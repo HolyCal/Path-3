@@ -35,6 +35,7 @@ span {
     grid-column: 1/4;
     grid-row: 5;
     background-color: #B8860B;
+    text-align: center;
 }
 .grid-nav-bot {
     display: grid;
