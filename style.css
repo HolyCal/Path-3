@@ -9,6 +9,9 @@ body {
     margin: auto;
     background-color: red;
 }
+span {
+    display: block;
+}
 .grid-title {
     grid-column: 2/3;
     grid-row: 1;
@@ -28,11 +31,16 @@ body {
     margin-right: 10px;
     background-color: pink;
 }
+.grid-restaurant-cards {
+    grid-column: 1/4;
+    grid-row: 5;
+    background-color: #B8860B;
+}
 .grid-nav-bot {
     display: grid;
     grid-template: 1fr/ 1fr;
     grid-column: 1/4;
-    grid-row: 5;
+    grid-row: 6;
     background-color: black;
   }
 .title {
@@ -99,6 +107,6 @@ h2 {
     grid-row: 3;
     background-color: orange;
 }
-span {
-    display: block;
+.restuarant-cards {
+    background-color: #FFF8DC;
 }
