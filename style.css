@@ -18,6 +18,9 @@ a {
 a:visited {
     text-decoration: none;
   }
+.restaurant-card-images {
+    
+}
 .grid-title {
     grid-column: 2/3;
     grid-row: 1;
