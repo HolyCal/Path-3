@@ -43,14 +43,14 @@ header .container-header .container-header-box-subtitle {
 }
 header .container-header .container-header-box-subtitle .subtitle {
   margin: 1rem auto;
-  font-size: 1.4rem;
+  font-size: 1.5rem;
 }
 header .container-header .container-header-box-location {
   margin: 0.1rem;
 }
 header .container-header .container-header-box-location .location {
   margin: auto;
-  font-size: 1rem;
+  font-size: 0.75rem;
 }
 
 body {
@@ -77,11 +77,11 @@ body .box-h2 {
           flex-direction: row;
   background: #FF79DA;
   color: #99E2D0;
-  height: 20%;
-  -ms-flex-preferred-size: 20%;
-      flex-basis: 20%;
+  background: blue;
+  block-size: 10rem;
   border: 0.3rem #ccc solid;
   padding: 1rem;
+  font-size: 0.75rem;
 }
 
 .container-nav {
@@ -104,6 +104,8 @@ body .box-h2 {
   block-size: 5rem;
   border: 0.3rem #ccc solid;
   padding: 1rem;
+  font-size: 1.5rem;
+  background: green;
 }
 .container-nav div {
   border: 0.3rem #ccc solid;
@@ -115,6 +117,10 @@ body .box-h2 {
 }
 .container-nav .container-nav-box-2 {
   border-right: none;
+}
+
+span {
+  display: block;
 }
 
 img {

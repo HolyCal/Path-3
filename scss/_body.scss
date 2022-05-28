@@ -16,9 +16,10 @@ body {
     color: $textColor;
         .box-h2 {
             @include flexCenter(row, $secondary-color, $tertiary-color);
-            height: 20%;
-            flex-basis: 20%;
+            background: blue;
+            block-size: 10rem;
             border: 0.3rem #ccc solid;
             padding: 1rem;
+            font-size: map-get($font-size, small);
         }
 }

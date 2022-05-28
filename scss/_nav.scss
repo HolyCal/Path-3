@@ -24,4 +24,6 @@
     block-size: 5rem;
     border: 0.3rem #ccc solid;
     padding: 1rem;
+    font-size: map-get($font-size, medium);
+    background: green;
 }
