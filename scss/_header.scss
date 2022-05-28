@@ -1,0 +1,49 @@
+@mixin flexCenter($direction, $background, $color) {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: $direction;
+    background: $background;
+    color: $color;
+}
+
+
+header {
+    @include flexCenter(column, $secondary-color, $tertiary-color);
+    .container-header {
+        align-items: flex-start;
+        flex-basis: 99%;
+            div {
+                //border: 0.3rem #ccc solid;//
+                padding: 0rem 5rem;
+                
+            }
+            .container-header-box-title {
+                .title {
+                    font-size: map-get($font-size, large);
+                    margin: 1rem auto;
+                }
+                margin: 0.1rem;
+            }
+            .container-header-box-subtitle {
+                .subtitle {
+                    margin: 1rem auto;
+                    font-size: map-get($font-size, medium);
+                }
+                margin: 0.1rem;
+            }
+            .container-header-box-location {
+                .location {
+                    margin: auto;
+                    font-size: map-get($font-size, small);
+                }
+                margin: 0.1rem;
+            }
+        }
+        border: 0.3rem #ccc solid;
+        padding: 1rem;
+        background: red;
+        block-size: 10rem;
+}

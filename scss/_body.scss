@@ -1,0 +1,24 @@
+@mixin flexCenter($direction, $background, $color) {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: $direction;
+    background: $background;
+    color: $color;
+}
+
+body {
+    background-color: $tertiary-color;
+    font-family: "'Roboto'", sans-serif;
+    font-weight: map-get($font-weights, medium);
+    color: $textColor;
+        .box-h2 {
+            @include flexCenter(row, $secondary-color, $tertiary-color);
+            height: 20%;
+            flex-basis: 20%;
+            border: 0.3rem #ccc solid;
+            padding: 1rem;
+        }
+}

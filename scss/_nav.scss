@@ -1,0 +1,27 @@
+@mixin flexCenter($direction, $background, $color) {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: $direction;
+    background: $background;
+    color: $color;
+}
+
+.container-nav {
+    @include flexCenter(row, $secondary-color, $tertiary-color);
+    div {
+        border: 0.3rem  #ccc solid;
+        padding: 1rem;
+        width: 29%;
+    }
+    .container-nav-box-1 {
+        border-right: none;
+    }
+    .container-nav-box-2 {
+        border-right: none;
+    }
+    block-size: 5rem;
+    border: 0.3rem #ccc solid;
+    padding: 1rem;
+}

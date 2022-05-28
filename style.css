@@ -1,6 +1,6 @@
 body {
     background-color: white;
-    font-family: font-family "'Roboto'", sans-serif;
+    font-family: "'Roboto'", sans-serif;
 }
 .container {
     display: grid;
@@ -19,7 +19,7 @@ a:visited {
     text-decoration: none;
   }
 .restaurant-card-images {
-    
+    background-color: none;
 }
 .grid-title {
     grid-column: 2/3;
