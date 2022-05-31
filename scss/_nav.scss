@@ -9,6 +9,10 @@
 }
 
 .container-nav {
+    @media (max-width: 800px) {
+        display: flex;
+        flex-direction: column;
+        }
     @include flexCenter(row, $secondary-color, $tertiary-color);
     div {
         border: 0.3rem  #ccc solid;
@@ -19,6 +23,7 @@
         border-right: none;
     }
     .container-nav-box-2 {
+        
         border-right: none;
     }
     block-size: 5rem;
