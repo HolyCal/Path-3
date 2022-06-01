@@ -1,16 +1,67 @@
 @import "var";
 @import "header";
-@import "body";
-@import "nav";
 
-@media(min-width:768px){
-
+main {
+    @include flexCenter (column, $primaryColor, $secondaryColor);
+    @include mobile {
+        flex-direction: column;
+    }
+background:#F5F5DC;
+    header {
+        display: flex;
+        border: $border;
+        width: 99%;
+        @include flexCenter(row, $primaryColor, $secondaryColor);
+        .flexbox-container-header {
+            .flexbox-title {
+                border: $border;
+                margin: 1rem;
+            }
+            .flexbox-subtitle {
+                border: $border;
+                margin: 1rem;
+            }
+            .flexbox-location {
+                border: $border;
+                margin: 1rem;
+            }
+        }
+        background:#00FFFF;
+    }
+    nav {
+        display: flex;
+        border: $border;
+        margin: 1rem;
+        width: 99%;
+        @include flexNav(row, $primaryColor, $secondaryColor);
+        .flexbox-container-nav {
+            .flexbox-home {
+                border: $border;
+                margin: 1rem;
+                padding: 5rem;
+            }
+            .flexbox-about {
+                border: $border;
+                margin: 1rem;
+                padding: 5rem;
+            }
+            .flexbox-menu {
+                border: $border;
+                margin: 1rem;
+                padding: 5rem;
+            }
+        }
+        background:#7FFFD4;
+    }
 }
-
-span {
-    display: block;
-}
-img {
-    max-width: 20rem;
-    max-height: 20rem;
-}
+// background:#0000FF;
+// background:#8A2BE2;
+// background:#A52A2A;
+// background:#5F9EA0;
+// background:#7FFF00;
+// background:#D2691E;
+// background:#FF7F50;
+// background:#6495ED;
+// background:#DC143C;
+// background:#00FFFF;
+// background:#B8860B;

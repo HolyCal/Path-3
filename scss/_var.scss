@@ -1,17 +1,25 @@
-$primary-color: #9356DC;
-$secondary-color: #FF79DA;
-$tertiary-color: #99E2D0;
-$textColor: black;
-$font-size: (
-    "small": 0.75rem,
-    "medium":1.5rem,
-    "large":3rem 
-);
-$font-weights: (
-    "regular": 400,
-    "medium": 500,
-    "bold": 700
-);
-
-$fontTitles: shirkland; 
-$fontText: roboto; 
+@mixin flexCenter($direction, $background, $color) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: $direction;
+    background: $background;
+    color: $color;
+}
+@mixin flexNav($direction, $background, $color) {
+    display: flex;
+    flex-direction: $direction;
+    background: $background;
+    color: $color;
+}
+@mixin mobile {
+    @media (max-width: $mobile) {
+        @content;
+    }
+}
+$primaryColor: #9356DC;
+$secondaryColor: #FF79DA;
+$tertiaryColor: #99E2D0;
+$border: 0.3rem $tertiaryColor solid;
+$mobile: 800px;
