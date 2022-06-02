@@ -1,9 +1,7 @@
-@import "var";
 header {
     display: flex;
-    background:#00FFFF;
     border: $border;
-    @include flexCenter(row, $primaryColor, $secondaryColor);
+    @include flexHeader(row, $primaryColor, $secondaryColor);
     .flexbox-container-header {
         .flexbox-title {
             border: $border;

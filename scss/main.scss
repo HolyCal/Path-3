@@ -1,64 +1,107 @@
 @import "var";
 @import "header";
-
+@import "nav";
+body {
+    border: $border;
+    width: 100%;
+    margin: 1rem 1rem;
 main {
-    @include flexCenter (column, $primaryColor, $secondaryColor);
-    @include mobile {
-        flex-direction: column;
-    }
-background:#F5F5DC;
-    header {
-        display: flex;
-        border: $border;
-        width: 99%;
-        @include flexCenter(row, $primaryColor, $secondaryColor);
-        .flexbox-container-header {
-            .flexbox-title {
-                border: $border;
-                margin: 1rem;
-            }
-            .flexbox-subtitle {
-                border: $border;
-                margin: 1rem;
-            }
-            .flexbox-location {
-                border: $border;
-                margin: 1rem;
-            }
+        @include flexMain (column, $primaryColor, $secondaryColor);
+        @include mobile {
+            flex-direction: column;
         }
-        background:#00FFFF;
-    }
-    nav {
-        display: flex;
-        border: $border;
-        margin: 1rem;
-        width: 99%;
-        @include flexNav(row, $primaryColor, $secondaryColor);
-        .flexbox-container-nav {
-            .flexbox-home {
-                border: $border;
-                margin: 1rem;
-                padding: 5rem;
+    background:#F5F5DC;
+    margin: 1rem 1rem;
+        header {
+            @include flexHeader(row, $primaryColor, $secondaryColor);
+            .flexbox-container-header {
+                .flexbox-title {
+                    border: $border;
+                    margin: 1rem;
+                }
+                .flexbox-subtitle {
+                    border: $border;
+                    margin: 1rem;
+                }
+                .flexbox-location {
+                    border: $border;
+                    margin: 1rem;
+                }
             }
-            .flexbox-about {
-                border: $border;
-                margin: 1rem;
-                padding: 5rem;
-            }
-            .flexbox-menu {
-                border: $border;
-                margin: 1rem;
-                padding: 5rem;
-            }
+            display: flex;
+            border: $border;
+            margin: 1rem;
+            // width: 100%;
+            background:#8A2BE2;
         }
-        background:#7FFFD4;
+        nav {
+            @include flexNav(row, $primaryColor, $secondaryColor);
+            .flexbox-container-nav {
+                .flexbox-home {
+                    border: $border;
+                    margin: 1rem;
+                    padding: 5rem;
+                }
+                .flexbox-about {
+                    border: $border;
+                    margin: 1rem;
+                    padding: 5rem;
+                }
+                .flexbox-menu {
+                    border: $border;
+                    margin: 1rem;
+                    padding: 5rem;
+                }
+            }
+            display: flex;
+            border: $border;
+            margin: auto;
+            // width: 100%;
+            background:#7FFFD4;
+        }
+        .flexbox-h2 {
+            @include flexH2(column, $primaryColor, $secondaryColor);
+            border: $border;
+            // width: 100%;
+            // padding: 1rem;
+            margin: auto;
+            background:#0000FF;        
+        }
+        .flexbox-book {
+            @include flexBook(column, $primaryColor, $secondaryColor);
+            border: $border;
+            // width: 100%;
+            // padding: 1rem;
+            margin: auto;
+            background:#A52A2A;
+        }
+        .flexbox-container-restaurant-cards {
+            .flexbox-restaurant-cards {
+                @include flexCards(column, $primaryColor, $secondaryColor);
+                border: $border;
+                // width: 100%;
+                // padding: 1rem;
+                margin: auto;
+                background:#7FFF00;
+            }
+            img {
+                display: block;
+                max-width: 20rem;
+                max-height: 20rem;
+            }
+            border: $border;
+            // width: 100%;
+            // padding: 1rem;
+            margin: auto;
+            background:#5F9EA0;
+        }
     }
 }
-// background:#0000FF;
-// background:#8A2BE2;
-// background:#A52A2A;
-// background:#5F9EA0;
-// background:#7FFF00;
+
+
+
+
+
 // background:#D2691E;
 // background:#FF7F50;
 // background:#6495ED;

@@ -1,13 +1,48 @@
-@mixin flexCenter($direction, $background, $color) {
+main{background:#F5F5DC};
+header{background:#8A2BE2};
+nav{background:#7FFFD4};
+.flexbox-h2{background:#0000FF};
+.flexbox-book{background:#A52A2A};
+.flexbox-container-restaurant-cards{background:#5F9EA0};
+.flexbox-restaurant-cards{background:#7FFF00};
+//flexbox color key. Delete when layout is finished //
+
+@mixin flexMain($direction, $background, $color) {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     text-align: center;
     flex-direction: $direction;
     background: $background;
     color: $color;
 }
+@mixin flexHeader($direction, $background, $color) {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: $direction;
+    background: $background;
+    color: $color;
+}
 @mixin flexNav($direction, $background, $color) {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: $direction;
+    background: $background;
+    color: $color;
+}
+@mixin flexH2 ($direction, $background, $color) {
+    display: flex;
+    flex-direction: $direction;
+    background: $background;
+    color: $color;
+}
+@mixin flexBook ($direction, $background, $color) {
+    display: flex;
+    flex-direction: $direction;
+    background: $background;
+    color: $color;
+}
+@mixin flexCards ($direction, $background, $color) {
     display: flex;
     flex-direction: $direction;
     background: $background;
