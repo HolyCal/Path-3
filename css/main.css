@@ -110,8 +110,10 @@ body main {
           flex-direction: column;
   background: #9356DC;
   color: #FF79DA;
+  width: 100%;
   background: #F5F5DC;
   margin: 1rem 1rem;
+  border: 0.3rem #99E2D0 solid;
 }
 @media (max-width: 800px) {
   body main {
@@ -135,7 +137,7 @@ body main header {
   color: #FF79DA;
   display: flex;
   border: 0.3rem #99E2D0 solid;
-  margin: 1rem;
+  width: 100%;
   background: #8A2BE2;
 }
 body main header .flexbox-container-header .flexbox-title {
@@ -164,7 +166,7 @@ body main nav {
   color: #FF79DA;
   display: flex;
   border: 0.3rem #99E2D0 solid;
-  margin: auto;
+  width: 100%;
   background: #7FFFD4;
 }
 body main nav .flexbox-container-nav .flexbox-home {
@@ -186,6 +188,8 @@ body main .flexbox-h2 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -193,7 +197,7 @@ body main .flexbox-h2 {
   background: #9356DC;
   color: #FF79DA;
   border: 0.3rem #99E2D0 solid;
-  margin: auto;
+  width: 100%;
   background: #0000FF;
 }
 body main .flexbox-book {
@@ -207,12 +211,12 @@ body main .flexbox-book {
   background: #9356DC;
   color: #FF79DA;
   border: 0.3rem #99E2D0 solid;
-  margin: auto;
+  width: 100%;
   background: #A52A2A;
 }
 body main .flexbox-container-restaurant-cards {
   border: 0.3rem #99E2D0 solid;
-  margin: auto;
+  width: 100%;
   background: #5F9EA0;
 }
 body main .flexbox-container-restaurant-cards .flexbox-restaurant-cards {

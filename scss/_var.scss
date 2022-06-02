@@ -32,6 +32,7 @@ nav{background:#7FFFD4};
 }
 @mixin flexH2 ($direction, $background, $color) {
     display: flex;
+    flex-wrap: nowrap;
     flex-direction: $direction;
     background: $background;
     color: $color;

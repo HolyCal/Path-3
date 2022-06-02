@@ -10,8 +10,10 @@ main {
         @include mobile {
             flex-direction: column;
         }
-    background:#F5F5DC;
-    margin: 1rem 1rem;
+        width: 100%;
+        background:#F5F5DC;
+        margin: 1rem 1rem;
+        border: $border;
         header {
             @include flexHeader(row, $primaryColor, $secondaryColor);
             .flexbox-container-header {
@@ -30,8 +32,8 @@ main {
             }
             display: flex;
             border: $border;
-            margin: 1rem;
-            // width: 100%;
+            // margin: 1rem;
+            width: 100%;
             background:#8A2BE2;
         }
         nav {
@@ -55,24 +57,24 @@ main {
             }
             display: flex;
             border: $border;
-            margin: auto;
-            // width: 100%;
+            // margin: auto;
+            width: 100%;
             background:#7FFFD4;
         }
         .flexbox-h2 {
             @include flexH2(column, $primaryColor, $secondaryColor);
             border: $border;
-            // width: 100%;
+            width: 100%;
             // padding: 1rem;
-            margin: auto;
+            // margin: auto;
             background:#0000FF;        
         }
         .flexbox-book {
             @include flexBook(column, $primaryColor, $secondaryColor);
             border: $border;
-            // width: 100%;
+            width: 100%;
             // padding: 1rem;
-            margin: auto;
+            // margin: auto;
             background:#A52A2A;
         }
         .flexbox-container-restaurant-cards {
@@ -90,9 +92,9 @@ main {
                 max-height: 20rem;
             }
             border: $border;
-            // width: 100%;
+            width: 100%;
             // padding: 1rem;
-            margin: auto;
+            // margin: auto;
             background:#5F9EA0;
         }
     }
