@@ -4,7 +4,7 @@
 body {
     border: $border;
     width: 100%;
-    margin: 1rem 1rem;
+    margin: 0.8rem;
 main {
         @include flexMain (column, $primaryColor, $secondaryColor);
         @include mobile {
@@ -37,8 +37,16 @@ main {
             background:#8A2BE2;
         }
         nav {
-            @include flexNav(row, $primaryColor, $secondaryColor);
             .flexbox-container-nav {
+                @include flexNav(row, $primaryColor, $secondaryColor);
+                @include mobile {
+                    flex-direction: column;
+                }
+                display: flex;
+                border: $border;
+                // margin: auto;
+                width: 100%;
+                background:#7FFFD4;
                 .flexbox-home {
                     border: $border;
                     margin: 1rem;
@@ -55,11 +63,7 @@ main {
                     padding: 5rem;
                 }
             }
-            display: flex;
-            border: $border;
-            // margin: auto;
-            width: 100%;
-            background:#7FFFD4;
+            
         }
         .flexbox-h2 {
             @include flexH2(column, $primaryColor, $secondaryColor);

@@ -91,7 +91,7 @@ nav .flexbox-container-nav .flexbox-menu {
 body {
   border: 0.3rem #99E2D0 solid;
   width: 100%;
-  margin: 1rem 1rem;
+  margin: 0.8rem;
 }
 body main {
   display: -webkit-box;
@@ -152,7 +152,7 @@ body main header .flexbox-container-header .flexbox-location {
   border: 0.3rem #99E2D0 solid;
   margin: 1rem;
 }
-body main nav {
+body main nav .flexbox-container-nav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -168,6 +168,14 @@ body main nav {
   border: 0.3rem #99E2D0 solid;
   width: 100%;
   background: #7FFFD4;
+}
+@media (max-width: 800px) {
+  body main nav .flexbox-container-nav {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
 }
 body main nav .flexbox-container-nav .flexbox-home {
   border: 0.3rem #99E2D0 solid;
