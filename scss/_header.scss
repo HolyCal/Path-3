@@ -1,18 +1,18 @@
 header {
     display: flex;
-    border: $border;
+    box-shadow: $box-shadow;
     @include flexHeader(row, $primaryColor, $secondaryColor);
-    .flexbox-container-header {
+    .container-header {
         .flexbox-title {
-            border: $border;
+            box-shadow: $box-shadow;
             margin: 1rem;
         }
         .flexbox-subtitle {
-            border: $border;
+            box-shadow: $box-shadow;
             margin: 1rem;
         }
         .flexbox-location {
-            border: $border;
+            box-shadow: $box-shadow;
             margin: 1rem;
         }
     }

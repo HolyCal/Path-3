@@ -1,3 +1,4 @@
+//flexbox color key. Delete when layout is finished //
 main{background:#F5F5DC};
 header{background:#8A2BE2};
 nav{background:#7FFFD4};
@@ -7,9 +8,71 @@ nav{background:#7FFFD4};
 .flexbox-restaurant-cards{background:#7FFF00};
 //flexbox color key. Delete when layout is finished //
 
+$primaryColor: #9356DC;
+$secondaryColor: #FF79DA;
+$tertiaryColor: #99E2D0;
+$box-shadow: 0rem 0rem 0rem 0.35rem red;
+$tablets: 768px;
+$laptop: 1024px;
+$desktop: 1200px;
+$TV: 1201px;
+
+$base-font-stack: (
+  // Sans-serif
+  Roboto: (
+    light: (
+      family: ('Roboto', sans-serif),
+      weight: 200,
+      style: normal
+    ),
+    light-italic: (
+      family: ('Roboto', sans-serif),
+      weight: 200,
+      style: italic
+    ),
+    regular: (
+      family: ('Roboto', sans-serif),
+      weight: 400,
+      style: normal
+    ),
+    regular-italic: (
+      family: ('Roboto', sans-serif),
+      weight: 400,
+      style: italic
+    ),
+    bold: (
+      family: ('Roboto', sans-serif),
+      weight: 700,
+      style: normal
+    ),
+    bold-italic: (
+      family: ('Roboto', sans-serif),
+      weight: 700,
+      style: italic
+    ),
+  ),
+);
+
+@mixin font($group, $variant: regular, $properties: family weight style, $font-stack: $base-font-stack) {
+    $font-properties: map-deep-get($font-stack, $group, $variant);
+    @if $font-properties {
+        @each $property, $values in $font-properties {
+          @if contains($properties, $property) {
+            font-#{$property}: map-get($font-properties, $property);
+          }
+        }
+      }
+    }
+// @mixin flexColorDirection($direction, $background, $color) {
+//     display: flex;
+//     flex-direction: $direction;
+//     background: $background;
+//     color: $color;
+// }
+
 @mixin flexMain($direction, $background, $color) {
+    // @include flexColorDirection($direction, $background, $color);
     display: flex;
-    justify-content: flex-start;
     align-items: center;
     text-align: center;
     flex-direction: $direction;
@@ -17,45 +80,47 @@ nav{background:#7FFFD4};
     color: $color;
 }
 @mixin flexHeader($direction, $background, $color) {
+    // @include flexColorDirection($direction, $background, $color);
     display: flex;
-    justify-content: space-around;
     flex-direction: $direction;
     background: $background;
     color: $color;
 }
 @mixin flexNav($direction, $background, $color) {
+    // @include flexColorDirection($direction, $background, $color);
     display: flex;
-    justify-content: space-around;
+    flex-grow: 1;
+    text-align: center;
     flex-direction: $direction;
     background: $background;
     color: $color;
+    
 }
-@mixin flexH2 ($direction, $background, $color) {
+@mixin briefDescOfComp ($direction, $background, $color) {
+    // @include flexColorDirection($direction, $background, $color);
     display: flex;
     flex-wrap: nowrap;
     flex-direction: $direction;
     background: $background;
     color: $color;
+    
 }
 @mixin flexBook ($direction, $background, $color) {
+    // @include flexColorDirection($direction, $background, $color);
     display: flex;
     flex-direction: $direction;
     background: $background;
     color: $color;
 }
 @mixin flexCards ($direction, $background, $color) {
+    // @include flexColorDirection($direction, $background, $color);
     display: flex;
     flex-direction: $direction;
     background: $background;
     color: $color;
 }
-@mixin mobile {
-    @media (max-width: $mobile) {
+@mixin desktop {
+    @media (max-width: $desktop) {
         @content;
     }
 }
-$primaryColor: #9356DC;
-$secondaryColor: #FF79DA;
-$tertiaryColor: #99E2D0;
-$border: 0.3rem $tertiaryColor solid;
-$mobile: 800px;

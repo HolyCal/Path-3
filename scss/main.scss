@@ -1,107 +1,94 @@
 @import "var";
 @import "header";
 @import "nav";
+@import "body";
 body {
-    border: $border;
-    width: 100%;
-    margin: 0.8rem;
-main {
-        @include flexMain (column, $primaryColor, $secondaryColor);
-        @include mobile {
-            flex-direction: column;
-        }
-        width: 100%;
-        background:#F5F5DC;
-        margin: 1rem 1rem;
-        border: $border;
-        header {
-            @include flexHeader(row, $primaryColor, $secondaryColor);
-            .flexbox-container-header {
-                .flexbox-title {
-                    border: $border;
-                    margin: 1rem;
-                }
-                .flexbox-subtitle {
-                    border: $border;
-                    margin: 1rem;
-                }
-                .flexbox-location {
-                    border: $border;
-                    margin: 1rem;
-                }
+    div {
+        margin: 0px;
+    }
+    box-shadow: $box-shadow;
+     @include desktop {
+         flex-direction: row;
+     } 
+    header {
+        @include flexHeader(column, $primaryColor, $secondaryColor);
+        .flexbox-container-header {
+            .flexbox-title {
+                box-shadow: $box-shadow;
+                justify-content: center;
+                text-align: center;
             }
-            display: flex;
-            border: $border;
-            // margin: 1rem;
-            width: 100%;
-            background:#8A2BE2;
-        }
-        nav {
-            .flexbox-container-nav {
-                @include flexNav(row, $primaryColor, $secondaryColor);
-                @include mobile {
-                    flex-direction: column;
-                }
-                display: flex;
-                border: $border;
-                // margin: auto;
-                width: 100%;
-                background:#7FFFD4;
-                .flexbox-home {
-                    border: $border;
-                    margin: 1rem;
-                    padding: 5rem;
-                }
-                .flexbox-about {
-                    border: $border;
-                    margin: 1rem;
-                    padding: 5rem;
-                }
-                .flexbox-menu {
-                    border: $border;
-                    margin: 1rem;
-                    padding: 5rem;
-                }
+            .flexbox-subtitle {
+                box-shadow: $box-shadow;
+                justify-content: center;
+                text-align: center;
             }
-            
-        }
-        .flexbox-h2 {
-            @include flexH2(column, $primaryColor, $secondaryColor);
-            border: $border;
-            width: 100%;
-            // padding: 1rem;
-            // margin: auto;
-            background:#0000FF;        
-        }
-        .flexbox-book {
-            @include flexBook(column, $primaryColor, $secondaryColor);
-            border: $border;
-            width: 100%;
-            // padding: 1rem;
-            // margin: auto;
-            background:#A52A2A;
-        }
-        .flexbox-container-restaurant-cards {
-            .flexbox-restaurant-cards {
-                @include flexCards(column, $primaryColor, $secondaryColor);
-                border: $border;
-                // width: 100%;
-                // padding: 1rem;
-                margin: auto;
-                background:#7FFF00;
+            .flexbox-location {
+                box-shadow: $box-shadow;
+                justify-content: center;
+                text-align: center;
             }
-            img {
-                display: block;
-                max-width: 20rem;
-                max-height: 20rem;
-            }
-            border: $border;
-            width: 100%;
-            // padding: 1rem;
-            // margin: auto;
-            background:#5F9EA0;
         }
     }
+    nav {
+        @include flexNav(row, $primaryColor, $secondaryColor);
+        @include desktop {
+            flex-direction: row;
+        } 
+        .flexbox-container-nav {
+        @include flexNav(row, $primaryColor, $secondaryColor);
+            display: flex;
+            box-shadow: $box-shadow;
+            background:#7FFFD4;
+            .flexbox-home {
+                @include flexNav(row, $primaryColor, $secondaryColor);
+                box-shadow: $box-shadow;
+                // padding: 5rem;
+            }
+            .flexbox-about {
+                @include flexNav(row, $primaryColor, $secondaryColor);
+                box-shadow: $box-shadow;
+                // padding: 5rem;
+            }
+            .flexbox-menu {
+                @include flexNav(row, $primaryColor, $secondaryColor);
+                box-shadow: $box-shadow;
+                // padding: 5rem;
+            }
+        }
+    }
+main {
+    @include flexMain (column, $primaryColor, $secondaryColor);
+        background:#F5F5DC;
+        box-shadow: $box-shadow;
+            .briefDescOfComp {
+                @include briefDescOfComp(column, $primaryColor, $secondaryColor);
+                box-shadow: $box-shadow;
+                padding: 1rem 0rem;
+            }
+            .flexbox-book {
+                @include flexBook(column, $primaryColor, $secondaryColor);
+                box-shadow: $box-shadow;
+                // padding: 1rem;
+                background:#A52A2A;
+            }
+            .flexbox-container-restaurant-cards {
+                .flexbox-restaurant-cards {
+                    @include flexCards(column, $primaryColor, $secondaryColor);
+                    box-shadow: $box-shadow;
+                    // padding: 1rem;
+                    background:#7FFF00;
+                }
+                img {
+                    display: block;
+                    max-width: 20rem;
+                    max-height: 20rem;
+                }
+                box-shadow: $box-shadow;
+                // padding: 1rem;
+                background:#5F9EA0;
+            }
+    }   
 }
 
 

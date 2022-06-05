@@ -1,22 +1,22 @@
 nav {
     display: flex;
-    border: $border;
+    box-shadow: $box-shadow;
     margin: 1rem;
     width: 99%;
     @include flexNav(row, $primaryColor, $secondaryColor);
     .flexbox-container-nav {
         .flexbox-home {
-            border: $border;
+            box-shadow: $box-shadow;
             margin: 1rem;
             padding: 5rem;
         }
         .flexbox-about {
-            border: $border;
+            box-shadow: $box-shadow;
             margin: 1rem;
             padding: 5rem;
         }
         .flexbox-menu {
-            border: $border;
+            box-shadow: $box-shadow;
             margin: 1rem;
             padding: 5rem;
         }
