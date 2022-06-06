@@ -1,233 +1,212 @@
-main {
-  background: #F5F5DC;
-}
-
-header {
-  background: #8A2BE2;
-}
-
-nav {
-  background: #7FFFD4;
-}
-
-.flexbox-h2 {
-  background: #0000FF;
-}
-
-.flexbox-book {
-  background: #A52A2A;
-}
-
-.flexbox-container-restaurant-cards {
-  background: #5F9EA0;
-}
-
-.flexbox-restaurant-cards {
-  background: #7FFF00;
-}
-
-header {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-shadow: 0rem 0rem 0rem 0.35rem red;
-          box-shadow: 0rem 0rem 0rem 0.35rem red;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  background: #9356DC;
-  color: #FF79DA;
-}
-
-header .flexbox-container-header .flexbox-title {
-  -webkit-box-shadow: 0rem 0rem 0rem 0.35rem red;
-          box-shadow: 0rem 0rem 0rem 0.35rem red;
-  margin: 1rem;
-}
-
-header .flexbox-container-header .flexbox-subtitle {
-  -webkit-box-shadow: 0rem 0rem 0rem 0.35rem red;
-          box-shadow: 0rem 0rem 0rem 0.35rem red;
-  margin: 1rem;
-}
-
-header .flexbox-container-header .flexbox-location {
-  -webkit-box-shadow: 0rem 0rem 0rem 0.35rem red;
-          box-shadow: 0rem 0rem 0rem 0.35rem red;
-  margin: 1rem;
-}
-
-nav {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-shadow: 0rem 0rem 0rem 0.35rem red;
-          box-shadow: 0rem 0rem 0rem 0.35rem red;
-  margin: 1rem;
-  width: 99%;
-  display: flex;
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
-  text-align: center;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  background: #9356DC;
-  color: #FF79DA;
-  background: #7FFFD4;
-}
-
-nav .flexbox-container-nav .flexbox-home {
-  -webkit-box-shadow: 0rem 0rem 0rem 0.35rem red;
-          box-shadow: 0rem 0rem 0rem 0.35rem red;
-  margin: 1rem;
-  padding: 5rem;
-}
-
-nav .flexbox-container-nav .flexbox-about {
-  -webkit-box-shadow: 0rem 0rem 0rem 0.35rem red;
-          box-shadow: 0rem 0rem 0rem 0.35rem red;
-  margin: 1rem;
-  padding: 5rem;
-}
-
-nav .flexbox-container-nav .flexbox-menu {
-  -webkit-box-shadow: 0rem 0rem 0rem 0.35rem red;
-          box-shadow: 0rem 0rem 0rem 0.35rem red;
-  margin: 1rem;
-  padding: 5rem;
-}
-
 body {
+  background: white;
   -webkit-box-shadow: 0rem 0rem 0rem 0.35rem red;
           box-shadow: 0rem 0rem 0rem 0.35rem red;
-  /* @include desktop {
-         flex-direction: column;
-     } */
 }
 
 body div {
   margin: 0px;
 }
 
+@media (max-width: 1200px) {
+  body {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+
 body header {
+  -webkit-box-shadow: 0rem 0rem 0rem 0.35rem red;
+          box-shadow: 0rem 0rem 0rem 0.35rem red;
+  margin-bottom: 1rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  background: white;
+  color: black;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  background: #9356DC;
-  color: #FF79DA;
 }
 
-body header .flexbox-container-header .flexbox-title {
-  -webkit-box-shadow: 0rem 0rem 0rem 0.35rem red;
-          box-shadow: 0rem 0rem 0rem 0.35rem red;
+body header .container-header .logo {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  text-align: center;
+  margin: 0.5rem;
+  padding: 1rem;
+}
+
+body header .container-header .logo .logo-img {
+  float: center;
+  height: 5rem;
+  width: 15rem;
+}
+
+body header .container-header .subtitle {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   text-align: center;
+  font-size: 2vw;
+  letter-spacing: 0.05rem;
+  font-family: "Shrikhand", cursive;
 }
 
-body header .flexbox-container-header .flexbox-subtitle {
-  -webkit-box-shadow: 0rem 0rem 0rem 0.35rem red;
-          box-shadow: 0rem 0rem 0rem 0.35rem red;
+body header .container-header .location {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   text-align: center;
+  font-size: 2vw;
+  background: rgba(0, 0, 0, 0.134);
+  padding: 0.8rem;
 }
 
-body header .flexbox-container-header .flexbox-location {
+body header .container-header .location .location-para {
+  display: inline;
+  font-family: "Roboto", sans-serif;
+  margin-left: 0.3rem;
+  border-radius: 0.4rem;
+}
+
+body header nav {
   -webkit-box-shadow: 0rem 0rem 0rem 0.35rem red;
           box-shadow: 0rem 0rem 0rem 0.35rem red;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  text-align: center;
 }
 
-body nav .flexbox-container-nav {
+body header nav .container-nav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  position: relative;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
-  text-align: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  background: #9356DC;
-  color: #FF79DA;
-  /* @include desktop {
-                flex-direction: row;
-            } */
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: black;
+  background: white;
+  direction: row;
+  gap: 10%;
   display: flex;
-  -webkit-box-shadow: 0rem 0rem 0rem 0.35rem red;
-          box-shadow: 0rem 0rem 0rem 0.35rem red;
-  background: #7FFFD4;
+  margin-bottom: 1rem;
 }
 
-body nav .flexbox-container-nav .flexbox-home {
+body header nav .container-nav a:link {
+  text-decoration: none;
+  font-size: 2.5vw;
+  text-align: center;
+  color: #9356DC;
+}
+
+body header nav .container-nav a:visited {
+  text-decoration: none;
+  font-size: 2.5vw;
+  text-align: center;
+  color: #FF79DA;
+}
+
+body header nav .container-nav a:hover {
+  text-decoration: underline;
+  font-size: 3vw;
+  text-align: center;
+  color: #99E2D0;
+}
+
+body header nav .container-nav .home {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  position: relative;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
-  text-align: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  background: #9356DC;
-  color: #FF79DA;
-  -webkit-box-shadow: 0rem 0rem 0rem 0.35rem red;
-          box-shadow: 0rem 0rem 0rem 0.35rem red;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: black;
+  background: white;
+  direction: row;
+  gap: 10%;
+  padding: 2vw;
+  margin: 1rem 1rem 0rem 1rem;
+  -ms-flex-item-align: stretch;
+      align-self: stretch;
+  -webkit-box-shadow: 0rem 0rem 0.5rem 0.5rem #acac9a;
+          box-shadow: 0rem 0rem 0.5rem 0.5rem #acac9a;
+  border-radius: 0.4rem;
+  font-family: "Shrikhand", cursive;
 }
 
-body nav .flexbox-container-nav .flexbox-about {
+body header nav .container-nav .about {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  position: relative;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
-  text-align: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  background: #9356DC;
-  color: #FF79DA;
-  -webkit-box-shadow: 0rem 0rem 0rem 0.35rem red;
-          box-shadow: 0rem 0rem 0rem 0.35rem red;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: black;
+  background: white;
+  direction: row;
+  gap: 10%;
+  padding: 2vw;
+  margin: 1rem 1rem 0rem 1rem;
+  -ms-flex-item-align: stretch;
+      align-self: stretch;
+  -webkit-box-shadow: 0rem 0rem 0.5rem 0.5rem #acac9a;
+          box-shadow: 0rem 0rem 0.5rem 0.5rem #acac9a;
+  border-radius: 0.4rem;
+  font-family: "Shrikhand", cursive;
 }
 
-body nav .flexbox-container-nav .flexbox-menu {
+body header nav .container-nav .menu {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  position: relative;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
-  text-align: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  background: #9356DC;
-  color: #FF79DA;
-  -webkit-box-shadow: 0rem 0rem 0rem 0.35rem red;
-          box-shadow: 0rem 0rem 0rem 0.35rem red;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: black;
+  background: white;
+  direction: row;
+  gap: 10%;
+  padding: 2vw;
+  margin: 1rem 1rem 0rem 1rem;
+  -ms-flex-item-align: stretch;
+      align-self: stretch;
+  -webkit-box-shadow: 0rem 0rem 0.5rem 0.5rem #acac9a;
+          box-shadow: 0rem 0rem 0.5rem 0.5rem #acac9a;
+  border-radius: 0.4rem;
+  font-family: "Shrikhand", cursive;
 }
 
 body main {
@@ -242,11 +221,9 @@ body main {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  background: #9356DC;
-  color: #FF79DA;
-  background: #F5F5DC;
-  -webkit-box-shadow: 0rem 0rem 0rem 0.35rem red;
-          box-shadow: 0rem 0rem 0rem 0.35rem red;
+  background: white;
+  color: black;
+  gap: 10%;
 }
 
 body main .briefDescOfComp {
@@ -259,14 +236,15 @@ body main .briefDescOfComp {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  background: #9356DC;
-  color: #FF79DA;
-  -webkit-box-shadow: 0rem 0rem 0rem 0.35rem red;
-          box-shadow: 0rem 0rem 0rem 0.35rem red;
-  padding: 1rem 0rem;
+  background: white;
+  color: black;
+  padding: 0rem 1rem;
+  font-size: 2.4vw;
+  margin-bottom: 1rem;
+  font-family: "Roboto", sans-serif;
 }
 
-body main .flexbox-book {
+body main .booking {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -274,20 +252,25 @@ body main .flexbox-book {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  background: #9356DC;
-  color: #FF79DA;
+  background: white;
+  color: black;
+  gap: 10%;
   -webkit-box-shadow: 0rem 0rem 0rem 0.35rem red;
           box-shadow: 0rem 0rem 0rem 0.35rem red;
-  background: #A52A2A;
+  padding: 1rem 1rem;
+  margin-bottom: 1rem;
+  font-family: "Roboto", sans-serif;
 }
 
-body main .flexbox-container-restaurant-cards {
-  -webkit-box-shadow: 0rem 0rem 0rem 0.35rem red;
-          box-shadow: 0rem 0rem 0rem 0.35rem red;
-  background: #5F9EA0;
+body main .container-restaurant-cards h3 {
+  font-size: 3vw;
+  text-decoration: underline;
+  margin-bottom: 1rem;
+  font-family: "Shrikhand", cursive;
+  letter-spacing: 0.05rem;
 }
 
-body main .flexbox-container-restaurant-cards .flexbox-restaurant-cards {
+body main .container-restaurant-cards .restaurant-cards {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -295,16 +278,19 @@ body main .flexbox-container-restaurant-cards .flexbox-restaurant-cards {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  background: #9356DC;
-  color: #FF79DA;
+  background: white;
+  color: black;
+  gap: 10%;
   -webkit-box-shadow: 0rem 0rem 0rem 0.35rem red;
           box-shadow: 0rem 0rem 0rem 0.35rem red;
-  background: #7FFF00;
+  padding: 0rem 1rem;
+  margin-bottom: 1rem;
 }
 
-body main .flexbox-container-restaurant-cards img {
-  display: block;
-  max-width: 20rem;
-  max-height: 20rem;
+body main .container-restaurant-cards img {
+  float: center;
+  width: 20rem;
+  height: 20rem;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
-/*# sourceMappingURL=main.css.map */

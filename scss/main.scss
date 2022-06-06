@@ -2,91 +2,136 @@
 @import "header";
 @import "nav";
 @import "body";
-body {
+
+// Cylces background of logo colours, looks tacky :P 
+// @keyframes icc{
+//     0%{
+//         filter: hue-rotate(1deg);
+//     }
+//     25%{
+//         filter: hue-rotate(360deg);
+//     }
+//     50%{
+//         filter: hue-rotate(1deg);
+//     }
+//     75%{
+//         filter: hue-rotate(360deg);
+//     }
+//     100%{
+//         filter: hue-rotate(1deg);
+//     }
+// }
+
+    body {
+    background: white;
     div {
         margin: 0px;
     }
-    box-shadow: $box-shadow;
+    box-shadow: $boxShadow;
      @include desktop {
          flex-direction: row;
      } 
     header {
-        @include flexHeader(column, $primaryColor, $secondaryColor);
-        .flexbox-container-header {
-            .flexbox-title {
-                box-shadow: $box-shadow;
-                justify-content: center;
-                text-align: center;
-            }
-            .flexbox-subtitle {
-                box-shadow: $box-shadow;
-                justify-content: center;
-                text-align: center;
-            }
-            .flexbox-location {
-                box-shadow: $box-shadow;
-                justify-content: center;
-                text-align: center;
-            }
-        }
-    }
-    nav {
-        @include flexNav(row, $primaryColor, $secondaryColor);
-        @include desktop {
-            flex-direction: row;
-        } 
-        .flexbox-container-nav {
-        @include flexNav(row, $primaryColor, $secondaryColor);
+        box-shadow: $boxShadow;
+        margin-bottom: 1rem;
+        @include flexHeader(column, white, black);
+            .container-header {
+                .logo {
+                    @include logoImg;
+                    padding: 1rem;
+                    // Not uses at current state. might come back and edit it better
+                    // background: #9356DC;
+                    // border-radius: $borderRadius;
+                    // animation: icc 5s;
+                    // animation-delay: 0;
+                    // animation-iteration-count: infinite;
+                    .logo-img {
+                        float: center;
+                        height: 5rem;
+                        width: 15rem;
+                    }
+                }
+                .subtitle {
+                    justify-content: center;
+                    text-align: center;
+                    font-size: $font-size-small;
+                    letter-spacing: $letterSpacing;
+                    font-family: $fontShirkhand;
+                }
+                .location {
+                    justify-content: center;
+                    text-align: center;
+                    font-size: $font-size-small;
+                    background: rgba(0, 0, 0, 0.134);
+                    padding: 0.8rem;
+                        .location-para {
+                            display: inline;
+                            font-family: $fontRoboto;
+                            margin-left: 0.3rem;
+                            border-radius: $borderRadius;
+                        }
+                    }
+                }
+        nav {
+            box-shadow: $boxShadow;
+            @include desktop {
+            } 
+            .container-nav {
+            @include flexNav(row, white, black);
+            @include a;
             display: flex;
-            box-shadow: $box-shadow;
-            background:#7FFFD4;
-            .flexbox-home {
-                @include flexNav(row, $primaryColor, $secondaryColor);
-                box-shadow: $box-shadow;
-                // padding: 5rem;
-            }
-            .flexbox-about {
-                @include flexNav(row, $primaryColor, $secondaryColor);
-                box-shadow: $box-shadow;
-                // padding: 5rem;
-            }
-            .flexbox-menu {
-                @include flexNav(row, $primaryColor, $secondaryColor);
-                box-shadow: $box-shadow;
-                // padding: 5rem;
+            margin-bottom: 1rem;
+                .home {
+                    @include flexNav(row, white, black);
+                    @include navLinks;
+                }
+                .about {
+                    @include flexNav(row, white, black);
+                    @include navLinks;
+                }
+                .menu {
+                    @include flexNav(row, white, black);
+                    @include navLinks;
+                }
             }
         }
     }
 main {
-    @include flexMain (column, $primaryColor, $secondaryColor);
-        background:#F5F5DC;
-        box-shadow: $box-shadow;
+    @include flexMain (column, white, black);
             .briefDescOfComp {
-                @include briefDescOfComp(column, $primaryColor, $secondaryColor);
-                box-shadow: $box-shadow;
-                padding: 1rem 0rem;
+                @include briefDescOfComp(column, white, black);
+                padding: 0rem 1rem;
+                font-size: $font-size-regular;
+                margin-bottom: 1rem;
+                font-family: $fontRoboto;
             }
-            .flexbox-book {
-                @include flexBook(column, $primaryColor, $secondaryColor);
-                box-shadow: $box-shadow;
-                // padding: 1rem;
-                background:#A52A2A;
+            .booking {
+                @include flexBooking(column, white, black);
+                box-shadow: $boxShadow;
+                padding: 1rem 1rem;
+                margin-bottom: 1rem;
+                font-family: $fontRoboto;
             }
-            .flexbox-container-restaurant-cards {
-                .flexbox-restaurant-cards {
-                    @include flexCards(column, $primaryColor, $secondaryColor);
-                    box-shadow: $box-shadow;
-                    // padding: 1rem;
-                    background:#7FFF00;
+            .container-restaurant-cards {
+                h3 {
+                    font-size: $font-size-large;
+                    text-decoration: underline;
+                    margin-bottom: 1rem;
+                    font-family: $fontShirkhand;
+                    letter-spacing:  $letterSpacing;
+                }
+                .restaurant-cards {
+                    @include flexCards(column, white, black);
+                    box-shadow: $boxShadow;
+                    padding: 0rem 1rem;
+                    margin-bottom: 1rem;
                 }
                 img {
-                    display: block;
-                    max-width: 20rem;
-                    max-height: 20rem;
+                    float: center;
+                    width: 20rem;
+                    height: 20rem;
+                    object-fit: cover;
                 }
-                box-shadow: $box-shadow;
-                // padding: 1rem;
-                background:#5F9EA0;
             }
     }   
 }
