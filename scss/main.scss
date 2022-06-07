@@ -3,142 +3,167 @@
 @import "nav";
 @import "body";
 
-// Cylces background of logo colours, looks tacky :P 
-// @keyframes icc{
-//     0%{
-//         filter: hue-rotate(1deg);
-//     }
-//     25%{
-//         filter: hue-rotate(360deg);
-//     }
-//     50%{
-//         filter: hue-rotate(1deg);
-//     }
-//     75%{
-//         filter: hue-rotate(360deg);
-//     }
-//     100%{
-//         filter: hue-rotate(1deg);
-//     }
-// }
-
-    body {
-    background: white;
-    div {
-        margin: 0px;
-    }
-    box-shadow: $boxShadow;
-     @include desktop {
-         flex-direction: row;
-     } 
-    header {
-        box-shadow: $boxShadow;
-        margin-bottom: 1rem;
-        @include flexHeader(column, white, black);
-            .container-header {
-                .logo {
-                    @include logoImg;
-                    padding: 1rem;
-                    // Not uses at current state. might come back and edit it better
-                    // background: #9356DC;
-                    // border-radius: $borderRadius;
-                    // animation: icc 5s;
-                    // animation-delay: 0;
-                    // animation-iteration-count: infinite;
-                    .logo-img {
-                        float: center;
-                        height: 5rem;
-                        width: 15rem;
-                    }
+body {
+	background: white;
+	box-shadow: $boxShadow;
+	div {
+		margin: 0px;
+	}
+	@include desktop {
+		flex-direction: row;
+	}
+	header {
+		box-shadow: $boxShadow;
+		margin-bottom: 1rem;
+		@include flexHeader(column, white, black);
+		.container-header {
+			.logo {
+				@include logoImg;
+				.logo-img {
+					float: center;
+					height: 5rem;
+					width: 15rem;
+				}
+			}
+			.subtitle {
+				justify-content: center;
+				text-align: center;
+				font-size: $font-size-small;
+				letter-spacing: $letterSpacing;
+				font-family: $fontShirkhand;
+			}
+			.location {
+				justify-content: center;
+				text-align: center;
+				font-size: $font-size-small;
+				background: rgba(0, 0, 0, 0.134);
+				padding: 0.8rem;
+                border-top: 0.3rem solid rgba(65, 65, 65, 0.164);
+				.location-para {
+					display: inline;
+					font-family: $fontRoboto;
+					margin-left: 0.3rem;
+					border-radius: $borderRadius;
+				}
+			}
+		}
+		nav {
+			box-shadow: $boxShadow;
+			@include desktop {
+			}
+			.container-nav {
+				@include flexNav(row, white, black);
+				@include a;
+				display: flex;
+				margin-bottom: 1rem;
+				.home {
+					@include flexNav(row, white, black);
+					@include navLinks;
+				}
+				.about {
+					@include flexNav(row, white, black);
+					@include navLinks;
+				}
+				.menu {
+					@include flexNav(row, white, black);
+					@include navLinks;
+				}
+			}
+		}
+	}
+	main {
+		@include flexMain(column, white, black);
+		.briefDescOfComp {
+			@include briefDescOfComp(column, rgb(246, 246, 246), black);
+            letter-spacing: 0.02rem;
+			padding: 1rem;
+			font-size: $font-size-regular;
+			margin-bottom: 1rem;
+			font-family: $fontRoboto;
+                .span-h2 {
+                    margin-bottom: 0.5rem;        
                 }
-                .subtitle {
-                    justify-content: center;
-                    text-align: center;
+            }
+		.booking {
+			@include flexBooking(column, white, black);
+			box-shadow: $boxShadow;
+			padding: 1rem 1rem;
+			margin-bottom: 1rem;
+			font-family: $fontRoboto;
+            font-size: $font-size-regular;
+            font-weight: bolder;
+                .span-booking {
                     font-size: $font-size-small;
-                    letter-spacing: $letterSpacing;
-                    font-family: $fontShirkhand;
+                    margin: 1rem 0rem;
+                    font-weight: normal;
                 }
-                .location {
-                    justify-content: center;
+                .booking-button {
+                    background: $secondaryColor;
+                    background-image: linear-gradient(350deg, $primaryColor, $secondaryColor);
+                    border: none;
+                    border-radius: $borderRadiusButton;
+                    color: white;
                     text-align: center;
-                    font-size: $font-size-small;
-                    background: rgba(0, 0, 0, 0.134);
-                    padding: 0.8rem;
-                        .location-para {
-                            display: inline;
-                            font-family: $fontRoboto;
-                            margin-left: 0.3rem;
-                            border-radius: $borderRadius;
-                        }
-                    }
-                }
-        nav {
-            box-shadow: $boxShadow;
-            @include desktop {
-            } 
-            .container-nav {
-            @include flexNav(row, white, black);
-            @include a;
-            display: flex;
-            margin-bottom: 1rem;
-                .home {
-                    @include flexNav(row, white, black);
-                    @include navLinks;
-                }
-                .about {
-                    @include flexNav(row, white, black);
-                    @include navLinks;
-                }
-                .menu {
-                    @include flexNav(row, white, black);
-                    @include navLinks;
-                }
-            }
-        }
-    }
-main {
-    @include flexMain (column, white, black);
-            .briefDescOfComp {
-                @include briefDescOfComp(column, white, black);
-                padding: 0rem 1rem;
-                font-size: $font-size-regular;
-                margin-bottom: 1rem;
-                font-family: $fontRoboto;
-            }
-            .booking {
-                @include flexBooking(column, white, black);
-                box-shadow: $boxShadow;
-                padding: 1rem 1rem;
-                margin-bottom: 1rem;
-                font-family: $fontRoboto;
-            }
-            .container-restaurant-cards {
-                h3 {
+                    text-decoration: none;
+                    font-family: $fontRoboto;
                     font-size: $font-size-large;
-                    text-decoration: underline;
-                    margin-bottom: 1rem;
-                    font-family: $fontShirkhand;
-                    letter-spacing:  $letterSpacing;
+                    padding: 2rem;
+                    box-shadow: $boxShadowButton;
                 }
-                .restaurant-cards {
-                    @include flexCards(column, white, black);
-                    box-shadow: $boxShadow;
-                    padding: 0rem 1rem;
-                    margin-bottom: 1rem;
+		}
+        .how-it-works {
+            font-family: $fontRoboto;
+            font-size: $font-size-regular;
+            color: black;
+            text-align: center;
+                ol {
+                    counter-reset: item;
+                    font-size: $font-size-small;
+                            li {
+                                display: flex;
+                                background: $Shadow;
+                                margin: 1rem;
+                                border-radius: $borderRadiusHowItWorks;
+                                padding: 2rem;
+                            }
+                            li:before {
+                                content: counter(item) " ";
+                                counter-increment: item;
+                                display: flex;
+                                justify-content: flex-start;
+                                text-align: center;
+                                background: $primaryColor;
+                                border-radius: 50%;
+                                width: 2vw;
+                                padding: 0.3vw;
+                                padding-left: 1.1vw;
+                                color: white;
+                            }
                 }
-                img {
-                    float: center;
-                    width: 20rem;
-                    height: 20rem;
-                    object-fit: cover;
-                }
-            }
-    }   
+        }
+		.container-restaurant-cards {
+			h3 {
+				font-size: $font-size-large;
+				text-decoration: underline;
+				margin-bottom: 1rem;
+				font-family: $fontShirkhand;
+				letter-spacing: $letterSpacing;
+			}
+			.restaurant-cards {
+				@include flexCards(column, white, black);
+				box-shadow: $boxShadow;
+				padding: 0rem 1rem;
+				margin-bottom: 1rem;
+			}
+			img {
+				float: center;
+				width: 20rem;
+				height: 20rem;
+				object-fit: cover;
+			}
+		}
+	}
 }
-
-
-
-
 
 // background:#D2691E;
 // background:#FF7F50;

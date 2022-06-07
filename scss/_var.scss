@@ -1,160 +1,178 @@
-$primaryColor: #9356DC;
-$secondaryColor: #FF79DA;
-$tertiaryColor: #99E2D0;
-$beige: #F5F5DC;
-$beigeShadow: #acac9a;
-$boxShadow: 0rem 0rem 0rem 0.35rem red;
-$boxShadowLinks: 0rem 0rem 0.5rem 0.5rem $beigeShadow;
+$primaryColor: #9356dc;
+$secondaryColor: #ff79da;
+$tertiaryColor: #99e2d0;
+$Shadow: #cfcfcf;
+$boxShadow: 0rem 0rem 1rem 0rem red;
+$boxShadowLinks: 0rem 0rem 0.5rem 0.5rem $Shadow;
+$boxShadowButton: 0rem 0.3rem 0.5rem 0.1rem $Shadow;
 $font-size-small: 2vw;
 $font-size-regular: 2.4vw;
 $font-size-large: 3vw;
+$fontWeightThin: 300;
+$fontWeightRegular: 500;
+$fontWeightBold: 1000;
 $tablets: 768px;
 $laptop: 1024px;
 $desktop: 1200px;
 $TV: 1201px;
 $borderRadius: 0.4rem;
-$fontRoboto: 'Roboto', sans-serif; 
-$fontShirkhand: 'Shrikhand', cursive;
+$borderRadiusButton: 5rem;
+$borderRadiusHowItWorks: 1rem;
+$fontRoboto: "Roboto", sans-serif;
+$fontShirkhand: "Shrikhand", cursive;
 $letterSpacing: 0.05rem;
 
 $base-font-stack: (
-  Roboto: (
-    light: (
-      family: ('Roboto', sans-serif),
-      weight: 200,
-      style: normal
-    ),
-    light-italic: (
-      family: ('Roboto', sans-serif),
-      weight: 200,
-      style: italic
-    ),
-    regular: (
-      family: ('Roboto', sans-serif),
-      weight: 400,
-      style: normal
-    ),
-    regular-italic: (
-      family: ('Roboto', sans-serif),
-      weight: 400,
-      style: italic
-    ),
-    bold: (
-      family: ('Roboto', sans-serif),
-      weight: 700,
-      style: normal
-    ),
-    bold-italic: (
-      family: ('Roboto', sans-serif),
-      weight: 700,
-      style: italic
-    ),
-  ),
+	Roboto: (
+		light: (
+			family: (
+				"Roboto",
+				sans-serif
+			),
+			weight: 200,
+			style: normal
+		),
+		light-italic: (
+			family: (
+				"Roboto",
+				sans-serif
+			),
+			weight: 200,
+			style: italic
+		),
+		regular: (
+			family: (
+				"Roboto",
+				sans-serif
+			),
+			weight: 400,
+			style: normal
+		),
+		regular-italic: (
+			family: (
+				"Roboto",
+				sans-serif
+			),
+			weight: 400,
+			style: italic
+		),
+		bold: (
+			family: (
+				"Roboto",
+				sans-serif
+			),
+			weight: 700,
+			style: normal
+		),
+		bold-italic: (
+			family: (
+				"Roboto",
+				sans-serif
+			),
+			weight: 700,
+			style: italic
+		)
+	)
 );
 
-@mixin logoImg {
-  justify-content: center;
-  align-self: center;
-  text-align: center;
-  margin: 0.5rem;
-}
-@mixin font($group, $variant: regular, $properties: family weight style, $font-stack: $base-font-stack) {
-    $font-properties: map-deep-get($font-stack, $group, $variant);
-    @if $font-properties {
-        @each $property, $values in $font-properties {
-          @if contains($properties, $property) {
-            font-#{$property}: map-get($font-properties, $property);
-          }
-        }
+@mixin font(
+  $group,
+  $variant: regular,
+  $properties: family weight style,
+  $font-stack: $base-font-stack
+) {
+  $font-properties: map-deep-get($font-stack, $group, $variant);
+  @if $font-properties {
+    @each $property, $values in $font-properties {
+      @if contains($properties, $property) {
+        font-#{$property}: map-get($font-properties, $property);
       }
     }
-// @mixin flexColor($background, $color) {
-//     display: flex;
-//     background: $background;
-//     color: $color;
-// }
-@mixin marginBottom ($marginBottom) {
+  }
+}
+@mixin marginBottom($marginBottom) {
   margin-bottom: 1rem;
 }
+@mixin logoImg {
+	justify-content: center;
+	align-self: center;
+	text-align: center;
+	margin-top: 0.5rem;
+  padding-top: 1rem;
+}
 @mixin flexHeader($direction, $background, $color) {
-    // @include flexColor($background, $color);
-    display: flex;
-    background: $background;
-    color: $color;
-    flex-direction: $direction;
+	display: flex;
+	background: $background;
+	color: $color;
+	flex-direction: $direction;
 }
 @mixin flexNav($direction, $background, $color) {
-    display: flex;
-    position: relative;
-    justify-content: space-evenly;
-    flex-grow: 1;
-    align-items: center;
-    color: $color;
-    background: $background;
-    direction: $direction;
-    gap: 10%;
+	display: flex;
+	justify-content: space-around;
+	color: $color;
+	background: $background;
+	direction: $direction;
+	gap: 10%;
 }
 @mixin navLinks {
-  padding: 2vw;
-  margin: 1rem 1rem 0rem 1rem;
-  align-self: stretch;
-  box-shadow: $boxShadowLinks;
-  border-radius: $borderRadius;
-  font-family: $fontShirkhand;
+	padding: 2vw;
+	margin: 1rem 1rem 0rem 1rem;
+	box-shadow: $boxShadowLinks;
+	border-radius: $borderRadius;
+	font-family: $fontShirkhand;
 }
 @mixin flexMain($direction, $background, $color) {
-  display: flex;
-  align-items: center;
-  text-align: center;
-  flex-direction: $direction;
-  background: $background;
-  color: $color;
-  gap: 10%;
+	display: flex;
+	align-items: center;
+	text-align: center;
+	flex-direction: $direction;
+	background: $background;
+	color: $color;
+	gap: 10%;
 }
-@mixin briefDescOfComp ($direction, $background, $color) {
-    display: flex;
-    flex-wrap: nowrap;
-    flex-direction: $direction;
-    background: $background;
-    color: $color;
+@mixin briefDescOfComp($direction, $background, $color) {
+	display: flex;
+	flex-wrap: nowrap;
+	flex-direction: $direction;
+	background: $background;
+	color: $color;
 }
-@mixin flexBooking ($direction, $background, $color) {
-    display: flex;
-    flex-direction: $direction;
-    background: $background;
-    color: $color;
-    gap: 10%;
+@mixin flexBooking($direction, $background, $color) {
+	display: flex;
+	flex-direction: $direction;
+	background: $background;
+	color: $color;
+	gap: 10%;
 }
-@mixin flexCards ($direction, $background, $color) {
-    display: flex;
-    flex-direction: $direction;
-    background: $background;
-    color: $color;
-    gap: 10%;
+@mixin flexCards($direction, $background, $color) {
+	display: flex;
+	flex-direction: $direction;
+	background: $background;
+	color: $color;
+	gap: 10%;
 }
 @mixin a {
-  a:link {
-    text-decoration: none;
-    font-size: 2.5vw;
-    text-align: center;
-    color: $primaryColor;
-    
-  }
-  a:visited {
-    text-decoration: none;
-    font-size: 2.5vw;
-    text-align: center;
-    color: $secondaryColor;
-  }
-  a:hover {
-    text-decoration: underline;
-    font-size: 3vw;
-    text-align: center;
-    color: $tertiaryColor;
-  }
+	a:link {
+		text-decoration: none;
+		font-size: 2.5vw;
+		text-align: center;
+		color: $primaryColor;
+	}
+	a:visited {
+		text-decoration: none;
+		font-size: 2.5vw;
+		text-align: center;
+		color: $secondaryColor;
+	}
+	a:hover {
+		text-decoration: underline;
+		font-size: 3vw;
+		text-align: center;
+		color: $tertiaryColor;
+	}
 }
 @mixin desktop {
-    @media (max-width: $desktop) {
-        @content;
-    }
+	@media (max-width: $desktop) {
+		@content;
+	}
 }

@@ -1,7 +1,7 @@
 body {
   background: white;
-  -webkit-box-shadow: 0rem 0rem 0rem 0.35rem red;
-          box-shadow: 0rem 0rem 0rem 0.35rem red;
+  -webkit-box-shadow: 0rem 0rem 1rem 0rem red;
+          box-shadow: 0rem 0rem 1rem 0rem red;
 }
 
 body div {
@@ -18,8 +18,8 @@ body div {
 }
 
 body header {
-  -webkit-box-shadow: 0rem 0rem 0rem 0.35rem red;
-          box-shadow: 0rem 0rem 0rem 0.35rem red;
+  -webkit-box-shadow: 0rem 0rem 1rem 0rem red;
+          box-shadow: 0rem 0rem 1rem 0rem red;
   margin-bottom: 1rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -40,8 +40,8 @@ body header .container-header .logo {
       -ms-grid-row-align: center;
       align-self: center;
   text-align: center;
-  margin: 0.5rem;
-  padding: 1rem;
+  margin-top: 0.5rem;
+  padding-top: 1rem;
 }
 
 body header .container-header .logo .logo-img {
@@ -68,6 +68,7 @@ body header .container-header .location {
   font-size: 2vw;
   background: rgba(0, 0, 0, 0.134);
   padding: 0.8rem;
+  border-top: 0.3rem solid rgba(65, 65, 65, 0.164);
 }
 
 body header .container-header .location .location-para {
@@ -78,24 +79,16 @@ body header .container-header .location .location-para {
 }
 
 body header nav {
-  -webkit-box-shadow: 0rem 0rem 0rem 0.35rem red;
-          box-shadow: 0rem 0rem 0rem 0.35rem red;
+  -webkit-box-shadow: 0rem 0rem 1rem 0rem red;
+          box-shadow: 0rem 0rem 1rem 0rem red;
 }
 
 body header nav .container-nav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  position: relative;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   color: black;
   background: white;
   direction: row;
@@ -108,47 +101,37 @@ body header nav .container-nav a:link {
   text-decoration: none;
   font-size: 2.5vw;
   text-align: center;
-  color: #9356DC;
+  color: #9356dc;
 }
 
 body header nav .container-nav a:visited {
   text-decoration: none;
   font-size: 2.5vw;
   text-align: center;
-  color: #FF79DA;
+  color: #ff79da;
 }
 
 body header nav .container-nav a:hover {
   text-decoration: underline;
   font-size: 3vw;
   text-align: center;
-  color: #99E2D0;
+  color: #99e2d0;
 }
 
 body header nav .container-nav .home {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  position: relative;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   color: black;
   background: white;
   direction: row;
   gap: 10%;
   padding: 2vw;
   margin: 1rem 1rem 0rem 1rem;
-  -ms-flex-item-align: stretch;
-      align-self: stretch;
-  -webkit-box-shadow: 0rem 0rem 0.5rem 0.5rem #acac9a;
-          box-shadow: 0rem 0rem 0.5rem 0.5rem #acac9a;
+  -webkit-box-shadow: 0rem 0rem 0.5rem 0.5rem #cfcfcf;
+          box-shadow: 0rem 0rem 0.5rem 0.5rem #cfcfcf;
   border-radius: 0.4rem;
   font-family: "Shrikhand", cursive;
 }
@@ -157,26 +140,16 @@ body header nav .container-nav .about {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  position: relative;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   color: black;
   background: white;
   direction: row;
   gap: 10%;
   padding: 2vw;
   margin: 1rem 1rem 0rem 1rem;
-  -ms-flex-item-align: stretch;
-      align-self: stretch;
-  -webkit-box-shadow: 0rem 0rem 0.5rem 0.5rem #acac9a;
-          box-shadow: 0rem 0rem 0.5rem 0.5rem #acac9a;
+  -webkit-box-shadow: 0rem 0rem 0.5rem 0.5rem #cfcfcf;
+          box-shadow: 0rem 0rem 0.5rem 0.5rem #cfcfcf;
   border-radius: 0.4rem;
   font-family: "Shrikhand", cursive;
 }
@@ -185,26 +158,16 @@ body header nav .container-nav .menu {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  position: relative;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   color: black;
   background: white;
   direction: row;
   gap: 10%;
   padding: 2vw;
   margin: 1rem 1rem 0rem 1rem;
-  -ms-flex-item-align: stretch;
-      align-self: stretch;
-  -webkit-box-shadow: 0rem 0rem 0.5rem 0.5rem #acac9a;
-          box-shadow: 0rem 0rem 0.5rem 0.5rem #acac9a;
+  -webkit-box-shadow: 0rem 0rem 0.5rem 0.5rem #cfcfcf;
+          box-shadow: 0rem 0rem 0.5rem 0.5rem #cfcfcf;
   border-radius: 0.4rem;
   font-family: "Shrikhand", cursive;
 }
@@ -236,12 +199,17 @@ body main .briefDescOfComp {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  background: white;
+  background: #f6f6f6;
   color: black;
-  padding: 0rem 1rem;
+  letter-spacing: 0.02rem;
+  padding: 1rem;
   font-size: 2.4vw;
   margin-bottom: 1rem;
   font-family: "Roboto", sans-serif;
+}
+
+body main .briefDescOfComp .span-h2 {
+  margin-bottom: 0.5rem;
 }
 
 body main .booking {
@@ -255,11 +223,74 @@ body main .booking {
   background: white;
   color: black;
   gap: 10%;
-  -webkit-box-shadow: 0rem 0rem 0rem 0.35rem red;
-          box-shadow: 0rem 0rem 0rem 0.35rem red;
+  -webkit-box-shadow: 0rem 0rem 1rem 0rem red;
+          box-shadow: 0rem 0rem 1rem 0rem red;
   padding: 1rem 1rem;
   margin-bottom: 1rem;
   font-family: "Roboto", sans-serif;
+  font-size: 2.4vw;
+  font-weight: bolder;
+}
+
+body main .booking .span-booking {
+  font-size: 2vw;
+  margin: 1rem 0rem;
+  font-weight: normal;
+}
+
+body main .booking .booking-button {
+  background: #ff79da;
+  background-image: linear-gradient(350deg, #9356dc, #ff79da);
+  border: none;
+  border-radius: 5rem;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  font-family: "Roboto", sans-serif;
+  font-size: 3vw;
+  padding: 2rem;
+  -webkit-box-shadow: 0rem 0.3rem 0.5rem 0.1rem #cfcfcf;
+          box-shadow: 0rem 0.3rem 0.5rem 0.1rem #cfcfcf;
+}
+
+body main .how-it-works {
+  font-family: "Roboto", sans-serif;
+  font-size: 2.4vw;
+  color: black;
+  text-align: center;
+}
+
+body main .how-it-works ol {
+  counter-reset: item;
+  font-size: 2vw;
+}
+
+body main .how-it-works ol li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background: #cfcfcf;
+  margin: 1rem;
+  border-radius: 1rem;
+  padding: 2rem;
+}
+
+body main .how-it-works ol li:before {
+  content: counter(item) " ";
+  counter-increment: item;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  text-align: center;
+  background: #9356dc;
+  border-radius: 50%;
+  width: 2vw;
+  padding: 0.3vw;
+  padding-left: 1.1vw;
+  color: white;
 }
 
 body main .container-restaurant-cards h3 {
@@ -281,8 +312,8 @@ body main .container-restaurant-cards .restaurant-cards {
   background: white;
   color: black;
   gap: 10%;
-  -webkit-box-shadow: 0rem 0rem 0rem 0.35rem red;
-          box-shadow: 0rem 0rem 0rem 0.35rem red;
+  -webkit-box-shadow: 0rem 0rem 1rem 0rem red;
+          box-shadow: 0rem 0rem 1rem 0rem red;
   padding: 0rem 1rem;
   margin-bottom: 1rem;
 }
