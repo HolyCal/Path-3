@@ -78,118 +78,24 @@ body header .container-header .location .location-para {
   border-radius: 0.4rem;
 }
 
-body header nav {
-  -webkit-box-shadow: 0rem 0rem 1rem 0rem red;
-          box-shadow: 0rem 0rem 1rem 0rem red;
-}
-
-body header nav .container-nav {
+body header main {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  color: black;
   background: white;
-  direction: row;
-  gap: 10%;
-  display: flex;
-  margin-bottom: 1rem;
-}
-
-body header nav .container-nav a:link {
-  text-decoration: none;
-  font-size: 2.5vw;
-  text-align: center;
-  color: #9356dc;
-}
-
-body header nav .container-nav a:visited {
-  text-decoration: none;
-  font-size: 2.5vw;
-  text-align: center;
-  color: #ff79da;
-}
-
-body header nav .container-nav a:hover {
-  text-decoration: underline;
-  font-size: 3vw;
-  text-align: center;
-  color: #99e2d0;
-}
-
-body header nav .container-nav .home {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
   color: black;
-  background: white;
-  direction: row;
-  gap: 10%;
-  padding: 2vw;
-  margin: 1rem 1rem 0rem 1rem;
-  -webkit-box-shadow: 0rem 0rem 0.5rem 0.5rem #cfcfcf;
-          box-shadow: 0rem 0rem 0.5rem 0.5rem #cfcfcf;
-  border-radius: 0.4rem;
-  font-family: "Shrikhand", cursive;
-}
-
-body header nav .container-nav .about {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  color: black;
-  background: white;
-  direction: row;
-  gap: 10%;
-  padding: 2vw;
-  margin: 1rem 1rem 0rem 1rem;
-  -webkit-box-shadow: 0rem 0rem 0.5rem 0.5rem #cfcfcf;
-          box-shadow: 0rem 0rem 0.5rem 0.5rem #cfcfcf;
-  border-radius: 0.4rem;
-  font-family: "Shrikhand", cursive;
-}
-
-body header nav .container-nav .menu {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  color: black;
-  background: white;
-  direction: row;
-  gap: 10%;
-  padding: 2vw;
-  margin: 1rem 1rem 0rem 1rem;
-  -webkit-box-shadow: 0rem 0rem 0.5rem 0.5rem #cfcfcf;
-          box-shadow: 0rem 0rem 0.5rem 0.5rem #cfcfcf;
-  border-radius: 0.4rem;
-  font-family: "Shrikhand", cursive;
-}
-
-body main {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  text-align: center;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  background: white;
-  color: black;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
   gap: 10%;
 }
 
-body main .briefDescOfComp {
+body header main .briefDescOfComp {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -208,11 +114,11 @@ body main .briefDescOfComp {
   font-family: "Roboto", sans-serif;
 }
 
-body main .briefDescOfComp .span-h2 {
+body header main .briefDescOfComp .span-h2 {
   margin-bottom: 0.5rem;
 }
 
-body main .booking {
+body header main .booking {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -232,13 +138,13 @@ body main .booking {
   font-weight: bolder;
 }
 
-body main .booking .span-booking {
+body header main .booking .span-booking {
   font-size: 2vw;
   margin: 1rem 0rem;
   font-weight: normal;
 }
 
-body main .booking .booking-button {
+body header main .booking .booking-button {
   background: #ff79da;
   background-image: linear-gradient(350deg, #9356dc, #ff79da);
   border: none;
@@ -253,47 +159,36 @@ body main .booking .booking-button {
           box-shadow: 0rem 0.3rem 0.5rem 0.1rem #cfcfcf;
 }
 
-body main .how-it-works {
+body header main .how-it-works {
   font-family: "Roboto", sans-serif;
   font-size: 2.4vw;
   color: black;
   text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
-body main .how-it-works ol {
+body header main .how-it-works ol {
   counter-reset: item;
   font-size: 2vw;
 }
 
-body main .how-it-works ol li {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  background: #cfcfcf;
-  margin: 1rem;
-  border-radius: 1rem;
-  padding: 2rem;
-}
-
-body main .how-it-works ol li:before {
-  content: counter(item) " ";
-  counter-increment: item;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+body header main .how-it-works ol li {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
   text-align: center;
   background: #9356dc;
   border-radius: 50%;
-  width: 2vw;
-  padding: 0.3vw;
-  padding-left: 1.1vw;
-  color: white;
+  width: 20vw;
+  background: #cfcfcf;
+  margin: 1rem;
+  border-radius: 1rem;
+  padding: 2rem;
 }
 
-body main .container-restaurant-cards h3 {
+body header main .container-restaurant-cards h3 {
   font-size: 3vw;
   text-decoration: underline;
   margin-bottom: 1rem;
@@ -301,7 +196,7 @@ body main .container-restaurant-cards h3 {
   letter-spacing: 0.05rem;
 }
 
-body main .container-restaurant-cards .restaurant-cards {
+body header main .container-restaurant-cards .restaurant-cards {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -318,7 +213,7 @@ body main .container-restaurant-cards .restaurant-cards {
   margin-bottom: 1rem;
 }
 
-body main .container-restaurant-cards img {
+body header main .container-restaurant-cards img {
   float: center;
   width: 20rem;
   height: 20rem;

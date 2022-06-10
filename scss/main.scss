@@ -47,30 +47,6 @@ body {
 				}
 			}
 		}
-		nav {
-			box-shadow: $boxShadow;
-			@include desktop {
-			}
-			.container-nav {
-				@include flexNav(row, white, black);
-				@include a;
-				display: flex;
-				margin-bottom: 1rem;
-				.home {
-					@include flexNav(row, white, black);
-					@include navLinks;
-				}
-				.about {
-					@include flexNav(row, white, black);
-					@include navLinks;
-				}
-				.menu {
-					@include flexNav(row, white, black);
-					@include navLinks;
-				}
-			}
-		}
-	}
 	main {
 		@include flexMain(column, white, black);
 		.briefDescOfComp {
@@ -116,28 +92,20 @@ body {
             font-size: $font-size-regular;
             color: black;
             text-align: center;
+			display: flex;
                 ol {
                     counter-reset: item;
                     font-size: $font-size-small;
                             li {
-                                display: flex;
+								justify-content: flex-start;
+                                text-align: center;
+                                background: $primaryColor;
+                                border-radius: 50%;
+                                width: 20vw;
                                 background: $Shadow;
                                 margin: 1rem;
                                 border-radius: $borderRadiusHowItWorks;
                                 padding: 2rem;
-                            }
-                            li:before {
-                                content: counter(item) " ";
-                                counter-increment: item;
-                                display: flex;
-                                justify-content: flex-start;
-                                text-align: center;
-                                background: $primaryColor;
-                                border-radius: 50%;
-                                width: 2vw;
-                                padding: 0.3vw;
-                                padding-left: 1.1vw;
-                                color: white;
                             }
                 }
         }
@@ -163,6 +131,7 @@ body {
 			}
 		}
 	}
+}
 }
 
 // background:#D2691E;
