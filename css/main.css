@@ -8,15 +8,6 @@ body div {
   margin: 0px;
 }
 
-@media (max-width: 1200px) {
-  body {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-  }
-}
-
 body header {
   -webkit-box-shadow: 0rem 0rem 1rem 0rem red;
           box-shadow: 0rem 0rem 1rem 0rem red;
@@ -78,7 +69,7 @@ body header .container-header .location .location-para {
   border-radius: 0.4rem;
 }
 
-body header main {
+body main {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -95,18 +86,18 @@ body header main {
   gap: 10%;
 }
 
-body header main .briefDescOfComp {
+body main .briefDescOfComp {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
+  background: #f6f6f6;
+  color: black;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  background: #f6f6f6;
-  color: black;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
   letter-spacing: 0.02rem;
   padding: 1rem;
   font-size: 2.4vw;
@@ -114,11 +105,11 @@ body header main .briefDescOfComp {
   font-family: "Roboto", sans-serif;
 }
 
-body header main .briefDescOfComp .span-h2 {
+body main .briefDescOfComp .span-h2 {
   margin-bottom: 0.5rem;
 }
 
-body header main .booking {
+body main .booking {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -138,13 +129,13 @@ body header main .booking {
   font-weight: bolder;
 }
 
-body header main .booking .span-booking {
+body main .booking .span-booking {
   font-size: 2vw;
   margin: 1rem 0rem;
   font-weight: normal;
 }
 
-body header main .booking .booking-button {
+body main .booking .booking-button {
   background: #ff79da;
   background-image: linear-gradient(350deg, #9356dc, #ff79da);
   border: none;
@@ -159,36 +150,68 @@ body header main .booking .booking-button {
           box-shadow: 0rem 0.3rem 0.5rem 0.1rem #cfcfcf;
 }
 
-body header main .how-it-works {
+body main .how-it-works {
   font-family: "Roboto", sans-serif;
   font-size: 2.4vw;
   color: black;
-  text-align: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  font-weight: 1000;
 }
 
-body header main .how-it-works ol {
+body main .how-it-works ol {
   counter-reset: item;
+  list-style-type: none;
   font-size: 2vw;
 }
 
-body header main .how-it-works ol li {
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+body main .how-it-works ol li {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   text-align: center;
   background: #9356dc;
   border-radius: 50%;
-  width: 20vw;
-  background: #cfcfcf;
+  width: 60vw;
+  background: #eeeeee;
   margin: 1rem;
   border-radius: 1rem;
   padding: 2rem;
 }
 
-body header main .container-restaurant-cards h3 {
+body main .how-it-works ol li .fa-mobile-screen {
+  position: absolute;
+  left: 35vw;
+  color: #545454;
+}
+
+body main .how-it-works ol li .fa-list-check {
+  position: absolute;
+  left: 35vw;
+  color: #545454;
+}
+
+body main .how-it-works ol li .fa-store {
+  position: absolute;
+  left: 35vw;
+  color: #545454;
+}
+
+body main .how-it-works ol li:before {
+  position: absolute;
+  left: 18vw;
+  content: counter(item) " ";
+  counter-increment: item;
+  background: #9356dc;
+  border-radius: 50%;
+  width: 2vw;
+  padding: 0.5vw;
+  color: white;
+}
+
+body main .how-it-works ol li:hover {
+  background: #9256dc28;
+}
+
+body main .container-restaurant-cards h3 {
   font-size: 3vw;
   text-decoration: underline;
   margin-bottom: 1rem;
@@ -196,7 +219,7 @@ body header main .container-restaurant-cards h3 {
   letter-spacing: 0.05rem;
 }
 
-body header main .container-restaurant-cards .restaurant-cards {
+body main .container-restaurant-cards .restaurant-cards {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -213,10 +236,10 @@ body header main .container-restaurant-cards .restaurant-cards {
   margin-bottom: 1rem;
 }
 
-body header main .container-restaurant-cards img {
+body main .container-restaurant-cards img {
   float: center;
-  width: 20rem;
-  height: 20rem;
+  width: 10rem;
+  height: 10rem;
   -o-object-fit: cover;
      object-fit: cover;
 }

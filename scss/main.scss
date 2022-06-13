@@ -9,9 +9,6 @@ body {
 	div {
 		margin: 0px;
 	}
-	@include desktop {
-		flex-direction: row;
-	}
 	header {
 		box-shadow: $boxShadow;
 		margin-bottom: 1rem;
@@ -47,6 +44,7 @@ body {
 				}
 			}
 		}
+	}
 	main {
 		@include flexMain(column, white, black);
 		.briefDescOfComp {
@@ -91,22 +89,51 @@ body {
             font-family: $fontRoboto;
             font-size: $font-size-regular;
             color: black;
-            text-align: center;
-			display: flex;
+			font-weight: $fontWeightBold;
                 ol {
                     counter-reset: item;
+					list-style-type: none;
                     font-size: $font-size-small;
                             li {
-								justify-content: flex-start;
+								justify-content: center;
                                 text-align: center;
                                 background: $primaryColor;
                                 border-radius: 50%;
-                                width: 20vw;
-                                background: $Shadow;
+                                width: 60vw;
+                                background: $ShadowHowItWorks;
                                 margin: 1rem;
                                 border-radius: $borderRadiusHowItWorks;
                                 padding: 2rem;
+									.fa-mobile-screen{
+										position: absolute;
+										left: 35vw;
+										color: rgb(84, 84, 84);
+									}
+									.fa-list-check {
+										position: absolute;
+										left: 35vw;
+										color: rgb(84, 84, 84);
+									}
+									.fa-store {
+										position: absolute;
+										left: 35vw;
+										color: rgb(84, 84, 84);
+									}
                             }
+							li:before {
+								position:absolute;
+								left: 18vw;
+								content: counter(item) " ";
+								counter-increment: item;
+								background: $primaryColor;
+								border-radius: 50%;
+								width: 2vw;
+								padding: 0.5vw;
+								color: white;
+								}
+								li:hover {
+									background: #9256dc28;
+								}
                 }
         }
 		.container-restaurant-cards {
@@ -125,13 +152,12 @@ body {
 			}
 			img {
 				float: center;
-				width: 20rem;
-				height: 20rem;
+				width: 10rem;
+				height: 10rem;
 				object-fit: cover;
 			}
 		}
 	}
-}
 }
 
 // background:#D2691E;

@@ -2,6 +2,7 @@ $primaryColor: #9356dc;
 $secondaryColor: #ff79da;
 $tertiaryColor: #99e2d0;
 $Shadow: #cfcfcf;
+$ShadowHowItWorks: #eeeeee;
 $boxShadow: 0rem 0rem 1rem 0rem red;
 $boxShadowLinks: 0rem 0rem 0.5rem 0.5rem $Shadow;
 $boxShadowButton: 0rem 0.3rem 0.5rem 0.1rem $Shadow;
@@ -49,11 +50,8 @@ $letterSpacing: 0.05rem;
 	gap: 10%;
 }
 @mixin briefDescOfComp($direction, $background, $color) {
-	display: flex;
+	@include backgroundColorFlexDirection($direction, $background, $color);
 	flex-wrap: nowrap;
-	flex-direction: $direction;
-	background: $background;
-	color: $color;
 }
 @mixin flexBooking($direction, $background, $color) {
 	display: flex;
