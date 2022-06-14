@@ -135,19 +135,34 @@ body main .booking .span-booking {
   font-weight: normal;
 }
 
-body main .booking .booking-button {
+body main .booking .booking-btn {
   background: #ff79da;
   background-image: linear-gradient(350deg, #9356dc, #ff79da);
   border: none;
   border-radius: 5rem;
-  color: white;
   text-align: center;
-  text-decoration: none;
   font-family: "Roboto", sans-serif;
   font-size: 3vw;
   padding: 2rem;
   -webkit-box-shadow: 0rem 0.3rem 0.5rem 0.1rem #cfcfcf;
           box-shadow: 0rem 0.3rem 0.5rem 0.1rem #cfcfcf;
+  cursor: pointer;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+body main .booking .booking-btn .booking-btn:hover {
+  -webkit-transition: -webkit-transform 0.3s ease-in-out;
+  transition: -webkit-transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+  -webkit-transform: scale(2);
+          transform: scale(2);
+}
+
+body main .booking .booking-btn .booking-btn-a {
+  text-decoration: none;
+  color: white;
 }
 
 body main .how-it-works {
