@@ -12,6 +12,7 @@ $font-size-large: 3vw;
 $fontWeightThin: 300;
 $fontWeightRegular: 500;
 $fontWeightBold: 1000;
+$fontWeightBolder: 0px 1px, 1px 0px, 1px 1px;
 $tablets: 768px;
 $laptop: 1024px;
 $desktop: 1200px;
@@ -54,18 +55,10 @@ $letterSpacing: 0.05rem;
 	flex-wrap: nowrap;
 }
 @mixin flexBooking($direction, $background, $color) {
-	display: flex;
-	flex-direction: $direction;
-	background: $background;
-	color: $color;
-	gap: 10%;
+	@include backgroundColorFlexDirection($direction, $background, $color);
 }
 @mixin flexCards($direction, $background, $color) {
-	display: flex;
-	flex-direction: $direction;
-	background: $background;
-	color: $color;
-	gap: 10%;
+	@include backgroundColorFlexDirection($direction, $background, $color);
 }
 @mixin a {
 	a:link {
@@ -86,6 +79,12 @@ $letterSpacing: 0.05rem;
 		text-align: center;
 		color: $tertiaryColor;
 	}
+}
+@mixin restuarantCards {
+	box-shadow: $boxShadowButton;
+	border-radius: $borderRadius;
+	margin: 1rem;
+	width: 99%;
 }
 @mixin desktop {
 	@media (max-width: $desktop) {

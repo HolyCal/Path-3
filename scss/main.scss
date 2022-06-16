@@ -2,12 +2,22 @@
 @import "header";
 @import "nav";
 @import "body";
-
+// @import "./fontawesome/scss/fontawesome.scss";
+// @import "./fontawesome/scss/solid.scss";
+// @import "./fontawesome/scss/brands.scss";
+* {
+	padding: 0;
+	margin: 0;
+}
 body {
 	background: white;
 	box-shadow: $boxShadow;
+	overflow:auto;
 	div {
 		margin: 0px;
+	}
+	p {
+		white-space: pre-line;
 	}
 	header {
 		box-shadow: $boxShadow;
@@ -65,11 +75,15 @@ body {
 			margin-bottom: 1rem;
 			font-family: $fontRoboto;
 			font-size: $font-size-regular;
-			font-weight: bolder;
+			font-weight: $fontWeightBold;
+			text-shadow: $fontWeightBolder;
+			letter-spacing: 0.1rem;
 			.span-booking {
 				font-size: $font-size-small;
 				margin: 1rem 0rem;
-				font-weight: normal;
+				font-weight: $font-size-regular;
+				text-shadow: none;
+				color: grey;
 			}
 			.booking-btn {
 				background: $secondaryColor;
@@ -79,9 +93,12 @@ body {
 				text-align: center;
 				font-family: $fontRoboto;
 				font-size: $font-size-large;
-				padding: 2rem;
+				padding: 1.5rem;
 				box-shadow: $boxShadowButton;
 				cursor: pointer;
+				font-weight: $fontWeightBold;
+				text-shadow: $fontWeightBolder;
+				letter-spacing: 0.1rem;
 				transform: scale(1);
 					// hover not working!!!!!!
 					.booking-btn:hover {
@@ -100,10 +117,14 @@ body {
 			font-size: $font-size-regular;
 			color: black;
 			font-weight: $fontWeightBold;
+			text-shadow: $fontWeightBolder;
+			letter-spacing: 0.1rem;
 			ol {
 				counter-reset: item;
 				list-style-type: none;
 				font-size: $font-size-small;
+				text-shadow: none;
+				letter-spacing: 0;
 				li {
 					justify-content: center;
 					text-align: center;
@@ -129,10 +150,13 @@ body {
 						left: 35vw;
 						color: rgb(84, 84, 84);
 					}
+					.fa-solid:hover {
+						color: $primaryColor;
+					}
 				}
 				li:before {
 					position: absolute;
-					left: 18vw;
+					left: 18%;
 					content: counter(item) " ";
 					counter-increment: item;
 					background: $primaryColor;
@@ -153,19 +177,66 @@ body {
 				margin-bottom: 1rem;
 				font-family: $fontShirkhand;
 				letter-spacing: $letterSpacing;
+				width: 95vw;
 			}
 			.restaurant-cards {
 				@include flexCards(column, white, black);
 				box-shadow: $boxShadow;
 				padding: 0rem 1rem;
 				margin-bottom: 1rem;
+				font-family: $fontRoboto;
+				font-size: $font-size-large;
+				text-align: left;
+				span {
+					display: block;
+					margin-left: 1rem;
+					margin-top: 1rem;
+					font-weight: $fontWeightBold;
+				}
+				.restaurant-card-location {
+					display: block;
+					margin-left: 1rem;
+					font-weight: $fontWeightRegular;
+				}
+				.fa-heart {
+					color: black;
+					position: absolute;
+					margin-left: 80vw;
+					font-size: $font-size-large;
+					color: red;
+				}
+				.the-full-pallete-box {
+					@include restuarantCards;
+				}
+				.new {
+						position: absolute;
+						top: 74rem;
+						color: #0a5743b6;
+						font-family: $fontRoboto;
+						font-size: $font-size-large;
+						font-weight: $fontWeightBold;
+						background: $tertiaryColor;
+					}
+				.the-enchanted-plate-box {
+					@include restuarantCards;
+				}
+				.bastille-box {
+					@include restuarantCards;
+				}
+				.le-gourmand-box {
+					@include restuarantCards;
+				}
+				img {
+					float: center;
+					width: 100%;
+					height: 20vh;
+					object-fit: cover;
+					border-top-left-radius: $borderRadius;
+					border-top-right-radius: $borderRadius;
+				}
+
 			}
-			img {
-				float: center;
-				width: 10rem;
-				height: 10rem;
-				object-fit: cover;
-			}
+			
 		}
 	}
 }
