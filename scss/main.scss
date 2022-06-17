@@ -156,7 +156,7 @@ body {
 				}
 				li:before {
 					position: absolute;
-					left: 18%;
+					left: 16%;
 					content: counter(item) " ";
 					counter-increment: item;
 					background: $primaryColor;
