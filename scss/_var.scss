@@ -6,9 +6,9 @@ $ShadowHowItWorks: #eeeeee;
 $boxShadow: 0rem 0rem 1rem 0rem red;
 $boxShadowLinks: 0rem 0rem 0.5rem 0.5rem $Shadow;
 $boxShadowButton: 0rem 0.3rem 0.5rem 0.1rem $Shadow;
-$font-size-small: 2vw;
-$font-size-regular: 2.4vw;
-$font-size-large: 3vw;
+$font-size-small: 1rem;
+$font-size-regular: 1.2rem;
+$font-size-large: 1.8rem;
 $fontWeightThin: 300;
 $fontWeightRegular: 500;
 $fontWeightBold: 1000;
@@ -24,70 +24,94 @@ $fontRoboto: "Roboto", sans-serif;
 $fontShirkhand: "Shrikhand", cursive;
 $letterSpacing: 0.05rem;
 
-
 @mixin marginBottom($marginBottom) {
   margin-bottom: 1rem;
 }
 @mixin logoImg {
-	justify-content: center;
-	align-self: center;
-	text-align: center;
-	margin-top: 0.5rem;
-  	padding-top: 1rem;
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  text-align: center;
+  margin-top: 0.5rem;
+  padding-top: 1rem;
 }
-@mixin backgroundColorFlexDirection ($direction, $background, $color) {
-	display: flex;
-	background: $background;
-	color: $color;
-	flex-direction: $direction;
+@mixin menuLogoImg {
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  text-align: center;
+  margin-top: 0.5rem;
+  padding-top: 1rem;
+}
+@mixin backgroundColorFlexDirection($direction, $background, $color) {
+  display: flex;
+  background: $background;
+  color: $color;
+  flex-direction: $direction;
 }
 @mixin flexHeader($direction, $background, $color) {
-	@include backgroundColorFlexDirection($direction, $background, $color);
+  @include backgroundColorFlexDirection($direction, $background, $color);
 }
 @mixin flexMain($direction, $background, $color) {
-	@include backgroundColorFlexDirection($direction, $background, $color);
-	align-items: center;
-	text-align: center;
-	gap: 10%;
+  @include backgroundColorFlexDirection($direction, $background, $color);
+  align-items: center;
+  text-align: center;
+  gap: 10%;
 }
 @mixin briefDescOfComp($direction, $background, $color) {
-	@include backgroundColorFlexDirection($direction, $background, $color);
-	flex-wrap: nowrap;
+  @include backgroundColorFlexDirection($direction, $background, $color);
+  flex-wrap: nowrap;
 }
 @mixin flexBooking($direction, $background, $color) {
-	@include backgroundColorFlexDirection($direction, $background, $color);
+  @include backgroundColorFlexDirection($direction, $background, $color);
 }
 @mixin flexCards($direction, $background, $color) {
-	@include backgroundColorFlexDirection($direction, $background, $color);
+  @include backgroundColorFlexDirection($direction, $background, $color);
 }
 @mixin a {
-	a:link {
-		text-decoration: none;
-		font-size: 2.5vw;
-		text-align: center;
-		color: $primaryColor;
-	}
-	a:visited {
-		text-decoration: none;
-		font-size: 2.5vw;
-		text-align: center;
-		color: $secondaryColor;
-	}
-	a:hover {
-		text-decoration: underline;
-		font-size: 3vw;
-		text-align: center;
-		color: $tertiaryColor;
-	}
+  a:link {
+    text-decoration: none;
+    font-size: 2.5vw;
+    text-align: center;
+    color: $primaryColor;
+  }
+  a:visited {
+    text-decoration: none;
+    font-size: 2.5vw;
+    text-align: center;
+    color: $secondaryColor;
+  }
+  a:hover {
+    text-decoration: underline;
+    font-size: 3vw;
+    text-align: center;
+    color: $tertiaryColor;
+  }
 }
 @mixin restuarantCards {
-	box-shadow: $boxShadowButton;
-	border-radius: $borderRadius;
-	margin: 1rem;
-	width: 99%;
+  box-shadow: $boxShadowButton;
+  border-radius: $borderRadius;
+  margin: 1rem 0rem;
+  width: 99%;
+}
+@mixin flexFooter {
+  background: #696969;
+}
+@mixin footerLinks {
+  color: white;
+  margin-left: 1rem;
+  font: $font-size-small $fontRoboto;
+  padding-bottom: 0.5rem;
+  white-space: normal;
+}
+@mixin menuPageBackgroundImg {
+  height: 10vh;
+  width: 100%;
+  float: center;
+  object-fit: cover;
 }
 @mixin desktop {
-	@media (max-width: $desktop) {
-		@content;
-	}
+  @media (max-width: $desktop) {
+    @content;
+  }
 }

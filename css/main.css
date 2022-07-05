@@ -9,15 +9,12 @@ body {
           box-shadow: 0rem 0rem 1rem 0rem red;
   overflow: auto;
 }
-
 body div {
   margin: 0px;
 }
-
 body p {
   white-space: pre-line;
 }
-
 body header {
   -webkit-box-shadow: 0rem 0rem 1rem 0rem red;
           box-shadow: 0rem 0rem 1rem 0rem red;
@@ -32,53 +29,49 @@ body header {
       -ms-flex-direction: column;
           flex-direction: column;
 }
-
 body header .container-header .logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
       align-self: center;
   text-align: center;
   margin-top: 0.5rem;
   padding-top: 1rem;
 }
-
 body header .container-header .logo .logo-img {
   float: center;
-  height: 5rem;
+  height: 4rem;
   width: 15rem;
 }
-
 body header .container-header .subtitle {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   text-align: center;
-  font-size: 2vw;
+  font-size: 1rem;
   letter-spacing: 0.05rem;
   font-family: "Shrikhand", cursive;
 }
-
 body header .container-header .location {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   text-align: center;
-  font-size: 2vw;
+  font-size: 1rem;
   background: rgba(0, 0, 0, 0.134);
   padding: 0.8rem;
   border-top: 0.3rem solid rgba(65, 65, 65, 0.164);
 }
-
 body header .container-header .location .location-para {
   display: inline;
   font-family: "Roboto", sans-serif;
   margin-left: 0.3rem;
   border-radius: 0.4rem;
 }
-
 body main {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -95,12 +88,11 @@ body main {
   text-align: center;
   gap: 10%;
 }
-
 body main .briefDescOfComp {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  background: #f6f6f6;
+  background: rgb(246, 246, 246);
   color: black;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
@@ -110,15 +102,13 @@ body main .briefDescOfComp {
       flex-wrap: nowrap;
   letter-spacing: 0.02rem;
   padding: 1rem;
-  font-size: 2.4vw;
+  font-size: 1.2rem;
   margin-bottom: 1rem;
   font-family: "Roboto", sans-serif;
 }
-
 body main .briefDescOfComp .span-h2 {
   margin-bottom: 0.5rem;
 }
-
 body main .booking {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -134,20 +124,18 @@ body main .booking {
   padding: 1rem 1rem;
   margin-bottom: 1rem;
   font-family: "Roboto", sans-serif;
-  font-size: 2.4vw;
+  font-size: 1.2rem;
   font-weight: 1000;
   text-shadow: 0px 1px, 1px 0px, 1px 1px;
   letter-spacing: 0.1rem;
 }
-
 body main .booking .span-booking {
-  font-size: 2vw;
+  font-size: 1rem;
   margin: 1rem 0rem;
-  font-weight: 2.4vw;
+  font-weight: 1.2rem;
   text-shadow: none;
   color: grey;
 }
-
 body main .booking .booking-btn {
   background: #ff79da;
   background-image: linear-gradient(350deg, #9356dc, #ff79da);
@@ -155,7 +143,7 @@ body main .booking .booking-btn {
   border-radius: 5rem;
   text-align: center;
   font-family: "Roboto", sans-serif;
-  font-size: 3vw;
+  font-size: 1.8rem;
   padding: 1.5rem;
   -webkit-box-shadow: 0rem 0.3rem 0.5rem 0.1rem #cfcfcf;
           box-shadow: 0rem 0.3rem 0.5rem 0.1rem #cfcfcf;
@@ -166,39 +154,36 @@ body main .booking .booking-btn {
   -webkit-transform: scale(1);
           transform: scale(1);
 }
-
-body main .booking .booking-btn .booking-btn:hover {
-  -webkit-transition: -webkit-transform 0.3s ease-in-out;
-  transition: -webkit-transform 0.3s ease-in-out;
-  transition: transform 0.3s ease-in-out;
-  transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
-  -webkit-transform: scale(2);
-          transform: scale(2);
-}
-
 body main .booking .booking-btn .booking-btn-a {
   text-decoration: none;
   color: white;
 }
-
+body main .booking .booking-btn:hover {
+  -webkit-transition: -webkit-transform 0.3s ease-in-out;
+  transition: -webkit-transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+}
 body main .how-it-works {
   font-family: "Roboto", sans-serif;
-  font-size: 2.4vw;
+  font-size: 1.2rem;
   color: black;
   font-weight: 1000;
   text-shadow: 0px 1px, 1px 0px, 1px 1px;
   letter-spacing: 0.1rem;
 }
-
 body main .how-it-works ol {
   counter-reset: item;
   list-style-type: none;
-  font-size: 2vw;
+  font-size: 1rem;
+  font-weight: 500;
   text-shadow: none;
   letter-spacing: 0;
 }
-
 body main .how-it-works ol li {
+  position: relative;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -211,54 +196,46 @@ body main .how-it-works ol li {
   border-radius: 1rem;
   padding: 2rem;
 }
-
 body main .how-it-works ol li .fa-mobile-screen {
   position: absolute;
-  left: 35vw;
-  color: #545454;
+  left: 6vw;
+  color: rgb(84, 84, 84);
 }
-
 body main .how-it-works ol li .fa-list-check {
   position: absolute;
-  left: 35vw;
-  color: #545454;
+  left: 6vw;
+  color: rgb(84, 84, 84);
 }
-
 body main .how-it-works ol li .fa-store {
   position: absolute;
-  left: 35vw;
-  color: #545454;
+  left: 6vw;
+  color: rgb(84, 84, 84);
 }
-
 body main .how-it-works ol li .fa-solid:hover {
   color: #9356dc;
 }
-
 body main .how-it-works ol li:before {
   position: absolute;
-  left: 16%;
+  left: -0.5rem;
   content: counter(item) " ";
   counter-increment: item;
   background: #9356dc;
   border-radius: 50%;
-  width: 2vw;
+  width: 5vw;
   padding: 0.5vw;
   color: white;
 }
-
 body main .how-it-works ol li:hover {
-  background: #9256dc28;
+  background: rgba(146, 86, 220, 0.1568627451);
 }
-
 body main .container-restaurant-cards h3 {
-  font-size: 3vw;
+  font-size: 1.8rem;
   text-decoration: underline;
   margin-bottom: 1rem;
   font-family: "Shrikhand", cursive;
   letter-spacing: 0.05rem;
   width: 95vw;
 }
-
 body main .container-restaurant-cards .restaurant-cards {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -274,73 +251,66 @@ body main .container-restaurant-cards .restaurant-cards {
   padding: 0rem 1rem;
   margin-bottom: 1rem;
   font-family: "Roboto", sans-serif;
-  font-size: 3vw;
+  font-size: 1.8rem;
   text-align: left;
 }
-
 body main .container-restaurant-cards .restaurant-cards span {
   display: block;
-  margin-left: 1rem;
-  margin-top: 1rem;
+  margin-top: 0.8rem;
+  margin-left: 0.8rem;
   font-weight: 1000;
 }
-
 body main .container-restaurant-cards .restaurant-cards .restaurant-card-location {
   display: block;
-  margin-left: 1rem;
   font-weight: 500;
+  margin-left: 0.8rem;
 }
-
 body main .container-restaurant-cards .restaurant-cards .fa-heart {
   color: black;
   position: absolute;
-  margin-left: 80vw;
-  font-size: 3vw;
-  color: red;
+  margin-left: 75vw;
+  font-size: 1.8rem;
+  border: solid red;
+  color: white;
 }
-
 body main .container-restaurant-cards .restaurant-cards .the-full-pallete-box {
   -webkit-box-shadow: 0rem 0.3rem 0.5rem 0.1rem #cfcfcf;
           box-shadow: 0rem 0.3rem 0.5rem 0.1rem #cfcfcf;
   border-radius: 0.4rem;
-  margin: 1rem;
+  margin: 1rem 0rem;
   width: 99%;
+  display: absolute;
 }
-
 body main .container-restaurant-cards .restaurant-cards .new {
   position: absolute;
-  top: 74rem;
-  color: #0a5743b6;
+  bottom: 74rem;
+  color: rgba(10, 87, 67, 0.7137254902);
   font-family: "Roboto", sans-serif;
-  font-size: 3vw;
+  font-size: 1.8rem;
   font-weight: 1000;
   background: #99e2d0;
 }
-
 body main .container-restaurant-cards .restaurant-cards .the-enchanted-plate-box {
   -webkit-box-shadow: 0rem 0.3rem 0.5rem 0.1rem #cfcfcf;
           box-shadow: 0rem 0.3rem 0.5rem 0.1rem #cfcfcf;
   border-radius: 0.4rem;
-  margin: 1rem;
+  margin: 1rem 0rem;
   width: 99%;
 }
-
 body main .container-restaurant-cards .restaurant-cards .bastille-box {
   -webkit-box-shadow: 0rem 0.3rem 0.5rem 0.1rem #cfcfcf;
           box-shadow: 0rem 0.3rem 0.5rem 0.1rem #cfcfcf;
   border-radius: 0.4rem;
-  margin: 1rem;
+  margin: 1rem 0rem;
   width: 99%;
 }
-
 body main .container-restaurant-cards .restaurant-cards .le-gourmand-box {
   -webkit-box-shadow: 0rem 0.3rem 0.5rem 0.1rem #cfcfcf;
           box-shadow: 0rem 0.3rem 0.5rem 0.1rem #cfcfcf;
   border-radius: 0.4rem;
-  margin: 1rem;
+  margin: 1rem 0rem;
   width: 99%;
 }
-
 body main .container-restaurant-cards .restaurant-cards img {
   float: center;
   width: 100%;
@@ -349,4 +319,61 @@ body main .container-restaurant-cards .restaurant-cards img {
      object-fit: cover;
   border-top-left-radius: 0.4rem;
   border-top-right-radius: 0.4rem;
+}
+body footer {
+  -webkit-box-shadow: 0rem 0rem 1rem 0rem red;
+          box-shadow: 0rem 0rem 1rem 0rem red;
+  background: #696969;
+  padding-bottom: 1rem;
+}
+body footer .footer-logo-img {
+  height: 1rem;
+  width: 6rem;
+  margin-left: 1rem;
+  -webkit-filter: invert(100%);
+          filter: invert(100%);
+  margin: 1rem;
+}
+body footer .footer-p {
+  color: white;
+  margin-left: 1rem;
+  font: 1rem "Roboto", sans-serif;
+  padding-bottom: 0.5rem;
+  white-space: normal;
+}
+body footer .support-a-restaurant-p {
+  color: white;
+  margin-left: 1rem;
+  font: 1rem "Roboto", sans-serif;
+  padding-bottom: 0.5rem;
+  white-space: normal;
+  font-weight: 1000;
+}
+body footer .support-a-restaurant-p .fa-utensils {
+  margin-right: 1.2rem;
+}
+body footer .become-a-partner-p {
+  color: white;
+  margin-left: 1rem;
+  font: 1rem "Roboto", sans-serif;
+  padding-bottom: 0.5rem;
+  white-space: normal;
+  font-weight: 1000;
+}
+body footer .become-a-partner-p .fa-handshake-angle {
+  margin-right: 0.8rem;
+}
+body footer .legal-p {
+  color: white;
+  margin-left: 1rem;
+  font: 1rem "Roboto", sans-serif;
+  padding-bottom: 0.5rem;
+  white-space: normal;
+}
+body footer .contact-p {
+  color: white;
+  margin-left: 1rem;
+  font: 1rem "Roboto", sans-serif;
+  padding-bottom: 0.5rem;
+  white-space: normal;
 }

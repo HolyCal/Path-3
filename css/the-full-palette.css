@@ -1,0 +1,60 @@
+body {
+  background: white;
+  -webkit-box-shadow: 0rem 0rem 1rem 0rem red;
+          box-shadow: 0rem 0rem 1rem 0rem red;
+  overflow: auto;
+}
+body div {
+  margin: 0px;
+}
+body p {
+  white-space: pre-line;
+}
+body header {
+  -webkit-box-shadow: 0rem 0rem 1rem 0rem red;
+          box-shadow: 0rem 0rem 1rem 0rem red;
+  margin-bottom: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background: white;
+  color: black;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+body header .container-header .logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-item-align: center;
+      align-self: center;
+  text-align: center;
+  margin-top: 0.5rem;
+  padding-top: 1rem;
+}
+body header .container-header .logo .menu-logo-img {
+  float: center;
+  height: 1rem;
+  width: 5rem;
+}
+body header .container-header .subtitle {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  font-size: 1rem;
+  letter-spacing: 0.05rem;
+  font-family: "Shrikhand", cursive;
+}
+body header .container-header .header-image .background-image {
+  height: 10vh;
+  width: 100%;
+  float: center;
+  -o-object-fit: cover;
+     object-fit: cover;
+}

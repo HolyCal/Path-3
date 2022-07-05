@@ -2,243 +2,280 @@
 @import "header";
 @import "nav";
 @import "body";
-// @import "./fontawesome/scss/fontawesome.scss";
-// @import "./fontawesome/scss/solid.scss";
-// @import "./fontawesome/scss/brands.scss";
+
 * {
-	padding: 0;
-	margin: 0;
+  padding: 0;
+  margin: 0;
 }
 body {
-	background: white;
-	box-shadow: $boxShadow;
-	overflow:auto;
-	div {
-		margin: 0px;
-	}
-	p {
-		white-space: pre-line;
-	}
-	header {
-		box-shadow: $boxShadow;
-		margin-bottom: 1rem;
-		@include flexHeader(column, white, black);
-		.container-header {
-			.logo {
-				@include logoImg;
-				.logo-img {
-					float: center;
-					height: 5rem;
-					width: 15rem;
-				}
-			}
-			.subtitle {
-				justify-content: center;
-				text-align: center;
-				font-size: $font-size-small;
-				letter-spacing: $letterSpacing;
-				font-family: $fontShirkhand;
-			}
-			.location {
-				justify-content: center;
-				text-align: center;
-				font-size: $font-size-small;
-				background: rgba(0, 0, 0, 0.134);
-				padding: 0.8rem;
-				border-top: 0.3rem solid rgba(65, 65, 65, 0.164);
-				.location-para {
-					display: inline;
-					font-family: $fontRoboto;
-					margin-left: 0.3rem;
-					border-radius: $borderRadius;
-				}
-			}
-		}
-	}
-	main {
-		@include flexMain(column, white, black);
-		.briefDescOfComp {
-			@include briefDescOfComp(column, rgb(246, 246, 246), black);
-			letter-spacing: 0.02rem;
-			padding: 1rem;
-			font-size: $font-size-regular;
-			margin-bottom: 1rem;
-			font-family: $fontRoboto;
-			.span-h2 {
-				margin-bottom: 0.5rem;
-			}
-		}
-		.booking {
-			@include flexBooking(column, white, black);
-			box-shadow: $boxShadow;
-			padding: 1rem 1rem;
-			margin-bottom: 1rem;
-			font-family: $fontRoboto;
-			font-size: $font-size-regular;
-			font-weight: $fontWeightBold;
-			text-shadow: $fontWeightBolder;
-			letter-spacing: 0.1rem;
-			.span-booking {
-				font-size: $font-size-small;
-				margin: 1rem 0rem;
-				font-weight: $font-size-regular;
-				text-shadow: none;
-				color: grey;
-			}
-			.booking-btn {
-				background: $secondaryColor;
-				background-image: linear-gradient(350deg, $primaryColor, $secondaryColor);
-				border: none;
-				border-radius: $borderRadiusButton;
-				text-align: center;
-				font-family: $fontRoboto;
-				font-size: $font-size-large;
-				padding: 1.5rem;
-				box-shadow: $boxShadowButton;
-				cursor: pointer;
-				font-weight: $fontWeightBold;
-				text-shadow: $fontWeightBolder;
-				letter-spacing: 0.1rem;
-				transform: scale(1);
-					// hover not working!!!!!!
-					.booking-btn:hover {
-						transition: transform 0.3s ease-in-out;
-						transform: scale(2);
-					}
-					// hover not working!!!!!!
-				.booking-btn-a {
-					text-decoration: none;
-					color: white;
-				}
-			}
-		}
-		.how-it-works {
-			font-family: $fontRoboto;
-			font-size: $font-size-regular;
-			color: black;
-			font-weight: $fontWeightBold;
-			text-shadow: $fontWeightBolder;
-			letter-spacing: 0.1rem;
-			ol {
-				counter-reset: item;
-				list-style-type: none;
-				font-size: $font-size-small;
-				text-shadow: none;
-				letter-spacing: 0;
-				li {
-					justify-content: center;
-					text-align: center;
-					background: $primaryColor;
-					border-radius: 50%;
-					width: 60vw;
-					background: $ShadowHowItWorks;
-					margin: 1rem;
-					border-radius: $borderRadiusHowItWorks;
-					padding: 2rem;
-					.fa-mobile-screen {
-						position: absolute;
-						left: 35vw;
-						color: rgb(84, 84, 84);
-					}
-					.fa-list-check {
-						position: absolute;
-						left: 35vw;
-						color: rgb(84, 84, 84);
-					}
-					.fa-store {
-						position: absolute;
-						left: 35vw;
-						color: rgb(84, 84, 84);
-					}
-					.fa-solid:hover {
-						color: $primaryColor;
-					}
-				}
-				li:before {
-					position: absolute;
-					left: 16%;
-					content: counter(item) " ";
-					counter-increment: item;
-					background: $primaryColor;
-					border-radius: 50%;
-					width: 2vw;
-					padding: 0.5vw;
-					color: white;
-				}
-				li:hover {
-					background: #9256dc28;
-				}
-			}
-		}
-		.container-restaurant-cards {
-			h3 {
-				font-size: $font-size-large;
-				text-decoration: underline;
-				margin-bottom: 1rem;
-				font-family: $fontShirkhand;
-				letter-spacing: $letterSpacing;
-				width: 95vw;
-			}
-			.restaurant-cards {
-				@include flexCards(column, white, black);
-				box-shadow: $boxShadow;
-				padding: 0rem 1rem;
-				margin-bottom: 1rem;
-				font-family: $fontRoboto;
-				font-size: $font-size-large;
-				text-align: left;
-				span {
-					display: block;
-					margin-left: 1rem;
-					margin-top: 1rem;
-					font-weight: $fontWeightBold;
-				}
-				.restaurant-card-location {
-					display: block;
-					margin-left: 1rem;
-					font-weight: $fontWeightRegular;
-				}
-				.fa-heart {
-					color: black;
-					position: absolute;
-					margin-left: 80vw;
-					font-size: $font-size-large;
-					color: red;
-				}
-				.the-full-pallete-box {
-					@include restuarantCards;
-				}
-				.new {
-						position: absolute;
-						top: 74rem;
-						color: #0a5743b6;
-						font-family: $fontRoboto;
-						font-size: $font-size-large;
-						font-weight: $fontWeightBold;
-						background: $tertiaryColor;
-					}
-				.the-enchanted-plate-box {
-					@include restuarantCards;
-				}
-				.bastille-box {
-					@include restuarantCards;
-				}
-				.le-gourmand-box {
-					@include restuarantCards;
-				}
-				img {
-					float: center;
-					width: 100%;
-					height: 20vh;
-					object-fit: cover;
-					border-top-left-radius: $borderRadius;
-					border-top-right-radius: $borderRadius;
-				}
-
-			}
-			
-		}
-	}
+  background: white;
+  box-shadow: $boxShadow;
+  overflow: auto;
+  div {
+    margin: 0px;
+  }
+  p {
+    white-space: pre-line;
+  }
+  header {
+    box-shadow: $boxShadow;
+    margin-bottom: 1rem;
+    @include flexHeader(column, white, black);
+    .container-header {
+      .logo {
+        @include logoImg;
+        .logo-img {
+          float: center;
+          height: 4rem;
+          width: 15rem;
+        }
+      }
+      .subtitle {
+        justify-content: center;
+        text-align: center;
+        font-size: $font-size-small;
+        letter-spacing: $letterSpacing;
+        font-family: $fontShirkhand;
+      }
+      .location {
+        justify-content: center;
+        text-align: center;
+        font-size: $font-size-small;
+        background: rgba(0, 0, 0, 0.134);
+        padding: 0.8rem;
+        border-top: 0.3rem solid rgba(65, 65, 65, 0.164);
+        .location-para {
+          display: inline;
+          font-family: $fontRoboto;
+          margin-left: 0.3rem;
+          border-radius: $borderRadius;
+        }
+      }
+    }
+  }
+  main {
+    @include flexMain(column, white, black);
+    .briefDescOfComp {
+      @include briefDescOfComp(column, rgb(246, 246, 246), black);
+      letter-spacing: 0.02rem;
+      padding: 1rem;
+      font-size: $font-size-regular;
+      margin-bottom: 1rem;
+      font-family: $fontRoboto;
+      .span-h2 {
+        margin-bottom: 0.5rem;
+      }
+    }
+    .booking {
+      @include flexBooking(column, white, black);
+      box-shadow: $boxShadow;
+      padding: 1rem 1rem;
+      margin-bottom: 1rem;
+      font-family: $fontRoboto;
+      font-size: $font-size-regular;
+      font-weight: $fontWeightBold;
+      text-shadow: $fontWeightBolder;
+      letter-spacing: 0.1rem;
+      .span-booking {
+        font-size: $font-size-small;
+        margin: 1rem 0rem;
+        font-weight: $font-size-regular;
+        text-shadow: none;
+        color: grey;
+      }
+      .booking-btn {
+        background: $secondaryColor;
+        background-image: linear-gradient(
+          350deg,
+          $primaryColor,
+          $secondaryColor
+        );
+        border: none;
+        border-radius: $borderRadiusButton;
+        text-align: center;
+        font-family: $fontRoboto;
+        font-size: $font-size-large;
+        padding: 1.5rem;
+        box-shadow: $boxShadowButton;
+        cursor: pointer;
+        font-weight: $fontWeightBold;
+        text-shadow: $fontWeightBolder;
+        letter-spacing: 0.1rem;
+        transform: scale(1);
+        .booking-btn-a {
+          text-decoration: none;
+          color: white;
+        }
+        &:hover {
+          transition: transform 0.3s ease-in-out;
+          transform: scale(1.05);
+        }
+      }
+    }
+    .how-it-works {
+      font-family: $fontRoboto;
+      font-size: $font-size-regular;
+      color: black;
+      font-weight: $fontWeightBold;
+      text-shadow: $fontWeightBolder;
+      letter-spacing: 0.1rem;
+      ol {
+        counter-reset: item;
+        list-style-type: none;
+        font-size: $font-size-small;
+        font-weight: $fontWeightRegular;
+        text-shadow: none;
+        letter-spacing: 0;
+        li {
+          position: relative;
+          justify-content: center;
+          text-align: center;
+          background: $primaryColor;
+          border-radius: 50%;
+          width: 60vw;
+          background: $ShadowHowItWorks;
+          margin: 1rem;
+          border-radius: $borderRadiusHowItWorks;
+          padding: 2rem;
+          .fa-mobile-screen {
+            position: absolute;
+            left: 6vw;
+            color: rgb(84, 84, 84);
+          }
+          .fa-list-check {
+            position: absolute;
+            left: 6vw;
+            color: rgb(84, 84, 84);
+          }
+          .fa-store {
+            position: absolute;
+            left: 6vw;
+            color: rgb(84, 84, 84);
+          }
+          .fa-solid:hover {
+            color: $primaryColor;
+          }
+        }
+        li:before {
+          position: absolute;
+          left: -0.5rem;
+          content: counter(item) " ";
+          counter-increment: item;
+          background: $primaryColor;
+          border-radius: 50%;
+          width: 5vw;
+          padding: 0.5vw;
+          color: white;
+        }
+        li:hover {
+          background: #9256dc28;
+        }
+      }
+    }
+    .container-restaurant-cards {
+      h3 {
+        font-size: $font-size-large;
+        text-decoration: underline;
+        margin-bottom: 1rem;
+        font-family: $fontShirkhand;
+        letter-spacing: $letterSpacing;
+        width: 95vw;
+      }
+      .restaurant-cards {
+        @include flexCards(column, white, black);
+        box-shadow: $boxShadow;
+        padding: 0rem 1rem;
+        margin-bottom: 1rem;
+        font-family: $fontRoboto;
+        font-size: $font-size-large;
+        text-align: left;
+        span {
+          display: block;
+          margin-top: 0.8rem;
+          margin-left: 0.8rem;
+          font-weight: $fontWeightBold;
+        }
+        .restaurant-card-location {
+          display: block;
+          font-weight: $fontWeightRegular;
+          margin-left: 0.8rem;
+        }
+        .fa-heart {
+          color: black;
+          position: absolute;
+          margin-left: 75vw;
+          font-size: $font-size-large;
+          border: solid red;
+          color: white;
+        }
+        .the-full-pallete-box {
+          @include restuarantCards;
+          display: absolute;
+        }
+        .new {
+          position: absolute;
+          bottom: 74rem;
+          color: #0a5743b6;
+          font-family: $fontRoboto;
+          font-size: $font-size-large;
+          font-weight: $fontWeightBold;
+          background: $tertiaryColor;
+        }
+        .the-enchanted-plate-box {
+          @include restuarantCards;
+        }
+        .bastille-box {
+          @include restuarantCards;
+        }
+        .le-gourmand-box {
+          @include restuarantCards;
+        }
+        img {
+          float: center;
+          width: 100%;
+          height: 20vh;
+          object-fit: cover;
+          border-top-left-radius: $borderRadius;
+          border-top-right-radius: $borderRadius;
+        }
+      }
+    }
+  }
+  footer {
+    box-shadow: $boxShadow;
+    background: #696969;
+    padding-bottom: 1rem;
+    .footer-logo-img {
+      height: 1rem;
+      width: 6rem;
+      margin-left: 1rem;
+      filter: invert(100%);
+      margin: 1rem;
+    }
+    .footer-p {
+      @include footerLinks;
+    }
+    .support-a-restaurant-p {
+      @include footerLinks;
+      font-weight: $fontWeightBold;
+      .fa-utensils {
+        margin-right: 1.2rem;
+      }
+    }
+    .become-a-partner-p {
+      @include footerLinks;
+      font-weight: $fontWeightBold;
+      .fa-handshake-angle {
+        margin-right: 0.8rem;
+      }
+    }
+    .legal-p {
+      @include footerLinks;
+    }
+    .contact-p {
+      @include footerLinks;
+    }
+  }
 }
 
 // background:#D2691E;

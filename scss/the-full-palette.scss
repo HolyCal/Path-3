@@ -1,0 +1,40 @@
+@import "var";
+
+body {
+  background: white;
+  box-shadow: $boxShadow;
+  overflow: auto;
+  div {
+    margin: 0px;
+  }
+  p {
+    white-space: pre-line;
+  }
+  header {
+    box-shadow: $boxShadow;
+    margin-bottom: 1rem;
+    @include flexHeader(column, white, black);
+    .container-header {
+      .logo {
+        @include menuLogoImg;
+        .menu-logo-img {
+          float: center;
+          height: 1rem;
+          width: 5rem;
+        }
+      }
+      .subtitle {
+        justify-content: center;
+        text-align: center;
+        font-size: $font-size-small;
+        letter-spacing: $letterSpacing;
+        font-family: $fontShirkhand;
+      }
+      .header-image {
+        .background-image {
+          @include menuPageBackgroundImg;
+        }
+      }
+    }
+  }
+}
