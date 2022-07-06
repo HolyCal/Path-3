@@ -31,11 +31,7 @@ body {
         }
       }
       .subtitle {
-        justify-content: center;
-        text-align: center;
-        font-size: $font-size-small;
-        letter-spacing: $letterSpacing;
-        font-family: $fontShirkhand;
+        @include subtitle;
       }
       .location {
         justify-content: center;
@@ -77,13 +73,10 @@ body {
       text-shadow: $fontWeightBolder;
       letter-spacing: 0.1rem;
       .span-booking {
-        font-size: $font-size-small;
-        margin: 1rem 0rem;
-        font-weight: $font-size-regular;
-        text-shadow: none;
-        color: grey;
+        @include spanBooking;
       }
       .booking-btn {
+        @include bookingBtn;
         background: $secondaryColor;
         background-image: linear-gradient(
           350deg,
@@ -113,12 +106,7 @@ body {
       }
     }
     .how-it-works {
-      font-family: $fontRoboto;
-      font-size: $font-size-regular;
-      color: black;
-      font-weight: $fontWeightBold;
-      text-shadow: $fontWeightBolder;
-      letter-spacing: 0.1rem;
+      @include howItWorks;
       ol {
         counter-reset: item;
         list-style-type: none;
@@ -127,6 +115,7 @@ body {
         text-shadow: none;
         letter-spacing: 0;
         li {
+          @include howItWorksLi;
           position: relative;
           justify-content: center;
           text-align: center;
@@ -157,15 +146,7 @@ body {
           }
         }
         li:before {
-          position: absolute;
-          left: -0.5rem;
-          content: counter(item) " ";
-          counter-increment: item;
-          background: $primaryColor;
-          border-radius: 50%;
-          width: 5vw;
-          padding: 0.5vw;
-          color: white;
+          @include liBeforeHowItWorks;
         }
         li:hover {
           background: #9256dc28;
@@ -174,12 +155,7 @@ body {
     }
     .container-restaurant-cards {
       h3 {
-        font-size: $font-size-large;
-        text-decoration: underline;
-        margin-bottom: 1rem;
-        font-family: $fontShirkhand;
-        letter-spacing: $letterSpacing;
-        width: 95vw;
+        @include h3;
       }
       .restaurant-cards {
         @include flexCards(column, white, black);
@@ -189,6 +165,7 @@ body {
         font-family: $fontRoboto;
         font-size: $font-size-large;
         text-align: left;
+        position: relative;
         span {
           display: block;
           margin-top: 0.8rem;
@@ -200,19 +177,14 @@ body {
           font-weight: $fontWeightRegular;
           margin-left: 0.8rem;
         }
-        .fa-heart {
-          color: black;
-          position: absolute;
-          margin-left: 75vw;
-          font-size: $font-size-large;
-          border: solid red;
-          color: white;
-        }
         .the-full-pallete-box {
           @include restuarantCards;
           display: absolute;
           .new {
             @include New;
+          }
+          .fa-heart {
+            @include theFullPaletteHeartIcon;
           }
         }
         .the-enchanted-plate-box {
@@ -220,12 +192,21 @@ body {
           .new {
             @include New;
           }
+          .fa-heart {
+            @include theEnchantedPlateHeartIcon;
+          }
         }
         .bastille-box {
           @include restuarantCards;
+          .fa-heart {
+            @include bastilleHeartIcon;
+          }
         }
         .le-gourmand-box {
           @include restuarantCards;
+          .fa-heart {
+            @include leGourmandHeartIcon;
+          }
         }
         img {
           float: center;
