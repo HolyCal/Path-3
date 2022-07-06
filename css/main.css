@@ -64,7 +64,7 @@ body header .container-header .location {
   font-size: 1rem;
   background: rgba(0, 0, 0, 0.134);
   padding: 0.8rem;
-  border-top: 0.3rem solid rgba(65, 65, 65, 0.164);
+  border-top: 0.2rem solid rgba(65, 65, 65, 0.164);
 }
 body header .container-header .location .location-para {
   display: inline;
@@ -86,7 +86,6 @@ body main {
       -ms-flex-align: center;
           align-items: center;
   text-align: center;
-  gap: 10%;
 }
 body main .briefDescOfComp {
   display: -webkit-box;
@@ -281,14 +280,17 @@ body main .container-restaurant-cards .restaurant-cards .the-full-pallete-box {
   width: 99%;
   display: absolute;
 }
-body main .container-restaurant-cards .restaurant-cards .new {
+body main .container-restaurant-cards .restaurant-cards .the-full-pallete-box .new {
   position: absolute;
-  bottom: 74rem;
-  color: rgba(10, 87, 67, 0.7137254902);
+  margin: 1rem;
+  padding: 0.5rem 3rem;
+  left: 45%;
+  color: #017c5a;
   font-family: "Roboto", sans-serif;
-  font-size: 1.8rem;
+  font-size: 1.2rem;
   font-weight: 1000;
   background: #99e2d0;
+  border-radius: 0.2rem;
 }
 body main .container-restaurant-cards .restaurant-cards .the-enchanted-plate-box {
   -webkit-box-shadow: 0rem 0.3rem 0.5rem 0.1rem #cfcfcf;
@@ -296,6 +298,18 @@ body main .container-restaurant-cards .restaurant-cards .the-enchanted-plate-box
   border-radius: 0.4rem;
   margin: 1rem 0rem;
   width: 99%;
+}
+body main .container-restaurant-cards .restaurant-cards .the-enchanted-plate-box .new {
+  position: absolute;
+  margin: 1rem;
+  padding: 0.5rem 3rem;
+  left: 45%;
+  color: #017c5a;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 1000;
+  background: #99e2d0;
+  border-radius: 0.2rem;
 }
 body main .container-restaurant-cards .restaurant-cards .bastille-box {
   -webkit-box-shadow: 0rem 0.3rem 0.5rem 0.1rem #cfcfcf;

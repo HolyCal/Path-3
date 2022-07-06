@@ -56,7 +56,6 @@ $letterSpacing: 0.05rem;
   @include backgroundColorFlexDirection($direction, $background, $color);
   align-items: center;
   text-align: center;
-  gap: 10%;
 }
 @mixin briefDescOfComp($direction, $background, $color) {
   @include backgroundColorFlexDirection($direction, $background, $color);
@@ -93,6 +92,18 @@ $letterSpacing: 0.05rem;
   border-radius: $borderRadius;
   margin: 1rem 0rem;
   width: 99%;
+}
+@mixin New {
+  position: absolute;
+  margin: 1rem;
+  padding: 0.5rem 3rem;
+  left: 45%;
+  color: #017c5a;
+  font-family: $fontRoboto;
+  font-size: $font-size-regular;
+  font-weight: $fontWeightBold;
+  background: $tertiaryColor;
+  border-radius: 0.2rem;
 }
 @mixin flexFooter {
   background: #696969;

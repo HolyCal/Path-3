@@ -43,7 +43,7 @@ body {
         font-size: $font-size-small;
         background: rgba(0, 0, 0, 0.134);
         padding: 0.8rem;
-        border-top: 0.3rem solid rgba(65, 65, 65, 0.164);
+        border-top: 0.2rem solid rgba(65, 65, 65, 0.164);
         .location-para {
           display: inline;
           font-family: $fontRoboto;
@@ -211,18 +211,15 @@ body {
         .the-full-pallete-box {
           @include restuarantCards;
           display: absolute;
-        }
-        .new {
-          position: absolute;
-          bottom: 74rem;
-          color: #0a5743b6;
-          font-family: $fontRoboto;
-          font-size: $font-size-large;
-          font-weight: $fontWeightBold;
-          background: $tertiaryColor;
+          .new {
+            @include New;
+          }
         }
         .the-enchanted-plate-box {
           @include restuarantCards;
+          .new {
+            @include New;
+          }
         }
         .bastille-box {
           @include restuarantCards;
