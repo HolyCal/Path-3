@@ -64,37 +64,12 @@ body {
     }
     .booking {
       @include flexBooking(column, white, black);
-      box-shadow: $boxShadow;
-      padding: 1rem 1rem;
-      margin-bottom: 1rem;
-      font-family: $fontRoboto;
-      font-size: $font-size-regular;
-      font-weight: $fontWeightBold;
-      text-shadow: $fontWeightBolder;
-      letter-spacing: 0.1rem;
+      @include booking;
       .span-booking {
         @include spanBooking;
       }
       .booking-btn {
         @include bookingBtn;
-        background: $secondaryColor;
-        background-image: linear-gradient(
-          350deg,
-          $primaryColor,
-          $secondaryColor
-        );
-        border: none;
-        border-radius: $borderRadiusButton;
-        text-align: center;
-        font-family: $fontRoboto;
-        font-size: $font-size-large;
-        padding: 1.5rem;
-        box-shadow: $boxShadowButton;
-        cursor: pointer;
-        font-weight: $fontWeightBold;
-        text-shadow: $fontWeightBolder;
-        letter-spacing: 0.1rem;
-        transform: scale(1);
         .booking-btn-a {
           text-decoration: none;
           color: white;
@@ -185,6 +160,9 @@ body {
           }
           .fa-heart {
             @include theFullPaletteHeartIcon;
+          }
+          .fa-heart:focus {
+            @include faHeartFocus;
           }
         }
         .the-enchanted-plate-box {
