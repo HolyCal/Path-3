@@ -1,5 +1,5 @@
 @import "var";
-@import "main";
+
 body {
   background: white;
   box-shadow: $boxShadow;
@@ -26,7 +26,7 @@ body {
       .subtitle {
         justify-content: center;
         text-align: center;
-        font-size: $font-size-small;
+        font-size: $fontShrikhand-size-small;
         letter-spacing: $letterSpacing;
         font-family: $fontShirkhand;
       }

@@ -9,7 +9,6 @@
 }
 body {
   background: white;
-  box-shadow: $boxShadow;
   overflow: auto;
   div {
     margin: 0px;
@@ -18,7 +17,6 @@ body {
     white-space: pre-line;
   }
   header {
-    box-shadow: $boxShadow;
     margin-bottom: 1rem;
     @include flexHeader(column, white, black);
     .container-header {
@@ -36,7 +34,7 @@ body {
       .location {
         justify-content: center;
         text-align: center;
-        font-size: $font-size-small;
+        font-size: $fontRoboto-size-small;
         background: rgba(0, 0, 0, 0.134);
         padding: 0.8rem;
         border-top: 0.2rem solid rgba(65, 65, 65, 0.164);
@@ -51,15 +49,29 @@ body {
   }
   main {
     @include flexMain(column, white, black);
-    .briefDescOfComp {
+    .brief-desc-of-comp {
       @include briefDescOfComp(column, rgb(246, 246, 246), black);
-      letter-spacing: 0.02rem;
-      padding: 1rem;
-      font-size: $font-size-regular;
-      margin-bottom: 1rem;
-      font-family: $fontRoboto;
-      .span-h2 {
+      .span-brief-desc-of-comp {
         margin-bottom: 0.5rem;
+      }
+      #span-brief-desc-of-comp-first-p {
+        margin-bottom: 0.3rem;
+      }
+      .span-brief-desc-of-comp-last-p {
+        text-align: center;
+        font-size: 1.4rem;
+      }
+      #span-brief-desc-of-comp-last-p-border-top {
+        border-top: 0.3rem solid transparent;
+        border-image: linear-gradient(to right, $secondaryColor, $primaryColor);
+        border-image-slice: 1;
+        margin-top: 2rem;
+        padding: 0rem;
+      }
+      #span-brief-desc-of-comp-last-p-border-bottom {
+        border-bottom: 0.3rem solid transparent;
+        border-image: linear-gradient(to right, $primaryColor, $secondaryColor);
+        border-image-slice: 1;
       }
     }
     .booking {
@@ -83,24 +95,10 @@ body {
     .how-it-works {
       @include howItWorks;
       ol {
-        counter-reset: item;
-        list-style-type: none;
-        font-size: $font-size-small;
-        font-weight: $fontWeightRegular;
-        text-shadow: none;
-        letter-spacing: 0;
+        @include howItWorksOl;
         li {
           @include howItWorksLi;
-          position: relative;
-          justify-content: center;
-          text-align: center;
-          background: $primaryColor;
-          border-radius: 50%;
-          width: 60vw;
-          background: $ShadowHowItWorks;
-          margin: 1rem;
-          border-radius: $borderRadiusHowItWorks;
-          padding: 2rem;
+
           .fa-mobile-screen {
             position: absolute;
             left: 6vw;
@@ -129,18 +127,11 @@ body {
       }
     }
     .container-restaurant-cards {
-      h3 {
-        @include h3;
+      h2 {
+        @include h2;
       }
       .restaurant-cards {
         @include flexCards(column, white, black);
-        box-shadow: $boxShadow;
-        padding: 0rem 1rem;
-        margin-bottom: 1rem;
-        font-family: $fontRoboto;
-        font-size: $font-size-large;
-        text-align: left;
-        position: relative;
         span {
           display: block;
           margin-top: 0.8rem;
@@ -154,7 +145,7 @@ body {
         }
         .the-full-pallete-box {
           @include restuarantCards;
-          display: absolute;
+          display: relative;
           .new {
             @include New;
           }
@@ -164,24 +155,36 @@ body {
           .fa-heart:focus {
             @include faHeartFocus;
           }
+          .fa-heart:hover {
+            @include faHeartFocus;
+          }
         }
         .the-enchanted-plate-box {
           @include restuarantCards;
+          display: relative;
           .new {
             @include New;
           }
           .fa-heart {
             @include theEnchantedPlateHeartIcon;
           }
+          .fa-heart:focus {
+            @include faHeartFocus;
+          }
+          .fa-heart:hover {
+            @include faHeartFocus;
+          }
         }
         .bastille-box {
           @include restuarantCards;
+          display: relative;
           .fa-heart {
             @include bastilleHeartIcon;
           }
         }
         .le-gourmand-box {
           @include restuarantCards;
+          display: relative;
           .fa-heart {
             @include leGourmandHeartIcon;
           }
@@ -198,7 +201,6 @@ body {
     }
   }
   footer {
-    box-shadow: $boxShadow;
     background: #696969;
     padding-bottom: 1rem;
     .footer-logo-img {
