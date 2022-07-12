@@ -48,14 +48,9 @@ body header .container-header .subtitle {
       -ms-flex-pack: center;
           justify-content: center;
   text-align: center;
-  font-size: 1rem;
+  font-size: 1.2rem;
   letter-spacing: 0.05rem;
   font-family: "Shrikhand", cursive;
-}
-@media only screen and (min-device-width: 768px) and (max-device-height: 1024) and (orientation: portrait) {
-  body header .container-header .subtitle {
-    width: 100%;
-  }
 }
 @media only screen and (min-device-width: 912px) and (max-device-height: 1368px) and (orientation: portrait) {
   body header .container-header .subtitle {
@@ -108,15 +103,10 @@ body main .brief-desc-of-comp {
       flex-wrap: nowrap;
   letter-spacing: 0.02rem;
   padding: 1.5rem;
-  font-size: 1.2rem;
+  font-size: 1rem;
   font-family: "Roboto", sans-serif;
   text-align: left;
   font-weight: 500;
-}
-@media only screen and (min-device-width: 1024px) {
-  body main .brief-desc-of-comp {
-    width: 100%;
-  }
 }
 @media only screen and (min-device-width: 912px) and (max-device-height: 1368px) and (orientation: portrait) {
   body main .brief-desc-of-comp {
@@ -174,26 +164,26 @@ body main .booking {
     font-size: 1.5rem;
   }
 }
-@media only screen and (min-device-width: 540px) and (orientation: portrait) {
-  body main .booking {
-    width: 100%;
-  }
-}
-@media only screen and (min-device-width: 1024px) {
-  body main .booking {
-    width: 100%;
-  }
-}
 @media only screen and (min-device-width: 540px) and (max-device-height: 720px) and (orientation: portrait) {
   body main .booking {
-    /* For portrait layouts only */
     font-size: 1.5rem;
+    width: 94%;
   }
 }
 @media only screen and (min-device-width: 768px) and (max-device-height: 1024px) and (orientation: portrait) {
   body main .booking {
-    /* For portrait layouts only */
     font-size: 1.5rem;
+    width: 95%;
+  }
+}
+@media only screen and (min-device-width: 820px) and (max-device-height: 1180px) {
+  body main .booking {
+    width: 96%;
+  }
+}
+@media only screen and (min-device-width: 912px) and (max-device-height: 1368px) {
+  body main .booking {
+    width: 96%;
   }
 }
 @media only screen and (min-device-width: 1024px) and (max-device-height: 600px) {
@@ -204,8 +194,8 @@ body main .booking {
 }
 @media only screen and (min-device-width: 1280px) and (max-device-height: 800px) {
   body main .booking {
-    /* For portrait layouts only */
-    font-size: 2rem;
+    font-size: 1.5rem;
+    width: 97%;
   }
 }
 @media only screen and (min-device-width: 1253px) and (max-device-height: 1252px) {
@@ -261,27 +251,27 @@ body main .booking .booking-btn {
 }
 @media only screen and (min-device-width: 912px) and (max-device-height: 1368px) and (orientation: portrait) {
   body main .booking .booking-btn {
-    /* For portrait layouts only */
     font-size: 1.5rem;
+    margin-bottom: 1rem;
   }
 }
 @media only screen and (min-device-width: 540px) and (max-device-height: 720px) and (orientation: portrait) {
   body main .booking .booking-btn {
-    font-size: 1.5rem;
-    margin: 0rem 5rem;
+    font-size: 1.2rem;
+    margin: 0rem 7rem;
+    margin-bottom: 1rem;
   }
 }
 @media only screen and (min-device-width: 768px) and (max-device-height: 1024px) and (orientation: portrait) {
   body main .booking .booking-btn {
     /* For portrait layouts only */
     font-size: 1.5rem;
-    margin: 0rem 13rem;
+    margin: 0rem 11rem;
     margin-bottom: 1rem;
   }
 }
 @media only screen and (min-device-width: 820px) and (max-device-height: 1180px) and (orientation: portrait) {
   body main .booking .booking-btn {
-    /* For portrait layouts only */
     margin: 0rem 17rem;
   }
 }
@@ -316,7 +306,7 @@ body main .booking .booking-btn:hover {
 }
 body main .how-it-works {
   font-family: "Roboto", sans-serif;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   color: black;
   font-weight: 1000;
   letter-spacing: 0.1rem;
@@ -334,6 +324,11 @@ body main .how-it-works {
   }
 }
 @media only screen and (min-device-width: 768px) and (max-device-height: 1024px) and (orientation: portrait) {
+  body main .how-it-works {
+    font-size: 1.5rem;
+  }
+}
+@media only screen and (min-device-width: 820px) and (max-device-height: 1180px) and (orientation: portrait) {
   body main .how-it-works {
     /* For portrait layouts only */
     font-size: 1.5rem;
@@ -353,7 +348,6 @@ body main .how-it-works {
 }
 @media only screen and (min-device-width: 1253px) and (max-device-height: 1252px) {
   body main .how-it-works {
-    /* For portrait layouts only */
     font-size: 1.5rem;
   }
 }
@@ -485,7 +479,6 @@ body main .how-it-works ol li:before {
 }
 @media only screen and (min-device-width: 1180px) and (max-device-height: 1252px) and (orientation: portrait) {
   body main .how-it-works ol li:before {
-    /* For portrait layouts only */
     width: 3vw;
     left: -1.5rem;
   }
@@ -502,7 +495,7 @@ body main .how-it-works ol li:hover {
   background: rgba(146, 86, 220, 0.1568627451);
 }
 body main .container-restaurant-cards h2 {
-  font-size: 1.5rem;
+  font-size: 2rem;
   margin-bottom: 1rem;
   font-family: "Shrikhand", cursive;
   letter-spacing: 0.05rem;

@@ -7,12 +7,12 @@ $ShadowHowItWorks: #eeeeee;
 $boxShadow: 0rem 0rem 1rem 0rem red;
 $boxShadowLinks: 0rem 0rem 0.5rem 0.5rem $Shadow;
 $boxShadowButton: 0rem 0.3rem 0.5rem 0.1rem $Shadow;
-$fontRoboto-size-smalll: 1rem;
-$fontRoboto-size-regular: 1.2rem;
-$fontRoboto-size-large: 1.5rem;
-$fontShrikhand-size-small: 1rem;
-$fontShrikhand-size-regular: 1.2rem;
-$fontShrikhand-size-large: 1.5rem;
+$fontRobotoSizeSmall: 1rem;
+$fontRobotoSizeRegular: 1.2rem;
+$fontRobotoSizeLarge: 1.5rem;
+$fontShrikhandSizeSmall: 1rem;
+$fontShrikhandSizeRegular: 1.2rem;
+$fontShrikhandSizeLarge: 2rem;
 $fontWeightThin: 300;
 $fontWeightRegular: 500;
 $fontWeightBold: 1000;
@@ -26,9 +26,8 @@ $borderRadius: 0.4rem;
 $borderRadiusButton: 5rem;
 $borderRadiusHowItWorks: 1rem;
 $fontRoboto: "Roboto", sans-serif;
-$fontShirkhand: "Shrikhand", cursive;
+$fontShrikhand: "Shrikhand", cursive;
 $letterSpacing: 0.05rem;
-
 @mixin marginBottom($marginBottom) {
   margin-bottom: 1rem;
 }
@@ -59,15 +58,14 @@ $letterSpacing: 0.05rem;
 }
 @mixin subtitle {
   @media only screen and (min-device-width: 768px) and (max-device-height: 1024) and (orientation: portrait) {
-    width: 100%;
   }
   @media only screen and (min-device-width: 912px) and (max-device-height: 1368px) and (orientation: portrait) {
     /* For portrait layouts only */
-    font-size: $fontRoboto-size-regular;
+    font-size: $fontRobotoSizeRegular;
   }
   justify-content: center;
   text-align: center;
-  font-size: $fontShrikhand-size-regular;
+  font-size: $fontShrikhandSizeRegular;
   letter-spacing: $letterSpacing;
   font-family: $fontShrikhand;
 }
@@ -78,17 +76,16 @@ $letterSpacing: 0.05rem;
 }
 @mixin briefDescOfComp($direction, $background, $color) {
   @media only screen and (min-device-width: 1024px) {
-    width: 100%;
   }
   @media only screen and (min-device-width: 912px) and (max-device-height: 1368px) and (orientation: portrait) {
     /* For portrait layouts only */
-    font-size: $fontRoboto-size-large;
+    font-size: $fontRobotoSizeLarge;
   }
   @include backgroundColorFlexDirection($direction, $background, $color);
   flex-wrap: nowrap;
   letter-spacing: 0.02rem;
   padding: 1.5rem;
-  font-size: $font-size-small;
+  font-size: $fontRobotoSizeSmall;
   font-family: $fontRoboto;
   text-align: left;
   font-weight: $fontWeightRegular;
@@ -97,43 +94,46 @@ $letterSpacing: 0.05rem;
   @include backgroundColorFlexDirection($direction, $background, $color);
   @media only screen and (min-device-width: 912px) and (max-device-height: 1368px) and (orientation: portrait) {
     /* For portrait layouts only */
-    font-size: $fontRoboto-size-large;
+    font-size: $fontRobotoSizeLarge;
   }
 }
 @mixin booking {
   @media only screen and (min-device-width: 375px) and (max-device-height: 720px) and (orientation: landscape) {
-    width: 100%;
   }
   @media only screen and (min-device-width: 540px) and (orientation: portrait) {
-    width: 100%;
-  }
-  @media only screen and (min-device-width: 1024px) {
-    width: 100%;
   }
   @media only screen and (min-device-width: 540px) and (max-device-height: 720px) and (orientation: portrait) {
-    /* For portrait layouts only */
-    font-size: $fontRoboto-size-large;
+    font-size: $fontRobotoSizeLarge;
+    width: 94%;
   }
   @media only screen and (min-device-width: 768px) and (max-device-height: 1024px) and (orientation: portrait) {
-    /* For portrait layouts only */
-    font-size: $fontRoboto-size-large;
+    font-size: $fontRobotoSizeLarge;
+    width: 95%;
+  }
+  @media only screen and (min-device-width: 820px) and (max-device-height: 1180px) {
+    width: 96%;
+  }
+  @media only screen and (min-device-width: 912px) and (max-device-height: 1368px) {
+    width: 96%;
+  }
+  @media only screen and (min-device-width: 1024px) {
   }
   @media only screen and (min-device-width: 1024px) and (max-device-height: 600px) {
     /* For portrait layouts only */
-    font-size: $fontRoboto-size-large;
+    font-size: $fontRobotoSizeLarge;
   }
   @media only screen and (min-device-width: 1280px) and (max-device-height: 800px) {
-    /* For portrait layouts only */
-    font-size: 2rem;
+    font-size: $fontRobotoSizeLarge;
+    width: 97%;
   }
   @media only screen and (min-device-width: 1253px) and (max-device-height: 1252px) {
     /* For portrait layouts only */
-    font-size: $fontRoboto-size-large;
+    font-size: $fontRobotoSizeLarge;
   }
   padding: 1rem;
   margin-bottom: 1rem;
   font-family: $fontRoboto;
-  font-size: $fontRoboto-size-large;
+  font-size: $fontRobotoSizeLarge;
   font-weight: $fontWeightBold;
   letter-spacing: 0.1rem;
   background: rgb(246, 246, 246);
@@ -147,7 +147,7 @@ $letterSpacing: 0.05rem;
     /* For portrait layouts only */
     font-size: 1.3rem;
   }
-  font-size: $fontRoboto-size-small;
+  font-size: $fontRobotoSizeSmall;
   margin: 2rem 0rem;
   font-weight: $fontWeightRegular;
   color: grey;
@@ -159,21 +159,21 @@ $letterSpacing: 0.05rem;
     margin-bottom: 1rem;
   }
   @media only screen and (min-device-width: 912px) and (max-device-height: 1368px) and (orientation: portrait) {
-    /* For portrait layouts only */
-    font-size: $fontRoboto-size-large;
+    font-size: $fontRobotoSizeLarge;
+    margin-bottom: 1rem;
   }
   @media only screen and (min-device-width: 540px) and (max-device-height: 720px) and (orientation: portrait) {
-    font-size: $fontRoboto-size-large;
-    margin: 0rem 5rem;
+    font-size: $fontRobotoSizeRegular;
+    margin: 0rem 7rem;
+    margin-bottom: 1rem;
   }
   @media only screen and (min-device-width: 768px) and (max-device-height: 1024px) and (orientation: portrait) {
     /* For portrait layouts only */
-    font-size: $fontRoboto-size-large;
-    margin: 0rem 13rem;
+    font-size: $fontRobotoSizeLarge;
+    margin: 0rem 11rem;
     margin-bottom: 1rem;
   }
   @media only screen and (min-device-width: 820px) and (max-device-height: 1180px) and (orientation: portrait) {
-    /* For portrait layouts only */
     margin: 0rem 17rem;
   }
   @media only screen and (min-device-width: 912px) and (max-device-height: 1368px) and (orientation: portrait) {
@@ -193,7 +193,7 @@ $letterSpacing: 0.05rem;
   border-radius: $borderRadiusButton;
   text-align: center;
   font-family: $fontRoboto;
-  font-size: $fontRoboto-size-small;
+  font-size: $fontRobotoSizeSmall;
   padding: 1.5rem 0rem;
   cursor: pointer;
   font-weight: $fontWeightBold;
@@ -207,33 +207,32 @@ $letterSpacing: 0.05rem;
 @mixin howItWorks {
   @media only screen and (min-device-width: 912px) and (max-device-height: 1368px) and (orientation: portrait) {
     /* For portrait layouts only */
-    font-size: $fontRoboto-size-large;
+    font-size: $fontRobotoSizeLarge;
   }
   @media only screen and (min-device-width: 540px) and (max-device-height: 720px) and (orientation: portrait) {
     /* For portrait layouts only */
-    font-size: $fontRoboto-size-large;
+    font-size: $fontRobotoSizeLarge;
   }
   @media only screen and (min-device-width: 768px) and (max-device-height: 1024px) and (orientation: portrait) {
-    /* For portrait layouts only */
-    font-size: $fontRoboto-size-large;
+    font-size: $fontRobotoSizeLarge;
   }
   @media only screen and (min-device-width: 820px) and (max-device-height: 1180px) and (orientation: portrait) {
     /* For portrait layouts only */
-    font-size: 5rem;
+    font-size: $fontRobotoSizeLarge;
   }
   @media only screen and (min-device-width: 1024px) and (max-device-height: 600px) {
     /* For portrait layouts only */
-    font-size: $fontRoboto-size-large;
+    font-size: $fontRobotoSizeLarge;
   }
   @media only screen and (min-device-width: 1280px) and (max-device-height: 800px) {
     /* For portrait layouts only */
-    font-size: $fontRoboto-size-large;
+    font-size: $fontRobotoSizeLarge;
   }
   @media only screen and (min-device-width: 1253px) and (max-device-height: 1252px) {
-    font-size: $fontRoboto-size-large;
+    font-size: $fontRobotoSizeLarge;
   }
   font-family: $fontRoboto;
-  font-size: 5rem;
+  font-size: $fontRobotoSizeLarge;
   color: black;
   font-weight: $fontWeightBold;
   letter-spacing: 0.1rem;
@@ -241,30 +240,30 @@ $letterSpacing: 0.05rem;
 @mixin howItWorksLi {
   @media only screen and (min-device-width: 912px) and (max-device-height: 1368px) and (orientation: portrait) {
     /* For portrait layouts only */
-    font-size: $fontRoboto-size-regular;
+    font-size: $fontRobotoSizeRegular;
   }
   @media only screen and (min-device-width: 540px) and (max-device-height: 720px) and (orientation: portrait) {
     /* For portrait layouts only */
-    font-size: $fontRoboto-size-regular;
+    font-size: $fontRobotoSizeRegular;
   }
   @media only screen and (min-device-width: 768px) and (max-device-height: 1024px) and (orientation: portrait) {
     /* For portrait layouts only */
-    font-size: $fontRoboto-size-regular;
+    font-size: $fontRobotoSizeRegular;
   }
   @media only screen and (min-device-width: 820px) and (max-device-height: 1180px) and (orientation: portrait) {
     /* For portrait layouts only */
-    font-size: $fontRoboto-size-regular;
+    font-size: $fontRobotoSizeRegular;
   }
   @media only screen and (min-device-width: 1024px) and (max-device-height: 600px) {
     /* For portrait layouts only */
-    font-size: $fontRoboto-size-regular;
+    font-size: $fontRobotoSizeRegular;
   }
   @media only screen and (min-device-width: 1280px) and (max-device-height: 800px) {
     font-size: 1rem;
   }
   @media only screen and (min-device-width: 1253px) and (max-device-height: 1252px) {
     /* For portrait layouts only */
-    font-size: $fontRoboto-size-large;
+    font-size: $fontRobotoSizeLarge;
   }
   font-weight: $fontWeightBold;
   position: relative;
@@ -282,7 +281,7 @@ $letterSpacing: 0.05rem;
 @mixin howItWorksOl {
   counter-reset: item;
   list-style-type: none;
-  font-size: $fontRoboto-size-small;
+  font-size: $fontRobotoSizeSmall;
   font-weight: $fontWeightRegular;
   text-shadow: none;
   letter-spacing: 0;
@@ -310,7 +309,6 @@ $letterSpacing: 0.05rem;
     left: -1rem;
   }
   @media only screen and (min-device-width: 1180px) and (max-device-height: 1252px) and (orientation: portrait) {
-    /* For portrait layouts only */
     width: 3vw;
     left: -1.5rem;
   }
@@ -318,7 +316,7 @@ $letterSpacing: 0.05rem;
     /* For portrait layouts only */
     width: 1.5vw;
     left: -1rem;
-    font-size: $fontRoboto-size-regular;
+    font-size: $fontRobotoSizeRegular;
   }
   position: absolute;
   left: -0.5rem;
@@ -351,9 +349,9 @@ $letterSpacing: 0.05rem;
     /* For portrait layouts only */
     font-size: 2.5rem;
   }
-  font-size: 10rem;
+  font-size: $fontShrikhandSizeLarge;
   margin-bottom: 1rem;
-  font-family: $fontShirkhand;
+  font-family: $fontShrikhand;
   letter-spacing: $letterSpacing;
   width: 95vw;
 }
@@ -362,7 +360,7 @@ $letterSpacing: 0.05rem;
   padding: 0rem 1rem;
   margin-bottom: 1rem;
   font-family: $fontRoboto;
-  font-size: $fontRoboto-size-large;
+  font-size: $fontRobotoSizeLarge;
   text-align: left;
   position: relative;
 }
@@ -389,7 +387,7 @@ $letterSpacing: 0.05rem;
 @mixin restuarantCards {
   @media only screen and (min-device-width: 280px) and (max-device-width: 653px) and (orientation: portrait) {
     /* For portrait layouts only */
-    font-size: $fontRoboto-size-regular;
+    font-size: $fontRobotoSizeRegular;
   }
   box-shadow: $boxShadowButton;
   border-radius: $borderRadius;
@@ -431,7 +429,7 @@ $letterSpacing: 0.05rem;
 }
 @mixin faHeart {
   cursor: pointer;
-  font-size: $fontRoboto-size-large;
+  font-size: $fontRobotoSizeLarge;
   color: grey;
   position: absolute;
 }
@@ -457,7 +455,7 @@ $letterSpacing: 0.05rem;
     /* For portrait layouts only */
     left: 65%;
     padding: 1rem 5rem;
-    font-size: $fontRoboto-size-large;
+    font-size: $fontRobotoSizeLarge;
   }
   @media only screen and (min-device-width: 280px) and (max-device-height: 653px) and (orientation: portrait) {
     /* For portrait layouts only */
@@ -497,7 +495,7 @@ $letterSpacing: 0.05rem;
   left: 45%;
   color: #017c5a;
   font-family: $fontRoboto;
-  font-size: $fontRoboto-size-regular;
+  font-size: $fontRobotoSizeRegular;
   font-weight: $fontWeightBold;
   background: $tertiaryColor;
   border-radius: 0.2rem;
@@ -508,7 +506,7 @@ $letterSpacing: 0.05rem;
 @mixin footerLinks {
   color: white;
   margin-left: 1rem;
-  font: $fontRoboto-size-smalll $fontRoboto;
+  font: $fontRobotoSizeSmall $fontRoboto;
   padding-bottom: 0.5rem;
   white-space: normal;
 }

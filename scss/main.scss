@@ -34,10 +34,11 @@ body {
       .location {
         justify-content: center;
         text-align: center;
-        font-size: $fontRoboto-size-small;
+        font-size: $fontRobotoSizeSmall;
         background: rgba(0, 0, 0, 0.134);
         padding: 0.8rem;
         border-top: 0.2rem solid rgba(65, 65, 65, 0.164);
+        // width: 100%;
         .location-para {
           display: inline;
           font-family: $fontRoboto;
