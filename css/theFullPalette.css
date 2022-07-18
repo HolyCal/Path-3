@@ -1,0 +1,90 @@
+body {
+  background: white;
+  overflow: auto;
+}
+body div {
+  margin: 0px;
+}
+body p {
+  white-space: pre-line;
+}
+body header {
+  margin-bottom: 1rem;
+}
+body header .menu-container-header .menupage-logo .menupage-logo-img {
+  float: center;
+  height: 0.1rem;
+  width: 5rem;
+}
+body header .menu-container-header .the-full-palette-subtitle {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  font-size: 1rem;
+  letter-spacing: 0.05rem;
+  font-family: "Shrikhand", cursive;
+}
+
+main {
+  background: rgb(246, 246, 246);
+  border-radius: 1.4rem;
+}
+
+#menu-page-h1 {
+  font-family: "Shrikhand", cursive;
+  font-size: 1.5rem;
+  padding-top: 1rem;
+  padding-left: 1rem;
+}
+
+.menu-page-courses {
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: grey;
+  margin-left: 1rem;
+}
+
+.menu-page-courses::after {
+  content: "";
+  display: block;
+  border-bottom: 0.15rem solid #99e2d0;
+  width: 2.5rem;
+}
+
+.menu-dishes {
+  -webkit-box-shadow: 0rem 0.3rem 0.5rem 0.1rem #cfcfcf;
+          box-shadow: 0rem 0.3rem 0.5rem 0.1rem #cfcfcf;
+  border-radius: 1rem;
+  height: 4rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  margin-bottom: 1rem;
+}
+.menu-dishes .menu-dish-titles {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 1000;
+  margin-top: 0.8rem;
+  margin-left: 1rem;
+  margin-bottom: 0.1rem;
+  padding-bottom: 0;
+  padding-top: 0;
+}
+.menu-dishes .menu-dishes-p {
+  font-family: "Roboto", sans-serif;
+  font-size: 0.8rem;
+  font-weight: 300;
+  margin-top: 0;
+  margin-left: 1rem;
+  color: grey;
+}

@@ -1,0 +1,87 @@
+@import "var";
+
+body {
+  @include body;
+  div {
+    margin: 0px;
+  }
+  p {
+    white-space: pre-line;
+  }
+  header {
+    margin-bottom: 1rem;
+    // @include menuPageHeader(column, white, black);
+    .menu-container-header {
+      .menupage-logo {
+        .menupage-logo-img {
+          float: center;
+          height: 0.1rem;
+          width: 5rem;
+        }
+      }
+      .the-full-palette-subtitle {
+        justify-content: center;
+        text-align: center;
+        font-size: $fontShrikhandSizeSmall;
+        letter-spacing: $letterSpacing;
+        font-family: $fontShrikhand;
+      }
+      // .header-image {
+      //   .background-image {
+      //     @include menuPageBackgroundImg;
+      //   }
+    }
+  }
+}
+main {
+  background: rgb(246, 246, 246);
+  border-radius: 1.4rem;
+}
+#menu-page-h1 {
+  font-family: $fontShrikhand;
+  font-size: 1.5rem;
+  // margin: 1rem;
+  padding-top: 1rem;
+  padding-left: 1rem;
+}
+.menu-page-courses {
+  font-family: $fontRoboto;
+  font-size: $fontRobotoSizeSmall;
+  font-weight: $fontWeightRegular;
+  text-transform: uppercase;
+  color: grey;
+  margin-left: 1rem;
+}
+.menu-page-courses::after {
+  content: "";
+  display: block;
+  border-bottom: 0.15rem solid $tertiaryColor;
+  width: 2.5rem;
+}
+.menu-dishes {
+  box-shadow: $boxShadowButton;
+  border-radius: 1rem;
+  height: 4rem;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  margin-bottom: 1rem;
+  .menu-dish-titles {
+    font-family: $fontRoboto;
+    font-size: $fontRobotoSizeRegular;
+    font-weight: $fontWeightBold;
+    margin-top: 0.8rem;
+    margin-left: 1rem;
+    margin-bottom: 0.1rem;
+    padding-bottom: 0;
+    padding-top: 0;
+  }
+  .menu-dishes-p {
+    font-family: $fontRoboto;
+    font-size: $fontRobotoSizeSmallest;
+    font-weight: $fontWeightThin;
+    margin-top: 0;
+    margin-left: 1rem;
+    color: grey;
+  }
+}

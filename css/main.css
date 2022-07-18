@@ -1,3 +1,736 @@
+.brief-desc-of-comp {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background: rgb(246, 246, 246);
+  color: black;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  letter-spacing: 0.02rem;
+  padding: 1.5rem;
+  font-size: 1rem;
+  font-family: "Roboto", sans-serif;
+  text-align: left;
+  font-weight: 500;
+}
+@media only screen and (min-device-width: 912px) and (max-device-height: 1368px) and (orientation: portrait) {
+  .brief-desc-of-comp {
+    font-size: 1.5rem;
+  }
+}
+.brief-desc-of-comp .span-brief-desc-of-comp {
+  margin-bottom: 0.5rem;
+}
+.brief-desc-of-comp #span-brief-desc-of-comp-first-p {
+  margin-bottom: 0.3rem;
+}
+.brief-desc-of-comp .span-brief-desc-of-comp-last-p {
+  text-align: center;
+  font-size: 1.4rem;
+}
+.brief-desc-of-comp #span-brief-desc-of-comp-last-p-border-top {
+  border-top: 0.3rem solid transparent;
+  -o-border-image: linear-gradient(to right, #ff79da, #9356dc);
+     border-image: -webkit-gradient(linear, left top, right top, from(#ff79da), to(#9356dc));
+     border-image: linear-gradient(to right, #ff79da, #9356dc);
+  border-image-slice: 1;
+  margin-top: 2rem;
+  padding: 0rem;
+}
+.brief-desc-of-comp #span-brief-desc-of-comp-last-p-border-bottom {
+  border-bottom: 0.3rem solid transparent;
+  -o-border-image: linear-gradient(to right, #9356dc, #ff79da);
+     border-image: -webkit-gradient(linear, left top, right top, from(#9356dc), to(#ff79da));
+     border-image: linear-gradient(to right, #9356dc, #ff79da);
+  border-image-slice: 1;
+}
+
+.booking {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background: white;
+  color: black;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 1000;
+  letter-spacing: 0.1rem;
+  background: rgb(246, 246, 246);
+}
+@media only screen and (min-device-width: 912px) and (max-device-height: 1368px) and (orientation: portrait) {
+  .booking {
+    font-size: 1.5rem;
+  }
+}
+@media only screen and (min-device-width: 540px) and (max-device-height: 720px) and (orientation: portrait) {
+  .booking {
+    font-size: 1.5rem;
+    width: 94%;
+  }
+}
+@media only screen and (min-device-width: 768px) and (max-device-height: 1024px) and (orientation: portrait) {
+  .booking {
+    font-size: 1.5rem;
+    width: 95%;
+  }
+}
+@media only screen and (min-device-width: 820px) and (max-device-height: 1180px) {
+  .booking {
+    width: 96%;
+  }
+}
+@media only screen and (min-device-width: 912px) and (max-device-height: 1368px) {
+  .booking {
+    width: 96%;
+  }
+}
+@media only screen and (min-device-width: 1024px) and (max-device-height: 600px) {
+  .booking {
+    font-size: 1.5rem;
+  }
+}
+@media only screen and (min-device-width: 1280px) and (max-device-height: 800px) {
+  .booking {
+    font-size: 1.5rem;
+    width: 97%;
+  }
+}
+@media only screen and (min-device-width: 1253px) and (max-device-height: 1252px) {
+  .booking {
+    font-size: 1.5rem;
+  }
+}
+.booking .span-booking {
+  font-size: 1rem;
+  margin: 2rem 0rem;
+  font-weight: 500;
+  color: grey;
+}
+@media only screen and (min-device-width: 280px) and (max-device-height: 653px) and (orientation: portrait) {
+  .booking .span-booking {
+    margin: 1rem 0rem;
+  }
+}
+@media only screen and (min-device-width: 912px) and (max-device-height: 1368px) and (orientation: portrait) {
+  .booking .span-booking {
+    font-size: 1.3rem;
+  }
+}
+.booking .booking-btn {
+  background: #ff79da;
+  background-image: linear-gradient(350deg, #9356dc, #ff79da);
+  border: none;
+  border-radius: 5rem;
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+  padding: 1.5rem 0rem;
+  cursor: pointer;
+  font-weight: 1000;
+  letter-spacing: 0.1rem;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-box-shadow: 0rem 0.3rem 0.5rem 0.1rem #cfcfcf;
+          box-shadow: 0rem 0.3rem 0.5rem 0.1rem #cfcfcf;
+  margin-bottom: 3rem;
+  margin: 0rem 3rem;
+  margin-bottom: 2rem;
+}
+@media only screen and (min-device-width: 280px) and (max-device-height: 653px) and (orientation: portrait) {
+  .booking .booking-btn {
+    margin: 0rem;
+    margin-bottom: 1rem;
+  }
+}
+@media only screen and (min-device-width: 912px) and (max-device-height: 1368px) and (orientation: portrait) {
+  .booking .booking-btn {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+}
+@media only screen and (min-device-width: 540px) and (max-device-height: 720px) and (orientation: portrait) {
+  .booking .booking-btn {
+    font-size: 1.2rem;
+    margin: 0rem 7rem;
+    margin-bottom: 1rem;
+  }
+}
+@media only screen and (min-device-width: 768px) and (max-device-height: 1024px) and (orientation: portrait) {
+  .booking .booking-btn {
+    font-size: 1.5rem;
+    margin: 0rem 11rem;
+    margin-bottom: 1rem;
+  }
+}
+@media only screen and (min-device-width: 820px) and (max-device-height: 1180px) and (orientation: portrait) {
+  .booking .booking-btn {
+    margin: 0rem 17rem;
+  }
+}
+@media only screen and (min-device-width: 912px) and (max-device-height: 1368px) and (orientation: portrait) {
+  .booking .booking-btn {
+    margin: 0rem 16rem;
+  }
+}
+@media only screen and (min-device-width: 1024px) and (max-device-height: 600px) {
+  .booking .booking-btn {
+    margin: 0rem 20rem;
+    margin-bottom: 1rem;
+  }
+}
+@media only screen and (min-device-width: 1280px) and (max-device-height: 800px) {
+  .booking .booking-btn {
+    margin: 0rem 30rem;
+    margin-bottom: 1rem;
+  }
+}
+.booking .booking-btn .booking-btn-a {
+  text-decoration: none;
+  color: white;
+}
+.booking .booking-btn:hover {
+  -webkit-transition: -webkit-transform 0.3s ease-in-out;
+  transition: -webkit-transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+}
+
+.how-it-works {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.5rem;
+  color: black;
+  font-weight: 1000;
+  letter-spacing: 0.1rem;
+}
+@media only screen and (min-device-width: 912px) and (max-device-height: 1368px) and (orientation: portrait) {
+  .how-it-works {
+    font-size: 1.5rem;
+  }
+}
+@media only screen and (min-device-width: 540px) and (max-device-height: 720px) and (orientation: portrait) {
+  .how-it-works {
+    font-size: 1.5rem;
+  }
+}
+@media only screen and (min-device-width: 768px) and (max-device-height: 1024px) and (orientation: portrait) {
+  .how-it-works {
+    font-size: 1.5rem;
+  }
+}
+@media only screen and (min-device-width: 820px) and (max-device-height: 1180px) and (orientation: portrait) {
+  .how-it-works {
+    font-size: 1.5rem;
+  }
+}
+@media only screen and (min-device-width: 1024px) and (max-device-height: 600px) {
+  .how-it-works {
+    font-size: 1.5rem;
+  }
+}
+@media only screen and (min-device-width: 1280px) and (max-device-height: 800px) {
+  .how-it-works {
+    font-size: 1.5rem;
+  }
+}
+@media only screen and (min-device-width: 1253px) and (max-device-height: 1252px) {
+  .how-it-works {
+    font-size: 1.5rem;
+  }
+}
+.how-it-works ol {
+  counter-reset: item;
+  list-style-type: none;
+  font-size: 1rem;
+  font-weight: 500;
+  text-shadow: none;
+  letter-spacing: 0;
+}
+.how-it-works ol li {
+  font-weight: 1000;
+  position: relative;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  background: #9356dc;
+  border-radius: 50%;
+  width: 60vw;
+  background: #eeeeee;
+  margin: 1rem;
+  border-radius: 1rem;
+  padding: 2rem;
+  -webkit-box-shadow: 0rem 0.3rem 0.5rem 0.1rem #cfcfcf;
+          box-shadow: 0rem 0.3rem 0.5rem 0.1rem #cfcfcf;
+}
+@media only screen and (min-device-width: 912px) and (max-device-height: 1368px) and (orientation: portrait) {
+  .how-it-works ol li {
+    font-size: 1.2rem;
+  }
+}
+@media only screen and (min-device-width: 540px) and (max-device-height: 720px) and (orientation: portrait) {
+  .how-it-works ol li {
+    font-size: 1.2rem;
+  }
+}
+@media only screen and (min-device-width: 768px) and (max-device-height: 1024px) and (orientation: portrait) {
+  .how-it-works ol li {
+    font-size: 1.2rem;
+  }
+}
+@media only screen and (min-device-width: 820px) and (max-device-height: 1180px) and (orientation: portrait) {
+  .how-it-works ol li {
+    font-size: 1.2rem;
+  }
+}
+@media only screen and (min-device-width: 1024px) and (max-device-height: 600px) {
+  .how-it-works ol li {
+    font-size: 1.2rem;
+  }
+}
+@media only screen and (min-device-width: 1280px) and (max-device-height: 800px) {
+  .how-it-works ol li {
+    font-size: 1rem;
+  }
+}
+@media only screen and (min-device-width: 1253px) and (max-device-height: 1252px) {
+  .how-it-works ol li {
+    font-size: 1.5rem;
+  }
+}
+.how-it-works ol li .fa-mobile-screen {
+  position: absolute;
+  left: 6vw;
+  color: rgb(84, 84, 84);
+}
+.how-it-works ol li .fa-list-check {
+  position: absolute;
+  left: 6vw;
+  color: rgb(84, 84, 84);
+}
+.how-it-works ol li .fa-store {
+  position: absolute;
+  left: 6vw;
+  color: rgb(84, 84, 84);
+}
+.how-it-works ol li .fa-solid:hover {
+  color: #9356dc;
+}
+.how-it-works ol li:before {
+  position: absolute;
+  left: -0.5rem;
+  content: counter(item) " ";
+  counter-increment: item;
+  background: #9356dc;
+  border-radius: 50%;
+  width: 5vw;
+  padding: 0.5vw;
+  color: white;
+}
+@media only screen and (min-device-width: 481px) and (max-device-width: 1180px) and (orientation: portrait) {
+  .how-it-works ol li:before {
+    width: 3vw;
+  }
+}
+@media only screen and (min-device-width: 540px) and (max-device-height: 720px) and (orientation: portrait) {
+  .how-it-works ol li:before {
+    width: 4vw;
+  }
+}
+@media only screen and (min-device-width: 1024px) and (max-device-height: 600px) {
+  .how-it-works ol li:before {
+    width: 3vw;
+    left: -1rem;
+  }
+}
+@media only screen and (min-device-width: 1280px) and (max-device-height: 800px) {
+  .how-it-works ol li:before {
+    width: 2.5vw;
+    left: -1rem;
+  }
+}
+@media only screen and (min-device-width: 1180px) and (max-device-height: 1252px) and (orientation: portrait) {
+  .how-it-works ol li:before {
+    width: 3vw;
+    left: -1.5rem;
+  }
+}
+@media only screen and (min-device-width: 1253px) and (max-device-height: 1252px) {
+  .how-it-works ol li:before {
+    width: 1.5vw;
+    left: -1rem;
+    font-size: 1.2rem;
+  }
+}
+.how-it-works ol li:hover {
+  background: rgba(146, 86, 220, 0.1568627451);
+}
+
+.container-restaurant-cards h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  font-family: "Shrikhand", cursive;
+  letter-spacing: 0.05rem;
+  width: 95vw;
+}
+@media only screen and (min-device-width: 912px) and (max-device-height: 1368px) and (orientation: portrait) {
+  .container-restaurant-cards h2 {
+    font-size: 3rem;
+  }
+}
+@media only screen and (min-device-width: 540px) and (max-device-height: 720px) and (orientation: portrait) {
+  .container-restaurant-cards h2 {
+    font-size: 2.3rem;
+  }
+}
+@media only screen and (min-device-width: 1024px) and (max-device-height: 600px) {
+  .container-restaurant-cards h2 {
+    font-size: 2rem;
+  }
+}
+@media only screen and (min-device-width: 1280px) and (max-device-height: 800px) {
+  .container-restaurant-cards h2 {
+    font-size: 2.7rem;
+  }
+}
+@media only screen and (min-device-width: 1253px) and (max-device-height: 1252px) {
+  .container-restaurant-cards h2 {
+    font-size: 2.5rem;
+  }
+}
+.container-restaurant-cards .restaurant-cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background: white;
+  color: black;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 0rem 1rem;
+  margin-bottom: 1rem;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.5rem;
+  text-align: left;
+  position: relative;
+}
+.container-restaurant-cards .restaurant-cards span {
+  display: block;
+  margin-top: 0.8rem;
+  margin-left: 0.8rem;
+  font-weight: 1000;
+}
+.container-restaurant-cards .restaurant-cards .restaurant-card-location {
+  display: block;
+  font-weight: 500;
+  margin-left: 0.8rem;
+}
+.container-restaurant-cards .restaurant-cards .the-full-pallete-box {
+  -webkit-box-shadow: 0rem 0.3rem 0.5rem 0.1rem #cfcfcf;
+          box-shadow: 0rem 0.3rem 0.5rem 0.1rem #cfcfcf;
+  border-radius: 0.4rem;
+  margin: 1rem 0rem;
+  width: 99%;
+  display: relative;
+}
+@media only screen and (min-device-width: 280px) and (max-device-width: 653px) and (orientation: portrait) {
+  .container-restaurant-cards .restaurant-cards .the-full-pallete-box {
+    font-size: 1.2rem;
+  }
+}
+.container-restaurant-cards .restaurant-cards .the-full-pallete-box .new {
+  position: absolute;
+  margin: 1rem;
+  padding: 0.5rem 3rem;
+  left: 45%;
+  color: #017c5a;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 1000;
+  background: #99e2d0;
+  border-radius: 0.2rem;
+}
+@media only screen and (min-device-width: 481px) and (max-device-height: 1180px) and (orientation: portrait) {
+  .container-restaurant-cards .restaurant-cards .the-full-pallete-box .new {
+    left: 70%;
+  }
+}
+@media only screen and (min-device-width: 540px) and (max-device-height: 720px) and (orientation: portrait) {
+  .container-restaurant-cards .restaurant-cards .the-full-pallete-box .new {
+    left: 10%;
+  }
+}
+@media only screen and (min-device-width: 912px) and (max-device-height: 1368px) and (orientation: portrait) {
+  .container-restaurant-cards .restaurant-cards .the-full-pallete-box .new {
+    left: 65%;
+    padding: 1rem 5rem;
+    font-size: 1.5rem;
+  }
+}
+@media only screen and (min-device-width: 280px) and (max-device-height: 653px) and (orientation: portrait) {
+  .container-restaurant-cards .restaurant-cards .the-full-pallete-box .new {
+    left: 35%;
+  }
+}
+@media only screen and (min-device-width: 412px) and (max-device-height: 914px) and (orientation: portrait) {
+  .container-restaurant-cards .restaurant-cards .the-full-pallete-box .new {
+    left: 50%;
+  }
+}
+@media only screen and (min-device-width: 1024px) and (max-device-height: 600px) and (orientation: landscape) {
+  .container-restaurant-cards .restaurant-cards .the-full-pallete-box .new {
+    left: 15%;
+  }
+}
+@media only screen and (min-device-width: 1024px) and (max-device-height: 600px) {
+  .container-restaurant-cards .restaurant-cards .the-full-pallete-box .new {
+    left: 75%;
+  }
+}
+@media only screen and (min-device-width: 1280px) and (max-device-height: 800px) {
+  .container-restaurant-cards .restaurant-cards .the-full-pallete-box .new {
+    left: 75%;
+  }
+}
+@media only screen and (min-device-width: 1253px) and (max-device-height: 1252px) and (orientation: portrait) {
+  .container-restaurant-cards .restaurant-cards .the-full-pallete-box .new {
+    width: 2vw;
+    left: -1.5rem;
+  }
+}
+@media only screen and (min-device-width: 1253px) and (max-device-height: 1252px) {
+  .container-restaurant-cards .restaurant-cards .the-full-pallete-box .new {
+    left: 75%;
+    font-size: 1.7rem;
+  }
+}
+.container-restaurant-cards .restaurant-cards .the-full-pallete-box .fa-heart {
+  left: 78%;
+  bottom: 77%;
+  cursor: pointer;
+  font-size: 1.5rem;
+  color: grey;
+  position: absolute;
+}
+.container-restaurant-cards .restaurant-cards .the-full-pallete-box .fa-heart:focus {
+  color: #ff79da;
+}
+.container-restaurant-cards .restaurant-cards .the-full-pallete-box .fa-heart:hover {
+  color: #ff79da;
+}
+.container-restaurant-cards .restaurant-cards .the-enchanted-plate-box {
+  -webkit-box-shadow: 0rem 0.3rem 0.5rem 0.1rem #cfcfcf;
+          box-shadow: 0rem 0.3rem 0.5rem 0.1rem #cfcfcf;
+  border-radius: 0.4rem;
+  margin: 1rem 0rem;
+  width: 99%;
+  display: relative;
+}
+@media only screen and (min-device-width: 280px) and (max-device-width: 653px) and (orientation: portrait) {
+  .container-restaurant-cards .restaurant-cards .the-enchanted-plate-box {
+    font-size: 1.2rem;
+  }
+}
+.container-restaurant-cards .restaurant-cards .the-enchanted-plate-box .new {
+  position: absolute;
+  margin: 1rem;
+  padding: 0.5rem 3rem;
+  left: 45%;
+  color: #017c5a;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 1000;
+  background: #99e2d0;
+  border-radius: 0.2rem;
+}
+@media only screen and (min-device-width: 481px) and (max-device-height: 1180px) and (orientation: portrait) {
+  .container-restaurant-cards .restaurant-cards .the-enchanted-plate-box .new {
+    left: 70%;
+  }
+}
+@media only screen and (min-device-width: 540px) and (max-device-height: 720px) and (orientation: portrait) {
+  .container-restaurant-cards .restaurant-cards .the-enchanted-plate-box .new {
+    left: 10%;
+  }
+}
+@media only screen and (min-device-width: 912px) and (max-device-height: 1368px) and (orientation: portrait) {
+  .container-restaurant-cards .restaurant-cards .the-enchanted-plate-box .new {
+    left: 65%;
+    padding: 1rem 5rem;
+    font-size: 1.5rem;
+  }
+}
+@media only screen and (min-device-width: 280px) and (max-device-height: 653px) and (orientation: portrait) {
+  .container-restaurant-cards .restaurant-cards .the-enchanted-plate-box .new {
+    left: 35%;
+  }
+}
+@media only screen and (min-device-width: 412px) and (max-device-height: 914px) and (orientation: portrait) {
+  .container-restaurant-cards .restaurant-cards .the-enchanted-plate-box .new {
+    left: 50%;
+  }
+}
+@media only screen and (min-device-width: 1024px) and (max-device-height: 600px) and (orientation: landscape) {
+  .container-restaurant-cards .restaurant-cards .the-enchanted-plate-box .new {
+    left: 15%;
+  }
+}
+@media only screen and (min-device-width: 1024px) and (max-device-height: 600px) {
+  .container-restaurant-cards .restaurant-cards .the-enchanted-plate-box .new {
+    left: 75%;
+  }
+}
+@media only screen and (min-device-width: 1280px) and (max-device-height: 800px) {
+  .container-restaurant-cards .restaurant-cards .the-enchanted-plate-box .new {
+    left: 75%;
+  }
+}
+@media only screen and (min-device-width: 1253px) and (max-device-height: 1252px) and (orientation: portrait) {
+  .container-restaurant-cards .restaurant-cards .the-enchanted-plate-box .new {
+    width: 2vw;
+    left: -1.5rem;
+  }
+}
+@media only screen and (min-device-width: 1253px) and (max-device-height: 1252px) {
+  .container-restaurant-cards .restaurant-cards .the-enchanted-plate-box .new {
+    left: 75%;
+    font-size: 1.7rem;
+  }
+}
+.container-restaurant-cards .restaurant-cards .the-enchanted-plate-box .fa-heart {
+  left: 78%;
+  bottom: 52%;
+  cursor: pointer;
+  font-size: 1.5rem;
+  color: grey;
+  position: absolute;
+}
+.container-restaurant-cards .restaurant-cards .the-enchanted-plate-box .fa-heart:focus {
+  color: #ff79da;
+}
+.container-restaurant-cards .restaurant-cards .the-enchanted-plate-box .fa-heart:hover {
+  color: #ff79da;
+}
+.container-restaurant-cards .restaurant-cards .bastille-box {
+  -webkit-box-shadow: 0rem 0.3rem 0.5rem 0.1rem #cfcfcf;
+          box-shadow: 0rem 0.3rem 0.5rem 0.1rem #cfcfcf;
+  border-radius: 0.4rem;
+  margin: 1rem 0rem;
+  width: 99%;
+  display: relative;
+}
+@media only screen and (min-device-width: 280px) and (max-device-width: 653px) and (orientation: portrait) {
+  .container-restaurant-cards .restaurant-cards .bastille-box {
+    font-size: 1.2rem;
+  }
+}
+.container-restaurant-cards .restaurant-cards .bastille-box .fa-heart {
+  left: 78%;
+  bottom: 27%;
+  cursor: pointer;
+  font-size: 1.5rem;
+  color: grey;
+  position: absolute;
+}
+.container-restaurant-cards .restaurant-cards .le-gourmand-box {
+  -webkit-box-shadow: 0rem 0.3rem 0.5rem 0.1rem #cfcfcf;
+          box-shadow: 0rem 0.3rem 0.5rem 0.1rem #cfcfcf;
+  border-radius: 0.4rem;
+  margin: 1rem 0rem;
+  width: 99%;
+  display: relative;
+}
+@media only screen and (min-device-width: 280px) and (max-device-width: 653px) and (orientation: portrait) {
+  .container-restaurant-cards .restaurant-cards .le-gourmand-box {
+    font-size: 1.2rem;
+  }
+}
+.container-restaurant-cards .restaurant-cards .le-gourmand-box .fa-heart {
+  left: 78%;
+  bottom: 2%;
+  cursor: pointer;
+  font-size: 1.5rem;
+  color: grey;
+  position: absolute;
+}
+.container-restaurant-cards .restaurant-cards img {
+  float: center;
+  width: 100%;
+  height: 20vh;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-top-left-radius: 0.4rem;
+  border-top-right-radius: 0.4rem;
+}
+
+footer {
+  background: #696969;
+  padding-bottom: 1rem;
+}
+footer .footer-logo-img {
+  height: 1rem;
+  width: 6rem;
+  margin-left: 1rem;
+  -webkit-filter: invert(100%);
+          filter: invert(100%);
+  margin: 1rem;
+}
+footer .footer-p {
+  color: white;
+  margin-left: 1rem;
+  font: 1rem "Roboto", sans-serif;
+  padding-bottom: 0.5rem;
+  white-space: normal;
+}
+footer .support-a-restaurant-p {
+  color: white;
+  margin-left: 1rem;
+  font: 1rem "Roboto", sans-serif;
+  padding-bottom: 0.5rem;
+  white-space: normal;
+  font-weight: 1000;
+}
+footer .support-a-restaurant-p .fa-utensils {
+  margin-right: 1.2rem;
+}
+footer .become-a-partner-p {
+  color: white;
+  margin-left: 1rem;
+  font: 1rem "Roboto", sans-serif;
+  padding-bottom: 0.5rem;
+  white-space: normal;
+  font-weight: 1000;
+}
+footer .become-a-partner-p .fa-handshake-angle {
+  margin-right: 0.8rem;
+}
+footer .legal-p {
+  color: white;
+  margin-left: 1rem;
+  font: 1rem "Roboto", sans-serif;
+  padding-bottom: 0.5rem;
+  white-space: normal;
+}
+footer .contact-p {
+  color: white;
+  margin-left: 1rem;
+  font: 1rem "Roboto", sans-serif;
+  padding-bottom: 0.5rem;
+  white-space: normal;
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -14,7 +747,6 @@ body p {
   white-space: pre-line;
 }
 body header {
-  margin-bottom: 1rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -25,7 +757,7 @@ body header {
       -ms-flex-direction: column;
           flex-direction: column;
 }
-body header .container-header .logo {
+body header .container-header .logo a .logo-img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -37,11 +769,7 @@ body header .container-header .logo {
   text-align: center;
   margin-top: 0.5rem;
   padding-top: 1rem;
-}
-body header .container-header .logo .logo-img {
-  float: center;
-  height: 4rem;
-  width: 15rem;
+  height: 1rem;
 }
 body header .container-header .subtitle {
   -webkit-box-pack: center;
@@ -54,7 +782,6 @@ body header .container-header .subtitle {
 }
 @media only screen and (min-device-width: 912px) and (max-device-height: 1368px) and (orientation: portrait) {
   body header .container-header .subtitle {
-    /* For portrait layouts only */
     font-size: 1.2rem;
   }
 }
@@ -110,7 +837,6 @@ body main .brief-desc-of-comp {
 }
 @media only screen and (min-device-width: 912px) and (max-device-height: 1368px) and (orientation: portrait) {
   body main .brief-desc-of-comp {
-    /* For portrait layouts only */
     font-size: 1.5rem;
   }
 }
@@ -160,7 +886,6 @@ body main .booking {
 }
 @media only screen and (min-device-width: 912px) and (max-device-height: 1368px) and (orientation: portrait) {
   body main .booking {
-    /* For portrait layouts only */
     font-size: 1.5rem;
   }
 }
@@ -188,7 +913,6 @@ body main .booking {
 }
 @media only screen and (min-device-width: 1024px) and (max-device-height: 600px) {
   body main .booking {
-    /* For portrait layouts only */
     font-size: 1.5rem;
   }
 }
@@ -200,7 +924,6 @@ body main .booking {
 }
 @media only screen and (min-device-width: 1253px) and (max-device-height: 1252px) {
   body main .booking {
-    /* For portrait layouts only */
     font-size: 1.5rem;
   }
 }
@@ -212,13 +935,11 @@ body main .booking .span-booking {
 }
 @media only screen and (min-device-width: 280px) and (max-device-height: 653px) and (orientation: portrait) {
   body main .booking .span-booking {
-    /* For portrait layouts only */
     margin: 1rem 0rem;
   }
 }
 @media only screen and (min-device-width: 912px) and (max-device-height: 1368px) and (orientation: portrait) {
   body main .booking .span-booking {
-    /* For portrait layouts only */
     font-size: 1.3rem;
   }
 }
@@ -244,7 +965,6 @@ body main .booking .booking-btn {
 }
 @media only screen and (min-device-width: 280px) and (max-device-height: 653px) and (orientation: portrait) {
   body main .booking .booking-btn {
-    /* For portrait layouts only */
     margin: 0rem;
     margin-bottom: 1rem;
   }
@@ -264,7 +984,6 @@ body main .booking .booking-btn {
 }
 @media only screen and (min-device-width: 768px) and (max-device-height: 1024px) and (orientation: portrait) {
   body main .booking .booking-btn {
-    /* For portrait layouts only */
     font-size: 1.5rem;
     margin: 0rem 11rem;
     margin-bottom: 1rem;
@@ -313,13 +1032,11 @@ body main .how-it-works {
 }
 @media only screen and (min-device-width: 912px) and (max-device-height: 1368px) and (orientation: portrait) {
   body main .how-it-works {
-    /* For portrait layouts only */
     font-size: 1.5rem;
   }
 }
 @media only screen and (min-device-width: 540px) and (max-device-height: 720px) and (orientation: portrait) {
   body main .how-it-works {
-    /* For portrait layouts only */
     font-size: 1.5rem;
   }
 }
@@ -330,19 +1047,16 @@ body main .how-it-works {
 }
 @media only screen and (min-device-width: 820px) and (max-device-height: 1180px) and (orientation: portrait) {
   body main .how-it-works {
-    /* For portrait layouts only */
     font-size: 1.5rem;
   }
 }
 @media only screen and (min-device-width: 1024px) and (max-device-height: 600px) {
   body main .how-it-works {
-    /* For portrait layouts only */
     font-size: 1.5rem;
   }
 }
 @media only screen and (min-device-width: 1280px) and (max-device-height: 800px) {
   body main .how-it-works {
-    /* For portrait layouts only */
     font-size: 1.5rem;
   }
 }
@@ -378,31 +1092,26 @@ body main .how-it-works ol li {
 }
 @media only screen and (min-device-width: 912px) and (max-device-height: 1368px) and (orientation: portrait) {
   body main .how-it-works ol li {
-    /* For portrait layouts only */
     font-size: 1.2rem;
   }
 }
 @media only screen and (min-device-width: 540px) and (max-device-height: 720px) and (orientation: portrait) {
   body main .how-it-works ol li {
-    /* For portrait layouts only */
     font-size: 1.2rem;
   }
 }
 @media only screen and (min-device-width: 768px) and (max-device-height: 1024px) and (orientation: portrait) {
   body main .how-it-works ol li {
-    /* For portrait layouts only */
     font-size: 1.2rem;
   }
 }
 @media only screen and (min-device-width: 820px) and (max-device-height: 1180px) and (orientation: portrait) {
   body main .how-it-works ol li {
-    /* For portrait layouts only */
     font-size: 1.2rem;
   }
 }
 @media only screen and (min-device-width: 1024px) and (max-device-height: 600px) {
   body main .how-it-works ol li {
-    /* For portrait layouts only */
     font-size: 1.2rem;
   }
 }
@@ -413,7 +1122,6 @@ body main .how-it-works ol li {
 }
 @media only screen and (min-device-width: 1253px) and (max-device-height: 1252px) {
   body main .how-it-works ol li {
-    /* For portrait layouts only */
     font-size: 1.5rem;
   }
 }
@@ -448,31 +1156,22 @@ body main .how-it-works ol li:before {
 }
 @media only screen and (min-device-width: 481px) and (max-device-width: 1180px) and (orientation: portrait) {
   body main .how-it-works ol li:before {
-    /* For portrait layouts */
     width: 3vw;
   }
 }
 @media only screen and (min-device-width: 540px) and (max-device-height: 720px) and (orientation: portrait) {
   body main .how-it-works ol li:before {
-    /* For portrait layouts only */
     width: 4vw;
-  }
-}
-@media only screen and (min-device-width: 481px) and (max-device-width: 1180px) and (orientation: landscape) {
-  body main .how-it-works ol li:before {
-    /* For landscape layouts */
   }
 }
 @media only screen and (min-device-width: 1024px) and (max-device-height: 600px) {
   body main .how-it-works ol li:before {
-    /* For portrait layouts only */
     width: 3vw;
     left: -1rem;
   }
 }
 @media only screen and (min-device-width: 1280px) and (max-device-height: 800px) {
   body main .how-it-works ol li:before {
-    /* For portrait layouts only */
     width: 2.5vw;
     left: -1rem;
   }
@@ -485,7 +1184,6 @@ body main .how-it-works ol li:before {
 }
 @media only screen and (min-device-width: 1253px) and (max-device-height: 1252px) {
   body main .how-it-works ol li:before {
-    /* For portrait layouts only */
     width: 1.5vw;
     left: -1rem;
     font-size: 1.2rem;
@@ -503,31 +1201,26 @@ body main .container-restaurant-cards h2 {
 }
 @media only screen and (min-device-width: 912px) and (max-device-height: 1368px) and (orientation: portrait) {
   body main .container-restaurant-cards h2 {
-    /* For portrait layouts only */
     font-size: 3rem;
   }
 }
 @media only screen and (min-device-width: 540px) and (max-device-height: 720px) and (orientation: portrait) {
   body main .container-restaurant-cards h2 {
-    /* For portrait layouts only */
     font-size: 2.3rem;
   }
 }
 @media only screen and (min-device-width: 1024px) and (max-device-height: 600px) {
   body main .container-restaurant-cards h2 {
-    /* For portrait layouts only */
     font-size: 2rem;
   }
 }
 @media only screen and (min-device-width: 1280px) and (max-device-height: 800px) {
   body main .container-restaurant-cards h2 {
-    /* For portrait layouts only */
     font-size: 2.7rem;
   }
 }
 @media only screen and (min-device-width: 1253px) and (max-device-height: 1252px) {
   body main .container-restaurant-cards h2 {
-    /* For portrait layouts only */
     font-size: 2.5rem;
   }
 }
@@ -569,7 +1262,6 @@ body main .container-restaurant-cards .restaurant-cards .the-full-pallete-box {
 }
 @media only screen and (min-device-width: 280px) and (max-device-width: 653px) and (orientation: portrait) {
   body main .container-restaurant-cards .restaurant-cards .the-full-pallete-box {
-    /* For portrait layouts only */
     font-size: 1.2rem;
   }
 }
@@ -587,19 +1279,16 @@ body main .container-restaurant-cards .restaurant-cards .the-full-pallete-box .n
 }
 @media only screen and (min-device-width: 481px) and (max-device-height: 1180px) and (orientation: portrait) {
   body main .container-restaurant-cards .restaurant-cards .the-full-pallete-box .new {
-    /* For portrait layouts only */
     left: 70%;
   }
 }
 @media only screen and (min-device-width: 540px) and (max-device-height: 720px) and (orientation: portrait) {
   body main .container-restaurant-cards .restaurant-cards .the-full-pallete-box .new {
-    /* For portrait layouts only */
     left: 10%;
   }
 }
 @media only screen and (min-device-width: 912px) and (max-device-height: 1368px) and (orientation: portrait) {
   body main .container-restaurant-cards .restaurant-cards .the-full-pallete-box .new {
-    /* For portrait layouts only */
     left: 65%;
     padding: 1rem 5rem;
     font-size: 1.5rem;
@@ -607,13 +1296,11 @@ body main .container-restaurant-cards .restaurant-cards .the-full-pallete-box .n
 }
 @media only screen and (min-device-width: 280px) and (max-device-height: 653px) and (orientation: portrait) {
   body main .container-restaurant-cards .restaurant-cards .the-full-pallete-box .new {
-    /* For portrait layouts only */
     left: 35%;
   }
 }
 @media only screen and (min-device-width: 412px) and (max-device-height: 914px) and (orientation: portrait) {
   body main .container-restaurant-cards .restaurant-cards .the-full-pallete-box .new {
-    /* For portrait layouts only */
     left: 50%;
   }
 }
@@ -622,33 +1309,24 @@ body main .container-restaurant-cards .restaurant-cards .the-full-pallete-box .n
     left: 15%;
   }
 }
-@media only screen and (min-device-width: 481px) and (max-device-height: 1180px) and (orientation: landscape) {
-  body main .container-restaurant-cards .restaurant-cards .the-full-pallete-box .new {
-    /* For landscape layouts only */
-  }
-}
 @media only screen and (min-device-width: 1024px) and (max-device-height: 600px) {
   body main .container-restaurant-cards .restaurant-cards .the-full-pallete-box .new {
-    /* For portrait layouts only */
     left: 75%;
   }
 }
 @media only screen and (min-device-width: 1280px) and (max-device-height: 800px) {
   body main .container-restaurant-cards .restaurant-cards .the-full-pallete-box .new {
-    /* For portrait layouts only */
     left: 75%;
   }
 }
 @media only screen and (min-device-width: 1253px) and (max-device-height: 1252px) and (orientation: portrait) {
   body main .container-restaurant-cards .restaurant-cards .the-full-pallete-box .new {
-    /* For portrait layouts only */
     width: 2vw;
     left: -1.5rem;
   }
 }
 @media only screen and (min-device-width: 1253px) and (max-device-height: 1252px) {
   body main .container-restaurant-cards .restaurant-cards .the-full-pallete-box .new {
-    /* For portrait layouts only */
     left: 75%;
     font-size: 1.7rem;
   }
@@ -660,11 +1338,6 @@ body main .container-restaurant-cards .restaurant-cards .the-full-pallete-box .f
   font-size: 1.5rem;
   color: grey;
   position: absolute;
-}
-@media only screen and (min-device-width: 280px) and (max-device-width: 653px) and (orientation: portrait) {
-  body main .container-restaurant-cards .restaurant-cards .the-full-pallete-box .fa-heart {
-    /* For portrait layouts only */
-  }
 }
 body main .container-restaurant-cards .restaurant-cards .the-full-pallete-box .fa-heart:focus {
   color: #ff79da;
@@ -682,7 +1355,6 @@ body main .container-restaurant-cards .restaurant-cards .the-enchanted-plate-box
 }
 @media only screen and (min-device-width: 280px) and (max-device-width: 653px) and (orientation: portrait) {
   body main .container-restaurant-cards .restaurant-cards .the-enchanted-plate-box {
-    /* For portrait layouts only */
     font-size: 1.2rem;
   }
 }
@@ -700,19 +1372,16 @@ body main .container-restaurant-cards .restaurant-cards .the-enchanted-plate-box
 }
 @media only screen and (min-device-width: 481px) and (max-device-height: 1180px) and (orientation: portrait) {
   body main .container-restaurant-cards .restaurant-cards .the-enchanted-plate-box .new {
-    /* For portrait layouts only */
     left: 70%;
   }
 }
 @media only screen and (min-device-width: 540px) and (max-device-height: 720px) and (orientation: portrait) {
   body main .container-restaurant-cards .restaurant-cards .the-enchanted-plate-box .new {
-    /* For portrait layouts only */
     left: 10%;
   }
 }
 @media only screen and (min-device-width: 912px) and (max-device-height: 1368px) and (orientation: portrait) {
   body main .container-restaurant-cards .restaurant-cards .the-enchanted-plate-box .new {
-    /* For portrait layouts only */
     left: 65%;
     padding: 1rem 5rem;
     font-size: 1.5rem;
@@ -720,13 +1389,11 @@ body main .container-restaurant-cards .restaurant-cards .the-enchanted-plate-box
 }
 @media only screen and (min-device-width: 280px) and (max-device-height: 653px) and (orientation: portrait) {
   body main .container-restaurant-cards .restaurant-cards .the-enchanted-plate-box .new {
-    /* For portrait layouts only */
     left: 35%;
   }
 }
 @media only screen and (min-device-width: 412px) and (max-device-height: 914px) and (orientation: portrait) {
   body main .container-restaurant-cards .restaurant-cards .the-enchanted-plate-box .new {
-    /* For portrait layouts only */
     left: 50%;
   }
 }
@@ -735,33 +1402,24 @@ body main .container-restaurant-cards .restaurant-cards .the-enchanted-plate-box
     left: 15%;
   }
 }
-@media only screen and (min-device-width: 481px) and (max-device-height: 1180px) and (orientation: landscape) {
-  body main .container-restaurant-cards .restaurant-cards .the-enchanted-plate-box .new {
-    /* For landscape layouts only */
-  }
-}
 @media only screen and (min-device-width: 1024px) and (max-device-height: 600px) {
   body main .container-restaurant-cards .restaurant-cards .the-enchanted-plate-box .new {
-    /* For portrait layouts only */
     left: 75%;
   }
 }
 @media only screen and (min-device-width: 1280px) and (max-device-height: 800px) {
   body main .container-restaurant-cards .restaurant-cards .the-enchanted-plate-box .new {
-    /* For portrait layouts only */
     left: 75%;
   }
 }
 @media only screen and (min-device-width: 1253px) and (max-device-height: 1252px) and (orientation: portrait) {
   body main .container-restaurant-cards .restaurant-cards .the-enchanted-plate-box .new {
-    /* For portrait layouts only */
     width: 2vw;
     left: -1.5rem;
   }
 }
 @media only screen and (min-device-width: 1253px) and (max-device-height: 1252px) {
   body main .container-restaurant-cards .restaurant-cards .the-enchanted-plate-box .new {
-    /* For portrait layouts only */
     left: 75%;
     font-size: 1.7rem;
   }
@@ -773,11 +1431,6 @@ body main .container-restaurant-cards .restaurant-cards .the-enchanted-plate-box
   font-size: 1.5rem;
   color: grey;
   position: absolute;
-}
-@media only screen and (min-device-width: 280px) and (max-device-width: 653px) and (orientation: portrait) {
-  body main .container-restaurant-cards .restaurant-cards .the-enchanted-plate-box .fa-heart {
-    /* For portrait layouts only */
-  }
 }
 body main .container-restaurant-cards .restaurant-cards .the-enchanted-plate-box .fa-heart:focus {
   color: #ff79da;
@@ -795,7 +1448,6 @@ body main .container-restaurant-cards .restaurant-cards .bastille-box {
 }
 @media only screen and (min-device-width: 280px) and (max-device-width: 653px) and (orientation: portrait) {
   body main .container-restaurant-cards .restaurant-cards .bastille-box {
-    /* For portrait layouts only */
     font-size: 1.2rem;
   }
 }
@@ -807,11 +1459,6 @@ body main .container-restaurant-cards .restaurant-cards .bastille-box .fa-heart 
   color: grey;
   position: absolute;
 }
-@media only screen and (min-device-width: 280px) and (max-device-width: 653px) and (orientation: portrait) {
-  body main .container-restaurant-cards .restaurant-cards .bastille-box .fa-heart {
-    /* For portrait layouts only */
-  }
-}
 body main .container-restaurant-cards .restaurant-cards .le-gourmand-box {
   -webkit-box-shadow: 0rem 0.3rem 0.5rem 0.1rem #cfcfcf;
           box-shadow: 0rem 0.3rem 0.5rem 0.1rem #cfcfcf;
@@ -822,7 +1469,6 @@ body main .container-restaurant-cards .restaurant-cards .le-gourmand-box {
 }
 @media only screen and (min-device-width: 280px) and (max-device-width: 653px) and (orientation: portrait) {
   body main .container-restaurant-cards .restaurant-cards .le-gourmand-box {
-    /* For portrait layouts only */
     font-size: 1.2rem;
   }
 }
@@ -833,11 +1479,6 @@ body main .container-restaurant-cards .restaurant-cards .le-gourmand-box .fa-hea
   font-size: 1.5rem;
   color: grey;
   position: absolute;
-}
-@media only screen and (min-device-width: 280px) and (max-device-width: 653px) and (orientation: portrait) {
-  body main .container-restaurant-cards .restaurant-cards .le-gourmand-box .fa-heart {
-    /* For portrait layouts only */
-  }
 }
 body main .container-restaurant-cards .restaurant-cards img {
   float: center;

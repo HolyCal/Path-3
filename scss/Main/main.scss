@@ -1,8 +1,10 @@
 @import "var";
-@import "header";
-@import "nav";
-@import "body";
-
+@import "mainHeader";
+@import "briefDescOfComp";
+@import "booking";
+@import "howItWorks";
+@import "restaurantCards";
+@import "footer";
 * {
   padding: 0;
   margin: 0;
@@ -17,15 +19,13 @@ body {
     white-space: pre-line;
   }
   header {
-    margin-bottom: 1rem;
-    @include flexHeader(column, white, black);
+    @include header(column, white, black);
     .container-header {
       .logo {
-        @include logoImg;
-        .logo-img {
-          float: center;
-          height: 4rem;
-          width: 15rem;
+        a {
+          .logo-img {
+            @include logoImg;
+          }
         }
       }
       .subtitle {
@@ -38,7 +38,6 @@ body {
         background: rgba(0, 0, 0, 0.134);
         padding: 0.8rem;
         border-top: 0.2rem solid rgba(65, 65, 65, 0.164);
-        // width: 100%;
         .location-para {
           display: inline;
           font-family: $fontRoboto;
@@ -202,8 +201,7 @@ body {
     }
   }
   footer {
-    background: #696969;
-    padding-bottom: 1rem;
+    @include footer;
     .footer-logo-img {
       height: 1rem;
       width: 6rem;
@@ -236,10 +234,3 @@ body {
     }
   }
 }
-
-// background:#D2691E;
-// background:#FF7F50;
-// background:#6495ED;
-// background:#DC143C;
-// background:#00FFFF;
-// background:#B8860B;
