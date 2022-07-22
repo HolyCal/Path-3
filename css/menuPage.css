@@ -16,34 +16,34 @@ body p {
 body header {
   margin-bottom: 1rem;
 }
-body header .menu-container-header .menupage-logo .menupage-logo-img {
-  max-width: 100%;
+body header .menupage-container-header .menupage-logo .menupage-logo-img {
+  height: 10rem;
 }
-body header .menu-container-header .the-full-palette-subtitle {
+body header .menupage-container-header .the-full-palette-subtitle {
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   text-align: center;
   font-size: 1rem;
   letter-spacing: 0.05rem;
   font-family: "Shrikhand", cursive;
 }
-
-main {
+body header .menupage-container-header .header-image .background-image {
+  max-width: 100%;
+}
+body main {
   background: rgb(246, 246, 246);
   border-radius: 1.4rem;
   padding-bottom: 1rem;
 }
-
-#menu-page-h1 {
+body main #menu-page-h1 {
   font-family: "Shrikhand", cursive;
   font-size: 1.5rem;
   padding-top: 1rem;
   padding-left: 2rem;
   margin-bottom: 1rem;
 }
-
-.menu-page-courses {
+body main .menu-page-courses {
   font-family: "Roboto", sans-serif;
   font-size: 1rem;
   font-weight: 500;
@@ -51,17 +51,15 @@ main {
   color: grey;
   margin-left: 2rem;
 }
-
-.menu-page-courses::after {
+body main .menu-page-courses::after {
   content: "";
   display: block;
   border-bottom: 0.15rem solid #99e2d0;
   width: 2.5rem;
 }
-
-.menu-dishes {
+body main .menu-dishes {
   -webkit-box-shadow: 0rem 0.3rem 0.5rem 0.1rem #cfcfcf;
-          box-shadow: 0rem 0.3rem 0.5rem 0.1rem #cfcfcf;
+  box-shadow: 0rem 0.3rem 0.5rem 0.1rem #cfcfcf;
   border-radius: 1rem;
   height: 4rem;
   display: -webkit-box;
@@ -69,13 +67,13 @@ main {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -ms-flex-line-pack: center;
-      align-content: center;
+  align-content: center;
   margin: 1rem 1rem 1rem 1rem;
 }
-.menu-dishes .menu-dish-titles {
+body main .menu-dishes .menu-dish-titles {
   font-family: "Roboto", sans-serif;
   font-size: 1.2rem;
   font-weight: 1000;
@@ -85,7 +83,7 @@ main {
   padding-bottom: 0;
   padding-top: 0;
 }
-.menu-dishes .menu-dishes-p {
+body main .menu-dishes .menu-dishes-p {
   font-family: "Roboto", sans-serif;
   font-size: 0.8rem;
   font-weight: 300;
@@ -93,14 +91,13 @@ main {
   margin-left: 1rem;
   color: grey;
 }
-
-.order-button {
+body main .order-button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   background: #ff79da;
   background-image: linear-gradient(350deg, #9356dc, #ff79da);
   border: none;
@@ -113,9 +110,9 @@ main {
   font-weight: 500;
   letter-spacing: 0.1rem;
   -webkit-transform: scale(1);
-          transform: scale(1);
+  transform: scale(1);
   -webkit-box-shadow: 0rem 0.3rem 0.5rem 0.1rem #cfcfcf;
-          box-shadow: 0rem 0.3rem 0.5rem 0.1rem #cfcfcf;
+  box-shadow: 0rem 0.3rem 0.5rem 0.1rem #cfcfcf;
   margin-top: 2rem;
   margin-bottom: 2rem;
   margin-left: 5rem;
@@ -123,31 +120,30 @@ main {
   width: 10rem;
   padding: 0.7rem;
 }
-.order-button .order-button-a {
+body main .order-button .order-button-a {
   text-decoration: none;
   color: white;
 }
-
-footer {
+body main footer {
   background: #696969;
   padding-bottom: 1rem;
 }
-footer .footer-logo-img {
+body main footer .footer-logo-img {
   height: 1rem;
   width: 6rem;
   margin-left: 1rem;
   -webkit-filter: invert(100%);
-          filter: invert(100%);
+  filter: invert(100%);
   margin: 1rem;
 }
-footer .footer-p {
+body main footer .footer-p {
   color: white;
   margin-left: 1rem;
   font: 1rem "Roboto", sans-serif;
   padding-bottom: 0.5rem;
   white-space: normal;
 }
-footer .support-a-restaurant-p {
+body main footer .support-a-restaurant-p {
   color: white;
   margin-left: 1rem;
   font: 1rem "Roboto", sans-serif;
@@ -155,10 +151,10 @@ footer .support-a-restaurant-p {
   white-space: normal;
   font-weight: 1000;
 }
-footer .support-a-restaurant-p .fa-utensils {
+body main footer .support-a-restaurant-p .fa-utensils {
   margin-right: 1.2rem;
 }
-footer .become-a-partner-p {
+body main footer .become-a-partner-p {
   color: white;
   margin-left: 1rem;
   font: 1rem "Roboto", sans-serif;
@@ -166,17 +162,17 @@ footer .become-a-partner-p {
   white-space: normal;
   font-weight: 1000;
 }
-footer .become-a-partner-p .fa-handshake-angle {
+body main footer .become-a-partner-p .fa-handshake-angle {
   margin-right: 0.8rem;
 }
-footer .legal-p {
+body main footer .legal-p {
   color: white;
   margin-left: 1rem;
   font: 1rem "Roboto", sans-serif;
   padding-bottom: 0.5rem;
   white-space: normal;
 }
-footer .contact-p {
+body main footer .contact-p {
   color: white;
   margin-left: 1rem;
   font: 1rem "Roboto", sans-serif;

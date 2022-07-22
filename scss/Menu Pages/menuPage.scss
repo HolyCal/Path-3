@@ -1,0 +1,155 @@
+@import "var";
+
+* {
+  padding: 0;
+  margin: 0;
+}
+body {
+  @include body;
+  div {
+    margin: 0px;
+  }
+  p {
+    white-space: pre-line;
+  }
+  header {
+    margin-bottom: 1rem;
+    // @include menuPageHeader(column, white, black);
+    .menupage-container-header {
+      .menupage-logo {
+        .menupage-logo-img {
+          height: 10rem;
+        }
+      }
+      .the-full-palette-subtitle {
+        justify-content: center;
+        text-align: center;
+        font-size: $fontShrikhandSizeSmall;
+        letter-spacing: $letterSpacing;
+        font-family: $fontShrikhand;
+      }
+      .header-image {
+        .background-image {
+          // @include menuPageBackgroundImg;
+          max-width: 100%;
+          position: sticky;
+        }
+      }
+    }
+  }
+
+  main {
+    background: rgb(246, 246, 246);
+    border-radius: 1.4rem;
+    padding-bottom: 1rem;
+    #menu-page-h1 {
+      font-family: $fontShrikhand;
+      font-size: 1.5rem;
+      padding-top: 1rem;
+      padding-left: 2rem;
+      margin-bottom: 1rem;
+    }
+    .menu-page-courses {
+      font-family: $fontRoboto;
+      font-size: $fontRobotoSizeSmall;
+      font-weight: $fontWeightRegular;
+      text-transform: uppercase;
+      color: grey;
+      margin-left: 2rem;
+    }
+    .menu-page-courses::after {
+      content: "";
+      display: block;
+      border-bottom: 0.15rem solid $tertiaryColor;
+      width: 2.5rem;
+    }
+    .menu-dishes {
+      box-shadow: $boxShadowButton;
+      border-radius: 1rem;
+      height: 4rem;
+      display: flex;
+      flex-direction: column;
+      align-content: center;
+      margin: 1rem 1rem 1rem 1rem;
+      .menu-dish-titles {
+        font-family: $fontRoboto;
+        font-size: $fontRobotoSizeRegular;
+        font-weight: $fontWeightBold;
+        margin-top: 0.8rem;
+        margin-left: 1rem;
+        margin-bottom: 0.1rem;
+        padding-bottom: 0;
+        padding-top: 0;
+      }
+      .menu-dishes-p {
+        font-family: $fontRoboto;
+        font-size: $fontRobotoSizeSmallest;
+        font-weight: $fontWeightThin;
+        margin-top: 0;
+        margin-left: 1rem;
+        color: grey;
+      }
+    }
+    .order-button {
+      display: flex;
+      justify-content: center;
+      background: $secondaryColor;
+      background-image: linear-gradient(350deg, $primaryColor, $secondaryColor);
+      border: none;
+      border-radius: $borderRadiusButton;
+      text-align: center;
+      font-family: $fontRoboto;
+      font-size: $fontRobotoSizeSmall;
+      padding: 1.5rem 0rem;
+      cursor: pointer;
+      font-weight: $fontWeightRegular;
+      letter-spacing: 0.1rem;
+      transform: scale(1);
+      box-shadow: $boxShadowButton;
+      margin-top: 2rem;
+      margin-bottom: 2rem;
+      margin-left: 5rem;
+      margin: 2rem 0 2rem 5rem;
+      width: 10rem;
+      padding: 0.7rem;
+      .order-button-a {
+        text-decoration: none;
+        color: white;
+      }
+    }
+
+    footer {
+      @include footer;
+      .footer-logo-img {
+        height: 1rem;
+        width: 6rem;
+        margin-left: 1rem;
+        filter: invert(100%);
+        margin: 1rem;
+      }
+      .footer-p {
+        @include footerLinks;
+      }
+      .support-a-restaurant-p {
+        @include footerLinks;
+        font-weight: $fontWeightBold;
+        .fa-utensils {
+          margin-right: 1.2rem;
+        }
+      }
+      .become-a-partner-p {
+        @include footerLinks;
+        font-weight: $fontWeightBold;
+        .fa-handshake-angle {
+          margin-right: 0.8rem;
+        }
+      }
+      .legal-p {
+        @include footerLinks;
+      }
+      .contact-p {
+        @include footerLinks;
+      }
+    }
+  }
+}
