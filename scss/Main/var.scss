@@ -39,17 +39,6 @@ $letterSpacing: 0.05rem;
 @mixin marginBottom($marginBottom) {
   margin-bottom: 1rem;
 }
-@mixin logoImg {
-  display: flex;
-  justify-content: center;
-  align-self: center;
-  background: red;
-  text-align: center;
-  margin-top: 0.5rem;
-  padding-top: 1rem;
-  height: 10rem;
-  width: 10rem;
-}
 @mixin backgroundColorFlexDirection($direction, $background, $color) {
   display: flex;
   background: $background;
@@ -73,24 +62,22 @@ $letterSpacing: 0.05rem;
 }
 @mixin flexMain($direction, $background, $color) {
   @include backgroundColorFlexDirection($direction, $background, $color);
-  align-items: center;
-  text-align: center;
 }
-@mixin briefDescOfComp($direction, $background, $color) {
-  // @media only screen and (min-device-width: 1024px) {
-  // }
-  @media only screen and (min-device-width: 912px) and (max-device-height: 1368px) and (orientation: portrait) {
-    font-size: $fontRobotoSizeLarge;
-  }
-  @include backgroundColorFlexDirection($direction, $background, $color);
-  flex-wrap: nowrap;
-  letter-spacing: 0.02rem;
-  padding: 1.5rem;
-  font-size: $fontRobotoSizeSmall;
-  font-family: $fontRoboto;
-  text-align: left;
-  font-weight: $fontWeightRegular;
-}
+// @mixin briefDescOfComp($direction, $background, $color) {
+//   // @media only screen and (min-device-width: 1024px) {
+//   // }
+//   @media only screen and (min-device-width: 912px) and (max-device-height: 1368px) and (orientation: portrait) {
+//     font-size: $fontRobotoSizeLarge;
+//   }
+//   @include backgroundColorFlexDirection($direction, $background, $color);
+//   flex-wrap: nowrap;
+//   letter-spacing: 0.02rem;
+//   padding: 1.5rem;
+//   font-size: $fontRobotoSizeSmall;
+//   font-family: $fontRoboto;
+//   text-align: left;
+//   font-weight: $fontWeightRegular;
+// }
 @mixin flexBooking($direction, $background, $color) {
   @include backgroundColorFlexDirection($direction, $background, $color);
   @media only screen and (min-device-width: 912px) and (max-device-height: 1368px) and (orientation: portrait) {
@@ -128,13 +115,6 @@ $letterSpacing: 0.05rem;
   @media only screen and (min-device-width: 1253px) and (max-device-height: 1252px) {
     font-size: $fontRobotoSizeLarge;
   }
-  padding: 1rem;
-  margin-bottom: 1rem;
-  font-family: $fontRoboto;
-  font-size: $fontRobotoSizeLarge;
-  font-weight: $fontWeightBold;
-  letter-spacing: 0.1rem;
-  background: rgb(246, 246, 246);
 }
 @mixin spanBooking {
   @media only screen and (min-device-width: 280px) and (max-device-height: 653px) and (orientation: portrait) {
@@ -143,10 +123,6 @@ $letterSpacing: 0.05rem;
   @media only screen and (min-device-width: 912px) and (max-device-height: 1368px) and (orientation: portrait) {
     font-size: 1.3rem;
   }
-  font-size: $fontRobotoSizeSmall;
-  margin: 2rem 0rem;
-  font-weight: $fontWeightRegular;
-  color: grey;
 }
 @mixin bookingBtn {
   @media only screen and (min-device-width: 280px) and (max-device-height: 653px) and (orientation: portrait) {
@@ -181,22 +157,6 @@ $letterSpacing: 0.05rem;
     margin: 0rem 30rem;
     margin-bottom: 1rem;
   }
-  background: $secondaryColor;
-  background-image: linear-gradient(350deg, $primaryColor, $secondaryColor);
-  border: none;
-  border-radius: $borderRadiusButton;
-  text-align: center;
-  font-family: $fontRoboto;
-  font-size: $fontRobotoSizeSmall;
-  padding: 1.5rem 0rem;
-  cursor: pointer;
-  font-weight: $fontWeightBold;
-  letter-spacing: 0.1rem;
-  transform: scale(1);
-  box-shadow: $boxShadowButton;
-  margin-bottom: 3rem;
-  margin: 0rem 3rem;
-  margin-bottom: 2rem;
 }
 @mixin howItWorks {
   @media only screen and (min-device-width: 912px) and (max-device-height: 1368px) and (orientation: portrait) {
@@ -220,11 +180,6 @@ $letterSpacing: 0.05rem;
   @media only screen and (min-device-width: 1253px) and (max-device-height: 1252px) {
     font-size: $fontRobotoSizeLarge;
   }
-  font-family: $fontRoboto;
-  font-size: $fontRobotoSizeLarge;
-  color: black;
-  font-weight: $fontWeightBold;
-  letter-spacing: 0.1rem;
 }
 @mixin howItWorksLi {
   @media only screen and (min-device-width: 912px) and (max-device-height: 1368px) and (orientation: portrait) {
@@ -248,26 +203,6 @@ $letterSpacing: 0.05rem;
   @media only screen and (min-device-width: 1253px) and (max-device-height: 1252px) {
     font-size: $fontRobotoSizeLarge;
   }
-  font-weight: $fontWeightBold;
-  position: relative;
-  justify-content: center;
-  text-align: center;
-  background: $primaryColor;
-  border-radius: 50%;
-  width: 60vw;
-  background: $ShadowHowItWorks;
-  margin: 1rem;
-  border-radius: $borderRadiusHowItWorks;
-  padding: 2rem;
-  box-shadow: $boxShadowButton;
-}
-@mixin howItWorksOl {
-  counter-reset: item;
-  list-style-type: none;
-  font-size: $fontRobotoSizeSmall;
-  font-weight: $fontWeightRegular;
-  text-shadow: none;
-  letter-spacing: 0;
 }
 @mixin liBeforeHowItWorks {
   @media only screen and (min-device-width: 481px) and (max-device-width: 1180px) and (orientation: portrait) {
@@ -295,15 +230,6 @@ $letterSpacing: 0.05rem;
     left: -1rem;
     font-size: $fontRobotoSizeRegular;
   }
-  position: absolute;
-  left: -0.5rem;
-  content: counter(item) " ";
-  counter-increment: item;
-  background: $primaryColor;
-  border-radius: 50%;
-  width: 5vw;
-  padding: 0.5vw;
-  color: white;
 }
 @mixin h2 {
   @media only screen and (min-device-width: 912px) and (max-device-height: 1368px) and (orientation: portrait) {
@@ -365,33 +291,27 @@ $letterSpacing: 0.05rem;
   margin: 1rem 0rem;
   width: 99%;
 }
+@mixin restaurantCardsA {
+  text-decoration: none;
+}
+@mixin restaurantCardsAVisited {
+  color: black;
+}
 @mixin theFullPaletteHeartIcon {
   @media only screen and (min-device-width: 280px) and (max-device-width: 653px) and (orientation: portrait) {
   }
-  left: 78%;
-  bottom: 77%;
-  @include faHeart;
 }
 @mixin theEnchantedPlateHeartIcon {
   @media only screen and (min-device-width: 280px) and (max-device-width: 653px) and (orientation: portrait) {
   }
-  left: 78%;
-  bottom: 52%;
-  @include faHeart;
 }
 @mixin bastilleHeartIcon {
   @media only screen and (min-device-width: 280px) and (max-device-width: 653px) and (orientation: portrait) {
   }
-  left: 78%;
-  bottom: 27%;
-  @include faHeart;
 }
 @mixin leGourmandHeartIcon {
   @media only screen and (min-device-width: 280px) and (max-device-width: 653px) and (orientation: portrait) {
   }
-  left: 78%;
-  bottom: 2%;
-  @include faHeart;
 }
 @mixin faHeart {
   cursor: pointer;
@@ -455,10 +375,6 @@ $letterSpacing: 0.05rem;
   font-weight: $fontWeightBold;
   background: $tertiaryColor;
   border-radius: 0.2rem;
-}
-@mixin footer {
-  background: #696969;
-  padding-bottom: 1rem;
 }
 @mixin footerLinks {
   color: white;

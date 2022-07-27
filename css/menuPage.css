@@ -16,17 +16,13 @@ body p {
 body header {
   margin-bottom: 1rem;
 }
-body header .menupage-container-header .menupage-logo .menupage-logo-img {
-  height: 10rem;
-}
-body header .menupage-container-header .the-full-palette-subtitle {
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  text-align: center;
-  font-size: 1rem;
-  letter-spacing: 0.05rem;
-  font-family: "Shrikhand", cursive;
+body header .menupage-container-header .menupage-logo .menu-logo-img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  height: 1.8rem;
+  padding: 1rem 0 0.5rem 0;
 }
 body header .menupage-container-header .header-image .background-image {
   max-width: 100%;
@@ -59,7 +55,7 @@ body main .menu-page-courses::after {
 }
 body main .menu-dishes {
   -webkit-box-shadow: 0rem 0.3rem 0.5rem 0.1rem #cfcfcf;
-  box-shadow: 0rem 0.3rem 0.5rem 0.1rem #cfcfcf;
+          box-shadow: 0rem 0.3rem 0.5rem 0.1rem #cfcfcf;
   border-radius: 1rem;
   height: 4rem;
   display: -webkit-box;
@@ -67,13 +63,13 @@ body main .menu-dishes {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -ms-flex-line-pack: center;
-  align-content: center;
+      align-content: center;
   margin: 1rem 1rem 1rem 1rem;
 }
-body main .menu-dishes .menu-dish-titles {
+body main .menu-dish-titles {
   font-family: "Roboto", sans-serif;
   font-size: 1.2rem;
   font-weight: 1000;
@@ -83,7 +79,7 @@ body main .menu-dishes .menu-dish-titles {
   padding-bottom: 0;
   padding-top: 0;
 }
-body main .menu-dishes .menu-dishes-p {
+body main .menu-dishes-p {
   font-family: "Roboto", sans-serif;
   font-size: 0.8rem;
   font-weight: 300;
@@ -91,13 +87,13 @@ body main .menu-dishes .menu-dishes-p {
   margin-left: 1rem;
   color: grey;
 }
-body main .order-button {
+body .order-button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   background: #ff79da;
   background-image: linear-gradient(350deg, #9356dc, #ff79da);
   border: none;
@@ -110,9 +106,9 @@ body main .order-button {
   font-weight: 500;
   letter-spacing: 0.1rem;
   -webkit-transform: scale(1);
-  transform: scale(1);
+          transform: scale(1);
   -webkit-box-shadow: 0rem 0.3rem 0.5rem 0.1rem #cfcfcf;
-  box-shadow: 0rem 0.3rem 0.5rem 0.1rem #cfcfcf;
+          box-shadow: 0rem 0.3rem 0.5rem 0.1rem #cfcfcf;
   margin-top: 2rem;
   margin-bottom: 2rem;
   margin-left: 5rem;
@@ -120,30 +116,30 @@ body main .order-button {
   width: 10rem;
   padding: 0.7rem;
 }
-body main .order-button .order-button-a {
+body .order-button .order-button-a {
   text-decoration: none;
   color: white;
 }
-body main footer {
+body footer {
   background: #696969;
   padding-bottom: 1rem;
 }
-body main footer .footer-logo-img {
+body footer .footer-logo-img {
   height: 1rem;
   width: 6rem;
   margin-left: 1rem;
   -webkit-filter: invert(100%);
-  filter: invert(100%);
+          filter: invert(100%);
   margin: 1rem;
 }
-body main footer .footer-p {
+body footer .footer-p {
   color: white;
   margin-left: 1rem;
   font: 1rem "Roboto", sans-serif;
   padding-bottom: 0.5rem;
   white-space: normal;
 }
-body main footer .support-a-restaurant-p {
+body footer .support-a-restaurant-p {
   color: white;
   margin-left: 1rem;
   font: 1rem "Roboto", sans-serif;
@@ -151,10 +147,10 @@ body main footer .support-a-restaurant-p {
   white-space: normal;
   font-weight: 1000;
 }
-body main footer .support-a-restaurant-p .fa-utensils {
+body footer .support-a-restaurant-p .fa-utensils {
   margin-right: 1.2rem;
 }
-body main footer .become-a-partner-p {
+body footer .become-a-partner-p {
   color: white;
   margin-left: 1rem;
   font: 1rem "Roboto", sans-serif;
@@ -162,17 +158,17 @@ body main footer .become-a-partner-p {
   white-space: normal;
   font-weight: 1000;
 }
-body main footer .become-a-partner-p .fa-handshake-angle {
+body footer .become-a-partner-p .fa-handshake-angle {
   margin-right: 0.8rem;
 }
-body main footer .legal-p {
+body footer .legal-p {
   color: white;
   margin-left: 1rem;
   font: 1rem "Roboto", sans-serif;
   padding-bottom: 0.5rem;
   white-space: normal;
 }
-body main footer .contact-p {
+body footer .contact-p {
   color: white;
   margin-left: 1rem;
   font: 1rem "Roboto", sans-serif;

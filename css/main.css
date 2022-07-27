@@ -13,6 +13,12 @@ body div {
 body p {
   white-space: pre-line;
 }
+body a {
+  text-decoration: none;
+}
+body a:visited {
+  text-decoration: none;
+}
 body header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -28,31 +34,10 @@ body header .container-header .logo a .logo-img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -ms-flex-item-align: center;
-      align-self: center;
-  background: red;
-  text-align: center;
-  margin-top: 0.5rem;
+  margin: 0.5rem auto 0.8rem auto;
   padding-top: 1rem;
-  height: 10rem;
-  width: 10rem;
-}
-body header .container-header .subtitle {
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  text-align: center;
-  font-size: 1.2rem;
-  letter-spacing: 0.05rem;
-  font-family: "Shrikhand", cursive;
-}
-@media only screen and (min-device-width: 912px) and (max-device-height: 1368px) and (orientation: portrait) {
-  body header .container-header .subtitle {
-    font-size: 1.2rem;
-  }
+  height: 2rem;
+  width: 50%;
 }
 body header .container-header .location {
   -webkit-box-pack: center;
@@ -84,56 +69,6 @@ body main {
       -ms-flex-align: center;
           align-items: center;
   text-align: center;
-}
-body main .brief-desc-of-comp {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  background: rgb(246, 246, 246);
-  color: black;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
-  letter-spacing: 0.02rem;
-  padding: 1.5rem;
-  font-size: 1rem;
-  font-family: "Roboto", sans-serif;
-  text-align: left;
-  font-weight: 500;
-}
-@media only screen and (min-device-width: 912px) and (max-device-height: 1368px) and (orientation: portrait) {
-  body main .brief-desc-of-comp {
-    font-size: 1.5rem;
-  }
-}
-body main .brief-desc-of-comp .span-brief-desc-of-comp {
-  margin-bottom: 0.5rem;
-}
-body main .brief-desc-of-comp #span-brief-desc-of-comp-first-p {
-  margin-bottom: 0.3rem;
-}
-body main .brief-desc-of-comp .span-brief-desc-of-comp-last-p {
-  text-align: center;
-  font-size: 1.4rem;
-}
-body main .brief-desc-of-comp #span-brief-desc-of-comp-last-p-border-top {
-  border-top: 0.3rem solid transparent;
-  -o-border-image: linear-gradient(to right, #ff79da, #9356dc);
-     border-image: -webkit-gradient(linear, left top, right top, from(#ff79da), to(#9356dc));
-     border-image: linear-gradient(to right, #ff79da, #9356dc);
-  border-image-slice: 1;
-  margin-top: 2rem;
-  padding: 0rem;
-}
-body main .brief-desc-of-comp #span-brief-desc-of-comp-last-p-border-bottom {
-  border-bottom: 0.3rem solid transparent;
-  -o-border-image: linear-gradient(to right, #9356dc, #ff79da);
-     border-image: -webkit-gradient(linear, left top, right top, from(#9356dc), to(#ff79da));
-     border-image: linear-gradient(to right, #9356dc, #ff79da);
-  border-image-slice: 1;
 }
 body main .booking {
   display: -webkit-box;
@@ -467,6 +402,11 @@ body main .container-restaurant-cards h2 {
   font-family: "Shrikhand", cursive;
   letter-spacing: 0.05rem;
   width: 95vw;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  font-family: "Shrikhand", cursive;
+  letter-spacing: 0.05rem;
+  width: 95vw;
 }
 @media only screen and (min-device-width: 912px) and (max-device-height: 1368px) and (orientation: portrait) {
   body main .container-restaurant-cards h2 {
@@ -533,6 +473,12 @@ body main .container-restaurant-cards .restaurant-cards .the-full-pallete-box {
   body main .container-restaurant-cards .restaurant-cards .the-full-pallete-box {
     font-size: 1.2rem;
   }
+}
+body main .container-restaurant-cards .restaurant-cards .the-full-pallete-box a {
+  text-decoration: none;
+}
+body main .container-restaurant-cards .restaurant-cards .the-full-pallete-box a:visited {
+  color: black;
 }
 body main .container-restaurant-cards .restaurant-cards .the-full-pallete-box .new {
   position: absolute;
@@ -627,6 +573,12 @@ body main .container-restaurant-cards .restaurant-cards .the-enchanted-plate-box
     font-size: 1.2rem;
   }
 }
+body main .container-restaurant-cards .restaurant-cards .the-enchanted-plate-box a {
+  text-decoration: none;
+}
+body main .container-restaurant-cards .restaurant-cards .the-enchanted-plate-box a:visited {
+  color: black;
+}
 body main .container-restaurant-cards .restaurant-cards .the-enchanted-plate-box .new {
   position: absolute;
   margin: 1rem;
@@ -720,6 +672,12 @@ body main .container-restaurant-cards .restaurant-cards .bastille-box {
     font-size: 1.2rem;
   }
 }
+body main .container-restaurant-cards .restaurant-cards .bastille-box a {
+  text-decoration: none;
+}
+body main .container-restaurant-cards .restaurant-cards .bastille-box a:visited {
+  color: black;
+}
 body main .container-restaurant-cards .restaurant-cards .bastille-box .fa-heart {
   left: 78%;
   bottom: 27%;
@@ -740,6 +698,12 @@ body main .container-restaurant-cards .restaurant-cards .le-gourmand-box {
   body main .container-restaurant-cards .restaurant-cards .le-gourmand-box {
     font-size: 1.2rem;
   }
+}
+body main .container-restaurant-cards .restaurant-cards .le-gourmand-box a {
+  text-decoration: none;
+}
+body main .container-restaurant-cards .restaurant-cards .le-gourmand-box a:visited {
+  color: black;
 }
 body main .container-restaurant-cards .restaurant-cards .le-gourmand-box .fa-heart {
   left: 78%;
