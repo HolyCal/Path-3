@@ -39,6 +39,34 @@ body header .container-header .logo a .logo-img {
   height: 2rem;
   width: 50%;
 }
+@media only screen and (min-device-width: 820px) and (max-device-height: 1180px) and (orientation: portrait) {
+  body header .container-header .logo a .logo-img {
+    width: 30%;
+  }
+}
+@media only screen and (min-device-width: 768px) and (max-device-height: 1024px) and (orientation: portrait) {
+  body header .container-header .logo a .logo-img {
+    width: 30%;
+  }
+}
+@media only screen and (min-device-width: 912px) and (max-device-height: 1368px) and (orientation: portrait) {
+  body header .container-header .logo a .logo-img {
+    width: 40%;
+    height: 2.5rem;
+  }
+}
+@media only screen and (min-device-width: 1024px) and (max-device-height: 600px) {
+  body header .container-header .logo a .logo-img {
+    width: 40%;
+    height: 2.5rem;
+  }
+}
+@media only screen and (min-device-width: 1280px) and (max-device-height: 800px) {
+  body header .container-header .logo a .logo-img {
+    width: 40%;
+    height: 2.5rem;
+  }
+}
 body header .container-header .location {
   -webkit-box-pack: center;
       -ms-flex-pack: center;

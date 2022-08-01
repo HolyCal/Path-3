@@ -77,21 +77,21 @@ $letterSpacing: 0.05rem;
   align-items: center;
   text-align: center;
 }
-@mixin briefDescOfComp($direction, $background, $color) {
+// @mixin briefDescOfComp($direction, $background, $color) {
   // @media only screen and (min-device-width: 1024px) {
   // }
-  @media only screen and (min-device-width: 912px) and (max-device-height: 1368px) and (orientation: portrait) {
-    font-size: $fontRobotoSizeLarge;
-  }
-  @include backgroundColorFlexDirection($direction, $background, $color);
-  flex-wrap: nowrap;
-  letter-spacing: 0.02rem;
-  padding: 1.5rem;
-  font-size: $fontRobotoSizeSmall;
-  font-family: $fontRoboto;
-  text-align: left;
-  font-weight: $fontWeightRegular;
-}
+//   @media only screen and (min-device-width: 912px) and (max-device-height: 1368px) and (orientation: portrait) {
+//     font-size: $fontRobotoSizeLarge;
+//   }
+//   @include backgroundColorFlexDirection($direction, $background, $color);
+//   flex-wrap: nowrap;
+//   letter-spacing: 0.02rem;
+//   padding: 1.5rem;
+//   font-size: $fontRobotoSizeSmall;
+//   font-family: $fontRoboto;
+//   text-align: left;
+//   font-weight: $fontWeightRegular;
+// }
 @mixin flexBooking($direction, $background, $color) {
   @include backgroundColorFlexDirection($direction, $background, $color);
   @media only screen and (min-device-width: 912px) and (max-device-height: 1368px) and (orientation: portrait) {

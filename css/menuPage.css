@@ -48,12 +48,12 @@ body main .menu-page-courses {
   margin-left: 2rem;
 }
 body main .menu-page-courses::after {
-  content: "";
+  content: " ";
   display: block;
   border-bottom: 0.15rem solid #99e2d0;
   width: 2.5rem;
 }
-body main .menu-dishes {
+body main .menu-dishes .menu-dishes-btn {
   -webkit-box-shadow: 0rem 0.3rem 0.5rem 0.1rem #cfcfcf;
           box-shadow: 0rem 0.3rem 0.5rem 0.1rem #cfcfcf;
   border-radius: 1rem;
@@ -68,6 +68,47 @@ body main .menu-dishes {
   -ms-flex-line-pack: center;
       align-content: center;
   margin: 1rem 1rem 1rem 1rem;
+  position: relative;
+  cursor: pointer;
+  border: 0;
+  width: 20rem;
+  margin: auto;
+  margin: 1rem;
+  margin-right: 0;
+  z-index: 1;
+}
+body main .menu-dishes .fa-circle-check {
+  position: absolute;
+  right: 1rem;
+  bottom: 1.5rem;
+  color: rgb(246, 246, 246);
+  right: 1.3rem;
+  top: 1.2rem;
+  font-size: 1.5rem;
+}
+body main .menu-dishes .menu-dishes-btn::after {
+  content: " ";
+  position: absolute;
+  width: 20%;
+  height: 100%;
+  background: #99e2d0;
+  right: 0;
+  border-radius: 0.4rem;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  z-index: -1;
+  -webkit-transition: -webkit-transform 300ms ease-in;
+  transition: -webkit-transform 300ms ease-in;
+  transition: transform 300ms ease-in;
+  transition: transform 300ms ease-in, -webkit-transform 300ms ease-in;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transform-origin: right;
+          transform-origin: right;
+}
+body main .menu-dishes .menu-dishes-btn:hover::after {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
 }
 body main .menu-dish-titles {
   font-family: "Roboto", sans-serif;
