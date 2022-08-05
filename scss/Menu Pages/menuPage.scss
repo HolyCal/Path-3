@@ -132,86 +132,89 @@ body {
         animation: spin 1s linear infinite;
       }
       @keyframes spin {
-        100%{transform: rotate(360deg);}
+        100% {
+          transform: rotate(360deg);
+        }
       }
-    .menu-dish-titles {
+      .menu-dish-titles {
+        font-family: $fontRoboto;
+        font-size: $fontRobotoSizeRegular;
+        font-weight: $fontWeightBold;
+        margin-top: 0.8rem;
+        margin-left: 1rem;
+        margin-bottom: 0.1rem;
+        padding-bottom: 0;
+        padding-top: 0;
+      }
+      .menu-dishes-p {
+        font-family: $fontRoboto;
+        font-size: $fontRobotoSizeSmallest;
+        font-weight: $fontWeightThin;
+        margin-top: 0;
+        margin-left: 1rem;
+        color: grey;
+      }
+    }
+    .order-button {
+      display: flex;
+      justify-content: center;
+      background: $secondaryColor;
+      background-image: linear-gradient(350deg, $primaryColor, $secondaryColor);
+      border: none;
+      border-radius: $borderRadiusButton;
+      text-align: center;
       font-family: $fontRoboto;
-      font-size: $fontRobotoSizeRegular;
-      font-weight: $fontWeightBold;
-      margin-top: 0.8rem;
-      margin-left: 1rem;
-      margin-bottom: 0.1rem;
-      padding-bottom: 0;
-      padding-top: 0;
+      font-size: $fontRobotoSizeSmall;
+      padding: 1.5rem 0rem;
+      cursor: pointer;
+      font-weight: $fontWeightRegular;
+      letter-spacing: 0.1rem;
+      transform: scale(1);
+      box-shadow: $boxShadowButton;
+      margin-top: 2rem;
+      margin-bottom: 2rem;
+      margin-left: 5rem;
+      margin: 2rem 0 2rem 5rem;
+      width: 10rem;
+      padding: 0.7rem;
+      .order-button-a {
+        text-decoration: none;
+        color: white;
+      }
     }
-    .menu-dishes-p {
-      font-family: $fontRoboto;
-      font-size: $fontRobotoSizeSmallest;
-      font-weight: $fontWeightThin;
-      margin-top: 0;
-      margin-left: 1rem;
-      color: grey;
-    }
-  }
-  .order-button {
-    display: flex;
-    justify-content: center;
-    background: $secondaryColor;
-    background-image: linear-gradient(350deg, $primaryColor, $secondaryColor);
-    border: none;
-    border-radius: $borderRadiusButton;
-    text-align: center;
-    font-family: $fontRoboto;
-    font-size: $fontRobotoSizeSmall;
-    padding: 1.5rem 0rem;
-    cursor: pointer;
-    font-weight: $fontWeightRegular;
-    letter-spacing: 0.1rem;
-    transform: scale(1);
-    box-shadow: $boxShadowButton;
-    margin-top: 2rem;
-    margin-bottom: 2rem;
-    margin-left: 5rem;
-    margin: 2rem 0 2rem 5rem;
-    width: 10rem;
-    padding: 0.7rem;
-    .order-button-a {
-      text-decoration: none;
-      color: white;
-    }
-  }
 
-  footer {
-    @include footer;
-    .footer-logo-img {
-      height: 1rem;
-      width: 6rem;
-      margin-left: 1rem;
-      filter: invert(100%);
-      margin: 1rem;
-    }
-    .footer-p {
-      @include footerLinks;
-    }
-    .support-a-restaurant-p {
-      @include footerLinks;
-      font-weight: $fontWeightBold;
-      .fa-utensils {
-        margin-right: 1.2rem;
+    footer {
+      @include footer;
+      .footer-logo-img {
+        height: 1rem;
+        width: 6rem;
+        margin-left: 1rem;
+        filter: invert(100%);
+        margin: 1rem;
       }
-    }
-    .become-a-partner-p {
-      @include footerLinks;
-      font-weight: $fontWeightBold;
-      .fa-handshake-angle {
-        margin-right: 0.8rem;
+      .footer-p {
+        @include footerLinks;
       }
-    }
-    .legal-p {
-      @include footerLinks;
-    }
-    .contact-p {
-      @include footerLinks;
+      .support-a-restaurant-p {
+        @include footerLinks;
+        font-weight: $fontWeightBold;
+        .fa-utensils {
+          margin-right: 1.2rem;
+        }
+      }
+      .become-a-partner-p {
+        @include footerLinks;
+        font-weight: $fontWeightBold;
+        .fa-handshake-angle {
+          margin-right: 0.8rem;
+        }
+      }
+      .legal-p {
+        @include footerLinks;
+      }
+      .contact-p {
+        @include footerLinks;
+      }
     }
   }
 }
