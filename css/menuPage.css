@@ -10,9 +10,6 @@ body {
 body div {
   margin: 0px;
 }
-body p {
-  white-space: pre-line;
-}
 body header {
   margin-bottom: 1rem;
 }
@@ -31,6 +28,8 @@ body main {
   background: rgb(246, 246, 246);
   border-radius: 1.4rem;
   padding-bottom: 1rem;
+  position: relative;
+  top: -4rem;
 }
 body main #menu-page-h1 {
   font-family: "Shrikhand", cursive;
@@ -55,7 +54,7 @@ body main .menu-page-courses::after {
 }
 body main .menu-dishes .menu-dishes-btn {
   -webkit-box-shadow: 0rem 0.3rem 0.5rem 0.1rem #cfcfcf;
-  box-shadow: 0rem 0.3rem 0.5rem 0.1rem #cfcfcf;
+          box-shadow: 0rem 0.3rem 0.5rem 0.1rem #cfcfcf;
   border-radius: 1rem;
   height: 4rem;
   display: -webkit-box;
@@ -63,10 +62,10 @@ body main .menu-dishes .menu-dishes-btn {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -ms-flex-line-pack: center;
-  align-content: center;
+      align-content: center;
   margin: 1rem 1rem 1rem 1rem;
   position: relative;
   cursor: pointer;
@@ -76,6 +75,17 @@ body main .menu-dishes .menu-dishes-btn {
   margin: 1rem;
   margin-right: 0;
   z-index: 1;
+}
+body main .menu-dishes .menu-dishes-btn:hover .fa-circle-check {
+  -webkit-animation: spin 1s 1;
+          animation: spin 1s 1;
+  right: 1.5rem;
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s;
+}
+body main .menu-dishes .menu-dishes-btn:hover::after {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
 }
 body main .menu-dishes .menu-dishes-btn::after {
   content: " ";
@@ -93,24 +103,32 @@ body main .menu-dishes .menu-dishes-btn::after {
   transition: transform 300ms ease-in;
   transition: transform 300ms ease-in, -webkit-transform 300ms ease-in;
   -webkit-transform: scaleX(0);
-  transform: scaleX(0);
+          transform: scaleX(0);
   -webkit-transform-origin: right;
-  transform-origin: right;
-}
-body main .menu-dishes .menu-dishes-btn:hover::after {
-  -webkit-transform: scaleX(1);
-  transform: scaleX(1);
+          transform-origin: right;
 }
 body main .menu-dishes .fa-circle-check {
   position: absolute;
   right: 1rem;
   bottom: 1.5rem;
   color: rgb(246, 246, 246);
-  right: 1.3rem;
+  right: -5rem;
   top: 1.2rem;
   font-size: 1.5rem;
 }
-body main .menu-dish-titles {
+@-webkit-keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+@keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+body main .menu-dishes .menu-dish-titles {
   font-family: "Roboto", sans-serif;
   font-size: 1.2rem;
   font-weight: 1000;
@@ -120,7 +138,7 @@ body main .menu-dish-titles {
   padding-bottom: 0;
   padding-top: 0;
 }
-body main .menu-dishes-p {
+body main .menu-dishes .menu-dishes-p {
   font-family: "Roboto", sans-serif;
   font-size: 0.8rem;
   font-weight: 300;
@@ -128,13 +146,13 @@ body main .menu-dishes-p {
   margin-left: 1rem;
   color: grey;
 }
-body .order-button {
+body main .order-button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   background: #ff79da;
   background-image: linear-gradient(350deg, #9356dc, #ff79da);
   border: none;
@@ -147,9 +165,9 @@ body .order-button {
   font-weight: 500;
   letter-spacing: 0.1rem;
   -webkit-transform: scale(1);
-  transform: scale(1);
+          transform: scale(1);
   -webkit-box-shadow: 0rem 0.3rem 0.5rem 0.1rem #cfcfcf;
-  box-shadow: 0rem 0.3rem 0.5rem 0.1rem #cfcfcf;
+          box-shadow: 0rem 0.3rem 0.5rem 0.1rem #cfcfcf;
   margin-top: 2rem;
   margin-bottom: 2rem;
   margin-left: 5rem;
@@ -157,7 +175,7 @@ body .order-button {
   width: 10rem;
   padding: 0.7rem;
 }
-body .order-button .order-button-a {
+body main .order-button .order-button-a {
   text-decoration: none;
   color: white;
 }
@@ -170,7 +188,7 @@ body footer .footer-logo-img {
   width: 6rem;
   margin-left: 1rem;
   -webkit-filter: invert(100%);
-  filter: invert(100%);
+          filter: invert(100%);
   margin: 1rem;
 }
 body footer .footer-p {

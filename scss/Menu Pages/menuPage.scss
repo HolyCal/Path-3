@@ -9,9 +9,6 @@ body {
   div {
     margin: 0px;
   }
-  p {
-    white-space: pre-line;
-  }
   header {
     margin-bottom: 1rem;
     .menupage-container-header {
@@ -37,6 +34,8 @@ body {
     background: rgb(246, 246, 246);
     border-radius: 1.4rem;
     padding-bottom: 1rem;
+    position: relative;
+    top: -4rem;
     #menu-page-h1 {
       font-family: $fontShrikhand;
       font-size: 1.5rem;
@@ -76,6 +75,16 @@ body {
         margin-right: 0;
         z-index: 1;
       }
+      .menu-dishes-btn:hover {
+        .fa-circle-check {
+          animation: spin 1s 1;
+          right: 1.5rem;
+          animation-delay: 0.3s;
+        }
+      }
+      .menu-dishes-btn:hover::after {
+        transform: scaleX(1);
+      }
       .menu-dishes-btn::after {
         content: " ";
         position: absolute;
@@ -91,45 +100,14 @@ body {
         transform: scaleX(0);
         transform-origin: right;
       }
-      .menu-dishes-btn:hover::after {
-        transform: scaleX(1);
-      }
-      // .check-btn {
-      //   cursor: pointer;
-      //   border: 0;
-      //   width: 20rem;
-      //   margin: auto;
-      //   margin: 1rem;
-      //   margin-right: 0;
-      //   z-index: 1;
-      // }
-      // .check-btn::after {
-      //   content: " ";
-      //   position: absolute;
-      //   width: 20%;
-      //   height: 100%;
-      //   background: $tertiaryColor;
-      //   right: 0;
-      //   border-radius: $borderRadius;
-      //   border-top-left-radius: 0;
-      //   border-bottom-left-radius: 0;
-      //   z-index: -1;
-      //   transition: transform 300ms ease-in;
-      //   transform: scaleX(0);
-      //   transform-origin: right;
-      // }
       .fa-circle-check {
-        display: block;
-        position: fixed;
+        position: absolute;
         right: 1rem;
         bottom: 1.5rem;
         color: rgb(246, 246, 246);
-        right: 1.3rem;
+        right: -5rem;
         top: 1.2rem;
         font-size: 1.5rem;
-      }
-      .fa-circle-check:hover {
-        animation: spin 1s linear infinite;
       }
       @keyframes spin {
         100% {
@@ -182,39 +160,38 @@ body {
         color: white;
       }
     }
-
-    footer {
-      @include footer;
-      .footer-logo-img {
-        height: 1rem;
-        width: 6rem;
-        margin-left: 1rem;
-        filter: invert(100%);
-        margin: 1rem;
+  }
+  footer {
+    @include footer;
+    .footer-logo-img {
+      height: 1rem;
+      width: 6rem;
+      margin-left: 1rem;
+      filter: invert(100%);
+      margin: 1rem;
+    }
+    .footer-p {
+      @include footerLinks;
+    }
+    .support-a-restaurant-p {
+      @include footerLinks;
+      font-weight: $fontWeightBold;
+      .fa-utensils {
+        margin-right: 1.2rem;
       }
-      .footer-p {
-        @include footerLinks;
+    }
+    .become-a-partner-p {
+      @include footerLinks;
+      font-weight: $fontWeightBold;
+      .fa-handshake-angle {
+        margin-right: 0.8rem;
       }
-      .support-a-restaurant-p {
-        @include footerLinks;
-        font-weight: $fontWeightBold;
-        .fa-utensils {
-          margin-right: 1.2rem;
-        }
-      }
-      .become-a-partner-p {
-        @include footerLinks;
-        font-weight: $fontWeightBold;
-        .fa-handshake-angle {
-          margin-right: 0.8rem;
-        }
-      }
-      .legal-p {
-        @include footerLinks;
-      }
-      .contact-p {
-        @include footerLinks;
-      }
+    }
+    .legal-p {
+      @include footerLinks;
+    }
+    .contact-p {
+      @include footerLinks;
     }
   }
 }
