@@ -54,7 +54,7 @@ body {
     align-items: center;
     text-align: center;
     // .brief-desc-of-comp {
-    //   @include briefDescOfComp(column, rgb(246, 246, 246), black);
+    //   @include briefDescOfComp(column, $backgroundColorGray, black);
     //   .span-brief-desc-of-comp {
     //     margin-bottom: 0.5rem;
     //   }
@@ -87,7 +87,7 @@ body {
       font-size: $fontRobotoSizeLarge;
       font-weight: $fontWeightBold;
       letter-spacing: 0.1rem;
-      background: rgb(246, 246, 246);
+      background: $backgroundColorGray;
       .span-booking {
         @include spanBooking;
         font-size: $fontRobotoSizeSmall;
@@ -216,6 +216,7 @@ body {
         .the-full-pallete-box {
           @include restuarantCards;
           display: relative;
+          padding: 0;
           a {
             @include restaurantCardsA;
             &:visited {
@@ -231,11 +232,11 @@ body {
             bottom: 77%;
             @include faHeart;
           }
-          .fa-heart:focus {
-            @include faHeartFocus;
+          .fa-heart-2 {
+            @include faHeart2;
           }
           .fa-heart:hover {
-            @include faHeartFocus;
+            @include faHeartHover;
           }
         }
         .the-enchanted-plate-box {
@@ -256,11 +257,11 @@ body {
             bottom: 52%;
             @include faHeart;
           }
-          .fa-heart:focus {
-            @include faHeartFocus;
+          .fa-heart-2 {
+            @include faHeart2;
           }
           .fa-heart:hover {
-            @include faHeartFocus;
+            @include faHeartHover;
           }
         }
         .bastille-box {
@@ -278,6 +279,12 @@ body {
             bottom: 27%;
             @include faHeart;
           }
+          .fa-heart-2 {
+            @include faHeart2;
+          }
+          .fa-heart:hover {
+            @include faHeartHover;
+          }
         }
         .le-gourmand-box {
           @include restuarantCards;
@@ -293,6 +300,13 @@ body {
             left: 78%;
             bottom: 2%;
             @include faHeart;
+          }
+          .fa-heart-2 {
+            @include faHeart2;
+            bottom: 0.02rem;
+          }
+          .fa-heart:hover {
+            @include faHeartHover;
           }
         }
         img {

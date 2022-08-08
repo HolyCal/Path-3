@@ -1,6 +1,7 @@
 $primaryColor: #9356dc;
 $secondaryColor: #ff79da;
 $tertiaryColor: #99e2d0;
+$backgroundColorGray: rgb(246, 246, 246);
 $gradient: linear-gradient(350deg, $primaryColor, $secondaryColor);
 $Shadow: #cfcfcf;
 $ShadowHowItWorks: #eeeeee;
@@ -105,10 +106,6 @@ $letterSpacing: 0.05rem;
   }
 }
 @mixin booking {
-  // @media only screen and (min-device-width: 375px) and (max-device-height: 720px) and (orientation: landscape) {
-  // }
-  // @media only screen and (min-device-width: 540px) and (orientation: portrait) {
-  // }
   @media only screen and (min-device-width: 540px) and (max-device-height: 720px) and (orientation: portrait) {
     font-size: $fontRobotoSizeLarge;
     width: 94%;
@@ -123,8 +120,6 @@ $letterSpacing: 0.05rem;
   @media only screen and (min-device-width: 912px) and (max-device-height: 1368px) {
     width: 96%;
   }
-  // @media only screen and (min-device-width: 1024px) {
-  // }
   @media only screen and (min-device-width: 1024px) and (max-device-height: 600px) {
     font-size: $fontRobotoSizeLarge;
   }
@@ -282,26 +277,6 @@ $letterSpacing: 0.05rem;
   text-align: left;
   position: relative;
 }
-@mixin a {
-  a:link {
-    text-decoration: none;
-    font-size: 2.5vw;
-    text-align: center;
-    color: $primaryColor;
-  }
-  a:visited {
-    text-decoration: none;
-    font-size: 2.5vw;
-    text-align: center;
-    color: $secondaryColor;
-  }
-  a:hover {
-    text-decoration: underline;
-    font-size: 3vw;
-    text-align: center;
-    color: $tertiaryColor;
-  }
-}
 @mixin restuarantCards {
   @media only screen and (min-device-width: 280px) and (max-device-width: 653px) and (orientation: portrait) {
     font-size: $fontRobotoSizeRegular;
@@ -320,6 +295,10 @@ $letterSpacing: 0.05rem;
 @mixin theFullPaletteHeartIcon {
   @media only screen and (min-device-width: 280px) and (max-device-width: 653px) and (orientation: portrait) {
   }
+  position: relative;
+  cursor: pointer;
+  font-size: 1.5rem;
+  color: black;
 }
 @mixin theEnchantedPlateHeartIcon {
   @media only screen and (min-device-width: 280px) and (max-device-width: 653px) and (orientation: portrait) {
@@ -334,20 +313,28 @@ $letterSpacing: 0.05rem;
   }
 }
 @mixin faHeart {
+  position: relative;
   cursor: pointer;
-  font-size: $fontRobotoSizeLarge;
-  color: grey;
-  position: absolute;
+  font-size: 1.5rem;
+  color: black;
 }
-@mixin faHeartFocus {
-  color: $secondaryColor;
+@mixin faHeart2 {
+  color: $backgroundColorGray;
+  font-size: 1.3rem;
+  left: 13.53rem;
+  bottom: 0.09rem;
 }
-// @mixin faHeartActive {
-//   background-color: $secondaryColor;
-//   background-image: linear-gradient(350deg, $primaryColor, $secondaryColor);
-//   cursor: pointer;
-//   transform: scale(1.1);
-// }
+@mixin faHeartHover {
+  background-image: $gradient;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-color: $backgroundColorGray;
+  background-image: $backgroundColorGray;
+  background-size: 100%;
+  font-size: 1.6rem;
+  left: 13.41rem;
+  bottom: 0;
+}
 @mixin New {
   @media only screen and (min-device-width: 481px) and (max-device-height: 1180px) and (orientation: portrait) {
     left: 70%;
@@ -369,8 +356,6 @@ $letterSpacing: 0.05rem;
   @media only screen and (min-device-width: 1024px) and (max-device-height: 600px) and (orientation: landscape) {
     left: 15%;
   }
-  // @media only screen and (min-device-width: 481px) and (max-device-height: 1180px) and (orientation: landscape) {
-  // }
   @media only screen and (min-device-width: 1024px) and (max-device-height: 600px) {
     left: 75%;
   }

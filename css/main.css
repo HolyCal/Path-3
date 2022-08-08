@@ -496,6 +496,7 @@ body main .container-restaurant-cards .restaurant-cards .the-full-pallete-box {
   margin: 1rem 0rem;
   width: 99%;
   display: relative;
+  padding: 0;
 }
 @media only screen and (min-device-width: 280px) and (max-device-width: 653px) and (orientation: portrait) {
   body main .container-restaurant-cards .restaurant-cards .the-full-pallete-box {
@@ -575,18 +576,34 @@ body main .container-restaurant-cards .restaurant-cards .the-full-pallete-box .n
   }
 }
 body main .container-restaurant-cards .restaurant-cards .the-full-pallete-box .fa-heart {
-  left: 78%;
-  bottom: 77%;
+  position: relative;
   cursor: pointer;
   font-size: 1.5rem;
-  color: grey;
-  position: absolute;
+  color: black;
+  left: 78%;
+  bottom: 77%;
+  position: relative;
+  cursor: pointer;
+  font-size: 1.5rem;
+  color: black;
 }
-body main .container-restaurant-cards .restaurant-cards .the-full-pallete-box .fa-heart:focus {
-  color: #ff79da;
+body main .container-restaurant-cards .restaurant-cards .the-full-pallete-box .fa-heart-2 {
+  color: rgb(246, 246, 246);
+  font-size: 1.3rem;
+  left: 13.53rem;
+  bottom: 0.09rem;
 }
 body main .container-restaurant-cards .restaurant-cards .the-full-pallete-box .fa-heart:hover {
-  color: #ff79da;
+  background-image: linear-gradient(350deg, #9356dc, #ff79da);
+  -webkit-background-clip: text;
+          background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-color: rgb(246, 246, 246);
+  background-image: rgb(246, 246, 246);
+  background-size: 100%;
+  font-size: 1.6rem;
+  left: 13.41rem;
+  bottom: 0;
 }
 body main .container-restaurant-cards .restaurant-cards .the-enchanted-plate-box {
   -webkit-box-shadow: 0rem 0.3rem 0.5rem 0.1rem #cfcfcf;
@@ -676,16 +693,28 @@ body main .container-restaurant-cards .restaurant-cards .the-enchanted-plate-box
 body main .container-restaurant-cards .restaurant-cards .the-enchanted-plate-box .fa-heart {
   left: 78%;
   bottom: 52%;
+  position: relative;
   cursor: pointer;
   font-size: 1.5rem;
-  color: grey;
-  position: absolute;
+  color: black;
 }
-body main .container-restaurant-cards .restaurant-cards .the-enchanted-plate-box .fa-heart:focus {
-  color: #ff79da;
+body main .container-restaurant-cards .restaurant-cards .the-enchanted-plate-box .fa-heart-2 {
+  color: rgb(246, 246, 246);
+  font-size: 1.3rem;
+  left: 13.53rem;
+  bottom: 0.09rem;
 }
 body main .container-restaurant-cards .restaurant-cards .the-enchanted-plate-box .fa-heart:hover {
-  color: #ff79da;
+  background-image: linear-gradient(350deg, #9356dc, #ff79da);
+  -webkit-background-clip: text;
+          background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-color: rgb(246, 246, 246);
+  background-image: rgb(246, 246, 246);
+  background-size: 100%;
+  font-size: 1.6rem;
+  left: 13.41rem;
+  bottom: 0;
 }
 body main .container-restaurant-cards .restaurant-cards .bastille-box {
   -webkit-box-shadow: 0rem 0.3rem 0.5rem 0.1rem #cfcfcf;
@@ -709,10 +738,28 @@ body main .container-restaurant-cards .restaurant-cards .bastille-box a:visited 
 body main .container-restaurant-cards .restaurant-cards .bastille-box .fa-heart {
   left: 78%;
   bottom: 27%;
+  position: relative;
   cursor: pointer;
   font-size: 1.5rem;
-  color: grey;
-  position: absolute;
+  color: black;
+}
+body main .container-restaurant-cards .restaurant-cards .bastille-box .fa-heart-2 {
+  color: rgb(246, 246, 246);
+  font-size: 1.3rem;
+  left: 13.53rem;
+  bottom: 0.09rem;
+}
+body main .container-restaurant-cards .restaurant-cards .bastille-box .fa-heart:hover {
+  background-image: linear-gradient(350deg, #9356dc, #ff79da);
+  -webkit-background-clip: text;
+          background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-color: rgb(246, 246, 246);
+  background-image: rgb(246, 246, 246);
+  background-size: 100%;
+  font-size: 1.6rem;
+  left: 13.41rem;
+  bottom: 0;
 }
 body main .container-restaurant-cards .restaurant-cards .le-gourmand-box {
   -webkit-box-shadow: 0rem 0.3rem 0.5rem 0.1rem #cfcfcf;
@@ -736,10 +783,29 @@ body main .container-restaurant-cards .restaurant-cards .le-gourmand-box a:visit
 body main .container-restaurant-cards .restaurant-cards .le-gourmand-box .fa-heart {
   left: 78%;
   bottom: 2%;
+  position: relative;
   cursor: pointer;
   font-size: 1.5rem;
-  color: grey;
-  position: absolute;
+  color: black;
+}
+body main .container-restaurant-cards .restaurant-cards .le-gourmand-box .fa-heart-2 {
+  color: rgb(246, 246, 246);
+  font-size: 1.3rem;
+  left: 13.53rem;
+  bottom: 0.09rem;
+  bottom: 0.02rem;
+}
+body main .container-restaurant-cards .restaurant-cards .le-gourmand-box .fa-heart:hover {
+  background-image: linear-gradient(350deg, #9356dc, #ff79da);
+  -webkit-background-clip: text;
+          background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-color: rgb(246, 246, 246);
+  background-image: rgb(246, 246, 246);
+  background-size: 100%;
+  font-size: 1.6rem;
+  left: 13.41rem;
+  bottom: 0;
 }
 body main .container-restaurant-cards .restaurant-cards img {
   float: center;

@@ -1,0 +1,68 @@
+$primaryColor: #9356dc;
+$secondaryColor: #ff79da;
+$tertiaryColor: #99e2d0;
+$backgroundColorGray: rgb(246, 246, 246);
+$gradient: linear-gradient(350deg, $primaryColor, $secondaryColor);
+$Shadow: #cfcfcf;
+$ShadowHowItWorks: #eeeeee;
+$boxShadowLinks: 0rem 0rem 0.5rem 0.5rem $Shadow;
+$boxShadowButton: 0rem 0.3rem 0.5rem 0.1rem $Shadow;
+$fontRobotoSizeSmall: 1rem;
+$fontRobotoSizeSmallest: 0.8rem;
+$fontRobotoSizeRegular: 1.2rem;
+$fontRobotoSizeLarge: 1.5rem;
+$fontShrikhandSizeSmall: 1rem;
+$fontShrikhandSizeRegular: 1.2rem;
+$fontShrikhandSizeLarge: 2rem;
+$fontWeightThin: 300;
+$fontWeightRegular: 500;
+$fontWeightBold: 1000;
+$fontWeightBolder: 0px 1px, 1px 0px, 1px 1px;
+$smallTablets: 540px;
+$tablets: 768px;
+$laptop: 1024px;
+$desktop: 1200px;
+$TV: 1201px;
+$borderRadius: 0.4rem;
+$borderRadiusButton: 5rem;
+$borderRadiusHowItWorks: 1rem;
+$fontRoboto: "Roboto", sans-serif;
+$fontShrikhand: "Shrikhand", cursive;
+$letterSpacing: 0.05rem;
+@mixin body {
+  background: white;
+  overflow: auto;
+}
+@mixin div {
+  margin: 0;
+  padding: 0;
+}
+@mixin faHeart {
+  position: relative;
+  cursor: pointer;
+  font-size: 1.5rem;
+  color: black;
+}
+@mixin faHeart2 {
+  color: $backgroundColorGray;
+  font-size: 1.2rem;
+}
+@mixin faHeartHover {
+  color: $primaryColor;
+}
+@mixin footer {
+  background: #696969;
+  padding-bottom: 1rem;
+}
+@mixin footerLinks {
+  color: white;
+  margin-left: 1rem;
+  font: $fontRobotoSizeSmall $fontRoboto;
+  padding-bottom: 0.5rem;
+  white-space: normal;
+}
+@mixin desktop {
+  @media (max-width: $desktop) {
+    @content;
+  }
+}
