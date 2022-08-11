@@ -319,6 +319,7 @@ $letterSpacing: 0.05rem;
   color: black;
 }
 @mixin faHeart2 {
+  position: relative;
   color: $backgroundColorGray;
   font-size: 1.3rem;
   left: 13.53rem;

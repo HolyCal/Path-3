@@ -3,6 +3,8 @@
 * {
   padding: 0;
   margin: 0;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 body {
   @include body;
@@ -12,6 +14,15 @@ body {
   }
   header {
     margin-bottom: 1rem;
+    .back-arrow {
+      color: black;
+      &:visited {
+        color: black;
+      }
+      &:active {
+        color: $primaryColor;
+      }
+    }
     .menupage-container-header {
       .fa-arrow-left {
         position: absolute;
@@ -35,16 +46,88 @@ body {
           max-width: 100%;
         }
       }
+      .header-image-the-enchanted-plate {
+        height: 35rem;
+        margin-top: 0rem;
+      }
     }
   }
-
+  .the-enchanted-plate-main {
+    top: -23.5rem;
+  }
   main {
     background: $backgroundColorGray;
     border-top-left-radius: 1.4rem;
     border-top-right-radius: 1.4rem;
     position: relative;
     top: -4rem;
-    #menu-page-h1 {
+    overflow-y: hidden;
+    #menu-page-h1-the-full-palette {
+      @include menuPageH1;
+      .fa-heart {
+        @include faHeart;
+        left: 3.5rem;
+      }
+      .fa-heart-2 {
+        @include faHeart2;
+        left: 2.1rem;
+        bottom: 0;
+      }
+      .fa-heart-2::before {
+        @include faHeart2Before;
+      }
+      .fa-heart-2:hover {
+        @include faHeartHover;
+        left: 1.9rem;
+        bottom: -0.1rem;
+      }
+    }
+    #menu-page-h1-the-enchanted-plate {
+      font-family: $fontShrikhand;
+      font-size: 1.5rem;
+      padding-left: 2rem;
+      margin-bottom: 1rem;
+      .fa-heart {
+        @include faHeart;
+        top: -2.3rem;
+        left: 11.5rem;
+      }
+      .fa-heart-2 {
+        @include faHeart2;
+        left: 10.1rem;
+        top: -2.35rem;
+      }
+      .fa-heart-2::before {
+        @include faHeart2Before;
+      }
+      .fa-heart-2:hover {
+        @include faHeartHover;
+        left: 9.8rem;
+        top: -2.1rem;
+      }
+      white-space: pre-line;
+    }
+    #menu-page-h1-bastille {
+      @include menuPageH1;
+      .fa-heart {
+        @include faHeart;
+        left: 9.5rem;
+      }
+      .fa-heart-2 {
+        @include faHeart2;
+        left: 8.05rem;
+        bottom: 0.05rem;
+      }
+      .fa-heart-2::before {
+        @include faHeart2Before;
+      }
+      .fa-heart-2:hover {
+        @include faHeartHover;
+        left: 7.8rem;
+        bottom: -0.1rem;
+      }
+    }
+    #menu-page-h1-le-gourmand {
       font-family: $fontShrikhand;
       font-size: 1.5rem;
       padding-top: 1rem;
@@ -52,15 +135,19 @@ body {
       margin-bottom: 1rem;
       .fa-heart {
         @include faHeart;
-        left: 3rem;
       }
       .fa-heart-2 {
         @include faHeart2;
-        left: 1.66rem;
-        bottom: 0.08301rem;
+        right: -4.8rem;
+        bottom: 0.25rem;
+      }
+      .fa-heart-2::before {
+        @include faHeart2Before;
       }
       .fa-heart-2:hover {
         @include faHeartHover;
+        left: 4.7rem;
+        bottom: 0.15rem;
       }
     }
     .menu-page-courses {
@@ -78,23 +165,27 @@ body {
       width: 2.5rem;
     }
     .menu-dishes {
-      .menu-dishes {
+      display: flex;
+      .menu-dishes-content {
         box-shadow: $boxShadowButton;
         border-radius: 1rem;
         height: 4rem;
         display: flex;
+        flex-grow: 1;
         flex-direction: column;
         align-content: center;
         margin: 1rem 1rem 1rem 1rem;
         position: relative;
         border: 0;
         width: 20rem;
-        margin: auto;
         margin: 1rem;
-        margin-right: 0;
+        margin-right: 1rem;
         z-index: 1;
       }
-      .menu-dishes:hover {
+      .menu-dishes-content-overflow {
+        height: 5rem;
+      }
+      .menu-dishes-content:hover {
         .fa-circle-check {
           animation: spin 1s 1;
           right: 1.5rem;
@@ -107,10 +198,10 @@ body {
           background: $backgroundColorGray;
         }
       }
-      .menu-dishes:hover::after {
+      .menu-dishes-content:hover::after {
         transform: scaleX(1);
       }
-      .menu-dishes::after {
+      .menu-dishes-content::after {
         content: " ";
         position: absolute;
         width: 20%;
@@ -141,13 +232,16 @@ body {
       }
       .menu-dish-titles {
         font-family: $fontRoboto;
-        font-size: $fontRobotoSizeRegular;
+        font-size: 1rem;
         font-weight: $fontWeightBold;
         margin-top: 0.8rem;
         margin-left: 1rem;
         margin-bottom: 0.1rem;
         padding-bottom: 0;
         padding-top: 0;
+      }
+      .menu-dish-titles-overflow {
+        white-space: pre-line;
       }
       .menu-dish-description {
         font-family: $fontRoboto;
@@ -183,7 +277,7 @@ body {
       letter-spacing: 0.1rem;
       transform: scale(1);
       box-shadow: $boxShadowButton;
-      margin: 2rem 0 -1rem 5rem;
+      margin: 2rem 0 1rem 5rem;
       width: 10rem;
       padding: 0.7rem;
       .order-button-a {
@@ -191,6 +285,13 @@ body {
         color: white;
       }
     }
+    .order-button-the-enchanted-plate {
+      margin-bottom: 1rem;
+      overflow-y: hidden;
+    }
+  }
+  .footer-the-enchanted-plate {
+    margin-top: -20rem;
   }
   footer {
     @include footer;

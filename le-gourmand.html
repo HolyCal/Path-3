@@ -11,7 +11,7 @@
       href="https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="css/leGourmand.css" type="text/css" />
+    <link rel="stylesheet" href="css/menuPage.css" type="text/css" />
     <link
       href="https://github.com/HolyCal/P3/tree/main/P3/P3/food-card-images type=image/x-icon"
       rel="shortcut icon"
@@ -24,6 +24,7 @@
   <body>
     <header>
       <div class="menupage-container-header">
+        <a class ="back-arrow" href="index.html"><i class="fa-solid fa-arrow-left"></i></a>
         <div class="menupage-logo">
           <a href="index.html">
             <img
@@ -36,57 +37,88 @@
           </a>
         </div>
         <div class="header-image">
-          <!-- <img
+          <img
             class="background-image"
             style="vertical-align: middle"
-            src="images/restaurant-card-images/the-full-pallete.jpg"
-            alt="The Full Pallete Restaurant"
-            title="The Full Pallete"
-          /> -->
+            src="images/restaurant-card-images/le-gourmand.jpg"
+            alt="Le Gourmand Restaurant"
+            title="Le Gourmand"
+          />
         </div>
       </div>
     </header>
     <main>
-      <h1 id="menu-page-h1">Le Gourmand</h1>
+      <h1 id="menu-page-h1-le-gourmand">
+        Le Gourmand<i class="fa fa-light fa-heart"></i
+        ><i class="fa fa-light fa-heart fa-heart-2"></i>
+      </h1>
       <h2 class="menu-page-courses">Entrees</h2>
       <div class="menu-dishes">
-        <p class="menu-dish-titles">Tuna Carpaccio</p>
-        <p class="menu-dishes-p">Seasoned with yuzu</p>
-      </div>
-      <div class="menu-dishes">
-        <p class="menu-dish-titles">Crunchy Lobster Croquets</p>
-        <p class="menu-dishes-p">With seasonal vegetables</p>
-      </div>
-      <div class="menu-dishes">
-        <p class="menu-dish-titles">Mushroom Soup</p>
-        <p class="menu-dishes-p">With truffles</p>
-      </div>
+        <div class="menu-dishes-content">
+          <p class="menu-dish-titles">Tuna Carpaccio</p>
+          <div class="menu-dish-description">Seasoned with yuzu<p class="dish-prices">25€</p>
+          </div>
+          <i class="fa-solid fa-circle-check"></i>
+        </div>
+        <div class="menu-dishes">
+          <div class="menu-dishes-content">
+            <p class="menu-dish-titles">Crunchy Lobster Croquets</p>
+            <div class="menu-dish-description">With seasonal vegetables<p class="dish-prices">35€</p>
+            </div>
+            <i class="fa-solid fa-circle-check"></i>
+          </div>
+          <div class="menu-dishes">
+            <div class="menu-dishes-content">
+              <p class="menu-dish-titles">Mushroom Soup</p>
+              <div class="menu-dish-description">With truffles<p class="dish-prices">20€</p>
+              </div>
+              <i class="fa-solid fa-circle-check"></i>
+            </div>
       <h3 class="menu-page-courses">Main Dish</h3>
       <div class="menu-dishes">
-        <p class="menu-dish-titles">Roast Chicken with Provincal Herbs</p>
-        <p class="menu-dishes-p">With truffle cream</p>
-      </div>
-      <div class="menu-dishes">
-        <p class="menu-dish-titles">Roasted Lobster</p>
-        <p class="menu-dishes-p">With seasonal vegetables</p>
-      </div>
-      <div class="menu-dishes">
-        <p class="menu-dish-titles">Angust Beef</p>
-        <p class="menu-dishes-p">With seasonal vegetables</p>
-      </div>
+        <div class="menu-dishes-content menu-dishes-content-overflow">
+          <p class="menu-dish-titles menu-dish-titles-overflow">Roast Chicken with Provincal
+            Herbs</p>
+          <div class="menu-dish-description">With truffle cream<p class="dish-prices">40€</p>
+          </div>
+          <i class="fa-solid fa-circle-check"></i>
+        </div>
+        <div class="menu-dishes">
+          <div class="menu-dishes-content">
+            <p class="menu-dish-titles">Roasted Lobster</p>
+            <div class="menu-dish-description">With seasonal vegetables<p class="dish-prices">35€</p>
+            </div>
+            <i class="fa-solid fa-circle-check"></i>
+          </div>
+          <div class="menu-dishes">
+            <div class="menu-dishes-content">
+              <p class="menu-dish-titles">Angust Beef</p>
+              <div class="menu-dish-description">With seasonal vegetables<p class="dish-prices">44€</p>
+              </div>
+              <i class="fa-solid fa-circle-check"></i>
+            </div>
       <h4 class="menu-page-courses">Desserts</h4>
       <div class="menu-dishes">
-        <p class="menu-dish-titles">Assorted Dessert Plate</p>
-        <p class="menu-dishes-p">Chef's choice</p>
-      </div>
-      <div class="menu-dishes">
-        <p class="menu-dish-titles">Crème brulée</p>
-        <p class="menu-dishes-p">Revisted</p>
-      </div>
-      <div class="menu-dishes">
-        <p class="menu-dish-titles">Tiramisu</p>
-        <p class="menu-dishes-p">With hazelnuts</p>
-      </div>
+        <div class="menu-dishes-content">
+          <p class="menu-dish-titles">Assorted Dessert Plate</p>
+          <div class="menu-dish-description">Chef's choice<p class="dish-prices">18€</p>
+          </div>
+          <i class="fa-solid fa-circle-check"></i>
+        </div>
+        <div class="menu-dishes">
+          <div class="menu-dishes-content">
+            <p class="menu-dish-titles">Crème brulée</p>
+            <div class="menu-dish-description">Revisted<p class="dish-prices">22€</p>
+            </div>
+            <i class="fa-solid fa-circle-check"></i>
+          </div>
+          <div class="menu-dishes">
+            <div class="menu-dishes-content">
+              <p class="menu-dish-titles">Tiramisu</p>
+              <div class="menu-dish-description">With hazelnuts<p class="dish-prices">23€</p>
+              </div>
+              <i class="fa-solid fa-circle-check"></i>
+            </div>
       <button class="order-button">
         <a href="#" class="order-button-a">Order</a>
       </button>

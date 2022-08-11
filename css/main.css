@@ -588,6 +588,7 @@ body main .container-restaurant-cards .restaurant-cards .the-full-pallete-box .f
   color: black;
 }
 body main .container-restaurant-cards .restaurant-cards .the-full-pallete-box .fa-heart-2 {
+  position: relative;
   color: rgb(246, 246, 246);
   font-size: 1.3rem;
   left: 13.53rem;
@@ -699,6 +700,7 @@ body main .container-restaurant-cards .restaurant-cards .the-enchanted-plate-box
   color: black;
 }
 body main .container-restaurant-cards .restaurant-cards .the-enchanted-plate-box .fa-heart-2 {
+  position: relative;
   color: rgb(246, 246, 246);
   font-size: 1.3rem;
   left: 13.53rem;
@@ -744,6 +746,7 @@ body main .container-restaurant-cards .restaurant-cards .bastille-box .fa-heart 
   color: black;
 }
 body main .container-restaurant-cards .restaurant-cards .bastille-box .fa-heart-2 {
+  position: relative;
   color: rgb(246, 246, 246);
   font-size: 1.3rem;
   left: 13.53rem;
@@ -789,6 +792,7 @@ body main .container-restaurant-cards .restaurant-cards .le-gourmand-box .fa-hea
   color: black;
 }
 body main .container-restaurant-cards .restaurant-cards .le-gourmand-box .fa-heart-2 {
+  position: relative;
   color: rgb(246, 246, 246);
   font-size: 1.3rem;
   left: 13.53rem;
