@@ -165,7 +165,7 @@ body {
       width: 2.5rem;
     }
     .menu-dishes {
-      display: flex;
+      // display: flex;
       .menu-dishes-content {
         box-shadow: $boxShadowButton;
         border-radius: 1rem;
@@ -174,7 +174,6 @@ body {
         flex-grow: 1;
         flex-direction: column;
         align-content: center;
-        margin: 1rem 1rem 1rem 1rem;
         position: relative;
         border: 0;
         width: 20rem;
@@ -224,6 +223,7 @@ body {
         right: -5rem;
         top: 1.2rem;
         font-size: 1.5rem;
+        overflow: visible;
       }
       @keyframes spin {
         100% {
