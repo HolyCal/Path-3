@@ -165,7 +165,7 @@ body {
       width: 2.5rem;
     }
     .menu-dishes {
-      // display: flex;
+      display: flex;
       .menu-dishes-content {
         box-shadow: $boxShadowButton;
         border-radius: 1rem;
@@ -173,7 +173,7 @@ body {
         display: flex;
         flex-grow: 1;
         flex-direction: column;
-        align-content: center;
+        align-content: stretch;
         position: relative;
         border: 0;
         width: 20rem;

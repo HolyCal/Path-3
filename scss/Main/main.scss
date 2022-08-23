@@ -3,6 +3,9 @@
   padding: 0;
   margin: 0;
 }
+html {
+  overflow: auto;
+}
 body {
   background: white;
   overflow: auto;
@@ -24,27 +27,10 @@ body {
       .logo {
         a {
           .logo-img {
-            display: flex;
-            margin: 0.5rem auto 0.8rem auto;
-            padding-top: 1rem;
+            display: block;
+            margin: 1rem auto;
             height: 2rem;
-            width: 50%;
-            @include logoImg;
           }
-        }
-      }
-      .location {
-        justify-content: center;
-        text-align: center;
-        font-size: $fontRobotoSizeSmall;
-        background: rgba(0, 0, 0, 0.134);
-        padding: 0.8rem;
-        border-top: 0.2rem solid rgba(65, 65, 65, 0.164);
-        .location-para {
-          display: inline;
-          font-family: $fontRoboto;
-          margin-left: 0.3rem;
-          border-radius: $borderRadius;
         }
       }
     }
@@ -53,305 +39,299 @@ body {
     @include flexMain(column, white, black);
     align-items: center;
     text-align: center;
-    // .brief-desc-of-comp {
-    //   @include briefDescOfComp(column, $backgroundColorGray, black);
-    //   .span-brief-desc-of-comp {
-    //     margin-bottom: 0.5rem;
-    //   }
-    //   #span-brief-desc-of-comp-first-p {
-    //     margin-bottom: 0.3rem;
-    //   }
-    //   .span-brief-desc-of-comp-last-p {
-    //     text-align: center;
-    //     font-size: 1.4rem;
-    //   }
-    //   #span-brief-desc-of-comp-last-p-border-top {
-    //     border-top: 0.3rem solid transparent;
-    //     border-image: linear-gradient(to right, $secondaryColor, $primaryColor);
-    //     border-image-slice: 1;
-    //     margin-top: 2rem;
-    //     padding: 0rem;
-    //   }
-    //   #span-brief-desc-of-comp-last-p-border-bottom {
-    //     border-bottom: 0.3rem solid transparent;
-    //     border-image: linear-gradient(to right, $primaryColor, $secondaryColor);
-    //     border-image-slice: 1;
-    //   }
-    // }
-    .booking {
-      @include flexBooking(column, white, black);
-      @include booking;
-      padding: 1rem;
-      margin-bottom: 1rem;
-      font-family: $fontRoboto;
-      font-size: $fontRobotoSizeLarge;
-      font-weight: $fontWeightBold;
-      letter-spacing: 0.1rem;
-      background: $backgroundColorGray;
-      .span-booking {
-        @include spanBooking;
-        font-size: $fontRobotoSizeSmall;
-        margin: 2rem 0rem;
-        font-weight: $fontWeightRegular;
-        color: grey;
-      }
-      .booking-btn {
-        @include bookingBtn;
-        background: $secondaryColor;
-        background-image: linear-gradient(
-          350deg,
-          $primaryColor,
-          $secondaryColor
-        );
-        border: none;
-        border-radius: $borderRadiusButton;
-        text-align: center;
+    .location {
+      width: 100%;
+      justify-content: center;
+      text-align: center;
+      font-size: $fontRobotoSizeSmall;
+      background: rgba(0, 0, 0, 0.134);
+      padding: 0.8rem;
+      border-top: 0.2rem solid rgba(65, 65, 65, 0.164);
+      .location-content {
+        display: inline;
         font-family: $fontRoboto;
-        font-size: $fontRobotoSizeSmall;
-        padding: 1.5rem 0rem;
-        cursor: pointer;
-        font-weight: $fontWeightBold;
-        letter-spacing: 0.1rem;
-        transform: scale(1);
-        box-shadow: $boxShadowButton;
-        margin-bottom: 3rem;
-        margin: 0rem 3rem;
-        margin-bottom: 2rem;
-        .booking-btn-a {
-          text-decoration: none;
-          color: white;
-        }
-        &:hover {
-          transition: transform 0.3s ease-in-out;
-          transform: scale(1.05);
-        }
-      }
-    }
-    .how-it-works {
-      @include howItWorks;
-      font-family: $fontRoboto;
-      font-size: $fontRobotoSizeLarge;
-      color: black;
-      font-weight: $fontWeightBold;
-      letter-spacing: 0.1rem;
-      ol {
-        counter-reset: item;
-        list-style-type: none;
-        font-size: $fontRobotoSizeSmall;
-        font-weight: $fontWeightRegular;
-        text-shadow: none;
-        letter-spacing: 0;
-        li {
-          @include howItWorksLi;
-          font-weight: $fontWeightBold;
-          position: relative;
-          justify-content: center;
-          text-align: center;
-          background: $primaryColor;
-          border-radius: 50%;
-          width: 60vw;
-          background: $ShadowHowItWorks;
-          margin: 1rem;
-          border-radius: $borderRadiusHowItWorks;
-          padding: 2rem;
-          box-shadow: $boxShadowButton;
-          .fa-mobile-screen {
-            position: absolute;
-            left: 6vw;
-            color: rgb(84, 84, 84);
-          }
-          .fa-list-check {
-            position: absolute;
-            left: 6vw;
-            color: rgb(84, 84, 84);
-          }
-          .fa-store {
-            position: absolute;
-            left: 6vw;
-            color: rgb(84, 84, 84);
-          }
-          .fa-solid:hover {
-            color: $primaryColor;
-          }
-        }
-        li:before {
-          @include liBeforeHowItWorks;
-          position: absolute;
-          left: -0.5rem;
-          content: counter(item) " ";
-          counter-increment: item;
-          background: $primaryColor;
-          border-radius: 50%;
-          width: 5vw;
-          padding: 0.5vw;
-          color: white;
-        }
-        li:hover {
-          background: #9256dc28;
-        }
-      }
-    }
-    .container-restaurant-cards {
-      h2 {
-        @include h2;
-        font-size: $fontShrikhandSizeLarge;
-        margin-bottom: 1rem;
-        font-family: $fontShrikhand;
-        letter-spacing: $letterSpacing;
-        width: 95vw;
-      }
-      .restaurant-cards {
-        @include flexCards(column, white, black);
-        span {
-          display: block;
-          margin-top: 0.8rem;
-          margin-left: 0.8rem;
-          font-weight: $fontWeightBold;
-        }
-        .restaurant-card-location {
-          display: block;
-          font-weight: $fontWeightRegular;
-          margin-left: 0.8rem;
-        }
-        .the-full-pallete-box {
-          @include restuarantCards;
-          display: relative;
-          padding: 0;
-          a {
-            @include restaurantCardsA;
-            &:visited {
-              @include restaurantCardsAVisited;
-            }
-          }
-          .new {
-            @include New;
-          }
-          .fa-heart {
-            @include theFullPaletteHeartIcon;
-            left: 78%;
-            bottom: 77%;
-            @include faHeart;
-          }
-          .fa-heart-2 {
-            @include faHeart2;
-          }
-          .fa-heart:hover {
-            @include faHeartHover;
-          }
-        }
-        .the-enchanted-plate-box {
-          @include restuarantCards;
-          display: relative;
-          a {
-            @include restaurantCardsA;
-            &:visited {
-              @include restaurantCardsAVisited;
-            }
-          }
-          .new {
-            @include New;
-          }
-          .fa-heart {
-            @include theEnchantedPlateHeartIcon;
-            left: 78%;
-            bottom: 52%;
-            @include faHeart;
-          }
-          .fa-heart-2 {
-            @include faHeart2;
-          }
-          .fa-heart:hover {
-            @include faHeartHover;
-          }
-        }
-        .bastille-box {
-          @include restuarantCards;
-          display: relative;
-          a {
-            @include restaurantCardsA;
-            &:visited {
-              @include restaurantCardsAVisited;
-            }
-          }
-          .fa-heart {
-            @include bastilleHeartIcon;
-            left: 78%;
-            bottom: 27%;
-            @include faHeart;
-          }
-          .fa-heart-2 {
-            @include faHeart2;
-          }
-          .fa-heart:hover {
-            @include faHeartHover;
-          }
-        }
-        .le-gourmand-box {
-          @include restuarantCards;
-          display: relative;
-          a {
-            @include restaurantCardsA;
-            &:visited {
-              @include restaurantCardsAVisited;
-            }
-          }
-          .fa-heart {
-            @include leGourmandHeartIcon;
-            left: 78%;
-            bottom: 2%;
-            @include faHeart;
-          }
-          .fa-heart-2 {
-            @include faHeart2;
-            bottom: 0.02rem;
-          }
-          .fa-heart:hover {
-            @include faHeartHover;
-          }
-        }
-        img {
-          float: center;
-          width: 100%;
-          height: 20vh;
-          object-fit: cover;
-          border-top-left-radius: $borderRadius;
-          border-top-right-radius: $borderRadius;
-        }
+        margin-left: 0.3rem;
+        border-radius: $borderRadius;
       }
     }
   }
-  footer {
-    background: #696969;
-    padding-bottom: 1rem;
-    .footer-logo-img {
-      height: 1rem;
-      width: 6rem;
-      margin-left: 1rem;
-      filter: invert(100%);
-      margin: 1rem;
+  // .brief-desc-of-comp {
+  //   @include briefDescOfComp(column, $backgroundColorGray, black);
+  //   .span-brief-desc-of-comp {
+  //     margin-bottom: 0.5rem;
+  //   }
+  //   #span-brief-desc-of-comp-first-p {
+  //     margin-bottom: 0.3rem;
+  //   }
+  //   .span-brief-desc-of-comp-last-p {
+  //     text-align: center;
+  //     font-size: 1.4rem;
+  //   }
+  //   #span-brief-desc-of-comp-last-p-border-top {
+  //     border-top: 0.3rem solid transparent;
+  //     border-image: linear-gradient(to right, $secondaryColor, $primaryColor);
+  //     border-image-slice: 1;
+  //     margin-top: 2rem;
+  //     padding: 0rem;
+  //   }
+  //   #span-brief-desc-of-comp-last-p-border-bottom {
+  //     border-bottom: 0.3rem solid transparent;
+  //     border-image: linear-gradient(to right, $primaryColor, $secondaryColor);
+  //     border-image-slice: 1;
+  //   }
+  // }
+  .booking {
+    @include flexBooking(column, white, black);
+    @include booking;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    font-family: $fontRoboto;
+    font-size: $fontRobotoSizeLarge;
+    font-weight: $fontWeightBold;
+    letter-spacing: 0.1rem;
+    background: $backgroundColorGray;
+    .span-booking {
+      @include spanBooking;
+      font-size: $fontRobotoSizeSmall;
+      margin: 2rem 0rem;
+      font-weight: $fontWeightRegular;
+      color: grey;
     }
-    .footer-p {
-      @include footerLinks;
-    }
-    .support-a-restaurant-p {
-      @include footerLinks;
+    .booking-btn {
+      background: $secondaryColor;
+      background-image: linear-gradient(350deg, $primaryColor, $secondaryColor);
+      border: none;
+      border-radius: $borderRadiusButton;
+      text-align: center;
+      font-family: $fontRoboto;
+      font-size: $fontRobotoSizeSmall;
+      padding: 1.5rem 0rem;
+      cursor: pointer;
       font-weight: $fontWeightBold;
-      .fa-utensils {
-        margin-right: 1.2rem;
+      letter-spacing: 0.1rem;
+      transform: scale(1);
+      box-shadow: $boxShadowButton;
+      margin-bottom: 3rem;
+      margin: 0rem 3rem;
+      margin-bottom: 2rem;
+      .booking-btn-a {
+        text-decoration: none;
+        color: white;
+      }
+      &:hover {
+        transition: transform 0.3s ease-in-out;
+        transform: scale(1.05);
       }
     }
-    .become-a-partner-p {
-      @include footerLinks;
-      font-weight: $fontWeightBold;
-      .fa-handshake-angle {
-        margin-right: 0.8rem;
+  }
+  .how-it-works {
+    text-align: left;
+    font-family: $fontRoboto;
+    font-size: $fontRobotoSizeLarge;
+    color: black;
+    font-weight: $fontWeightBold;
+    letter-spacing: 0.1rem;
+    ol {
+      counter-reset: item;
+      list-style-type: none;
+      font-size: $fontRobotoSizeSmall;
+      font-weight: $fontWeightRegular;
+      text-shadow: none;
+      letter-spacing: 0;
+      li {
+        font-weight: $fontWeightBold;
+        position: relative;
+        justify-content: center;
+        text-align: center;
+        background: $primaryColor;
+        border-radius: 50%;
+        width: 60vw;
+        background: $ShadowHowItWorks;
+        margin: 1rem;
+        border-radius: $borderRadiusHowItWorks;
+        padding: 2rem;
+        box-shadow: $boxShadowButton;
+        .fa-mobile-screen {
+          position: absolute;
+          left: 6vw;
+          color: rgb(84, 84, 84);
+        }
+        .fa-list-check {
+          position: absolute;
+          left: 6vw;
+          color: rgb(84, 84, 84);
+        }
+        .fa-store {
+          position: absolute;
+          left: 6vw;
+          color: rgb(84, 84, 84);
+        }
+        .fa-solid:hover {
+          color: $primaryColor;
+        }
+      }
+      li:before {
+        @include liBeforeHowItWorks;
+        position: absolute;
+        left: -0.5rem;
+        content: counter(item) " ";
+        counter-increment: item;
+        background: $primaryColor;
+        border-radius: 50%;
+        width: 5vw;
+        padding: 0.5vw;
+        color: white;
+      }
+      li:hover {
+        background: #9256dc28;
       }
     }
-    .legal-p {
-      @include footerLinks;
+  }
+  .container-restaurant-cards {
+    position: absoulte;
+    h2 {
+      @include h2;
+      font-size: $fontShrikhandSizeLarge;
+      margin-bottom: 1rem;
+      font-family: $fontShrikhand;
+      letter-spacing: $letterSpacing;
+      width: 95vw;
     }
-    .contact-p {
-      @include footerLinks;
+    .restaurant-cards {
+      @include flexCards(column, white, black);
+      span {
+        display: block;
+        margin-top: 0.8rem;
+        margin-left: 0.8rem;
+        font-weight: $fontWeightBold;
+        position: relative;
+      }
+      .restaurant-card-location {
+        display: block;
+        font-weight: $fontWeightRegular;
+        margin-left: 0.8rem;
+      }
+      .the-full-pallete-box {
+        @include restuarantCards;
+        padding: 0;
+        a {
+          @include restaurantCardsA;
+          &:visited {
+            @include restaurantCardsAVisited;
+          }
+        }
+        .new {
+          @include New;
+        }
+        .fa-heart {
+          @include faHeart;
+        }
+        .fa-heart-2 {
+          @include faHeart2;
+        }
+        .fa-heart:hover {
+          @include faHeartHover;
+        }
+      }
+      .the-enchanted-plate-box {
+        @include restuarantCards;
+        a {
+          @include restaurantCardsA;
+          &:visited {
+            @include restaurantCardsAVisited;
+          }
+        }
+        .new {
+          @include New;
+        }
+        .fa-heart {
+          @include faHeart;
+        }
+        .fa-heart-2 {
+          @include faHeart2;
+        }
+        .fa-heart:hover {
+          @include faHeartHover;
+        }
+      }
+      .bastille-box {
+        @include restuarantCards;
+        a {
+          @include restaurantCardsA;
+          &:visited {
+            @include restaurantCardsAVisited;
+          }
+        }
+        .fa-heart {
+          @include faHeart;
+        }
+        .fa-heart-2 {
+          @include faHeart2;
+        }
+        .fa-heart:hover {
+          @include faHeartHover;
+        }
+      }
+      .le-gourmand-box {
+        @include restuarantCards;
+        a {
+          @include restaurantCardsA;
+          &:visited {
+            @include restaurantCardsAVisited;
+          }
+        }
+        .fa-heart {
+          @include faHeart;
+        }
+        .fa-heart-2 {
+          @include faHeart2;
+        }
+        .fa-heart:hover {
+          @include faHeartHover;
+        }
+      }
+      img {
+        float: center;
+        width: 100%;
+        height: 20vh;
+        object-fit: cover;
+        border-top-left-radius: $borderRadius;
+        border-top-right-radius: $borderRadius;
+      }
     }
+  }
+}
+footer {
+  background: #696969;
+  padding-bottom: 1rem;
+  .footer-logo-img {
+    height: 1rem;
+    width: 6rem;
+    margin-left: 1rem;
+    filter: invert(100%);
+    margin: 1rem;
+  }
+  .footer-p {
+    @include footerLinks;
+  }
+  .support-a-restaurant-p {
+    @include footerLinks;
+    font-weight: $fontWeightBold;
+    .fa-utensils {
+      margin-right: 1.2rem;
+    }
+  }
+  .become-a-partner-p {
+    @include footerLinks;
+    font-weight: $fontWeightBold;
+    .fa-handshake-angle {
+      margin-right: 0.8rem;
+    }
+  }
+  .legal-p {
+    @include footerLinks;
+  }
+  .contact-p {
+    @include footerLinks;
   }
 }

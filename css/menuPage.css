@@ -221,6 +221,11 @@ body main .menu-page-courses::after {
   border-bottom: 0.15rem solid #99e2d0;
   width: 2.5rem;
 }
+body main .menu-dishes {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
 body main .menu-dishes .menu-dishes-content {
   -webkit-box-shadow: 0rem 0.3rem 0.5rem 0.1rem #cfcfcf;
           box-shadow: 0rem 0.3rem 0.5rem 0.1rem #cfcfcf;
@@ -236,8 +241,8 @@ body main .menu-dishes .menu-dishes-content {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -ms-flex-line-pack: center;
-      align-content: center;
+  -ms-flex-line-pack: stretch;
+      align-content: stretch;
   position: relative;
   border: 0;
   width: 20rem;

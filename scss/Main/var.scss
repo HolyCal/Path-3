@@ -49,26 +49,6 @@ $letterSpacing: 0.05rem;
 @mixin header($direction, $background, $color) {
   @include backgroundColorFlexDirection($direction, $background, $color);
 }
-@mixin logoImg {
-  @media only screen and (min-device-width: 820px) and (max-device-height: 1180px) and (orientation: portrait) {
-    width: 30%;
-  }
-  @media only screen and (min-device-width: 768px) and (max-device-height: 1024px) and (orientation: portrait) {
-    width: 30%;
-  }
-  @media only screen and (min-device-width: 912px) and (max-device-height: 1368px) and (orientation: portrait) {
-    width: 40%;
-    height: 2.5rem;
-  }
-  @media only screen and (min-device-width: 1024px) and (max-device-height: 600px) {
-    width: 40%;
-    height: 2.5rem;
-  }
-  @media only screen and (min-device-width: 1280px) and (max-device-height: 800px) {
-    width: 40%;
-    height: 2.5rem;
-  }
-}
 @mixin subtitle {
   // @media only screen and (min-device-width: 768px) and (max-device-height: 1024) and (orientation: portrait) {
   // }
@@ -106,30 +86,7 @@ $letterSpacing: 0.05rem;
   }
 }
 @mixin booking {
-  @media only screen and (min-device-width: 540px) and (max-device-height: 720px) and (orientation: portrait) {
-    font-size: $fontRobotoSizeLarge;
-    width: 94%;
-  }
-  @media only screen and (min-device-width: 768px) and (max-device-height: 1024px) and (orientation: portrait) {
-    font-size: $fontRobotoSizeLarge;
-    width: 95%;
-  }
-  @media only screen and (min-device-width: 820px) and (max-device-height: 1180px) {
-    width: 96%;
-  }
-  @media only screen and (min-device-width: 912px) and (max-device-height: 1368px) {
-    width: 96%;
-  }
-  @media only screen and (min-device-width: 1024px) and (max-device-height: 600px) {
-    font-size: $fontRobotoSizeLarge;
-  }
-  @media only screen and (min-device-width: 1280px) and (max-device-height: 800px) {
-    font-size: $fontRobotoSizeLarge;
-    width: 97%;
-  }
-  @media only screen and (min-device-width: 1253px) and (max-device-height: 1252px) {
-    font-size: $fontRobotoSizeLarge;
-  }
+  width: 100%;
 }
 @mixin spanBooking {
   @media only screen and (min-device-width: 280px) and (max-device-height: 653px) and (orientation: portrait) {
@@ -137,86 +94,6 @@ $letterSpacing: 0.05rem;
   }
   @media only screen and (min-device-width: 912px) and (max-device-height: 1368px) and (orientation: portrait) {
     font-size: 1.3rem;
-  }
-}
-@mixin bookingBtn {
-  @media only screen and (min-device-width: 280px) and (max-device-height: 653px) and (orientation: portrait) {
-    margin: 0rem;
-    margin-bottom: 1rem;
-  }
-  @media only screen and (min-device-width: 912px) and (max-device-height: 1368px) and (orientation: portrait) {
-    font-size: $fontRobotoSizeLarge;
-    margin-bottom: 1rem;
-  }
-  @media only screen and (min-device-width: 540px) and (max-device-height: 720px) and (orientation: portrait) {
-    font-size: $fontRobotoSizeRegular;
-    margin: 0rem 7rem;
-    margin-bottom: 1rem;
-  }
-  @media only screen and (min-device-width: 768px) and (max-device-height: 1024px) and (orientation: portrait) {
-    font-size: $fontRobotoSizeLarge;
-    margin: 0rem 11rem;
-    margin-bottom: 1rem;
-  }
-  @media only screen and (min-device-width: 820px) and (max-device-height: 1180px) and (orientation: portrait) {
-    margin: 0rem 17rem;
-  }
-  @media only screen and (min-device-width: 912px) and (max-device-height: 1368px) and (orientation: portrait) {
-    margin: 0rem 16rem;
-  }
-  @media only screen and (min-device-width: 1024px) and (max-device-height: 600px) {
-    margin: 0rem 20rem;
-    margin-bottom: 1rem;
-  }
-  @media only screen and (min-device-width: 1280px) and (max-device-height: 800px) {
-    margin: 0rem 30rem;
-    margin-bottom: 1rem;
-  }
-}
-@mixin howItWorks {
-  @media only screen and (min-device-width: 912px) and (max-device-height: 1368px) and (orientation: portrait) {
-    font-size: $fontRobotoSizeLarge;
-  }
-  @media only screen and (min-device-width: 540px) and (max-device-height: 720px) and (orientation: portrait) {
-    font-size: $fontRobotoSizeLarge;
-  }
-  @media only screen and (min-device-width: 768px) and (max-device-height: 1024px) and (orientation: portrait) {
-    font-size: $fontRobotoSizeLarge;
-  }
-  @media only screen and (min-device-width: 820px) and (max-device-height: 1180px) and (orientation: portrait) {
-    font-size: $fontRobotoSizeLarge;
-  }
-  @media only screen and (min-device-width: 1024px) and (max-device-height: 600px) {
-    font-size: $fontRobotoSizeLarge;
-  }
-  @media only screen and (min-device-width: 1280px) and (max-device-height: 800px) {
-    font-size: $fontRobotoSizeLarge;
-  }
-  @media only screen and (min-device-width: 1253px) and (max-device-height: 1252px) {
-    font-size: $fontRobotoSizeLarge;
-  }
-}
-@mixin howItWorksLi {
-  @media only screen and (min-device-width: 912px) and (max-device-height: 1368px) and (orientation: portrait) {
-    font-size: $fontRobotoSizeRegular;
-  }
-  @media only screen and (min-device-width: 540px) and (max-device-height: 720px) and (orientation: portrait) {
-    font-size: $fontRobotoSizeRegular;
-  }
-  @media only screen and (min-device-width: 768px) and (max-device-height: 1024px) and (orientation: portrait) {
-    font-size: $fontRobotoSizeRegular;
-  }
-  @media only screen and (min-device-width: 820px) and (max-device-height: 1180px) and (orientation: portrait) {
-    font-size: $fontRobotoSizeRegular;
-  }
-  @media only screen and (min-device-width: 1024px) and (max-device-height: 600px) {
-    font-size: $fontRobotoSizeRegular;
-  }
-  @media only screen and (min-device-width: 1280px) and (max-device-height: 800px) {
-    font-size: 1rem;
-  }
-  @media only screen and (min-device-width: 1253px) and (max-device-height: 1252px) {
-    font-size: $fontRobotoSizeLarge;
   }
 }
 @mixin liBeforeHowItWorks {
@@ -285,6 +162,11 @@ $letterSpacing: 0.05rem;
   border-radius: $borderRadius;
   margin: 1rem 0rem;
   width: 99%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  position: relative;
 }
 @mixin restaurantCardsA {
   text-decoration: none;
@@ -292,38 +174,22 @@ $letterSpacing: 0.05rem;
 @mixin restaurantCardsAVisited {
   color: black;
 }
-@mixin theFullPaletteHeartIcon {
-  @media only screen and (min-device-width: 280px) and (max-device-width: 653px) and (orientation: portrait) {
-  }
-  position: relative;
-  cursor: pointer;
-  font-size: 1.5rem;
-  color: black;
-}
-@mixin theEnchantedPlateHeartIcon {
-  @media only screen and (min-device-width: 280px) and (max-device-width: 653px) and (orientation: portrait) {
-  }
-}
-@mixin bastilleHeartIcon {
-  @media only screen and (min-device-width: 280px) and (max-device-width: 653px) and (orientation: portrait) {
-  }
-}
-@mixin leGourmandHeartIcon {
-  @media only screen and (min-device-width: 280px) and (max-device-width: 653px) and (orientation: portrait) {
-  }
-}
 @mixin faHeart {
-  position: relative;
+  position: absolute;
   cursor: pointer;
   font-size: 1.5rem;
   color: black;
+  position: absolute;
+  right: 40px;
+  bottom: 20px;
 }
 @mixin faHeart2 {
-  position: relative;
+  position: absolute;
   color: $backgroundColorGray;
+  color: white;
   font-size: 1.3rem;
-  left: 13.53rem;
-  bottom: 0.09rem;
+  right: 41.5px;
+  bottom: 20px;
 }
 @mixin faHeartHover {
   background-image: $gradient;
@@ -332,55 +198,24 @@ $letterSpacing: 0.05rem;
   background-color: $backgroundColorGray;
   background-image: $backgroundColorGray;
   background-size: 100%;
+  position: absolute;
   font-size: 1.6rem;
-  left: 13.41rem;
-  bottom: 0;
+  right: 39.5px;
+  bottom: 18.5px;
 }
 @mixin New {
-  @media only screen and (min-device-width: 481px) and (max-device-height: 1180px) and (orientation: portrait) {
-    left: 70%;
-  }
-  @media only screen and (min-device-width: 540px) and (max-device-height: 720px) and (orientation: portrait) {
-    left: 10%;
-  }
-  @media only screen and (min-device-width: 912px) and (max-device-height: 1368px) and (orientation: portrait) {
-    left: 65%;
-    padding: 1rem 5rem;
-    font-size: $fontRobotoSizeLarge;
-  }
-  @media only screen and (min-device-width: 280px) and (max-device-height: 653px) and (orientation: portrait) {
-    left: 35%;
-  }
-  @media only screen and (min-device-width: 412px) and (max-device-height: 914px) and (orientation: portrait) {
-    left: 50%;
-  }
-  @media only screen and (min-device-width: 1024px) and (max-device-height: 600px) and (orientation: landscape) {
-    left: 15%;
-  }
-  @media only screen and (min-device-width: 1024px) and (max-device-height: 600px) {
-    left: 75%;
-  }
-  @media only screen and (min-device-width: 1280px) and (max-device-height: 800px) {
-    left: 75%;
-  }
-  @media only screen and (min-device-width: 1253px) and (max-device-height: 1252px) and (orientation: portrait) {
-    width: 2vw;
-    left: -1.5rem;
-  }
-  @media only screen and (min-device-width: 1253px) and (max-device-height: 1252px) {
-    left: 75%;
-    font-size: 1.7rem;
-  }
   position: absolute;
-  margin: 1rem;
-  padding: 0.5rem 3rem;
-  left: 45%;
+  padding: 0.3rem 0;
+  top: 1rem;
+  right: 1rem;
+  width: 5rem;
   color: #017c5a;
   font-family: $fontRoboto;
-  font-size: $fontRobotoSizeRegular;
+  font-size: 1rem;
   font-weight: $fontWeightBold;
   background: $tertiaryColor;
   border-radius: 0.2rem;
+  text-align: center;
 }
 @mixin footerLinks {
   color: white;
