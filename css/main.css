@@ -106,10 +106,8 @@ body .booking .booking-btn {
   font-size: 1rem;
   padding: 1rem 0rem;
   width: 100%;
-  max-width: 17rem;
+  max-width: 15rem;
   cursor: pointer;
-  font-weight: 900;
-  letter-spacing: 0.1rem;
   -webkit-transform: scale(1);
           transform: scale(1);
   -webkit-box-shadow: 0rem 0.3rem 0.5rem 0.1rem #cfcfcf;
