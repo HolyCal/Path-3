@@ -1,7 +1,8 @@
 $primaryColor: #9356dc;
 $secondaryColor: #ff79da;
 $tertiaryColor: #99e2d0;
-$backgroundColorGray: rgb(246, 246, 246);
+$backgroundColorGrey: #f8f4f4;
+$backgroundColorLightGrey: #f6f7f7;
 $gradient: linear-gradient(350deg, $primaryColor, $secondaryColor);
 $Shadow: #cfcfcf;
 $ShadowHowItWorks: #eeeeee;
@@ -16,7 +17,7 @@ $fontShrikhandSizeRegular: 1.2rem;
 $fontShrikhandSizeLarge: 2rem;
 $fontWeightThin: 300;
 $fontWeightRegular: 500;
-$fontWeightBold: 1000;
+$fontWeightBold: 900;
 $fontWeightBolder: 0px 1px, 1px 0px, 1px 1px;
 $smallTablets: 540px;
 $tablets: 768px;
@@ -25,7 +26,7 @@ $desktop: 1200px;
 $TV: 1201px;
 $borderRadius: 0.4rem;
 $borderRadiusButton: 5rem;
-$borderRadiusHowItWorks: 1rem;
+$borderRadiusHowItWorks: 1.5rem;
 $fontRoboto: "Roboto", sans-serif;
 $fontShrikhand: "Shrikhand", cursive;
 $letterSpacing: 0.05rem;
@@ -46,55 +47,19 @@ $letterSpacing: 0.05rem;
   color: $color;
   flex-direction: $direction;
 }
-@mixin header($direction, $background, $color) {
+@mixin flexDirectionBackgroundColorAndFlexDirection(
+  $direction,
+  $background,
+  $color
+) {
   @include backgroundColorFlexDirection($direction, $background, $color);
 }
 @mixin subtitle {
-  // @media only screen and (min-device-width: 768px) and (max-device-height: 1024) and (orientation: portrait) {
-  // }
-  @media only screen and (min-device-width: 912px) and (max-device-height: 1368px) and (orientation: portrait) {
-    font-size: $fontRobotoSizeRegular;
-  }
   justify-content: center;
   text-align: center;
   font-size: $fontShrikhandSizeRegular;
   letter-spacing: $letterSpacing;
   font-family: $fontShrikhand;
-}
-@mixin flexMain($direction, $background, $color) {
-  @include backgroundColorFlexDirection($direction, $background, $color);
-}
-// @mixin briefDescOfComp($direction, $background, $color) {
-//   // @media only screen and (min-device-width: 1024px) {
-//   // }
-//   @media only screen and (min-device-width: 912px) and (max-device-height: 1368px) and (orientation: portrait) {
-//     font-size: $fontRobotoSizeLarge;
-//   }
-//   @include backgroundColorFlexDirection($direction, $background, $color);
-//   flex-wrap: nowrap;
-//   letter-spacing: 0.02rem;
-//   padding: 1.5rem;
-//   font-size: $fontRobotoSizeSmall;
-//   font-family: $fontRoboto;
-//   text-align: left;
-//   font-weight: $fontWeightRegular;
-// }
-@mixin flexBooking($direction, $background, $color) {
-  @include backgroundColorFlexDirection($direction, $background, $color);
-  @media only screen and (min-device-width: 912px) and (max-device-height: 1368px) and (orientation: portrait) {
-    font-size: $fontRobotoSizeLarge;
-  }
-}
-@mixin booking {
-  width: 100%;
-}
-@mixin spanBooking {
-  @media only screen and (min-device-width: 280px) and (max-device-height: 653px) and (orientation: portrait) {
-    margin: 1rem 0rem;
-  }
-  @media only screen and (min-device-width: 912px) and (max-device-height: 1368px) and (orientation: portrait) {
-    font-size: 1.3rem;
-  }
 }
 @mixin liBeforeHowItWorks {
   @media only screen and (min-device-width: 481px) and (max-device-width: 1180px) and (orientation: portrait) {
@@ -123,50 +88,16 @@ $letterSpacing: 0.05rem;
     font-size: $fontRobotoSizeRegular;
   }
 }
-@mixin h2 {
-  @media only screen and (min-device-width: 912px) and (max-device-height: 1368px) and (orientation: portrait) {
-    font-size: 3rem;
-  }
-  @media only screen and (min-device-width: 540px) and (max-device-height: 720px) and (orientation: portrait) {
-    font-size: 2.3rem;
-  }
-  @media only screen and (min-device-width: 1024px) and (max-device-height: 600px) {
-    font-size: 2rem;
-  }
-  @media only screen and (min-device-width: 1280px) and (max-device-height: 800px) {
-    font-size: 2.7rem;
-  }
-  @media only screen and (min-device-width: 1253px) and (max-device-height: 1252px) {
-    font-size: 2.5rem;
-  }
-  font-size: $fontShrikhandSizeLarge;
-  margin-bottom: 1rem;
-  font-family: $fontShrikhand;
-  letter-spacing: $letterSpacing;
-  width: 95vw;
-}
-@mixin flexCards($direction, $background, $color) {
-  @include backgroundColorFlexDirection($direction, $background, $color);
-  padding: 0rem 1rem;
-  margin-bottom: 1rem;
-  font-family: $fontRoboto;
-  font-size: $fontRobotoSizeLarge;
-  text-align: left;
-  position: relative;
-}
 @mixin restuarantCards {
-  @media only screen and (min-device-width: 280px) and (max-device-width: 653px) and (orientation: portrait) {
-    font-size: $fontRobotoSizeRegular;
-  }
-  box-shadow: $boxShadowButton;
-  border-radius: $borderRadius;
-  margin: 1rem 0rem;
-  width: 99%;
   display: flex;
+  position: relative;
+  justify-content: space-around;
   flex-direction: column;
   flex-wrap: wrap;
-  justify-content: space-around;
-  position: relative;
+  width: 99%;
+  margin: 1rem 0rem;
+  box-shadow: $boxShadowButton;
+  border-radius: $borderRadius;
 }
 @mixin restaurantCardsA {
   text-decoration: none;
@@ -181,27 +112,27 @@ $letterSpacing: 0.05rem;
   color: black;
   position: absolute;
   right: 40px;
-  bottom: 20px;
+  bottom: 40px;
 }
 @mixin faHeart2 {
   position: absolute;
-  color: $backgroundColorGray;
+  color: $backgroundColorGrey;
   color: white;
   font-size: 1.3rem;
   right: 41.5px;
-  bottom: 20px;
+  bottom: 40px;
 }
 @mixin faHeartHover {
   background-image: $gradient;
   background-clip: text;
   -webkit-text-fill-color: transparent;
-  background-color: $backgroundColorGray;
-  background-image: $backgroundColorGray;
+  background-color: $backgroundColorGrey;
+  background-image: $backgroundColorGrey;
   background-size: 100%;
   position: absolute;
   font-size: 1.6rem;
   right: 39.5px;
-  bottom: 18.5px;
+  bottom: 38.5px;
 }
 @mixin New {
   position: absolute;
@@ -209,10 +140,10 @@ $letterSpacing: 0.05rem;
   top: 1rem;
   right: 1rem;
   width: 5rem;
-  color: #017c5a;
+  color: #149274;
   font-family: $fontRoboto;
   font-size: 1rem;
-  font-weight: $fontWeightBold;
+  font-weight: 600;
   background: $tertiaryColor;
   border-radius: 0.2rem;
   text-align: center;

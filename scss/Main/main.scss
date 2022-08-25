@@ -2,9 +2,7 @@
 * {
   padding: 0;
   margin: 0;
-}
-html {
-  overflow: auto;
+  max-width: 100%;
 }
 body {
   background: white;
@@ -22,7 +20,7 @@ body {
     text-decoration: none;
   }
   header {
-    @include header(column, white, black);
+    @include flexDirectionBackgroundColorAndFlexDirection(column, white, black);
     .container-header {
       .logo {
         a {
@@ -36,68 +34,45 @@ body {
     }
   }
   main {
-    @include flexMain(column, white, black);
+    @include flexDirectionBackgroundColorAndFlexDirection(column, white, black);
     align-items: center;
     text-align: center;
+    width: 100%;
     .location {
       width: 100%;
       justify-content: center;
       text-align: center;
       font-size: $fontRobotoSizeSmall;
       background: rgba(0, 0, 0, 0.134);
-      padding: 0.8rem;
+      padding: 0.8rem 0;
       border-top: 0.2rem solid rgba(65, 65, 65, 0.164);
       .location-content {
         display: inline;
         font-family: $fontRoboto;
-        margin-left: 0.3rem;
+        margin-left: 1rem;
         border-radius: $borderRadius;
       }
     }
   }
-  // .brief-desc-of-comp {
-  //   @include briefDescOfComp(column, $backgroundColorGray, black);
-  //   .span-brief-desc-of-comp {
-  //     margin-bottom: 0.5rem;
-  //   }
-  //   #span-brief-desc-of-comp-first-p {
-  //     margin-bottom: 0.3rem;
-  //   }
-  //   .span-brief-desc-of-comp-last-p {
-  //     text-align: center;
-  //     font-size: 1.4rem;
-  //   }
-  //   #span-brief-desc-of-comp-last-p-border-top {
-  //     border-top: 0.3rem solid transparent;
-  //     border-image: linear-gradient(to right, $secondaryColor, $primaryColor);
-  //     border-image-slice: 1;
-  //     margin-top: 2rem;
-  //     padding: 0rem;
-  //   }
-  //   #span-brief-desc-of-comp-last-p-border-bottom {
-  //     border-bottom: 0.3rem solid transparent;
-  //     border-image: linear-gradient(to right, $primaryColor, $secondaryColor);
-  //     border-image-slice: 1;
-  //   }
-  // }
   .booking {
-    @include flexBooking(column, white, black);
-    @include booking;
-    padding: 1rem;
+    @include flexDirectionBackgroundColorAndFlexDirection(column, white, black);
+    width: 100%;
+    padding: 2rem 0 2.5rem 0;
     margin-bottom: 1rem;
     font-family: $fontRoboto;
     font-size: $fontRobotoSizeLarge;
     font-weight: $fontWeightBold;
+    font-weight: bolder;
     letter-spacing: 0.1rem;
-    background: $backgroundColorGray;
+    background: $backgroundColorGrey;
     .span-booking {
-      @include spanBooking;
       font-size: $fontRobotoSizeSmall;
-      margin: 2rem 0rem;
+      margin: 2rem;
       font-weight: $fontWeightRegular;
       color: grey;
     }
     .booking-btn {
+      display: block;
       background: $secondaryColor;
       background-image: linear-gradient(350deg, $primaryColor, $secondaryColor);
       border: none;
@@ -106,14 +81,14 @@ body {
       font-family: $fontRoboto;
       font-size: $fontRobotoSizeSmall;
       padding: 1.5rem 0rem;
+      width: 100%;
+      max-width: 17rem;
       cursor: pointer;
       font-weight: $fontWeightBold;
       letter-spacing: 0.1rem;
       transform: scale(1);
       box-shadow: $boxShadowButton;
-      margin-bottom: 3rem;
-      margin: 0rem 3rem;
-      margin-bottom: 2rem;
+      margin: 1rem auto;
       .booking-btn-a {
         text-decoration: none;
         color: white;
@@ -125,45 +100,55 @@ body {
     }
   }
   .how-it-works {
+    h2 {
+      font-size: $fontRobotoSizeLarge;
+      font-family: $fontRoboto;
+      text-align: left;
+      margin: 0 1rem 1rem 1rem;
+      letter-spacing: $letterSpacing;
+      min-width: 95vw;
+    }
+    display: block;
     text-align: left;
+    padding: 2rem 0;
     font-family: $fontRoboto;
     font-size: $fontRobotoSizeLarge;
     color: black;
     font-weight: $fontWeightBold;
     letter-spacing: 0.1rem;
+    width: 100%;
     ol {
       counter-reset: item;
       list-style-type: none;
       font-size: $fontRobotoSizeSmall;
-      font-weight: $fontWeightRegular;
-      text-shadow: none;
       letter-spacing: 0;
+      margin-left: 0.5rem;
       li {
-        font-weight: $fontWeightBold;
+        font-weight: 600;
         position: relative;
         justify-content: center;
         text-align: center;
         background: $primaryColor;
         border-radius: 50%;
-        width: 60vw;
-        background: $ShadowHowItWorks;
+        max-width: 100%;
+        background: #f6f7f7;
         margin: 1rem;
         border-radius: $borderRadiusHowItWorks;
-        padding: 2rem;
+        padding: 1.5rem;
         box-shadow: $boxShadowButton;
         .fa-mobile-screen {
           position: absolute;
-          left: 6vw;
+          left: 8vw;
           color: rgb(84, 84, 84);
         }
         .fa-list-check {
           position: absolute;
-          left: 6vw;
+          left: 8vw;
           color: rgb(84, 84, 84);
         }
         .fa-store {
           position: absolute;
-          left: 6vw;
+          left: 8vw;
           color: rgb(84, 84, 84);
         }
         .fa-solid:hover {
@@ -188,28 +173,44 @@ body {
     }
   }
   .container-restaurant-cards {
-    position: absoulte;
-    h2 {
-      @include h2;
-      font-size: $fontShrikhandSizeLarge;
-      margin-bottom: 1rem;
-      font-family: $fontShrikhand;
+    width: 100%;
+    background: #f8f4f4;
+    h3 {
+      font-size: $fontRobotoSizeLarge;
+      font-family: $fontRoboto;
+      text-align: left;
+      margin-top: 3rem;
+      margin-left: 1rem;
       letter-spacing: $letterSpacing;
-      width: 95vw;
+      min-width: 95vw;
     }
     .restaurant-cards {
-      @include flexCards(column, white, black);
+      @include flexDirectionBackgroundColorAndFlexDirection(
+        column,
+        white,
+        black
+      );
+      background: $backgroundColorGrey;
+      margin: 1rem;
+      margin-top: 0;
       span {
         display: block;
+        position: relative;
+        font-family: $fontRoboto;
+        font-weight: $fontWeightBold;
+        font-size: 1.4rem;
+        text-align: left;
         margin-top: 0.8rem;
         margin-left: 0.8rem;
-        font-weight: $fontWeightBold;
-        position: relative;
       }
       .restaurant-card-location {
         display: block;
+        font-family: $fontRoboto;
+        text-align: left;
         font-weight: $fontWeightRegular;
+        font-size: 1.4rem;
         margin-left: 0.8rem;
+        margin-bottom: 1rem;
       }
       .the-full-pallete-box {
         @include restuarantCards;
@@ -293,7 +294,7 @@ body {
       img {
         float: center;
         width: 100%;
-        height: 20vh;
+        height: 19vh;
         object-fit: cover;
         border-top-left-radius: $borderRadius;
         border-top-right-radius: $borderRadius;
