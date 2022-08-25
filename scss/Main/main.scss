@@ -173,6 +173,7 @@ body {
   .container-restaurant-cards {
     width: 100%;
     background: #f8f4f4;
+    padding-bottom: 1.5rem;
     h3 {
       font-size: $fontRobotoSizeLarge;
       font-family: $fontRoboto;
@@ -301,7 +302,7 @@ body {
   }
 }
 footer {
-  background: #696969;
+  background: #343435;
   padding-bottom: 1rem;
   .footer-logo-img {
     height: 1rem;

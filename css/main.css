@@ -239,6 +239,7 @@ body .how-it-works ol li:hover {
 body .container-restaurant-cards {
   width: 100%;
   background: #f8f4f4;
+  padding-bottom: 1.5rem;
 }
 body .container-restaurant-cards h3 {
   font-size: 1.5rem;
@@ -542,7 +543,7 @@ body .container-restaurant-cards .restaurant-cards img {
 }
 
 footer {
-  background: #696969;
+  background: #343435;
   padding-bottom: 1rem;
 }
 footer .footer-logo-img {
