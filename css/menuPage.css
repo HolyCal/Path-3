@@ -232,11 +232,6 @@ body main .menu-page-courses::after {
   border-bottom: 0.15rem solid #99e2d0;
   width: 2.5rem;
 }
-body main .menu-dishes {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
 body main .menu-dishes .menu-dishes-content {
   -webkit-box-shadow: 0rem 0.3rem 0.5rem 0.1rem #cfcfcf;
           box-shadow: 0rem 0.3rem 0.5rem 0.1rem #cfcfcf;
@@ -264,6 +259,9 @@ body main .menu-dishes .menu-dishes-content {
 body main .menu-dishes .menu-dishes-content-overflow {
   height: 5rem;
 }
+body main .menu-dishes .menu-dishes-content:hover {
+  margin-left: 1rem;
+}
 body main .menu-dishes .menu-dishes-content:hover .fa-circle-check {
   -webkit-animation: spin 1s 1;
           animation: spin 1s 1;
@@ -274,6 +272,7 @@ body main .menu-dishes .menu-dishes-content:hover .fa-circle-check {
 body main .menu-dishes .menu-dishes-content:hover .dish-prices {
   position: absolute;
   margin-right: 2.2rem;
+  padding: 0 1.5rem 0 0.5rem;
   -webkit-transition: 0.3s;
   transition: 0.3s;
   background: rgb(246, 246, 246);

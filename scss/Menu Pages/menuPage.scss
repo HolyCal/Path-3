@@ -171,8 +171,8 @@ body {
       border-bottom: 0.15rem solid $tertiaryColor;
       width: 2.5rem;
     }
+    // .menu-dishes-container {
     .menu-dishes {
-      display: flex;
       .menu-dishes-content {
         box-shadow: $boxShadowButton;
         border-radius: 1rem;
@@ -192,6 +192,7 @@ body {
         height: 5rem;
       }
       .menu-dishes-content:hover {
+        margin-left: 1rem;
         .fa-circle-check {
           animation: spin 1s 1;
           right: 1.5rem;
@@ -200,6 +201,7 @@ body {
         .dish-prices {
           position: absolute;
           margin-right: 2.2rem;
+          padding: 0 1.5rem 0 0.5rem;
           transition: 0.3s;
           background: $backgroundColorGrey;
         }
@@ -268,6 +270,7 @@ body {
         }
       }
     }
+    // }
     .order-button {
       display: flex;
       justify-content: center;
