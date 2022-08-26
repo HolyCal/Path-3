@@ -45,28 +45,30 @@ $letterSpacing: 0.05rem;
   margin-bottom: 1rem;
 }
 @mixin faHeart {
-  position: relative;
+  font-size: 1.5rem;
+  position: absolute;
   cursor: pointer;
   font-size: 1.5rem;
   color: black;
+  right: 40px;
+  bottom: 40px;
 }
 @mixin faHeart2 {
-  position: relative;
-  color: $backgroundColorGray;
+  position: absolute;
+  color: $backgroundColorGrey;
   font-size: 1.3rem;
 }
 @mixin faHeart2Before {
   padding: 0.03rem;
 }
 @mixin faHeartHover {
+  position: absolute;
   background-image: $gradient;
   background-clip: text;
   -webkit-text-fill-color: transparent;
-  background-color: $backgroundColorGray;
-  background-image: $backgroundColorGray;
+  background-color: $backgroundColorGrey;
+  background-image: $backgroundColorGrey;
   background-size: 100%;
-  font-size: 1.8rem;
-  bottom: -0.1rem;
 }
 @mixin footer {
   background: #696969;

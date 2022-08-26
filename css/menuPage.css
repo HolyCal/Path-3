@@ -60,6 +60,7 @@ body main {
   overflow-y: hidden;
 }
 body main #menu-page-h1-the-full-palette {
+  position: relative;
   font-family: "Shrikhand", cursive;
   font-size: 1.5rem;
   padding-top: 1rem;
@@ -67,23 +68,28 @@ body main #menu-page-h1-the-full-palette {
   margin-bottom: 1rem;
 }
 body main #menu-page-h1-the-full-palette .fa-heart {
-  position: relative;
+  font-size: 1.5rem;
+  position: absolute;
   cursor: pointer;
   font-size: 1.5rem;
   color: black;
-  left: 3.5rem;
+  right: 40px;
+  bottom: 40px;
+  right: 40px;
+  bottom: 10px;
 }
 body main #menu-page-h1-the-full-palette .fa-heart-2 {
-  position: relative;
+  position: absolute;
   color: rgb(246, 246, 246);
   font-size: 1.3rem;
-  left: 2.1rem;
-  bottom: 0;
+  right: 41.5px;
+  bottom: 10px;
 }
 body main #menu-page-h1-the-full-palette .fa-heart-2::before {
   padding: 0.03rem;
 }
 body main #menu-page-h1-the-full-palette .fa-heart-2:hover {
+  position: absolute;
   background-image: linear-gradient(350deg, #9356dc, #ff79da);
   -webkit-background-clip: text;
           background-clip: text;
@@ -91,10 +97,9 @@ body main #menu-page-h1-the-full-palette .fa-heart-2:hover {
   background-color: rgb(246, 246, 246);
   background-image: rgb(246, 246, 246);
   background-size: 100%;
-  font-size: 1.8rem;
-  bottom: -0.1rem;
-  left: 1.9rem;
-  bottom: -0.1rem;
+  font-size: 1.6rem;
+  right: 39px;
+  bottom: 8px;
 }
 body main #menu-page-h1-the-enchanted-plate {
   font-family: "Shrikhand", cursive;
@@ -104,15 +109,18 @@ body main #menu-page-h1-the-enchanted-plate {
   white-space: pre-line;
 }
 body main #menu-page-h1-the-enchanted-plate .fa-heart {
-  position: relative;
+  font-size: 1.5rem;
+  position: absolute;
   cursor: pointer;
   font-size: 1.5rem;
   color: black;
+  right: 40px;
+  bottom: 40px;
   top: -2.3rem;
   left: 11.5rem;
 }
 body main #menu-page-h1-the-enchanted-plate .fa-heart-2 {
-  position: relative;
+  position: absolute;
   color: rgb(246, 246, 246);
   font-size: 1.3rem;
   left: 10.1rem;
@@ -122,6 +130,7 @@ body main #menu-page-h1-the-enchanted-plate .fa-heart-2::before {
   padding: 0.03rem;
 }
 body main #menu-page-h1-the-enchanted-plate .fa-heart-2:hover {
+  position: absolute;
   background-image: linear-gradient(350deg, #9356dc, #ff79da);
   -webkit-background-clip: text;
           background-clip: text;
@@ -129,8 +138,6 @@ body main #menu-page-h1-the-enchanted-plate .fa-heart-2:hover {
   background-color: rgb(246, 246, 246);
   background-image: rgb(246, 246, 246);
   background-size: 100%;
-  font-size: 1.8rem;
-  bottom: -0.1rem;
   left: 9.8rem;
   top: -2.1rem;
 }
@@ -142,14 +149,17 @@ body main #menu-page-h1-bastille {
   margin-bottom: 1rem;
 }
 body main #menu-page-h1-bastille .fa-heart {
-  position: relative;
+  font-size: 1.5rem;
+  position: absolute;
   cursor: pointer;
   font-size: 1.5rem;
   color: black;
+  right: 40px;
+  bottom: 40px;
   left: 9.5rem;
 }
 body main #menu-page-h1-bastille .fa-heart-2 {
-  position: relative;
+  position: absolute;
   color: rgb(246, 246, 246);
   font-size: 1.3rem;
   left: 8.05rem;
@@ -159,6 +169,7 @@ body main #menu-page-h1-bastille .fa-heart-2::before {
   padding: 0.03rem;
 }
 body main #menu-page-h1-bastille .fa-heart-2:hover {
+  position: absolute;
   background-image: linear-gradient(350deg, #9356dc, #ff79da);
   -webkit-background-clip: text;
           background-clip: text;
@@ -166,8 +177,6 @@ body main #menu-page-h1-bastille .fa-heart-2:hover {
   background-color: rgb(246, 246, 246);
   background-image: rgb(246, 246, 246);
   background-size: 100%;
-  font-size: 1.8rem;
-  bottom: -0.1rem;
   left: 7.8rem;
   bottom: -0.1rem;
 }
@@ -179,13 +188,16 @@ body main #menu-page-h1-le-gourmand {
   margin-bottom: 1rem;
 }
 body main #menu-page-h1-le-gourmand .fa-heart {
-  position: relative;
+  font-size: 1.5rem;
+  position: absolute;
   cursor: pointer;
   font-size: 1.5rem;
   color: black;
+  right: 40px;
+  bottom: 40px;
 }
 body main #menu-page-h1-le-gourmand .fa-heart-2 {
-  position: relative;
+  position: absolute;
   color: rgb(246, 246, 246);
   font-size: 1.3rem;
   right: -4.8rem;
@@ -195,6 +207,7 @@ body main #menu-page-h1-le-gourmand .fa-heart-2::before {
   padding: 0.03rem;
 }
 body main #menu-page-h1-le-gourmand .fa-heart-2:hover {
+  position: absolute;
   background-image: linear-gradient(350deg, #9356dc, #ff79da);
   -webkit-background-clip: text;
           background-clip: text;
@@ -202,8 +215,6 @@ body main #menu-page-h1-le-gourmand .fa-heart-2:hover {
   background-color: rgb(246, 246, 246);
   background-image: rgb(246, 246, 246);
   background-size: 100%;
-  font-size: 1.8rem;
-  bottom: -0.1rem;
   left: 4.7rem;
   bottom: 0.15rem;
 }

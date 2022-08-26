@@ -56,30 +56,37 @@ body {
     top: -23.5rem;
   }
   main {
-    background: $backgroundColorGray;
+    background: $backgroundColorGrey;
     border-top-left-radius: 1.4rem;
     border-top-right-radius: 1.4rem;
     position: relative;
     top: -4rem;
     overflow-y: hidden;
     #menu-page-h1-the-full-palette {
-      @include menuPageH1;
+      position: relative;
+      font-family: $fontShrikhand;
+      font-size: 1.5rem;
+      padding-top: 1rem;
+      padding-left: 2rem;
+      margin-bottom: 1rem;
       .fa-heart {
         @include faHeart;
-        left: 3.5rem;
+        right: 40px;
+        bottom: 10px;
       }
       .fa-heart-2 {
         @include faHeart2;
-        left: 2.1rem;
-        bottom: 0;
+        right: 41.5px;
+        bottom: 10px;
       }
       .fa-heart-2::before {
         @include faHeart2Before;
       }
       .fa-heart-2:hover {
         @include faHeartHover;
-        left: 1.9rem;
-        bottom: -0.1rem;
+        font-size: 1.6rem;
+        right: 39px;
+        bottom: 8px;
       }
     }
     #menu-page-h1-the-enchanted-plate {
