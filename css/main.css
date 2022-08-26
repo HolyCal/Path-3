@@ -126,7 +126,7 @@ body .booking .booking-btn:hover {
   -webkit-transform: scale(1.05);
           transform: scale(1.05);
 }
-body .how-it-works {
+body .how-it-works-container {
   display: block;
   text-align: left;
   padding: 2rem 0;
@@ -137,7 +137,12 @@ body .how-it-works {
   letter-spacing: 0.1rem;
   width: 100%;
 }
-body .how-it-works h2 {
+@media screen and (min-width: 768px) and (orientation: landscape) {
+  body .how-it-works-container {
+    margin: 0 auto;
+  }
+}
+body .how-it-works-container h2 {
   font-size: 1.5rem;
   font-family: "Roboto", sans-serif;
   text-align: left;
@@ -145,14 +150,19 @@ body .how-it-works h2 {
   letter-spacing: 0.05rem;
   min-width: 95vw;
 }
-body .how-it-works ol {
+@media screen and (min-width: 768px) and (orientation: landscape) {
+  body .how-it-works-container h2 {
+    text-align: center;
+  }
+}
+body .how-it-works-container ol {
   counter-reset: item;
   list-style-type: none;
   font-size: 1rem;
   letter-spacing: 0;
   margin-left: 0.5rem;
 }
-body .how-it-works ol li {
+body .how-it-works-container ol li {
   font-weight: 600;
   position: relative;
   -webkit-box-pack: center;
@@ -169,25 +179,31 @@ body .how-it-works ol li {
   -webkit-box-shadow: 0rem 0.3rem 0.5rem 0.1rem #cfcfcf;
           box-shadow: 0rem 0.3rem 0.5rem 0.1rem #cfcfcf;
 }
-body .how-it-works ol li .fa-mobile-screen {
+@media screen and (min-width: 768px) and (orientation: landscape) {
+  body .how-it-works-container ol li {
+    width: 50%;
+    margin: 1rem auto;
+  }
+}
+body .how-it-works-container ol li .fa-mobile-screen {
   position: absolute;
   left: 8vw;
   color: rgb(84, 84, 84);
 }
-body .how-it-works ol li .fa-list-check {
+body .how-it-works-container ol li .fa-list-check {
   position: absolute;
   left: 8vw;
   color: rgb(84, 84, 84);
 }
-body .how-it-works ol li .fa-store {
+body .how-it-works-container ol li .fa-store {
   position: absolute;
   left: 8vw;
   color: rgb(84, 84, 84);
 }
-body .how-it-works ol li .fa-solid:hover {
+body .how-it-works-container ol li .fa-solid:hover {
   color: #9356dc;
 }
-body .how-it-works ol li:before {
+body .how-it-works-container ol li:before {
   position: absolute;
   left: -0.5rem;
   content: counter(item) " ";
@@ -198,48 +214,66 @@ body .how-it-works ol li:before {
   padding: 0.5vw;
   color: white;
 }
+@media screen and (min-width: 768px) and (orientation: landscape) {
+  body .how-it-works-container ol li:before {
+    width: 2vw;
+  }
+}
 @media only screen and (min-device-width: 481px) and (max-device-width: 1180px) and (orientation: portrait) {
-  body .how-it-works ol li:before {
+  body .how-it-works-container ol li:before {
     width: 3vw;
   }
 }
 @media only screen and (min-device-width: 540px) and (max-device-height: 720px) and (orientation: portrait) {
-  body .how-it-works ol li:before {
+  body .how-it-works-container ol li:before {
     width: 4vw;
   }
 }
 @media only screen and (min-device-width: 1024px) and (max-device-height: 600px) {
-  body .how-it-works ol li:before {
+  body .how-it-works-container ol li:before {
     width: 3vw;
     left: -1rem;
   }
 }
 @media only screen and (min-device-width: 1280px) and (max-device-height: 800px) {
-  body .how-it-works ol li:before {
+  body .how-it-works-container ol li:before {
     width: 2.5vw;
     left: -1rem;
   }
 }
 @media only screen and (min-device-width: 1180px) and (max-device-height: 1252px) and (orientation: portrait) {
-  body .how-it-works ol li:before {
+  body .how-it-works-container ol li:before {
     width: 3vw;
     left: -1.5rem;
   }
 }
 @media only screen and (min-device-width: 1253px) and (max-device-height: 1252px) {
-  body .how-it-works ol li:before {
+  body .how-it-works-container ol li:before {
     width: 1.5vw;
     left: -1rem;
     font-size: 1.2rem;
   }
 }
-body .how-it-works ol li:hover {
+body .how-it-works-container ol li:hover {
   background: rgba(146, 86, 220, 0.1568627451);
 }
 body .container-restaurant-cards {
   width: 100%;
   background: #f8f4f4;
   padding-bottom: 1.5rem;
+}
+@media screen and (min-width: 768px) and (orientation: landscape) {
+  body .container-restaurant-cards {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
 }
 body .container-restaurant-cards h3 {
   font-size: 1.5rem;
@@ -263,6 +297,15 @@ body .container-restaurant-cards .restaurant-cards {
   background: #f8f4f4;
   margin: 1rem;
   margin-top: 0;
+}
+@media screen and (min-width: 768px) and (orientation: landscape) {
+  body .container-restaurant-cards .restaurant-cards {
+    -ms-flex-preferred-size: 30rem;
+        flex-basis: 30rem;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
 }
 body .container-restaurant-cards .restaurant-cards span {
   display: block;

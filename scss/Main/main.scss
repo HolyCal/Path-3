@@ -97,8 +97,14 @@ body {
       }
     }
   }
-  .how-it-works {
+  .how-it-works-container {
+    @media screen and (min-width: 768px) and (orientation: landscape) {
+      margin: 0 auto;
+    }
     h2 {
+      @media screen and (min-width: 768px) and (orientation: landscape) {
+        text-align: center;
+      }
       font-size: $fontRobotoSizeLarge;
       font-family: $fontRoboto;
       text-align: left;
@@ -122,6 +128,10 @@ body {
       letter-spacing: 0;
       margin-left: 0.5rem;
       li {
+        @media screen and (min-width: 768px) and (orientation: landscape) {
+          width: 50%;
+          margin: 1rem auto;
+        }
         font-weight: 600;
         position: relative;
         justify-content: center;
@@ -154,6 +164,9 @@ body {
         }
       }
       li:before {
+        @media screen and (min-width: 768px) and (orientation: landscape) {
+          width: 2vw;
+        }
         @include liBeforeHowItWorks;
         position: absolute;
         left: -0.5rem;
@@ -174,6 +187,11 @@ body {
     width: 100%;
     background: #f8f4f4;
     padding-bottom: 1.5rem;
+    @media screen and (min-width: 768px) and (orientation: landscape) {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
     h3 {
       font-size: $fontRobotoSizeLarge;
       font-family: $fontRoboto;
@@ -192,6 +210,10 @@ body {
       background: $backgroundColorGrey;
       margin: 1rem;
       margin-top: 0;
+      @media screen and (min-width: 768px) and (orientation: landscape) {
+        flex-basis: 30rem;
+        justify-content: space-evenly;
+      }
       span {
         display: block;
         position: relative;
