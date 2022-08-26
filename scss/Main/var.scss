@@ -88,20 +88,6 @@ $letterSpacing: 0.05rem;
     font-size: $fontRobotoSizeRegular;
   }
 }
-@mixin restuarantCards {
-  display: flex;
-  position: relative;
-  justify-content: space-around;
-  flex-direction: column;
-  flex-wrap: wrap;
-  width: 99%;
-  margin: 1rem 0rem;
-  box-shadow: $boxShadowButton;
-  border-radius: $borderRadius;
-}
-@mixin restaurantCardsA {
-  text-decoration: none;
-}
 @mixin restaurantCardsAVisited {
   color: black;
 }
@@ -111,14 +97,6 @@ $letterSpacing: 0.05rem;
   font-size: 1.5rem;
   color: black;
   right: 40px;
-  bottom: 40px;
-}
-@mixin faHeart2 {
-  position: absolute;
-  color: $backgroundColorGrey;
-  color: white;
-  font-size: 1.3rem;
-  right: 41.5px;
   bottom: 40px;
 }
 @mixin faHeartHover {

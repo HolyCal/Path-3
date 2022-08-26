@@ -59,9 +59,10 @@ body main .location {
           justify-content: center;
   text-align: center;
   font-size: 1rem;
-  background: rgba(0, 0, 0, 0.134);
+  background: #dcdcdd;
   padding: 0.8rem 0;
-  border-top: 0.2rem solid rgba(65, 65, 65, 0.164);
+  -webkit-box-shadow: inset 0px 7px 3px -3px #cbcbcd;
+          box-shadow: inset 0px 7px 3px -3px #cbcbcd;
 }
 body main .location .location-content {
   display: inline;
@@ -210,7 +211,7 @@ body .how-it-works-container ol li:before {
   counter-increment: item;
   background: #9356dc;
   border-radius: 50%;
-  width: 5vw;
+  width: 1rem;
   padding: 0.5vw;
   color: white;
 }
@@ -258,9 +259,9 @@ body .how-it-works-container ol li:hover {
   background: rgba(146, 86, 220, 0.1568627451);
 }
 body .container-restaurant-cards {
-  width: 100%;
   background: #f8f4f4;
   padding-bottom: 1.5rem;
+  width: 100%;
 }
 @media screen and (min-width: 768px) and (orientation: landscape) {
   body .container-restaurant-cards {
@@ -284,6 +285,13 @@ body .container-restaurant-cards h3 {
   letter-spacing: 0.05rem;
   min-width: 95vw;
 }
+@media screen and (min-width: 768px) and (orientation: landscape) {
+  body .container-restaurant-cards h3 {
+    text-align: center;
+    margin-bottom: 1rem;
+    font-size: 1.8rem;
+  }
+}
 body .container-restaurant-cards .restaurant-cards {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -300,12 +308,69 @@ body .container-restaurant-cards .restaurant-cards {
 }
 @media screen and (min-width: 768px) and (orientation: landscape) {
   body .container-restaurant-cards .restaurant-cards {
-    -ms-flex-preferred-size: 30rem;
-        flex-basis: 30rem;
+    width: 25%;
     -webkit-box-pack: space-evenly;
         -ms-flex-pack: space-evenly;
             justify-content: space-evenly;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin: 1rem;
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 21%;
+            flex: 1 0 21%;
   }
+}
+body .container-restaurant-cards .restaurant-cards .restaurant-card-boxes {
+  position: relative;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: 1rem 0rem;
+  padding: 0;
+  background: white;
+  -webkit-box-shadow: 0rem 0.3rem 0.5rem 0.1rem #cfcfcf;
+          box-shadow: 0rem 0.3rem 0.5rem 0.1rem #cfcfcf;
+  border-radius: 0.4rem;
+}
+body .container-restaurant-cards .restaurant-cards .restaurant-card-boxes a {
+  text-decoration: none;
+}
+body .container-restaurant-cards .restaurant-cards .restaurant-card-boxes a:visited {
+  color: black;
+}
+body .container-restaurant-cards .restaurant-cards .restaurant-card-boxes .new {
+  position: absolute;
+  padding: 0.3rem 0;
+  top: 1rem;
+  right: 1rem;
+  width: 5rem;
+  color: #149274;
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  background: #99e2d0;
+  border-radius: 0.2rem;
+  text-align: center;
+}
+body .container-restaurant-cards .restaurant-cards .restaurant-card-boxes .fa-regular {
+  position: absolute;
+  cursor: pointer;
+  font-size: 30px;
+  color: black;
+  right: 40px;
+  bottom: 40px;
+}
+body .container-restaurant-cards .restaurant-cards .restaurant-card-boxes .fa-regular:hover {
+  font-weight: 900;
+  background-image: linear-gradient(350deg, #9356dc, #ff79da);
+  -webkit-background-clip: text;
+          background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-color: #f8f4f4;
+  background-image: #f8f4f4;
 }
 body .container-restaurant-cards .restaurant-cards span {
   display: block;
@@ -326,256 +391,7 @@ body .container-restaurant-cards .restaurant-cards .restaurant-card-location {
   margin-left: 0.8rem;
   margin-bottom: 1rem;
 }
-body .container-restaurant-cards .restaurant-cards .the-full-pallete-box {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  position: relative;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  width: 99%;
-  margin: 1rem 0rem;
-  -webkit-box-shadow: 0rem 0.3rem 0.5rem 0.1rem #cfcfcf;
-          box-shadow: 0rem 0.3rem 0.5rem 0.1rem #cfcfcf;
-  border-radius: 0.4rem;
-  padding: 0;
-}
-body .container-restaurant-cards .restaurant-cards .the-full-pallete-box a {
-  text-decoration: none;
-}
-body .container-restaurant-cards .restaurant-cards .the-full-pallete-box a:visited {
-  color: black;
-}
-body .container-restaurant-cards .restaurant-cards .the-full-pallete-box .new {
-  position: absolute;
-  padding: 0.3rem 0;
-  top: 1rem;
-  right: 1rem;
-  width: 5rem;
-  color: #149274;
-  font-family: "Roboto", sans-serif;
-  font-size: 1rem;
-  font-weight: 600;
-  background: #99e2d0;
-  border-radius: 0.2rem;
-  text-align: center;
-}
-body .container-restaurant-cards .restaurant-cards .the-full-pallete-box .fa-heart {
-  position: absolute;
-  cursor: pointer;
-  font-size: 1.5rem;
-  color: black;
-  position: absolute;
-  right: 40px;
-  bottom: 40px;
-}
-body .container-restaurant-cards .restaurant-cards .the-full-pallete-box .fa-heart-2 {
-  position: absolute;
-  color: #f8f4f4;
-  color: white;
-  font-size: 1.3rem;
-  right: 41.5px;
-  bottom: 40px;
-}
-body .container-restaurant-cards .restaurant-cards .the-full-pallete-box .fa-heart:hover {
-  background-image: linear-gradient(350deg, #9356dc, #ff79da);
-  -webkit-background-clip: text;
-          background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-color: #f8f4f4;
-  background-image: #f8f4f4;
-  background-size: 100%;
-  position: absolute;
-  font-size: 1.6rem;
-  right: 39.5px;
-  bottom: 38.5px;
-}
-body .container-restaurant-cards .restaurant-cards .the-enchanted-plate-box {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  position: relative;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  width: 99%;
-  margin: 1rem 0rem;
-  -webkit-box-shadow: 0rem 0.3rem 0.5rem 0.1rem #cfcfcf;
-          box-shadow: 0rem 0.3rem 0.5rem 0.1rem #cfcfcf;
-  border-radius: 0.4rem;
-}
-body .container-restaurant-cards .restaurant-cards .the-enchanted-plate-box a {
-  text-decoration: none;
-}
-body .container-restaurant-cards .restaurant-cards .the-enchanted-plate-box a:visited {
-  color: black;
-}
-body .container-restaurant-cards .restaurant-cards .the-enchanted-plate-box .new {
-  position: absolute;
-  padding: 0.3rem 0;
-  top: 1rem;
-  right: 1rem;
-  width: 5rem;
-  color: #149274;
-  font-family: "Roboto", sans-serif;
-  font-size: 1rem;
-  font-weight: 600;
-  background: #99e2d0;
-  border-radius: 0.2rem;
-  text-align: center;
-}
-body .container-restaurant-cards .restaurant-cards .the-enchanted-plate-box .fa-heart {
-  position: absolute;
-  cursor: pointer;
-  font-size: 1.5rem;
-  color: black;
-  position: absolute;
-  right: 40px;
-  bottom: 40px;
-}
-body .container-restaurant-cards .restaurant-cards .the-enchanted-plate-box .fa-heart-2 {
-  position: absolute;
-  color: #f8f4f4;
-  color: white;
-  font-size: 1.3rem;
-  right: 41.5px;
-  bottom: 40px;
-}
-body .container-restaurant-cards .restaurant-cards .the-enchanted-plate-box .fa-heart:hover {
-  background-image: linear-gradient(350deg, #9356dc, #ff79da);
-  -webkit-background-clip: text;
-          background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-color: #f8f4f4;
-  background-image: #f8f4f4;
-  background-size: 100%;
-  position: absolute;
-  font-size: 1.6rem;
-  right: 39.5px;
-  bottom: 38.5px;
-}
-body .container-restaurant-cards .restaurant-cards .bastille-box {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  position: relative;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  width: 99%;
-  margin: 1rem 0rem;
-  -webkit-box-shadow: 0rem 0.3rem 0.5rem 0.1rem #cfcfcf;
-          box-shadow: 0rem 0.3rem 0.5rem 0.1rem #cfcfcf;
-  border-radius: 0.4rem;
-}
-body .container-restaurant-cards .restaurant-cards .bastille-box a {
-  text-decoration: none;
-}
-body .container-restaurant-cards .restaurant-cards .bastille-box a:visited {
-  color: black;
-}
-body .container-restaurant-cards .restaurant-cards .bastille-box .fa-heart {
-  position: absolute;
-  cursor: pointer;
-  font-size: 1.5rem;
-  color: black;
-  position: absolute;
-  right: 40px;
-  bottom: 40px;
-}
-body .container-restaurant-cards .restaurant-cards .bastille-box .fa-heart-2 {
-  position: absolute;
-  color: #f8f4f4;
-  color: white;
-  font-size: 1.3rem;
-  right: 41.5px;
-  bottom: 40px;
-}
-body .container-restaurant-cards .restaurant-cards .bastille-box .fa-heart:hover {
-  background-image: linear-gradient(350deg, #9356dc, #ff79da);
-  -webkit-background-clip: text;
-          background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-color: #f8f4f4;
-  background-image: #f8f4f4;
-  background-size: 100%;
-  position: absolute;
-  font-size: 1.6rem;
-  right: 39.5px;
-  bottom: 38.5px;
-}
-body .container-restaurant-cards .restaurant-cards .le-gourmand-box {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  position: relative;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  width: 99%;
-  margin: 1rem 0rem;
-  -webkit-box-shadow: 0rem 0.3rem 0.5rem 0.1rem #cfcfcf;
-          box-shadow: 0rem 0.3rem 0.5rem 0.1rem #cfcfcf;
-  border-radius: 0.4rem;
-}
-body .container-restaurant-cards .restaurant-cards .le-gourmand-box a {
-  text-decoration: none;
-}
-body .container-restaurant-cards .restaurant-cards .le-gourmand-box a:visited {
-  color: black;
-}
-body .container-restaurant-cards .restaurant-cards .le-gourmand-box .fa-heart {
-  position: absolute;
-  cursor: pointer;
-  font-size: 1.5rem;
-  color: black;
-  position: absolute;
-  right: 40px;
-  bottom: 40px;
-}
-body .container-restaurant-cards .restaurant-cards .le-gourmand-box .fa-heart-2 {
-  position: absolute;
-  color: #f8f4f4;
-  color: white;
-  font-size: 1.3rem;
-  right: 41.5px;
-  bottom: 40px;
-}
-body .container-restaurant-cards .restaurant-cards .le-gourmand-box .fa-heart:hover {
-  background-image: linear-gradient(350deg, #9356dc, #ff79da);
-  -webkit-background-clip: text;
-          background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-color: #f8f4f4;
-  background-image: #f8f4f4;
-  background-size: 100%;
-  position: absolute;
-  font-size: 1.6rem;
-  right: 39.5px;
-  bottom: 38.5px;
-}
-body .container-restaurant-cards .restaurant-cards img {
+body .container-restaurant-cards img {
   float: center;
   width: 100%;
   height: 19vh;
@@ -584,12 +400,30 @@ body .container-restaurant-cards .restaurant-cards img {
   border-top-left-radius: 0.4rem;
   border-top-right-radius: 0.4rem;
 }
+@media screen and (min-width: 768px) and (orientation: landscape) {
+  body .container-restaurant-cards img {
+    width: 20rem;
+  }
+}
+@media screen and (min-width: 1024px) and (orientation: landscape) {
+  body .container-restaurant-cards img {
+    width: 40rem;
+  }
+}
 
 footer {
   background: #343435;
   padding-bottom: 1rem;
+  width: 100%;
 }
-footer .footer-logo-img {
+@media screen and (min-width: 768px) and (orientation: landscape) {
+  footer .footer-content-container {
+    display: block;
+    margin: auto;
+    max-width: 13rem;
+  }
+}
+footer .footer-content-container .footer-logo-img {
   height: 1rem;
   width: 6rem;
   margin-left: 1rem;
@@ -597,14 +431,14 @@ footer .footer-logo-img {
           filter: invert(100%);
   margin: 1rem;
 }
-footer .footer-p {
+footer .footer-content-container .footer-p {
   color: white;
   margin-left: 1rem;
   font: 1rem "Roboto", sans-serif;
   padding-bottom: 0.5rem;
   white-space: normal;
 }
-footer .support-a-restaurant-p {
+footer .footer-content-container .support-a-restaurant-p {
   color: white;
   margin-left: 1rem;
   font: 1rem "Roboto", sans-serif;
@@ -612,10 +446,10 @@ footer .support-a-restaurant-p {
   white-space: normal;
   font-weight: 900;
 }
-footer .support-a-restaurant-p .fa-utensils {
+footer .footer-content-container .support-a-restaurant-p .fa-utensils {
   margin-right: 1.2rem;
 }
-footer .become-a-partner-p {
+footer .footer-content-container .become-a-partner-p {
   color: white;
   margin-left: 1rem;
   font: 1rem "Roboto", sans-serif;
@@ -623,17 +457,17 @@ footer .become-a-partner-p {
   white-space: normal;
   font-weight: 900;
 }
-footer .become-a-partner-p .fa-handshake-angle {
+footer .footer-content-container .become-a-partner-p .fa-handshake-angle {
   margin-right: 0.8rem;
 }
-footer .legal-p {
+footer .footer-content-container .legal-p {
   color: white;
   margin-left: 1rem;
   font: 1rem "Roboto", sans-serif;
   padding-bottom: 0.5rem;
   white-space: normal;
 }
-footer .contact-p {
+footer .footer-content-container .contact-p {
   color: white;
   margin-left: 1rem;
   font: 1rem "Roboto", sans-serif;
