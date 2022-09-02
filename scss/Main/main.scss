@@ -109,11 +109,11 @@ body {
     }
   }
   .how-it-works-container {
-    @media screen and (min-width: 768px) and (orientation: landscape) {
+    @media screen and (min-width: 768px) {
       margin: 0 auto;
     }
     h2 {
-      @media screen and (min-width: 768px) and (orientation: landscape) {
+      @media screen and (min-width: 768px) {
         text-align: center;
       }
       font-size: $fontRobotoSizeLarge;
@@ -139,7 +139,7 @@ body {
       letter-spacing: 0;
       margin-left: 0.5rem;
       li {
-        @media screen and (min-width: 768px) and (orientation: landscape) {
+        @media screen and (min-width: 768px) {
           width: 50%;
           margin: 1rem auto;
         }
@@ -175,9 +175,6 @@ body {
         }
       }
       li:before {
-        @media screen and (max-width: 1180px) and (orientation: landscape) {
-          left: 1rem;
-        }
         @include liBeforeHowItWorks;
         position: absolute;
         left: -0.5rem;
