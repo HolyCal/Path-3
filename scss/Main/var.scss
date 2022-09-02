@@ -30,36 +30,19 @@ $borderRadiusHowItWorks: 1.5rem;
 $fontRoboto: "Roboto", sans-serif;
 $fontShrikhand: "Shrikhand", cursive;
 $letterSpacing: 0.05rem;
-@mixin body {
-  background: white;
-  overflow: auto;
-}
-@mixin div {
-  margin: 0;
-  padding: 0;
-}
-@mixin marginBottom($marginBottom) {
-  margin-bottom: 1rem;
-}
+
 @mixin backgroundColorFlexDirection($direction, $background, $color) {
   display: flex;
   background: $background;
   color: $color;
   flex-direction: $direction;
 }
-@mixin flexDirectionBackgroundColorAndFlexDirection(
+@mixin flexDirectionBackgroundColorAndTextColor(
   $direction,
   $background,
   $color
 ) {
   @include backgroundColorFlexDirection($direction, $background, $color);
-}
-@mixin subtitle {
-  justify-content: center;
-  text-align: center;
-  font-size: $fontShrikhandSizeRegular;
-  letter-spacing: $letterSpacing;
-  font-family: $fontShrikhand;
 }
 @mixin liBeforeHowItWorks {
   @media only screen and (min-device-width: 481px) and (max-device-width: 1180px) and (orientation: portrait) {
@@ -87,9 +70,6 @@ $letterSpacing: 0.05rem;
     left: -1rem;
     font-size: $fontRobotoSizeRegular;
   }
-}
-@mixin restaurantCardsAVisited {
-  color: black;
 }
 @mixin faHeart {
   position: absolute;
@@ -131,9 +111,4 @@ $letterSpacing: 0.05rem;
   font: $fontRobotoSizeSmall $fontRoboto;
   padding-bottom: 0.5rem;
   white-space: normal;
-}
-@mixin desktop {
-  @media (max-width: $desktop) {
-    @content;
-  }
 }

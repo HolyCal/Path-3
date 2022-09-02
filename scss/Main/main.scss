@@ -20,7 +20,7 @@ body {
     text-decoration: none;
   }
   header {
-    @include flexDirectionBackgroundColorAndFlexDirection(column, white, black);
+    @include flexDirectionBackgroundColorAndTextColor(column, white, black);
     .container-header {
       .logo {
         a {
@@ -34,7 +34,7 @@ body {
     }
   }
   main {
-    @include flexDirectionBackgroundColorAndFlexDirection(column, white, black);
+    @include flexDirectionBackgroundColorAndTextColor(column, white, black);
     align-items: center;
     text-align: center;
     width: 100%;
@@ -56,7 +56,7 @@ body {
     }
   }
   .booking {
-    @include flexDirectionBackgroundColorAndFlexDirection(column, white, black);
+    @include flexDirectionBackgroundColorAndTextColor(column, white, black);
     width: 100%;
     padding: 2rem 0 2.5rem 0;
     margin-bottom: 1rem;
@@ -216,11 +216,7 @@ body {
         margin: 1rem;
         flex: 1 0 21%;
       }
-      @include flexDirectionBackgroundColorAndFlexDirection(
-        column,
-        white,
-        black
-      );
+      @include flexDirectionBackgroundColorAndTextColor(column, white, black);
       background: $backgroundColorGrey;
       margin: 1rem;
       margin-top: 0;
@@ -236,7 +232,7 @@ body {
         a {
           text-decoration: none;
           &:visited {
-            @include restaurantCardsAVisited;
+            color: black;
           }
         }
         .new {
