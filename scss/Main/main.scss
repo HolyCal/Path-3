@@ -55,140 +55,160 @@ body {
       }
     }
   }
-  .booking {
-    h1 {
-      font-size: $fontRobotoSizeLarge;
-      font-family: $fontRoboto;
-      letter-spacing: $letterSpacing;
-      min-width: 95vw;
-    }
-    @media screen and (min-width: 280px) and (orientation: portrait) {
-      margin-left: 0.5rem;
-      margin-right: 0.5rem;
-    }
-    @include flexDirectionBackgroundColorAndTextColor(column, white, black);
-    width: 100%;
-    padding: 2rem 0 2.5rem 0;
-    margin-bottom: 1rem;
-    font-family: $fontRoboto;
-    font-size: $fontRobotoSizeLarge;
-    font-weight: $fontWeightBold;
-    font-weight: bolder;
-    letter-spacing: 0.1rem;
-    background: $backgroundColorGrey;
-    .span-booking {
-      font-size: $fontRobotoSizeSmall;
-      margin: 2rem;
-      font-weight: $fontWeightRegular;
-      color: grey;
-    }
-    .booking-btn {
-      display: block;
-      background: $secondaryColor;
-      background-image: linear-gradient(350deg, $primaryColor, $secondaryColor);
-      border: none;
-      border-radius: $borderRadiusButton;
-      text-align: center;
-      font-family: $fontRoboto;
-      font-size: $fontRobotoSizeSmall;
-      padding: 1rem 0rem;
+  .booking-and-how-it-works-container {
+    .booking-container {
+      h1 {
+        font-size: $fontRobotoSizeLarge;
+        font-family: $fontRoboto;
+        letter-spacing: $letterSpacing;
+        min-width: 95vw;
+      }
+      @media screen and (max-width: 360px) and (orientation: portrait) {
+        margin-left: 0.5rem;
+        margin-right: 0.5rem;
+      }
+      @include flexDirectionBackgroundColorAndTextColor(column, white, black);
       width: 100%;
-      max-width: 15rem;
-      cursor: pointer;
-      transform: scale(1);
-      box-shadow: $boxShadowButton;
-      margin: 1rem auto;
-      .booking-btn-a {
-        text-decoration: none;
-        color: white;
-      }
-      &:hover {
-        transition: transform 0.3s ease-in-out;
-        transform: scale(1.05);
-      }
-    }
-  }
-  .how-it-works-container {
-    @media screen and (min-width: 768px) {
-      margin: 0 auto;
-    }
-    h2 {
-      @media screen and (min-width: 768px) {
-        text-align: center;
-      }
-      font-size: $fontRobotoSizeLarge;
+      padding: 2rem 0 2.5rem 0;
+      margin-bottom: 1rem;
       font-family: $fontRoboto;
-      text-align: left;
-      margin: 0 1rem 1rem 1rem;
-      letter-spacing: $letterSpacing;
-      min-width: 95vw;
-    }
-    display: block;
-    text-align: left;
-    padding: 2rem 0;
-    font-family: $fontRoboto;
-    font-size: $fontRobotoSizeLarge;
-    color: black;
-    font-weight: $fontWeightBold;
-    letter-spacing: 0.1rem;
-    width: 100%;
-    ol {
-      counter-reset: item;
-      list-style-type: none;
-      font-size: $fontRobotoSizeSmall;
-      letter-spacing: 0;
-      margin-left: 0.5rem;
-      li {
-        @media screen and (min-width: 768px) {
-          width: 50%;
-          margin: 1rem auto;
-        }
-        font-weight: 600;
-        position: relative;
-        justify-content: center;
+      font-size: $fontRobotoSizeLarge;
+      font-weight: $fontWeightBold;
+      font-weight: bolder;
+      letter-spacing: 0.1rem;
+      background: $backgroundColorGrey;
+      .span-booking {
+        font-size: $fontRobotoSizeSmall;
+        margin: 2rem;
+        font-weight: $fontWeightRegular;
+        color: grey;
+      }
+      .booking-btn {
+        display: block;
+        background: $secondaryColor;
+        background-image: linear-gradient(
+          350deg,
+          $primaryColor,
+          $secondaryColor
+        );
+        border: none;
+        border-radius: $borderRadiusButton;
         text-align: center;
-        background: $primaryColor;
-        border-radius: 50%;
-        max-width: 100%;
-        background: #f6f7f7;
-        margin: 1rem;
-        border-radius: $borderRadiusHowItWorks;
-        padding: 1.5rem;
+        font-family: $fontRoboto;
+        font-size: $fontRobotoSizeSmall;
+        padding: 1rem 0rem;
+        width: 100%;
+        max-width: 15rem;
+        cursor: pointer;
+        transform: scale(1);
         box-shadow: $boxShadowButton;
-        .fa-mobile-screen {
-          position: absolute;
-          left: 8vw;
-          color: rgb(84, 84, 84);
+        margin: 1rem auto;
+        .booking-btn-a {
+          text-decoration: none;
+          color: white;
         }
-        .fa-list-check {
-          position: absolute;
-          left: 8vw;
-          color: rgb(84, 84, 84);
-        }
-        .fa-store {
-          position: absolute;
-          left: 8vw;
-          color: rgb(84, 84, 84);
-        }
-        .fa-solid:hover {
-          color: $primaryColor;
+        &:hover {
+          transition: transform 0.3s ease-in-out;
+          transform: scale(1.05);
         }
       }
-      li:before {
-        @include liBeforeHowItWorks;
-        position: absolute;
-        left: -0.5rem;
-        // bottom: 0.5rem;
-        content: counter(item) " ";
-        counter-increment: item;
-        background: $primaryColor;
-        border-radius: 50%;
-        width: 1rem;
-        padding: 0.5vw;
-        color: white;
+    }
+    .how-it-works-container {
+      display: block;
+      text-align: left;
+      padding: 2rem 0;
+      font-family: $fontRoboto;
+      font-size: $fontRobotoSizeLarge;
+      color: black;
+      font-weight: $fontWeightBold;
+      letter-spacing: 0.1rem;
+      width: 100%;
+      @media screen and (min-width: 768px) {
+        margin: 0 auto;
       }
-      li:hover {
-        background: #9256dc28;
+      h2 {
+        font-size: $fontRobotoSizeLarge;
+        font-family: $fontRoboto;
+        text-align: left;
+        margin: 0 1rem 1rem 1rem;
+        letter-spacing: $letterSpacing;
+        min-width: 95vw;
+        @media screen and (min-width: 768px) {
+          text-align: center;
+        }
+      }
+      ol {
+        counter-reset: item;
+        list-style-type: none;
+        font-size: $fontRobotoSizeSmall;
+        letter-spacing: 0;
+        margin-left: 0.5rem;
+        li {
+          font-weight: 600;
+          position: relative;
+          justify-content: center;
+          text-align: center;
+          background: $primaryColor;
+          border-radius: 50%;
+          max-width: 100%;
+          background: #f6f7f7;
+          margin: 1rem;
+          border-radius: $borderRadiusHowItWorks;
+          padding: 1.5rem;
+          box-shadow: $boxShadowButton;
+          @media screen and (min-width: 768px) {
+            width: 50%;
+            margin: 1rem auto;
+          }
+          .fa-mobile-screen {
+            position: absolute;
+            left: 8vw;
+            color: rgb(84, 84, 84);
+          }
+          .fa-list-check {
+            position: absolute;
+            left: 8vw;
+            color: rgb(84, 84, 84);
+          }
+          .fa-store {
+            position: absolute;
+            left: 8vw;
+            color: rgb(84, 84, 84);
+          }
+          .fa-solid:hover {
+            color: $primaryColor;
+          }
+        }
+        li:before {
+          @include liBeforeHowItWorks;
+          position: absolute;
+          left: -0.5rem;
+          // bottom: 0.5rem;
+          content: counter(item) " ";
+          counter-increment: item;
+          background: $primaryColor;
+          border-radius: 50%;
+          width: 1rem;
+          padding: 0.5vw;
+          color: white;
+        }
+        li:hover {
+          background: #9256dc28;
+        }
+      }
+    }
+    @media screen and (min-width: 1024px) {
+      display: flex;
+      flex-direction: row;
+      .booking-container {
+        display: flex;
+        flex-direction: column;
+        flex-basis: 50%;
+      }
+      .how-it-works-container {
+        display: flex;
+        flex-direction: column;
+        flex-basis: 50%;
       }
     }
   }
@@ -202,11 +222,6 @@ body {
       flex-wrap: wrap;
     }
     h3 {
-      @media screen and (min-width: 768px) and (orientation: landscape) {
-        text-align: center;
-        margin-bottom: 1rem;
-        font-size: 1.8rem;
-      }
       font-size: $fontRobotoSizeLarge;
       font-family: $fontRoboto;
       text-align: left;
@@ -214,8 +229,17 @@ body {
       margin-left: 1rem;
       letter-spacing: $letterSpacing;
       min-width: 95vw;
+      @media screen and (min-width: 768px) and (orientation: landscape) {
+        text-align: center;
+        margin-bottom: 1rem;
+        font-size: 1.8rem;
+      }
     }
     .restaurant-cards {
+      @include flexDirectionBackgroundColorAndTextColor(column, white, black);
+      background: $backgroundColorGrey;
+      margin: 1rem;
+      margin-top: 0;
       @media screen and (min-width: 768px) and (orientation: landscape) {
         width: 25%;
         justify-content: space-evenly;
@@ -224,11 +248,9 @@ body {
         margin: 1rem;
         flex: 1 0 21%;
       }
-      @include flexDirectionBackgroundColorAndTextColor(column, white, black);
-      background: $backgroundColorGrey;
-      margin: 1rem;
-      margin-top: 0;
-
+      @media screen and (max-width: 360px) {
+        margin: 1rem 0;
+      }
       .restaurant-card-boxes {
         position: relative;
         flex-wrap: wrap;
@@ -237,6 +259,14 @@ body {
         background: white;
         box-shadow: $boxShadowButton;
         border-radius: $borderRadius;
+        @media screen and (min-width: 2048px) {
+          flex-basis: 50rem;
+        }
+        .restaurant-card-images {
+          @media screen and (min-width: 2048px) {
+            width: 100%;
+          }
+        }
         a {
           text-decoration: none;
           &:visited {
@@ -253,6 +283,11 @@ body {
           color: black;
           right: 40px;
           bottom: 40px;
+          @media screen and (max-width: 360px) {
+            font-size: 20px;
+            bottom: 30px;
+            right: 10px;
+          }
         }
         .fa-regular:hover {
           font-weight: 900;
@@ -272,6 +307,9 @@ body {
         text-align: left;
         margin-top: 0.8rem;
         margin-left: 0.8rem;
+        @media screen and (max-width: 360px) {
+          font-size: 1rem;
+        }
       }
       .restaurant-card-location {
         display: block;
@@ -281,21 +319,24 @@ body {
         font-size: 1.4rem;
         margin-left: 0.8rem;
         margin-bottom: 1rem;
+        @media screen and (max-width: 360px) {
+          font-size: 0.8rem;
+        }
       }
     }
     img {
-      @media screen and (min-width: 768px) and (orientation: landscape) {
-        width: 20rem;
-      }
-      @media screen and (min-width: 1024px) and (orientation: landscape) {
-        width: 40rem;
-      }
       float: center;
       width: 100%;
       height: 19vh;
       object-fit: cover;
       border-top-left-radius: $borderRadius;
       border-top-right-radius: $borderRadius;
+      @media screen and (min-width: 768px) and (orientation: landscape) {
+        width: 20rem;
+      }
+      @media screen and (min-width: 1024px) and (orientation: landscape) {
+        width: 40rem;
+      }
     }
   }
 }
@@ -304,20 +345,15 @@ footer {
   padding-bottom: 1rem;
   width: 100%;
   .footer-content-container {
-    @media screen and (min-width: 768px) and (orientation: landscape) {
-      display: block;
-      margin: auto;
-      max-width: 13rem;
-      text-align: center;
-      // .footer-logo-img {
-      // }
-    }
+    width: 13rem;
+    height: 10rem;
     .footer-logo-img {
       height: 1rem;
       width: 6rem;
       margin-left: 1rem;
       filter: invert(100%);
       margin: 1rem;
+      object-position: center;
     }
     .footer-p {
       @include footerLinks;
@@ -341,6 +377,13 @@ footer {
     }
     .contact-p {
       @include footerLinks;
+    }
+    @media screen and (min-width: 768px) {
+      margin: 0 auto;
+      max-width: 13rem;
+      text-align: center;
+      // .footer-logo-img {
+      // }
     }
   }
 }

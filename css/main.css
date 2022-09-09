@@ -70,7 +70,7 @@ body main .location .location-content {
   margin-left: 1rem;
   border-radius: 0.4rem;
 }
-body .booking {
+body .booking-and-how-it-works-container .booking-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -90,25 +90,25 @@ body .booking {
   letter-spacing: 0.1rem;
   background: #f8f4f4;
 }
-body .booking h1 {
+body .booking-and-how-it-works-container .booking-container h1 {
   font-size: 1.5rem;
   font-family: "Roboto", sans-serif;
   letter-spacing: 0.05rem;
   min-width: 95vw;
 }
-@media screen and (min-width: 280px) and (orientation: portrait) {
-  body .booking {
+@media screen and (max-width: 360px) and (orientation: portrait) {
+  body .booking-and-how-it-works-container .booking-container {
     margin-left: 0.5rem;
     margin-right: 0.5rem;
   }
 }
-body .booking .span-booking {
+body .booking-and-how-it-works-container .booking-container .span-booking {
   font-size: 1rem;
   margin: 2rem;
   font-weight: 500;
   color: grey;
 }
-body .booking .booking-btn {
+body .booking-and-how-it-works-container .booking-container .booking-btn {
   display: block;
   background: #ff79da;
   background-image: linear-gradient(350deg, #9356dc, #ff79da);
@@ -127,11 +127,11 @@ body .booking .booking-btn {
           box-shadow: 0rem 0.3rem 0.5rem 0.1rem #cfcfcf;
   margin: 1rem auto;
 }
-body .booking .booking-btn .booking-btn-a {
+body .booking-and-how-it-works-container .booking-container .booking-btn .booking-btn-a {
   text-decoration: none;
   color: white;
 }
-body .booking .booking-btn:hover {
+body .booking-and-how-it-works-container .booking-container .booking-btn:hover {
   -webkit-transition: -webkit-transform 0.3s ease-in-out;
   transition: -webkit-transform 0.3s ease-in-out;
   transition: transform 0.3s ease-in-out;
@@ -139,7 +139,7 @@ body .booking .booking-btn:hover {
   -webkit-transform: scale(1.05);
           transform: scale(1.05);
 }
-body .how-it-works-container {
+body .booking-and-how-it-works-container .how-it-works-container {
   display: block;
   text-align: left;
   padding: 2rem 0;
@@ -151,11 +151,11 @@ body .how-it-works-container {
   width: 100%;
 }
 @media screen and (min-width: 768px) {
-  body .how-it-works-container {
+  body .booking-and-how-it-works-container .how-it-works-container {
     margin: 0 auto;
   }
 }
-body .how-it-works-container h2 {
+body .booking-and-how-it-works-container .how-it-works-container h2 {
   font-size: 1.5rem;
   font-family: "Roboto", sans-serif;
   text-align: left;
@@ -164,18 +164,18 @@ body .how-it-works-container h2 {
   min-width: 95vw;
 }
 @media screen and (min-width: 768px) {
-  body .how-it-works-container h2 {
+  body .booking-and-how-it-works-container .how-it-works-container h2 {
     text-align: center;
   }
 }
-body .how-it-works-container ol {
+body .booking-and-how-it-works-container .how-it-works-container ol {
   counter-reset: item;
   list-style-type: none;
   font-size: 1rem;
   letter-spacing: 0;
   margin-left: 0.5rem;
 }
-body .how-it-works-container ol li {
+body .booking-and-how-it-works-container .how-it-works-container ol li {
   font-weight: 600;
   position: relative;
   -webkit-box-pack: center;
@@ -193,30 +193,30 @@ body .how-it-works-container ol li {
           box-shadow: 0rem 0.3rem 0.5rem 0.1rem #cfcfcf;
 }
 @media screen and (min-width: 768px) {
-  body .how-it-works-container ol li {
+  body .booking-and-how-it-works-container .how-it-works-container ol li {
     width: 50%;
     margin: 1rem auto;
   }
 }
-body .how-it-works-container ol li .fa-mobile-screen {
+body .booking-and-how-it-works-container .how-it-works-container ol li .fa-mobile-screen {
   position: absolute;
   left: 8vw;
   color: rgb(84, 84, 84);
 }
-body .how-it-works-container ol li .fa-list-check {
+body .booking-and-how-it-works-container .how-it-works-container ol li .fa-list-check {
   position: absolute;
   left: 8vw;
   color: rgb(84, 84, 84);
 }
-body .how-it-works-container ol li .fa-store {
+body .booking-and-how-it-works-container .how-it-works-container ol li .fa-store {
   position: absolute;
   left: 8vw;
   color: rgb(84, 84, 84);
 }
-body .how-it-works-container ol li .fa-solid:hover {
+body .booking-and-how-it-works-container .how-it-works-container ol li .fa-solid:hover {
   color: #9356dc;
 }
-body .how-it-works-container ol li:before {
+body .booking-and-how-it-works-container .how-it-works-container ol li:before {
   position: absolute;
   left: -0.5rem;
   content: counter(item) " ";
@@ -228,42 +228,75 @@ body .how-it-works-container ol li:before {
   color: white;
 }
 @media only screen and (min-device-width: 481px) and (max-device-width: 1180px) and (orientation: portrait) {
-  body .how-it-works-container ol li:before {
+  body .booking-and-how-it-works-container .how-it-works-container ol li:before {
     width: 3vw;
   }
 }
 @media only screen and (min-device-width: 540px) and (max-device-height: 720px) and (orientation: portrait) {
-  body .how-it-works-container ol li:before {
+  body .booking-and-how-it-works-container .how-it-works-container ol li:before {
     width: 4vw;
   }
 }
 @media only screen and (min-device-width: 1024px) and (max-device-height: 600px) {
-  body .how-it-works-container ol li:before {
+  body .booking-and-how-it-works-container .how-it-works-container ol li:before {
     width: 3vw;
     left: -1rem;
   }
 }
 @media only screen and (min-device-width: 1280px) and (max-device-height: 800px) {
-  body .how-it-works-container ol li:before {
+  body .booking-and-how-it-works-container .how-it-works-container ol li:before {
     width: 2.5vw;
     left: -1rem;
   }
 }
 @media only screen and (min-device-width: 1180px) and (max-device-height: 1252px) and (orientation: portrait) {
-  body .how-it-works-container ol li:before {
+  body .booking-and-how-it-works-container .how-it-works-container ol li:before {
     width: 3vw;
     left: -1.5rem;
   }
 }
 @media only screen and (min-device-width: 1253px) and (max-device-height: 1252px) {
-  body .how-it-works-container ol li:before {
+  body .booking-and-how-it-works-container .how-it-works-container ol li:before {
     width: 1.5vw;
     left: -1rem;
     font-size: 1.2rem;
   }
 }
-body .how-it-works-container ol li:hover {
+body .booking-and-how-it-works-container .how-it-works-container ol li:hover {
   background: rgba(146, 86, 220, 0.1568627451);
+}
+@media screen and (min-width: 1024px) {
+  body .booking-and-how-it-works-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  body .booking-and-how-it-works-container .booking-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-preferred-size: 50%;
+        flex-basis: 50%;
+  }
+  body .booking-and-how-it-works-container .how-it-works-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-preferred-size: 50%;
+        flex-basis: 50%;
+  }
 }
 body .container-restaurant-cards {
   background: #f8f4f4;
@@ -331,6 +364,11 @@ body .container-restaurant-cards .restaurant-cards {
             flex: 1 0 21%;
   }
 }
+@media screen and (max-width: 360px) {
+  body .container-restaurant-cards .restaurant-cards {
+    margin: 1rem 0;
+  }
+}
 body .container-restaurant-cards .restaurant-cards .restaurant-card-boxes {
   position: relative;
   -ms-flex-wrap: wrap;
@@ -341,6 +379,17 @@ body .container-restaurant-cards .restaurant-cards .restaurant-card-boxes {
   -webkit-box-shadow: 0rem 0.3rem 0.5rem 0.1rem #cfcfcf;
           box-shadow: 0rem 0.3rem 0.5rem 0.1rem #cfcfcf;
   border-radius: 0.4rem;
+}
+@media screen and (min-width: 2048px) {
+  body .container-restaurant-cards .restaurant-cards .restaurant-card-boxes {
+    -ms-flex-preferred-size: 50rem;
+        flex-basis: 50rem;
+  }
+}
+@media screen and (min-width: 2048px) {
+  body .container-restaurant-cards .restaurant-cards .restaurant-card-boxes .restaurant-card-images {
+    width: 100%;
+  }
 }
 body .container-restaurant-cards .restaurant-cards .restaurant-card-boxes a {
   text-decoration: none;
@@ -370,6 +419,13 @@ body .container-restaurant-cards .restaurant-cards .restaurant-card-boxes .fa-re
   right: 40px;
   bottom: 40px;
 }
+@media screen and (max-width: 360px) {
+  body .container-restaurant-cards .restaurant-cards .restaurant-card-boxes .fa-regular {
+    font-size: 20px;
+    bottom: 30px;
+    right: 10px;
+  }
+}
 body .container-restaurant-cards .restaurant-cards .restaurant-card-boxes .fa-regular:hover {
   font-weight: 900;
   background-image: linear-gradient(350deg, #9356dc, #ff79da);
@@ -389,6 +445,11 @@ body .container-restaurant-cards .restaurant-cards span {
   margin-top: 0.8rem;
   margin-left: 0.8rem;
 }
+@media screen and (max-width: 360px) {
+  body .container-restaurant-cards .restaurant-cards span {
+    font-size: 1rem;
+  }
+}
 body .container-restaurant-cards .restaurant-cards .restaurant-card-location {
   display: block;
   font-family: "Roboto", sans-serif;
@@ -397,6 +458,11 @@ body .container-restaurant-cards .restaurant-cards .restaurant-card-location {
   font-size: 1.4rem;
   margin-left: 0.8rem;
   margin-bottom: 1rem;
+}
+@media screen and (max-width: 360px) {
+  body .container-restaurant-cards .restaurant-cards .restaurant-card-location {
+    font-size: 0.8rem;
+  }
 }
 body .container-restaurant-cards img {
   float: center;
@@ -423,13 +489,9 @@ footer {
   padding-bottom: 1rem;
   width: 100%;
 }
-@media screen and (min-width: 768px) and (orientation: landscape) {
-  footer .footer-content-container {
-    display: block;
-    margin: auto;
-    max-width: 13rem;
-    text-align: center;
-  }
+footer .footer-content-container {
+  width: 13rem;
+  height: 10rem;
 }
 footer .footer-content-container .footer-logo-img {
   height: 1rem;
@@ -438,6 +500,8 @@ footer .footer-content-container .footer-logo-img {
   -webkit-filter: invert(100%);
           filter: invert(100%);
   margin: 1rem;
+  -o-object-position: center;
+     object-position: center;
 }
 footer .footer-content-container .footer-p {
   color: white;
@@ -481,4 +545,11 @@ footer .footer-content-container .contact-p {
   font: 1rem "Roboto", sans-serif;
   padding-bottom: 0.5rem;
   white-space: normal;
+}
+@media screen and (min-width: 768px) {
+  footer .footer-content-container {
+    margin: 0 auto;
+    max-width: 13rem;
+    text-align: center;
+  }
 }

@@ -4,7 +4,6 @@
   padding: 0;
   margin: 0;
   max-width: 100%;
-  overflow-x: hidden;
 }
 body {
   @include body;
@@ -175,9 +174,24 @@ body {
       display: flex;
       flex-direction: row;
       flex-wrap: wrap;
+      .entree-container {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+      }
+      .main-dish-container {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+      }
+      .desserts-container {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+      }
       .menu-dishes {
+        width: 100%;
         .menu-dishes-content {
-          @media screen and (min-width: 768px) {}
           position: relative;
           display: flex;
           flex-grow: 1;
@@ -186,7 +200,6 @@ body {
           margin: 1rem;
           margin-right: 1rem;
           height: 4rem;
-          // min-width: 100%;
           border: 0;
           box-shadow: $boxShadowButton;
           border-radius: 1rem;
