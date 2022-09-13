@@ -28,6 +28,9 @@ body {
             display: block;
             margin: 1rem auto;
             height: 2rem;
+            @media screen and (min-width: 1024px) {
+              max-width: 18rem;
+            }
           }
         }
       }
@@ -46,7 +49,6 @@ body {
       background: #dcdcdd;
       padding: 0.8rem 0;
       box-shadow: inset 0px 7px 3px -3px #cbcbcd;
-
       .location-content {
         display: inline;
         font-family: $fontRoboto;
@@ -56,16 +58,12 @@ body {
     }
   }
   .booking-and-how-it-works-container {
+    width: 100%;
     .booking-container {
       h1 {
         font-size: $fontRobotoSizeLarge;
         font-family: $fontRoboto;
         letter-spacing: $letterSpacing;
-        min-width: 95vw;
-      }
-      @media screen and (max-width: 360px) and (orientation: portrait) {
-        margin-left: 0.5rem;
-        margin-right: 0.5rem;
       }
       @include flexDirectionBackgroundColorAndTextColor(column, white, black);
       width: 100%;
@@ -77,6 +75,10 @@ body {
       font-weight: bolder;
       letter-spacing: 0.1rem;
       background: $backgroundColorGrey;
+      @media screen and (max-width: 360px) and (orientation: portrait) {
+        margin-left: 0.5rem;
+        margin-right: 0.5rem;
+      }
       .span-booking {
         font-size: $fontRobotoSizeSmall;
         margin: 2rem;
@@ -132,7 +134,6 @@ body {
         text-align: left;
         margin: 0 1rem 1rem 1rem;
         letter-spacing: $letterSpacing;
-        min-width: 95vw;
         @media screen and (min-width: 768px) {
           text-align: center;
         }
@@ -156,6 +157,9 @@ body {
           border-radius: $borderRadiusHowItWorks;
           padding: 1.5rem;
           box-shadow: $boxShadowButton;
+          @media screen and (min-width: 289px) and (max-width: 350px) and (orientation: portrait) {
+            height: 3rem;
+          }
           @media screen and (min-width: 768px) {
             width: 50%;
             margin: 1rem auto;
@@ -164,16 +168,37 @@ body {
             position: absolute;
             left: 8vw;
             color: rgb(84, 84, 84);
+            @media screen and (max-width: 288px) and (orientation: portrait) {
+              left: 20px;
+            }
+            @media screen and (min-width: 289px) and (max-width: 350px) and (orientation: portrait) {
+              bottom: 20px;
+              left: 100px;
+            }
           }
           .fa-list-check {
             position: absolute;
             left: 8vw;
             color: rgb(84, 84, 84);
+            @media screen and (max-width: 288px) and (orientation: portrait) {
+              left: 20px;
+            }
+            @media screen and (min-width: 289px) and (max-width: 350px) and (orientation: portrait) {
+              bottom: 20px;
+              left: 100px;
+            }
           }
           .fa-store {
             position: absolute;
             left: 8vw;
             color: rgb(84, 84, 84);
+            @media screen and (max-width: 288px) and (orientation: portrait) {
+              left: 20px;
+            }
+            @media screen and (min-width: 289px) and (max-width: 350px) and (orientation: portrait) {
+              bottom: 20px;
+              left: 100px;
+            }
           }
           .fa-solid:hover {
             color: $primaryColor;
@@ -200,19 +225,64 @@ body {
     @media screen and (min-width: 1024px) {
       display: flex;
       flex-direction: row;
+      width: 100%;
       .booking-container {
         display: flex;
         flex-direction: column;
         flex-basis: 50%;
+        margin-bottom: 0;
+        background: white;
+        box-shadow: 5px 0 5px -5px $primaryColor;
+        .span-booking {
+          margin: 5rem 0;
+        }
       }
       .how-it-works-container {
+        margin-left: 0;
+        margin-right: 0;
+        width: 100%;
         display: flex;
         flex-direction: column;
         flex-basis: 50%;
+        ol {
+          width: 100%;
+          li::before {
+            width: 1.5rem;
+            top: 20px;
+            left: -15px;
+          }
+          .fa-mobile-screen {
+            right: -100px;
+          }
+          .fa-list-check {
+            right: -100px;
+          }
+          .fa-store {
+            right: -100px;
+          }
+          i {
+            margin-left: 3rem;
+          }
+        }
       }
     }
   }
-  .container-restaurant-cards {
+  h3 {
+    font-size: $fontRobotoSizeLarge;
+    font-family: $fontRoboto;
+    text-align: left;
+    margin-top: 3rem;
+    margin-left: 1rem;
+    letter-spacing: $letterSpacing;
+    width: 100%;
+    margin-bottom: 0;
+    background: $backgroundColorGrey;
+    @media screen and (min-width: 768px) {
+      text-align: center;
+      font-size: 1.8rem;
+    }
+  }
+  .restaurant-cards-wrapper {
     background: #f8f4f4;
     padding-bottom: 1.5rem;
     width: 100%;
@@ -221,25 +291,17 @@ body {
       flex-direction: row;
       flex-wrap: wrap;
     }
-    h3 {
-      font-size: $fontRobotoSizeLarge;
-      font-family: $fontRoboto;
-      text-align: left;
-      margin-top: 3rem;
-      margin-left: 1rem;
-      letter-spacing: $letterSpacing;
-      min-width: 95vw;
-      @media screen and (min-width: 768px) and (orientation: landscape) {
-        text-align: center;
-        margin-bottom: 1rem;
-        font-size: 1.8rem;
-      }
-    }
-    .restaurant-cards {
-      @include flexDirectionBackgroundColorAndTextColor(column, white, black);
-      background: $backgroundColorGrey;
+    .restaurant-card-container {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      min-width: 10rem;
       margin: 1rem;
       margin-top: 0;
+      background: $backgroundColorGrey;
+      @media screen and (min-width: 1024px) {
+        flex-direction: row;
+      }
       @media screen and (min-width: 768px) and (orientation: landscape) {
         width: 25%;
         justify-content: space-evenly;
@@ -251,21 +313,23 @@ body {
       @media screen and (max-width: 360px) {
         margin: 1rem 0;
       }
-      .restaurant-card-boxes {
+      .restaurant-card-box {
         position: relative;
-        flex-wrap: wrap;
+        flex-direction: row;
+        flex-grow: 1;
         margin: 1rem;
         padding: 0;
         background: white;
         box-shadow: $boxShadowButton;
         border-radius: $borderRadius;
+        @media screen and (min-width: 1024px) {
+          min-width: 20rem;
+        }
         @media screen and (min-width: 2048px) {
           flex-basis: 50rem;
         }
         .restaurant-card-images {
-          @media screen and (min-width: 2048px) {
-            width: 100%;
-          }
+          width: 100%;
         }
         a {
           text-decoration: none;
@@ -296,6 +360,70 @@ body {
           -webkit-text-fill-color: transparent;
           background-color: $backgroundColorGrey;
           background-image: $backgroundColorGrey;
+        }
+        .fa-regular:active {
+          font-weight: 900;
+          background-image: $gradient;
+          background-clip: text;
+          -webkit-text-fill-color: transparent;
+          background-color: $backgroundColorGrey;
+          background-image: $backgroundColorGrey;
+        }
+      }
+      .restaurant-card-1 {
+        @media screen and (min-width: 1024px) {
+          width: 25rem;
+        }
+        @media screen and (min-width: 1280px) {
+          width: 30rem;
+        }
+        @media screen and (min-width: 1536px) {
+          width: 35rem;
+        }
+        @media screen and (min-width: 1600px) {
+          width: 40rem;
+        }
+      }
+      .restaurant-card-2 {
+        @media screen and (min-width: 1024px) {
+          width: 25rem;
+        }
+        @media screen and (min-width: 1280px) {
+          width: 30rem;
+        }
+        @media screen and (min-width: 1536px) {
+          width: 35rem;
+        }
+        @media screen and (min-width: 1600px) {
+          width: 40rem;
+        }
+      }
+      .restaurant-card-3 {
+        @media screen and (min-width: 1024px) {
+          width: 25rem;
+        }
+        @media screen and (min-width: 1280px) {
+          width: 30rem;
+        }
+        @media screen and (min-width: 1536px) {
+          width: 35rem;
+        }
+        @media screen and (min-width: 1600px) {
+          width: 40rem;
+        }
+      }
+      .restaurant-card-4 {
+        @media screen and (min-width: 1024px) {
+          width: 25rem;
+        }
+        @media screen and (min-width: 1280px) {
+          width: 30rem;
+        }
+        @media screen and (min-width: 1536px) {
+          width: 35rem;
+        }
+        @media screen and (min-width: 1600px) {
+          width: 40rem;
         }
       }
       span {
@@ -337,6 +465,9 @@ body {
       @media screen and (min-width: 1024px) and (orientation: landscape) {
         width: 40rem;
       }
+    }
+    @media screen and (min-width: 1024px) {
+      flex: 1 0 40%;
     }
   }
 }
@@ -382,8 +513,136 @@ footer {
       margin: 0 auto;
       max-width: 13rem;
       text-align: center;
-      // .footer-logo-img {
-      // }
     }
+  }
+}
+// Media Queries //
+.booking-container {
+  @media screen and (max-width: 360px) and (orientation: portrait) {
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+  }
+}
+.how-it-works-container {
+  @media screen and (min-width: 768px) {
+    margin: 0 auto;
+  }
+}
+h2 {
+  @media screen and (min-width: 768px) {
+    text-align: center;
+  }
+}
+li {
+  @media screen and (min-width: 768px) {
+    width: 50%;
+    margin: 1rem auto;
+  }
+}
+.booking-and-how-it-works-container {
+  @media screen and (min-width: 1024px) {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    .booking-container {
+      display: flex;
+      flex-direction: column;
+      flex-basis: 50%;
+      background: white;
+      .span-booking {
+        margin: 5rem 0;
+      }
+      .how-it-works-container {
+        margin-left: 0;
+        margin-right: 0;
+        width: 100%;
+        ol {
+          width: 100%;
+        }
+        .fa-mobile-screen {
+          left: 1vw;
+        }
+        .fa-list-check {
+          left: 1vw;
+        }
+        .fa-store {
+          left: 1vw;
+        }
+      }
+    }
+    .how-it-works-container {
+      display: flex;
+      flex-direction: column;
+      flex-basis: 50%;
+    }
+  }
+}
+.container-restaurant-cards {
+  @media screen and (min-width: 768px) and (orientation: landscape) {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+h3 {
+  @media screen and (min-width: 768px) and (orientation: landscape) {
+    text-align: center;
+    margin-bottom: 1rem;
+    font-size: 1.8rem;
+  }
+}
+.restaurant-cards {
+  @media screen and (min-width: 768px) and (orientation: landscape) {
+    width: 25%;
+    justify-content: space-evenly;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 1rem;
+    flex: 1 0 21%;
+  }
+  @media screen and (max-width: 360px) {
+    margin: 1rem 0;
+  }
+}
+.restaurant-card-boxes {
+  @media screen and (min-width: 2048px) {
+    flex-basis: 50rem;
+  }
+}
+.restaurant-card-images {
+  @media screen and (min-width: 2048px) {
+    width: 100%;
+  }
+}
+.fa-regular {
+  @media screen and (max-width: 360px) {
+    font-size: 20px;
+    bottom: 30px;
+    right: 10px;
+  }
+}
+span {
+  @media screen and (max-width: 360px) {
+    font-size: 1rem;
+  }
+}
+.restaurant-card-location {
+  @media screen and (max-width: 360px) {
+    font-size: 0.8rem;
+  }
+}
+img {
+  @media screen and (min-width: 768px) and (orientation: landscape) {
+    width: 20rem;
+  }
+  @media screen and (min-width: 1024px) and (orientation: landscape) {
+    width: 40rem;
+  }
+}
+.footer-content-container {
+  @media screen and (min-width: 768px) {
+    margin: 0 auto;
+    max-width: 13rem;
+    text-align: center;
   }
 }
