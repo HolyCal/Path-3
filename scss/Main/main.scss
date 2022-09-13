@@ -283,9 +283,9 @@ body {
     }
   }
   .restaurant-cards-wrapper {
-    background: #f8f4f4;
-    padding-bottom: 1.5rem;
     width: 100%;
+    padding-bottom: 1.5rem;
+    background: #f8f4f4;
     @media screen and (min-width: 768px) and (orientation: landscape) {
       display: flex;
       flex-direction: row;
@@ -481,9 +481,8 @@ footer {
     .footer-logo-img {
       height: 1rem;
       width: 6rem;
-      margin-left: 1rem;
       filter: invert(100%);
-      margin: 1rem;
+      margin: 1rem 0 1rem 1.5rem;
       object-position: center;
     }
     .footer-p {
@@ -516,6 +515,7 @@ footer {
     }
   }
 }
+
 // Media Queries //
 .booking-container {
   @media screen and (max-width: 360px) and (orientation: portrait) {

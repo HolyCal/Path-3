@@ -391,9 +391,9 @@ body h3 {
   }
 }
 body .restaurant-cards-wrapper {
-  background: #f8f4f4;
-  padding-bottom: 1.5rem;
   width: 100%;
+  padding-bottom: 1.5rem;
+  background: #f8f4f4;
 }
 @media screen and (min-width: 768px) and (orientation: landscape) {
   body .restaurant-cards-wrapper {
@@ -685,10 +685,9 @@ footer .footer-content-container {
 footer .footer-content-container .footer-logo-img {
   height: 1rem;
   width: 6rem;
-  margin-left: 1rem;
   -webkit-filter: invert(100%);
           filter: invert(100%);
-  margin: 1rem;
+  margin: 1rem 0 1rem 1.5rem;
   -o-object-position: center;
      object-position: center;
 }
