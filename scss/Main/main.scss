@@ -4,6 +4,7 @@
   margin: 0;
   max-width: 100%;
 }
+
 body {
   background: white;
   overflow: auto;
@@ -21,7 +22,7 @@ body {
   }
   header {
     @include flexDirectionBackgroundColorAndTextColor(column, white, black);
-    .container-header {
+    .header-container {
       .logo {
         a {
           .logo-img {
@@ -271,7 +272,7 @@ body {
     font-size: $fontRobotoSizeLarge;
     font-family: $fontRoboto;
     text-align: left;
-    margin-top: 3rem;
+    padding-top: 2rem;
     margin-left: 1rem;
     letter-spacing: $letterSpacing;
     width: 100%;
@@ -470,52 +471,52 @@ body {
       flex: 1 0 40%;
     }
   }
-}
-footer {
-  background: #343435;
-  padding-bottom: 1rem;
-  width: 100%;
-  .footer-content-container {
-    width: 13rem;
-    height: 10rem;
-    .footer-logo-img {
-      height: 1rem;
-      width: 6rem;
-      filter: invert(100%);
-      margin: 1rem 0 1rem 1.5rem;
-      object-position: center;
-    }
-    .footer-p {
-      @include footerLinks;
-    }
-    .support-a-restaurant-p {
-      @include footerLinks;
-      font-weight: $fontWeightBold;
-      .fa-utensils {
-        margin-right: 1.2rem;
+
+  footer {
+    background: #343435;
+    padding-bottom: 1rem;
+    width: 100%;
+    .footer-content-container {
+      width: 13rem;
+      height: 10rem;
+      .footer-logo-img {
+        height: 1rem;
+        width: 6rem;
+        filter: invert(100%);
+        margin: 1rem 0 1rem 1.5rem;
+        object-position: center;
       }
-    }
-    .become-a-partner-p {
-      @include footerLinks;
-      font-weight: $fontWeightBold;
-      .fa-handshake-angle {
-        margin-right: 0.8rem;
+      .footer-p {
+        @include footerLinks;
       }
-    }
-    .legal-p {
-      @include footerLinks;
-    }
-    .contact-p {
-      @include footerLinks;
-    }
-    @media screen and (min-width: 768px) {
-      margin: 0 auto;
-      max-width: 13rem;
-      text-align: center;
+      .support-a-restaurant-p {
+        @include footerLinks;
+        font-weight: $fontWeightBold;
+        .fa-utensils {
+          margin-right: 1.2rem;
+        }
+      }
+      .become-a-partner-p {
+        @include footerLinks;
+        font-weight: $fontWeightBold;
+        .fa-handshake-angle {
+          margin-right: 0.8rem;
+        }
+      }
+      .legal-p {
+        @include footerLinks;
+      }
+      .contact-p {
+        @include footerLinks;
+      }
+      @media screen and (min-width: 768px) {
+        margin: 0 auto;
+        max-width: 13rem;
+        text-align: center;
+      }
     }
   }
 }
-
 // Media Queries //
 .booking-container {
   @media screen and (max-width: 360px) and (orientation: portrait) {

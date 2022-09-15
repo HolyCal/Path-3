@@ -4,12 +4,9 @@
   padding: 0;
   margin: 0;
 }
+
 body {
-  @include body;
   background: $backgroundColorGrey;
-  div {
-    @include div;
-  }
   header {
     margin-bottom: 1rem;
     .back-arrow {
@@ -31,12 +28,15 @@ body {
         cursor: pointer;
       }
       .logo {
-        .logo-img {
-          display: block;
-          margin: 0 auto;
-          padding: 1rem 0 0.5rem 0;
-          max-width: 50%;
-          height: 2rem;
+        a {
+          .logo-img {
+            display: block;
+            margin: 1rem auto;
+            height: 2rem;
+            @media screen and (min-width: 1024px) {
+              max-width: 18rem;
+            }
+          }
         }
       }
       .header-image {
@@ -46,18 +46,27 @@ body {
       }
     }
   }
+
   main {
     position: relative;
     top: -4rem;
+    width: 100%;
     overflow-y: hidden;
     background: $backgroundColorGrey;
     border-top-left-radius: 2rem;
     border-top-right-radius: 2rem;
+    @media screen and (min-width: 1024px) {
+      top: -10rem;
+    }
     h1 {
       position: relative;
-      margin: 2rem 0 2rem 1.5rem;
+      margin: 2rem 0 0 1.5rem;
       font-size: 1.5rem;
       font-family: $fontShrikhand;
+      @media screen and (min-width: 1024px) {
+        font-size: 2rem;
+        text-align: center;
+      }
       .fa-regular {
         position: absolute;
         cursor: pointer;
@@ -67,8 +76,11 @@ body {
         bottom: 10px;
         @media screen and (max-width: 360px) {
           font-size: 20px;
-          // bottom: 30px;
-          // right: 10px;
+        }
+        @media screen and (min-width: 1024px) {
+          position: relative;
+          right: -50px;
+          bottom: 0;
         }
       }
       .fa-regular:hover {
@@ -90,10 +102,10 @@ body {
     }
 
     .menu-dishes-wrapper {
-      display: flex;
-      flex-direction: column;
-      flex-wrap: wrap;
       width: 100%;
+      @media screen and (min-width: 1024px) {
+        margin-bottom: 6rem;
+      }
       .courses {
         margin-left: 1.5rem;
         font-family: $fontRoboto;
@@ -108,24 +120,66 @@ body {
         width: 2.5rem;
         border-bottom: 0.15rem solid $tertiaryColor;
       }
-      .menu-dish-containers {
-        margin: 1rem 0 1rem 0;
+      .menu-dish-container {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        margin: 1rem 0;
+        @media screen and (max-width: 325px) {
+          margin-top: 0.3rem;
+        }
+        @media screen and (min-width: 1024px) {
+          display: flex;
+          flex-direction: row;
+          flex-wrap: wrap;
+          margin: 1rem 5%;
+        }
       }
-      // .entrees-container {
-      // }
-      // .main-dish-container {
-      // }
-      // .desserts-container {
-      // }
+      .entrees-container {
+        flex-direction: row;
+        flex-grow: 1;
+        margin: 1rem 0;
+        @media screen and (min-width: 1024px) {
+          min-width: 23rem;
+          max-width: 30rem;
+          margin: 0;
+        }
+      }
+      .main-dish-container {
+        flex-direction: row;
+        flex-grow: 1;
+        margin: 1rem 0;
+        @media screen and (min-width: 1024px) {
+          min-width: 23rem;
+          max-width: 30rem;
+          margin: 0;
+        }
+      }
+      .desserts-container {
+        flex-direction: row;
+        flex-grow: 1;
+        margin: 1rem 0;
+        @media screen and (min-width: 1024px) {
+          min-width: 23rem;
+          max-width: 30rem;
+          margin: 0;
+        }
+      }
       .menu-dish-box {
         position: relative;
         display: flex;
         flex-direction: column;
+        flex-wrap: wrap;
         height: 4rem;
         margin: 1rem;
         box-shadow: $boxShadowButton;
         border-radius: 1rem;
         z-index: 1;
+        padding: 0.3rem 0 0.5rem 0;
+        @media screen and (max-width: 325px) {
+          padding: 0 0 1rem 0;
+        }
         .menu-dish-box-overflow {
           height: 5rem;
         }
@@ -136,19 +190,59 @@ body {
           margin-left: 1rem;
           .fa-circle-check {
             animation: spin 1s 1;
-            right: 1.5rem;
+            right: 15%;
             animation-delay: 0.3s;
+            visibility: visible;
+            @media screen and (max-width: 325px) {
+              right: 1.4rem;
+              top: 35%;
+            }
+            @media screen and (min-width: 500px) {
+              right: 20%;
+              font-size: 2rem;
+              top: 25%;
+            }
+            @media screen and (min-width: 900px) {
+              font-size: 2.2rem;
+            }
+            @media screen and (min-width: 1024px) {
+              right: 10%;
+            }
           }
           .dish-prices {
             position: absolute;
             margin-right: 4rem;
             transition: 0.3s;
             background: $backgroundColorGrey;
+            @media screen and (max-width: 325px) {
+              margin-right: 4rem;
+            }
+            @media screen and (min-width: 500px) {
+              margin-right: 8rem;
+            }
+            @media screen and (min-width: 800px) {
+              margin-right: 11rem;
+            }
+            @media screen and (min-width: 1024px) {
+              margin-right: 3rem;
+            }
           }
           .dish-titles-and-description-container {
             width: 60%;
             word-wrap: normal;
             overflow: hidden;
+            .menu-dish-description {
+              @media screen and (max-width: 325px) {
+                position: absolute;
+                text-overflow: initial;
+                overflow: visible;
+                white-space: initial;
+                bottom: 0.7rem;
+              }
+            }
+          }
+          @media screen and (max-width: 325px) {
+            min-height: 6rem;
           }
         }
         &:hover::after {
@@ -161,6 +255,7 @@ body {
           height: 100%;
           background: $tertiaryColor;
           right: 0;
+          bottom: 0;
           border-radius: $borderRadius;
           border-top-left-radius: 0;
           border-bottom-left-radius: 0;
@@ -168,16 +263,21 @@ body {
           transition: transform 300ms ease-in;
           transform: scaleX(0);
           transform-origin: right;
+          @media screen and (max-width: 325px) {
+            width: 25%;
+          }
         }
         .fa-circle-check {
           position: absolute;
-          right: 1rem;
           bottom: 1.5rem;
           color: $backgroundColorGrey;
-          right: -5rem;
           top: 1.2rem;
           font-size: 1.5rem;
           overflow: visible;
+          visibility: hidden;
+          @media screen and (max-width: 325px) {
+            font-size: 2rem;
+          }
         }
         @keyframes spin {
           100% {
@@ -188,12 +288,14 @@ body {
           position: absolute;
           height: 100%;
           width: 80%;
-          border: 1px solid cyan;
           .menu-dish-titles {
             font-family: $fontRoboto;
-            font-size: 1rem;
-            font-weight: $fontWeightBold;
-            margin: 1rem 0 0.2rem 0.5rem;
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin: 0.5rem 0 0.2rem 0.5rem;
+            @media screen and (max-width: 325px) {
+              font-size: 1rem;
+            }
           }
           .menu-dish-titles-overflow {
             white-space: pre-line;
@@ -204,9 +306,15 @@ body {
             white-space: nowrap;
             margin-left: 0.5rem;
             font-family: $fontRoboto;
-            font-size: $fontRobotoSizeSmallest;
-            font-weight: $fontWeightThin;
+            font-size: 1rem;
+            font-weight: 500;
             color: grey;
+            @media screen and (max-width: 325px) {
+              text-overflow: clip;
+              overflow: visible;
+              white-space: initial;
+              font-size: 0.8rem;
+            }
           }
         }
         .dish-prices-container {
@@ -224,17 +332,28 @@ body {
             font-size: 1rem;
             font-weight: $fontWeightBold;
             color: black;
+            @media screen and (max-width: 325px) {
+              right: 1rem;
+            }
           }
         }
       }
     }
     .order-button-container {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      @media screen and (min-width: 1024px) {
+        display: block;
+        position: absolute;
+        bottom: 0;
+      }
       .order-button {
         display: flex;
         justify-content: center;
         cursor: pointer;
         width: 10rem;
-        margin: 2rem 0 1rem 5rem;
+        margin: 0 auto;
         padding: 0.7rem;
         letter-spacing: 0.1rem;
         font-family: $fontRoboto;
@@ -250,40 +369,54 @@ body {
           text-decoration: none;
           color: white;
         }
+        @media screen and (min-width: 1024px) {
+          padding: 1rem 1.5rem;
+          font-size: 1.5rem;
+        }
       }
     }
   }
+
   footer {
-    @include footer;
-    .footer-logo-img {
-      height: 1rem;
-      width: 6rem;
-      margin-left: 1rem;
-      filter: invert(100%);
-      margin: 1rem;
-    }
-    .footer-p {
-      @include footerLinks;
-    }
-    .support-a-restaurant-p {
-      @include footerLinks;
-      font-weight: $fontWeightBold;
-      .fa-utensils {
-        margin-right: 1.2rem;
+    background: #343435;
+    padding-bottom: 1rem;
+    width: 100%;
+    .footer-content-container {
+      width: 13rem;
+      .footer-logo-img {
+        height: 1rem;
+        width: 6rem;
+        filter: invert(100%);
+        margin: 1rem 0 1rem 1.5rem;
+        object-position: center;
       }
-    }
-    .become-a-partner-p {
-      @include footerLinks;
-      font-weight: $fontWeightBold;
-      .fa-handshake-angle {
-        margin-right: 0.8rem;
+      .footer-p {
+        @include footerLinks;
       }
-    }
-    .legal-p {
-      @include footerLinks;
-    }
-    .contact-p {
-      @include footerLinks;
+      .support-a-restaurant-p {
+        @include footerLinks;
+        .fa-utensils {
+          margin-right: 1.2rem;
+        }
+      }
+      .become-a-partner-p {
+        @include footerLinks;
+        .fa-handshake-angle {
+          margin-right: 0.8rem;
+        }
+      }
+      .legal-p {
+        @include footerLinks;
+        font-weight: 100;
+      }
+      .contact-p {
+        @include footerLinks;
+      }
+      @media screen and (min-width: 768px) {
+        margin: 0 auto;
+        max-width: 13rem;
+        text-align: center;
+      }
     }
   }
 }

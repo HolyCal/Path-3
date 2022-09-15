@@ -4,13 +4,7 @@
 }
 
 body {
-  background: white;
-  overflow: hidden;
   background: rgb(246, 246, 246);
-}
-body div {
-  margin: 0;
-  padding: 0;
 }
 body header {
   margin-bottom: 1rem;
@@ -32,12 +26,15 @@ body header .header-container .fa-arrow-left {
   -webkit-text-stroke: 0.5px;
   cursor: pointer;
 }
-body header .header-container .logo .logo-img {
+body header .header-container .logo a .logo-img {
   display: block;
-  margin: 0 auto;
-  padding: 1rem 0 0.5rem 0;
-  max-width: 50%;
+  margin: 1rem auto;
   height: 2rem;
+}
+@media screen and (min-width: 1024px) {
+  body header .header-container .logo a .logo-img {
+    max-width: 18rem;
+  }
 }
 body header .header-container .header-image .background-image {
   max-width: 100%;
@@ -45,16 +42,28 @@ body header .header-container .header-image .background-image {
 body main {
   position: relative;
   top: -4rem;
+  width: 100%;
   overflow-y: hidden;
   background: rgb(246, 246, 246);
   border-top-left-radius: 2rem;
   border-top-right-radius: 2rem;
 }
+@media screen and (min-width: 1024px) {
+  body main {
+    top: -10rem;
+  }
+}
 body main h1 {
   position: relative;
-  margin: 2rem 0 2rem 1.5rem;
+  margin: 2rem 0 0 1.5rem;
   font-size: 1.5rem;
   font-family: "Shrikhand", cursive;
+}
+@media screen and (min-width: 1024px) {
+  body main h1 {
+    font-size: 2rem;
+    text-align: center;
+  }
 }
 body main h1 .fa-regular {
   position: absolute;
@@ -67,6 +76,13 @@ body main h1 .fa-regular {
 @media screen and (max-width: 360px) {
   body main h1 .fa-regular {
     font-size: 20px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  body main h1 .fa-regular {
+    position: relative;
+    right: -50px;
+    bottom: 0;
   }
 }
 body main h1 .fa-regular:hover {
@@ -88,16 +104,12 @@ body main h1 .fa-regular:active {
   background-image: rgb(246, 246, 246);
 }
 body main .menu-dishes-wrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
   width: 100%;
+}
+@media screen and (min-width: 1024px) {
+  body main .menu-dishes-wrapper {
+    margin-bottom: 6rem;
+  }
 }
 body main .menu-dishes-wrapper .courses {
   margin-left: 1.5rem;
@@ -113,8 +125,90 @@ body main .menu-dishes-wrapper .courses::after {
   width: 2.5rem;
   border-bottom: 0.15rem solid #99e2d0;
 }
-body main .menu-dishes-wrapper .menu-dish-containers {
-  margin: 1rem 0 1rem 0;
+body main .menu-dishes-wrapper .menu-dish-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  margin: 1rem 0;
+}
+@media screen and (max-width: 325px) {
+  body main .menu-dishes-wrapper .menu-dish-container {
+    margin-top: 0.3rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  body main .menu-dishes-wrapper .menu-dish-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin: 1rem 5%;
+  }
+}
+body main .menu-dishes-wrapper .entrees-container {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  margin: 1rem 0;
+}
+@media screen and (min-width: 1024px) {
+  body main .menu-dishes-wrapper .entrees-container {
+    min-width: 23rem;
+    max-width: 30rem;
+    margin: 0;
+  }
+}
+body main .menu-dishes-wrapper .main-dish-container {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  margin: 1rem 0;
+}
+@media screen and (min-width: 1024px) {
+  body main .menu-dishes-wrapper .main-dish-container {
+    min-width: 23rem;
+    max-width: 30rem;
+    margin: 0;
+  }
+}
+body main .menu-dishes-wrapper .desserts-container {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  margin: 1rem 0;
+}
+@media screen and (min-width: 1024px) {
+  body main .menu-dishes-wrapper .desserts-container {
+    min-width: 23rem;
+    max-width: 30rem;
+    margin: 0;
+  }
 }
 body main .menu-dishes-wrapper .menu-dish-box {
   position: relative;
@@ -125,12 +219,20 @@ body main .menu-dishes-wrapper .menu-dish-box {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   height: 4rem;
   margin: 1rem;
   -webkit-box-shadow: 0rem 0.3rem 0.5rem 0.1rem #cfcfcf;
           box-shadow: 0rem 0.3rem 0.5rem 0.1rem #cfcfcf;
   border-radius: 1rem;
   z-index: 1;
+  padding: 0.3rem 0 0.5rem 0;
+}
+@media screen and (max-width: 325px) {
+  body main .menu-dishes-wrapper .menu-dish-box {
+    padding: 0 0 1rem 0;
+  }
 }
 body main .menu-dishes-wrapper .menu-dish-box .menu-dish-box-overflow {
   height: 5rem;
@@ -144,9 +246,33 @@ body main .menu-dishes-wrapper .menu-dish-box:hover .dish-prices-container {
 body main .menu-dishes-wrapper .menu-dish-box:hover .fa-circle-check {
   -webkit-animation: spin 1s 1;
           animation: spin 1s 1;
-  right: 1.5rem;
+  right: 15%;
   -webkit-animation-delay: 0.3s;
           animation-delay: 0.3s;
+  visibility: visible;
+}
+@media screen and (max-width: 325px) {
+  body main .menu-dishes-wrapper .menu-dish-box:hover .fa-circle-check {
+    right: 1.4rem;
+    top: 35%;
+  }
+}
+@media screen and (min-width: 500px) {
+  body main .menu-dishes-wrapper .menu-dish-box:hover .fa-circle-check {
+    right: 20%;
+    font-size: 2rem;
+    top: 25%;
+  }
+}
+@media screen and (min-width: 900px) {
+  body main .menu-dishes-wrapper .menu-dish-box:hover .fa-circle-check {
+    font-size: 2.2rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  body main .menu-dishes-wrapper .menu-dish-box:hover .fa-circle-check {
+    right: 10%;
+  }
 }
 body main .menu-dishes-wrapper .menu-dish-box:hover .dish-prices {
   position: absolute;
@@ -155,10 +281,44 @@ body main .menu-dishes-wrapper .menu-dish-box:hover .dish-prices {
   transition: 0.3s;
   background: rgb(246, 246, 246);
 }
+@media screen and (max-width: 325px) {
+  body main .menu-dishes-wrapper .menu-dish-box:hover .dish-prices {
+    margin-right: 4rem;
+  }
+}
+@media screen and (min-width: 500px) {
+  body main .menu-dishes-wrapper .menu-dish-box:hover .dish-prices {
+    margin-right: 8rem;
+  }
+}
+@media screen and (min-width: 800px) {
+  body main .menu-dishes-wrapper .menu-dish-box:hover .dish-prices {
+    margin-right: 11rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  body main .menu-dishes-wrapper .menu-dish-box:hover .dish-prices {
+    margin-right: 3rem;
+  }
+}
 body main .menu-dishes-wrapper .menu-dish-box:hover .dish-titles-and-description-container {
   width: 60%;
   word-wrap: normal;
   overflow: hidden;
+}
+@media screen and (max-width: 325px) {
+  body main .menu-dishes-wrapper .menu-dish-box:hover .dish-titles-and-description-container .menu-dish-description {
+    position: absolute;
+    text-overflow: initial;
+    overflow: visible;
+    white-space: initial;
+    bottom: 0.7rem;
+  }
+}
+@media screen and (max-width: 325px) {
+  body main .menu-dishes-wrapper .menu-dish-box:hover {
+    min-height: 6rem;
+  }
 }
 body main .menu-dishes-wrapper .menu-dish-box:hover::after {
   -webkit-transform: scaleX(1);
@@ -171,6 +331,7 @@ body main .menu-dishes-wrapper .menu-dish-box::after {
   height: 100%;
   background: #99e2d0;
   right: 0;
+  bottom: 0;
   border-radius: 0.4rem;
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
@@ -184,15 +345,24 @@ body main .menu-dishes-wrapper .menu-dish-box::after {
   -webkit-transform-origin: right;
           transform-origin: right;
 }
+@media screen and (max-width: 325px) {
+  body main .menu-dishes-wrapper .menu-dish-box::after {
+    width: 25%;
+  }
+}
 body main .menu-dishes-wrapper .menu-dish-box .fa-circle-check {
   position: absolute;
-  right: 1rem;
   bottom: 1.5rem;
   color: rgb(246, 246, 246);
-  right: -5rem;
   top: 1.2rem;
   font-size: 1.5rem;
   overflow: visible;
+  visibility: hidden;
+}
+@media screen and (max-width: 325px) {
+  body main .menu-dishes-wrapper .menu-dish-box .fa-circle-check {
+    font-size: 2rem;
+  }
 }
 @-webkit-keyframes spin {
   100% {
@@ -210,13 +380,17 @@ body main .menu-dishes-wrapper .menu-dish-box .dish-titles-and-description-conta
   position: absolute;
   height: 100%;
   width: 80%;
-  border: 1px solid cyan;
 }
 body main .menu-dishes-wrapper .menu-dish-box .dish-titles-and-description-container .menu-dish-titles {
   font-family: "Roboto", sans-serif;
-  font-size: 1rem;
-  font-weight: 1000;
-  margin: 1rem 0 0.2rem 0.5rem;
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin: 0.5rem 0 0.2rem 0.5rem;
+}
+@media screen and (max-width: 325px) {
+  body main .menu-dishes-wrapper .menu-dish-box .dish-titles-and-description-container .menu-dish-titles {
+    font-size: 1rem;
+  }
 }
 body main .menu-dishes-wrapper .menu-dish-box .dish-titles-and-description-container .menu-dish-titles-overflow {
   white-space: pre-line;
@@ -227,9 +401,17 @@ body main .menu-dishes-wrapper .menu-dish-box .dish-titles-and-description-conta
   white-space: nowrap;
   margin-left: 0.5rem;
   font-family: "Roboto", sans-serif;
-  font-size: 0.8rem;
-  font-weight: 300;
+  font-size: 1rem;
+  font-weight: 500;
   color: grey;
+}
+@media screen and (max-width: 325px) {
+  body main .menu-dishes-wrapper .menu-dish-box .dish-titles-and-description-container .menu-dish-description {
+    text-overflow: clip;
+    overflow: visible;
+    white-space: initial;
+    font-size: 0.8rem;
+  }
 }
 body main .menu-dishes-wrapper .menu-dish-box .dish-prices-container {
   position: absolute;
@@ -248,6 +430,27 @@ body main .menu-dishes-wrapper .menu-dish-box .dish-prices-container .dish-price
   font-weight: 1000;
   color: black;
 }
+@media screen and (max-width: 325px) {
+  body main .menu-dishes-wrapper .menu-dish-box .dish-prices-container .dish-prices {
+    right: 1rem;
+  }
+}
+body main .order-button-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+}
+@media screen and (min-width: 1024px) {
+  body main .order-button-container {
+    display: block;
+    position: absolute;
+    bottom: 0;
+  }
+}
 body main .order-button-container .order-button {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -257,7 +460,7 @@ body main .order-button-container .order-button {
           justify-content: center;
   cursor: pointer;
   width: 10rem;
-  margin: 2rem 0 1rem 5rem;
+  margin: 0 auto;
   padding: 0.7rem;
   letter-spacing: 0.1rem;
   font-family: "Roboto", sans-serif;
@@ -276,58 +479,75 @@ body main .order-button-container .order-button .order-button-a {
   text-decoration: none;
   color: white;
 }
-body footer {
-  background: #696969;
-  padding-bottom: 1rem;
+@media screen and (min-width: 1024px) {
+  body main .order-button-container .order-button {
+    padding: 1rem 1.5rem;
+    font-size: 1.5rem;
+  }
 }
-body footer .footer-logo-img {
+body footer {
+  background: #343435;
+  padding-bottom: 1rem;
+  width: 100%;
+}
+body footer .footer-content-container {
+  width: 13rem;
+}
+body footer .footer-content-container .footer-logo-img {
   height: 1rem;
   width: 6rem;
-  margin-left: 1rem;
   -webkit-filter: invert(100%);
           filter: invert(100%);
-  margin: 1rem;
+  margin: 1rem 0 1rem 1.5rem;
+  -o-object-position: center;
+     object-position: center;
 }
-body footer .footer-p {
+body footer .footer-content-container .footer-p {
   color: white;
   margin-left: 1rem;
   font: 1rem "Roboto", sans-serif;
   padding-bottom: 0.5rem;
   white-space: normal;
 }
-body footer .support-a-restaurant-p {
+body footer .footer-content-container .support-a-restaurant-p {
   color: white;
   margin-left: 1rem;
   font: 1rem "Roboto", sans-serif;
   padding-bottom: 0.5rem;
   white-space: normal;
-  font-weight: 1000;
 }
-body footer .support-a-restaurant-p .fa-utensils {
+body footer .footer-content-container .support-a-restaurant-p .fa-utensils {
   margin-right: 1.2rem;
 }
-body footer .become-a-partner-p {
+body footer .footer-content-container .become-a-partner-p {
   color: white;
   margin-left: 1rem;
   font: 1rem "Roboto", sans-serif;
   padding-bottom: 0.5rem;
   white-space: normal;
-  font-weight: 1000;
 }
-body footer .become-a-partner-p .fa-handshake-angle {
+body footer .footer-content-container .become-a-partner-p .fa-handshake-angle {
   margin-right: 0.8rem;
 }
-body footer .legal-p {
+body footer .footer-content-container .legal-p {
+  color: white;
+  margin-left: 1rem;
+  font: 1rem "Roboto", sans-serif;
+  padding-bottom: 0.5rem;
+  white-space: normal;
+  font-weight: 100;
+}
+body footer .footer-content-container .contact-p {
   color: white;
   margin-left: 1rem;
   font: 1rem "Roboto", sans-serif;
   padding-bottom: 0.5rem;
   white-space: normal;
 }
-body footer .contact-p {
-  color: white;
-  margin-left: 1rem;
-  font: 1rem "Roboto", sans-serif;
-  padding-bottom: 0.5rem;
-  white-space: normal;
+@media screen and (min-width: 768px) {
+  body footer .footer-content-container {
+    margin: 0 auto;
+    max-width: 13rem;
+    text-align: center;
+  }
 }
