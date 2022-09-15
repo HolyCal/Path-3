@@ -1,7 +1,6 @@
 * {
   padding: 0;
   margin: 0;
-  max-width: 100%;
 }
 
 body {
@@ -44,12 +43,12 @@ body header .header-container .header-image .background-image {
   max-width: 100%;
 }
 body main {
-  background: rgb(246, 246, 246);
-  border-top-left-radius: 2rem;
-  border-top-right-radius: 2rem;
   position: relative;
   top: -4rem;
   overflow-y: hidden;
+  background: rgb(246, 246, 246);
+  border-top-left-radius: 2rem;
+  border-top-right-radius: 2rem;
 }
 body main h1 {
   position: relative;
@@ -92,29 +91,33 @@ body main .menu-dishes-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 100%;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  width: 100%;
 }
-body main .courses {
+body main .menu-dishes-wrapper .courses {
+  margin-left: 1.5rem;
   font-family: "Roboto", sans-serif;
   font-size: 1rem;
   font-weight: 500;
   text-transform: uppercase;
   color: grey;
-  margin-left: 1.5rem;
 }
-body main .courses::after {
+body main .menu-dishes-wrapper .courses::after {
   content: " ";
   display: block;
-  border-bottom: 0.15rem solid #99e2d0;
   width: 2.5rem;
+  border-bottom: 0.15rem solid #99e2d0;
 }
-body main .menu-dish-box {
+body main .menu-dishes-wrapper .menu-dish-containers {
+  margin: 1rem 0 1rem 0;
+  border: 1px red solid;
+}
+body main .menu-dishes-wrapper .menu-dish-box {
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -128,39 +131,36 @@ body main .menu-dish-box {
           flex-direction: column;
   height: 4rem;
   margin: 1rem;
-  border: 0;
   -webkit-box-shadow: 0rem 0.3rem 0.5rem 0.1rem #cfcfcf;
           box-shadow: 0rem 0.3rem 0.5rem 0.1rem #cfcfcf;
   border-radius: 1rem;
   z-index: 1;
 }
-body main .menu-dish-box .menu-dish-box-overflow {
+body main .menu-dishes-wrapper .menu-dish-box .menu-dish-box-overflow {
   height: 5rem;
 }
-body main .menu-dish-box .menu-dish-box:hover {
+body main .menu-dishes-wrapper .menu-dish-box:hover {
   margin-left: 1rem;
-  text-overflow: ellipsis;
 }
-body main .menu-dish-box .menu-dish-box:hover .fa-circle-check {
+body main .menu-dishes-wrapper .menu-dish-box:hover .fa-circle-check {
   -webkit-animation: spin 1s 1;
           animation: spin 1s 1;
   right: 1.5rem;
   -webkit-animation-delay: 0.3s;
           animation-delay: 0.3s;
 }
-body main .menu-dish-box .menu-dish-box:hover .dish-prices {
+body main .menu-dishes-wrapper .menu-dish-box:hover .dish-prices {
   position: absolute;
-  margin-right: 2.2rem;
-  padding: 0 1.5rem 0 0.5rem;
+  margin-right: 4rem;
   -webkit-transition: 0.3s;
   transition: 0.3s;
   background: rgb(246, 246, 246);
 }
-body main .menu-dish-box .menu-dish-box:hover::after {
+body main .menu-dishes-wrapper .menu-dish-box:hover::after {
   -webkit-transform: scaleX(1);
           transform: scaleX(1);
 }
-body main .menu-dish-box .menu-dish-box::after {
+body main .menu-dishes-wrapper .menu-dish-box::after {
   content: " ";
   position: absolute;
   width: 20%;
@@ -180,7 +180,7 @@ body main .menu-dish-box .menu-dish-box::after {
   -webkit-transform-origin: right;
           transform-origin: right;
 }
-body main .menu-dish-box .fa-circle-check {
+body main .menu-dishes-wrapper .menu-dish-box .fa-circle-check {
   position: absolute;
   right: 1rem;
   bottom: 1.5rem;
@@ -202,23 +202,29 @@ body main .menu-dish-box .fa-circle-check {
             transform: rotate(360deg);
   }
 }
-body main .menu-dish-titles {
+body main .menu-dishes-wrapper .menu-dish-box .menu-dish-titles {
   font-family: "Roboto", sans-serif;
   font-size: 1rem;
   font-weight: 1000;
   margin: 1rem 0 0.2rem 0.5rem;
 }
-body main .menu-dish-titles-overflow {
+body main .menu-dishes-wrapper .menu-dish-box .menu-dish-titles-overflow {
   white-space: pre-line;
 }
-body main .menu-dish-description {
+body main .menu-dishes-wrapper .menu-dish-box .menu-dish-description {
+  margin-left: 0.5rem;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
   font-family: "Roboto", sans-serif;
   font-size: 0.8rem;
   font-weight: 300;
-  margin-left: 0.5rem;
   color: grey;
 }
-body main .menu-dish-description .dish-prices {
+body main .menu-dishes-wrapper .menu-dish-box .dish-prices-container {
+  width: 5em;
+}
+body main .menu-dishes-wrapper .menu-dish-box .dish-prices-container .dish-prices {
   position: absolute;
   right: 2rem;
   bottom: 0.7rem;
@@ -227,42 +233,33 @@ body main .menu-dish-description .dish-prices {
   font-weight: 1000;
   color: black;
 }
-body main .order-button {
+body main .order-button-container .order-button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  background: #ff79da;
-  background-image: linear-gradient(350deg, #9356dc, #ff79da);
-  border: none;
-  border-radius: 5rem;
-  text-align: center;
+  cursor: pointer;
+  width: 10rem;
+  margin: 2rem 0 1rem 5rem;
+  padding: 0.7rem;
+  letter-spacing: 0.1rem;
   font-family: "Roboto", sans-serif;
   font-size: 1rem;
-  padding: 1.5rem 0rem;
-  cursor: pointer;
   font-weight: 500;
-  letter-spacing: 0.1rem;
-  -webkit-transform: scale(1);
-          transform: scale(1);
+  background: #ff79da;
+  background-image: linear-gradient(350deg, #9356dc, #ff79da);
+  border-radius: 5rem;
   -webkit-box-shadow: 0rem 0.3rem 0.5rem 0.1rem #cfcfcf;
           box-shadow: 0rem 0.3rem 0.5rem 0.1rem #cfcfcf;
-  margin: 2rem 0 1rem 5rem;
-  width: 10rem;
-  padding: 0.7rem;
+  border: none;
+  -webkit-transform: scale(1);
+          transform: scale(1);
 }
-body main .order-button .order-button-a {
+body main .order-button-container .order-button .order-button-a {
   text-decoration: none;
   color: white;
-}
-body main .order-button-the-enchanted-plate {
-  margin-bottom: 1rem;
-  overflow-y: hidden;
-}
-body .footer-the-enchanted-plate {
-  margin-top: -20rem;
 }
 body footer {
   background: #696969;
