@@ -120,7 +120,6 @@ body {
       .menu-dish-box {
         position: relative;
         display: flex;
-        flex-grow: 1;
         flex-direction: column;
         height: 4rem;
         margin: 1rem;
@@ -131,6 +130,9 @@ body {
           height: 5rem;
         }
         &:hover {
+          .dish-prices-container {
+            width: 40%;
+          }
           margin-left: 1rem;
           .fa-circle-check {
             animation: spin 1s 1;
@@ -142,6 +144,11 @@ body {
             margin-right: 4rem;
             transition: 0.3s;
             background: $backgroundColorGrey;
+          }
+          .dish-titles-and-description-container {
+            width: 60%;
+            word-wrap: normal;
+            overflow: hidden;
           }
         }
         &:hover::after {
@@ -177,28 +184,39 @@ body {
             transform: rotate(360deg);
           }
         }
-        .menu-dish-titles {
-          font-family: $fontRoboto;
-          font-size: 1rem;
-          font-weight: $fontWeightBold;
-          margin: 1rem 0 0.2rem 0.5rem;
-        }
-        .menu-dish-titles-overflow {
-          white-space: pre-line;
-        }
-        .menu-dish-description {
-          margin-left: 0.5rem;
-          text-overflow: ellipsis;
-          overflow: hidden;
-          white-space: nowrap;
-          font-family: $fontRoboto;
-          font-size: $fontRobotoSizeSmallest;
-          font-weight: $fontWeightThin;
-          color: grey;
+        .dish-titles-and-description-container {
+          position: absolute;
+          height: 100%;
+          width: 80%;
+          border: 1px solid cyan;
+          .menu-dish-titles {
+            font-family: $fontRoboto;
+            font-size: 1rem;
+            font-weight: $fontWeightBold;
+            margin: 1rem 0 0.2rem 0.5rem;
+          }
+          .menu-dish-titles-overflow {
+            white-space: pre-line;
+          }
+          .menu-dish-description {
+            text-overflow: ellipsis;
+            overflow: hidden;
+            white-space: nowrap;
+            margin-left: 0.5rem;
+            font-family: $fontRoboto;
+            font-size: $fontRobotoSizeSmallest;
+            font-weight: $fontWeightThin;
+            color: grey;
+          }
         }
         .dish-prices-container {
-          width: 5em;
+          position: absolute;
+          height: 100%;
+          width: 20%;
+          right: 0;
+          bottom: 0;
           .dish-prices {
+            display: block;
             position: absolute;
             right: 2rem;
             bottom: 0.7rem;

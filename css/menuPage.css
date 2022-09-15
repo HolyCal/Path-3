@@ -121,9 +121,6 @@ body main .menu-dishes-wrapper .menu-dish-box {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -141,6 +138,9 @@ body main .menu-dishes-wrapper .menu-dish-box .menu-dish-box-overflow {
 body main .menu-dishes-wrapper .menu-dish-box:hover {
   margin-left: 1rem;
 }
+body main .menu-dishes-wrapper .menu-dish-box:hover .dish-prices-container {
+  width: 40%;
+}
 body main .menu-dishes-wrapper .menu-dish-box:hover .fa-circle-check {
   -webkit-animation: spin 1s 1;
           animation: spin 1s 1;
@@ -154,6 +154,11 @@ body main .menu-dishes-wrapper .menu-dish-box:hover .dish-prices {
   -webkit-transition: 0.3s;
   transition: 0.3s;
   background: rgb(246, 246, 246);
+}
+body main .menu-dishes-wrapper .menu-dish-box:hover .dish-titles-and-description-container {
+  width: 60%;
+  word-wrap: normal;
+  overflow: hidden;
 }
 body main .menu-dishes-wrapper .menu-dish-box:hover::after {
   -webkit-transform: scaleX(1);
@@ -201,29 +206,40 @@ body main .menu-dishes-wrapper .menu-dish-box .fa-circle-check {
             transform: rotate(360deg);
   }
 }
-body main .menu-dishes-wrapper .menu-dish-box .menu-dish-titles {
+body main .menu-dishes-wrapper .menu-dish-box .dish-titles-and-description-container {
+  position: absolute;
+  height: 100%;
+  width: 80%;
+  border: 1px solid cyan;
+}
+body main .menu-dishes-wrapper .menu-dish-box .dish-titles-and-description-container .menu-dish-titles {
   font-family: "Roboto", sans-serif;
   font-size: 1rem;
   font-weight: 1000;
   margin: 1rem 0 0.2rem 0.5rem;
 }
-body main .menu-dishes-wrapper .menu-dish-box .menu-dish-titles-overflow {
+body main .menu-dishes-wrapper .menu-dish-box .dish-titles-and-description-container .menu-dish-titles-overflow {
   white-space: pre-line;
 }
-body main .menu-dishes-wrapper .menu-dish-box .menu-dish-description {
-  margin-left: 0.5rem;
+body main .menu-dishes-wrapper .menu-dish-box .dish-titles-and-description-container .menu-dish-description {
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
+  margin-left: 0.5rem;
   font-family: "Roboto", sans-serif;
   font-size: 0.8rem;
   font-weight: 300;
   color: grey;
 }
 body main .menu-dishes-wrapper .menu-dish-box .dish-prices-container {
-  width: 5em;
+  position: absolute;
+  height: 100%;
+  width: 20%;
+  right: 0;
+  bottom: 0;
 }
 body main .menu-dishes-wrapper .menu-dish-box .dish-prices-container .dish-prices {
+  display: block;
   position: absolute;
   right: 2rem;
   bottom: 0.7rem;
