@@ -42,7 +42,11 @@ body header .header-container .header-image .background-image {
 @media screen and (min-width: 1024px) {
   body header .header-container .header-image .background-image {
     max-height: 30rem;
-    min-width: 100%;
+    width: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -o-object-position: center -10rem;
+       object-position: center -10rem;
   }
 }
 body main {

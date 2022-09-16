@@ -206,7 +206,6 @@ body {
           }
         }
         li:before {
-          @include liBeforeHowItWorks;
           position: absolute;
           left: -0.5rem;
           // bottom: 0.5rem;
@@ -247,7 +246,7 @@ body {
         flex-basis: 50%;
         ol {
           width: 100%;
-          li::before {
+          li:before {
             width: 1.5rem;
             top: 20px;
             left: -15px;
@@ -324,7 +323,7 @@ body {
         box-shadow: $boxShadowButton;
         border-radius: $borderRadius;
         @media screen and (min-width: 1024px) {
-          min-width: 20rem;
+          flex-basis: 46%;
         }
         @media screen and (min-width: 2048px) {
           flex-basis: 50rem;
@@ -453,7 +452,7 @@ body {
         }
       }
     }
-    img {
+    .restaurant-card-images {
       float: center;
       width: 100%;
       height: 19vh;
@@ -515,135 +514,5 @@ body {
         text-align: center;
       }
     }
-  }
-}
-// Media Queries //
-.booking-container {
-  @media screen and (max-width: 360px) and (orientation: portrait) {
-    margin-left: 0.5rem;
-    margin-right: 0.5rem;
-  }
-}
-.how-it-works-container {
-  @media screen and (min-width: 768px) {
-    margin: 0 auto;
-  }
-}
-h2 {
-  @media screen and (min-width: 768px) {
-    text-align: center;
-  }
-}
-li {
-  @media screen and (min-width: 768px) {
-    width: 50%;
-    margin: 1rem auto;
-  }
-}
-.booking-and-how-it-works-container {
-  @media screen and (min-width: 1024px) {
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    .booking-container {
-      display: flex;
-      flex-direction: column;
-      flex-basis: 50%;
-      background: white;
-      .span-booking {
-        margin: 5rem 0;
-      }
-      .how-it-works-container {
-        margin-left: 0;
-        margin-right: 0;
-        width: 100%;
-        ol {
-          width: 100%;
-        }
-        .fa-mobile-screen {
-          left: 1vw;
-        }
-        .fa-list-check {
-          left: 1vw;
-        }
-        .fa-store {
-          left: 1vw;
-        }
-      }
-    }
-    .how-it-works-container {
-      display: flex;
-      flex-direction: column;
-      flex-basis: 50%;
-    }
-  }
-}
-.container-restaurant-cards {
-  @media screen and (min-width: 768px) and (orientation: landscape) {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-  }
-}
-h3 {
-  @media screen and (min-width: 768px) and (orientation: landscape) {
-    text-align: center;
-    margin-bottom: 1rem;
-    font-size: 1.8rem;
-  }
-}
-.restaurant-cards {
-  @media screen and (min-width: 768px) and (orientation: landscape) {
-    width: 25%;
-    justify-content: space-evenly;
-    flex-direction: row;
-    flex-wrap: wrap;
-    margin: 1rem;
-    flex: 1 0 21%;
-  }
-  @media screen and (max-width: 360px) {
-    margin: 1rem 0;
-  }
-}
-.restaurant-card-boxes {
-  @media screen and (min-width: 2048px) {
-    flex-basis: 50rem;
-  }
-}
-.restaurant-card-images {
-  @media screen and (min-width: 2048px) {
-    width: 100%;
-  }
-}
-.fa-regular {
-  @media screen and (max-width: 360px) {
-    font-size: 20px;
-    bottom: 30px;
-    right: 10px;
-  }
-}
-span {
-  @media screen and (max-width: 360px) {
-    font-size: 1rem;
-  }
-}
-.restaurant-card-location {
-  @media screen and (max-width: 360px) {
-    font-size: 0.8rem;
-  }
-}
-img {
-  @media screen and (min-width: 768px) and (orientation: landscape) {
-    width: 20rem;
-  }
-  @media screen and (min-width: 1024px) and (orientation: landscape) {
-    width: 40rem;
-  }
-}
-.footer-content-container {
-  @media screen and (min-width: 768px) {
-    margin: 0 auto;
-    max-width: 13rem;
-    text-align: center;
   }
 }

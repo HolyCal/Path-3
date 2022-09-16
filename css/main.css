@@ -271,41 +271,6 @@ body .booking-and-how-it-works-container .how-it-works-container ol li:before {
   padding: 0.5vw;
   color: white;
 }
-@media only screen and (min-device-width: 481px) and (max-device-width: 1180px) and (orientation: portrait) {
-  body .booking-and-how-it-works-container .how-it-works-container ol li:before {
-    width: 3vw;
-  }
-}
-@media only screen and (min-device-width: 540px) and (max-device-height: 720px) and (orientation: portrait) {
-  body .booking-and-how-it-works-container .how-it-works-container ol li:before {
-    width: 4vw;
-  }
-}
-@media only screen and (min-device-width: 1024px) and (max-device-height: 600px) {
-  body .booking-and-how-it-works-container .how-it-works-container ol li:before {
-    width: 3vw;
-    left: -1rem;
-  }
-}
-@media only screen and (min-device-width: 1280px) and (max-device-height: 800px) {
-  body .booking-and-how-it-works-container .how-it-works-container ol li:before {
-    width: 2.5vw;
-    left: -1rem;
-  }
-}
-@media only screen and (min-device-width: 1180px) and (max-device-height: 1252px) and (orientation: portrait) {
-  body .booking-and-how-it-works-container .how-it-works-container ol li:before {
-    width: 3vw;
-    left: -1.5rem;
-  }
-}
-@media only screen and (min-device-width: 1253px) and (max-device-height: 1252px) {
-  body .booking-and-how-it-works-container .how-it-works-container ol li:before {
-    width: 1.5vw;
-    left: -1rem;
-    font-size: 1.2rem;
-  }
-}
 body .booking-and-how-it-works-container .how-it-works-container ol li:hover {
   background: rgba(146, 86, 220, 0.1568627451);
 }
@@ -355,7 +320,7 @@ body .booking-and-how-it-works-container .how-it-works-container ol li:hover {
   body .booking-and-how-it-works-container .how-it-works-container ol {
     width: 100%;
   }
-  body .booking-and-how-it-works-container .how-it-works-container ol li::before {
+  body .booking-and-how-it-works-container .how-it-works-container ol li:before {
     width: 1.5rem;
     top: 20px;
     left: -15px;
@@ -472,7 +437,8 @@ body .restaurant-cards-wrapper .restaurant-card-container .restaurant-card-box {
 }
 @media screen and (min-width: 1024px) {
   body .restaurant-cards-wrapper .restaurant-card-container .restaurant-card-box {
-    min-width: 20rem;
+    -ms-flex-preferred-size: 46%;
+        flex-basis: 46%;
   }
 }
 @media screen and (min-width: 2048px) {
@@ -646,7 +612,7 @@ body .restaurant-cards-wrapper .restaurant-card-container .restaurant-card-locat
     font-size: 0.8rem;
   }
 }
-body .restaurant-cards-wrapper img {
+body .restaurant-cards-wrapper .restaurant-card-images {
   float: center;
   width: 100%;
   height: 19vh;
@@ -656,12 +622,12 @@ body .restaurant-cards-wrapper img {
   border-top-right-radius: 0.4rem;
 }
 @media screen and (min-width: 768px) and (orientation: landscape) {
-  body .restaurant-cards-wrapper img {
+  body .restaurant-cards-wrapper .restaurant-card-images {
     width: 20rem;
   }
 }
 @media screen and (min-width: 1024px) and (orientation: landscape) {
-  body .restaurant-cards-wrapper img {
+  body .restaurant-cards-wrapper .restaurant-card-images {
     width: 40rem;
   }
 }
@@ -735,186 +701,6 @@ body footer .footer-content-container .contact-p {
 }
 @media screen and (min-width: 768px) {
   body footer .footer-content-container {
-    margin: 0 auto;
-    max-width: 13rem;
-    text-align: center;
-  }
-}
-
-@media screen and (max-width: 360px) and (orientation: portrait) {
-  .booking-container {
-    margin-left: 0.5rem;
-    margin-right: 0.5rem;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .how-it-works-container {
-    margin: 0 auto;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  h2 {
-    text-align: center;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  li {
-    width: 50%;
-    margin: 1rem auto;
-  }
-}
-
-@media screen and (min-width: 1024px) {
-  .booking-and-how-it-works-container {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    width: 100%;
-  }
-  .booking-and-how-it-works-container .booking-container {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -ms-flex-preferred-size: 50%;
-        flex-basis: 50%;
-    background: white;
-  }
-  .booking-and-how-it-works-container .booking-container .span-booking {
-    margin: 5rem 0;
-  }
-  .booking-and-how-it-works-container .booking-container .how-it-works-container {
-    margin-left: 0;
-    margin-right: 0;
-    width: 100%;
-  }
-  .booking-and-how-it-works-container .booking-container .how-it-works-container ol {
-    width: 100%;
-  }
-  .booking-and-how-it-works-container .booking-container .how-it-works-container .fa-mobile-screen {
-    left: 1vw;
-  }
-  .booking-and-how-it-works-container .booking-container .how-it-works-container .fa-list-check {
-    left: 1vw;
-  }
-  .booking-and-how-it-works-container .booking-container .how-it-works-container .fa-store {
-    left: 1vw;
-  }
-  .booking-and-how-it-works-container .how-it-works-container {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -ms-flex-preferred-size: 50%;
-        flex-basis: 50%;
-  }
-}
-
-@media screen and (min-width: 768px) and (orientation: landscape) {
-  .container-restaurant-cards {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-  }
-}
-
-@media screen and (min-width: 768px) and (orientation: landscape) {
-  h3 {
-    text-align: center;
-    margin-bottom: 1rem;
-    font-size: 1.8rem;
-  }
-}
-
-@media screen and (min-width: 768px) and (orientation: landscape) {
-  .restaurant-cards {
-    width: 25%;
-    -webkit-box-pack: space-evenly;
-        -ms-flex-pack: space-evenly;
-            justify-content: space-evenly;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    margin: 1rem;
-    -webkit-box-flex: 1;
-        -ms-flex: 1 0 21%;
-            flex: 1 0 21%;
-  }
-}
-@media screen and (max-width: 360px) {
-  .restaurant-cards {
-    margin: 1rem 0;
-  }
-}
-
-@media screen and (min-width: 2048px) {
-  .restaurant-card-boxes {
-    -ms-flex-preferred-size: 50rem;
-        flex-basis: 50rem;
-  }
-}
-
-@media screen and (min-width: 2048px) {
-  .restaurant-card-images {
-    width: 100%;
-  }
-}
-
-@media screen and (max-width: 360px) {
-  .fa-regular {
-    font-size: 20px;
-    bottom: 30px;
-    right: 10px;
-  }
-}
-
-@media screen and (max-width: 360px) {
-  span {
-    font-size: 1rem;
-  }
-}
-
-@media screen and (max-width: 360px) {
-  .restaurant-card-location {
-    font-size: 0.8rem;
-  }
-}
-
-@media screen and (min-width: 768px) and (orientation: landscape) {
-  img {
-    width: 20rem;
-  }
-}
-@media screen and (min-width: 1024px) and (orientation: landscape) {
-  img {
-    width: 40rem;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .footer-content-container {
     margin: 0 auto;
     max-width: 13rem;
     text-align: center;

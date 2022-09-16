@@ -44,33 +44,6 @@ $letterSpacing: 0.05rem;
 ) {
   @include backgroundColorFlexDirection($direction, $background, $color);
 }
-@mixin liBeforeHowItWorks {
-  @media only screen and (min-device-width: 481px) and (max-device-width: 1180px) and (orientation: portrait) {
-    width: 3vw;
-  }
-  @media only screen and (min-device-width: 540px) and (max-device-height: 720px) and (orientation: portrait) {
-    width: 4vw;
-  }
-  @media only screen and (min-device-width: 481px) and (max-device-width: 1180px) and (orientation: landscape) {
-  }
-  @media only screen and (min-device-width: 1024px) and (max-device-height: 600px) {
-    width: 3vw;
-    left: -1rem;
-  }
-  @media only screen and (min-device-width: 1280px) and (max-device-height: 800px) {
-    width: 2.5vw;
-    left: -1rem;
-  }
-  @media only screen and (min-device-width: 1180px) and (max-device-height: 1252px) and (orientation: portrait) {
-    width: 3vw;
-    left: -1.5rem;
-  }
-  @media only screen and (min-device-width: 1253px) and (max-device-height: 1252px) {
-    width: 1.5vw;
-    left: -1rem;
-    font-size: $fontRobotoSizeRegular;
-  }
-}
 @mixin faHeart {
   position: absolute;
   cursor: pointer;
