@@ -39,6 +39,12 @@ body header .header-container .logo a .logo-img {
 body header .header-container .header-image .background-image {
   max-width: 100%;
 }
+@media screen and (min-width: 1024px) {
+  body header .header-container .header-image .background-image {
+    max-height: 30rem;
+    min-width: 100%;
+  }
+}
 body main {
   position: relative;
   top: -4rem;
@@ -173,7 +179,6 @@ body main .menu-dishes-wrapper .entrees-container {
   body main .menu-dishes-wrapper .entrees-container {
     min-width: 23rem;
     max-width: 30rem;
-    margin: 0;
   }
 }
 body main .menu-dishes-wrapper .main-dish-container {
@@ -190,7 +195,6 @@ body main .menu-dishes-wrapper .main-dish-container {
   body main .menu-dishes-wrapper .main-dish-container {
     min-width: 23rem;
     max-width: 30rem;
-    margin: 0;
   }
 }
 body main .menu-dishes-wrapper .desserts-container {
@@ -207,7 +211,7 @@ body main .menu-dishes-wrapper .desserts-container {
   body main .menu-dishes-wrapper .desserts-container {
     min-width: 23rem;
     max-width: 30rem;
-    margin: 0;
+    margin: 1rem 0 0 0;
   }
 }
 body main .menu-dishes-wrapper .menu-dish-box {

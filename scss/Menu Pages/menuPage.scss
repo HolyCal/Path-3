@@ -42,6 +42,10 @@ body {
       .header-image {
         .background-image {
           max-width: 100%;
+          @media screen and (min-width: 1024px) {
+            max-height: 30rem;
+            min-width: 100%;
+          }
         }
       }
     }
@@ -143,7 +147,6 @@ body {
         @media screen and (min-width: 1024px) {
           min-width: 23rem;
           max-width: 30rem;
-          margin: 0;
         }
       }
       .main-dish-container {
@@ -153,7 +156,6 @@ body {
         @media screen and (min-width: 1024px) {
           min-width: 23rem;
           max-width: 30rem;
-          margin: 0;
         }
       }
       .desserts-container {
@@ -163,7 +165,7 @@ body {
         @media screen and (min-width: 1024px) {
           min-width: 23rem;
           max-width: 30rem;
-          margin: 0;
+          margin: 1rem 0 0 0;
         }
       }
       .menu-dish-box {
