@@ -41,12 +41,71 @@ body {
       }
       .header-image {
         .background-image {
-          max-width: 100%;
+          width: 100%;
+          object-fit: cover;
+          @media screen and (min-width: 280px) {
+            max-height: 5rem;
+          }
+          @media screen and (max-width: 768px) {
+            max-height: 20rem;
+          }
+          @media screen and (min-width: 768px) {
+            max-height: 20rem;
+            object-position: center 50%;
+          }
           @media screen and (min-width: 1024px) {
             max-height: 30rem;
-            width: 100%;
-            object-fit: cover;
-            object-position: center -10rem;
+            object-position: center 70%;
+          }
+          @media screen and (min-width: 2000px) {
+            max-height: 35rem;
+            object-position: center 70%;
+          }
+        }
+        .the-enchanted-plate-background-image {
+          width: 100%;
+          object-fit: cover;
+          @media screen and (min-width: 280px) {
+            max-height: 15rem;
+            object-position: center 45%;
+          }
+          @media screen and (min-width: 400px) {
+            max-height: 20rem;
+          }
+          @media screen and (min-width: 550px) {
+            object-position: center 65%;
+          }
+          @media screen and (min-width: 768px) {
+            max-height: 25rem;
+            object-position: center 60%;
+          }
+          @media screen and (min-width: 1024px) {
+            max-height: 30rem;
+            object-position: center 70%;
+          }
+          @media screen and (min-width: 1440px) {
+            object-position: center 60%;
+          }
+          @media screen and (min-width: 1920px) {
+            max-height: 40rem;
+          }
+        }
+        .bastille-background-image {
+          @media screen and (min-width: 1750px) {
+            object-position: center 75%;
+            max-height: 35rem;
+          }
+          @media screen and (min-width: 2000px) {
+            max-height: 45rem;
+          }
+        }
+        .le-gourmand-background-image {
+          @media screen and (min-width: 768px) {
+            object-position: center 90%;
+          }
+          @media screen and (min-width: 1440px) {
+            max-height: 40rem;
+            object-position: center 75%;
           }
         }
       }
@@ -69,6 +128,9 @@ body {
       margin: 2rem 0 0 1.5rem;
       font-size: 1.5rem;
       font-family: $fontShrikhand;
+      @media screen and (max-width: 360px) {
+        font-size: 1.4rem;
+      }
       @media screen and (min-width: 1024px) {
         font-size: 2rem;
         text-align: center;
@@ -80,8 +142,10 @@ body {
         color: black;
         right: 30px;
         bottom: 10px;
-        @media screen and (max-width: 360px) {
+        @media screen and (max-width: 325px) {
           font-size: 20px;
+          right: 1rem;
+          bottom: -1rem;
         }
         @media screen and (min-width: 1024px) {
           position: relative;
@@ -135,6 +199,12 @@ body {
         @media screen and (max-width: 325px) {
           margin-top: 0.3rem;
         }
+        @media screen and (min-width: 768px) {
+          display: flex;
+          flex-direction: row;
+          flex-wrap: wrap;
+          margin: 1rem 5%;
+        }
         @media screen and (min-width: 1024px) {
           display: flex;
           flex-direction: row;
@@ -146,6 +216,10 @@ body {
         flex-direction: row;
         flex-grow: 1;
         margin: 1rem 0;
+        @media screen and (min-width: 768px) {
+          min-width: 20rem;
+          max-width: 28rem;
+        }
         @media screen and (min-width: 1024px) {
           min-width: 23rem;
           max-width: 30rem;
@@ -155,6 +229,10 @@ body {
         flex-direction: row;
         flex-grow: 1;
         margin: 1rem 0;
+        @media screen and (min-width: 768px) {
+          min-width: 20rem;
+          max-width: 28rem;
+        }
         @media screen and (min-width: 1024px) {
           min-width: 23rem;
           max-width: 30rem;
@@ -164,6 +242,10 @@ body {
         flex-direction: row;
         flex-grow: 1;
         margin: 1rem 0;
+        @media screen and (min-width: 768px) {
+          min-width: 20rem;
+          max-width: 28rem;
+        }
         @media screen and (min-width: 1024px) {
           min-width: 23rem;
           max-width: 30rem;
@@ -175,7 +257,7 @@ body {
         display: flex;
         flex-direction: column;
         flex-wrap: wrap;
-        height: 4rem;
+        height: 3rem;
         margin: 1rem;
         box-shadow: $boxShadowButton;
         border-radius: 1rem;
@@ -184,55 +266,37 @@ body {
         @media screen and (max-width: 325px) {
           padding: 0 0 1rem 0;
         }
-        .menu-dish-box-overflow {
-          height: 5rem;
+        @media screen and (min-width: 768px) {
+          height: 4.3rem;
+          &:hover {
+            height: 6rem;
+          }
         }
         &:hover {
           .dish-prices-container {
-            width: 40%;
+            width: 100px;
           }
           margin-left: 1rem;
           .fa-circle-check {
+            top: 14px;
+            right: 14px;
+            font-size: 2rem;
+            cursor: pointer;
             animation: spin 1s 1;
-            right: 15%;
             animation-delay: 0.3s;
-            visibility: visible;
             @media screen and (max-width: 325px) {
-              right: 1.4rem;
-              top: 35%;
-            }
-            @media screen and (min-width: 500px) {
-              right: 20%;
-              font-size: 2rem;
-              top: 25%;
-            }
-            @media screen and (min-width: 900px) {
-              font-size: 2.2rem;
-            }
-            @media screen and (min-width: 1024px) {
-              right: 10%;
+              right: 17px;
+              bottom: 40px;
+              font-size: 1.8rem;
             }
           }
           .dish-prices {
             position: absolute;
-            margin-right: 4rem;
+            margin-right: 2.5rem;
             transition: 0.3s;
-            background: $backgroundColorGrey;
-            @media screen and (max-width: 325px) {
-              margin-right: 4rem;
-            }
-            @media screen and (min-width: 500px) {
-              margin-right: 8rem;
-            }
-            @media screen and (min-width: 800px) {
-              margin-right: 11rem;
-            }
-            @media screen and (min-width: 1024px) {
-              margin-right: 3rem;
-            }
           }
           .dish-titles-and-description-container {
-            width: 60%;
+            max-width: 260px;
             word-wrap: normal;
             overflow: hidden;
             .menu-dish-description {
@@ -242,6 +306,13 @@ body {
                 overflow: visible;
                 white-space: initial;
                 bottom: 0.7rem;
+              }
+              @media screen and (min-width: 768px) {
+                position: absolute;
+                text-overflow: initial;
+                overflow: visible;
+                white-space: initial;
+                bottom: 1rem;
               }
             }
           }
@@ -255,7 +326,7 @@ body {
         &::after {
           content: " ";
           position: absolute;
-          width: 20%;
+          width: 60px;
           height: 100%;
           background: $tertiaryColor;
           right: 0;
@@ -267,21 +338,11 @@ body {
           transition: transform 300ms ease-in;
           transform: scaleX(0);
           transform-origin: right;
-          @media screen and (max-width: 325px) {
-            width: 25%;
-          }
         }
         .fa-circle-check {
           position: absolute;
-          bottom: 1.5rem;
+          font-size: 0;
           color: $backgroundColorGrey;
-          top: 1.2rem;
-          font-size: 1.5rem;
-          overflow: visible;
-          visibility: hidden;
-          @media screen and (max-width: 325px) {
-            font-size: 2rem;
-          }
         }
         @keyframes spin {
           100% {
@@ -299,6 +360,12 @@ body {
             margin: 0.5rem 0 0.2rem 0.5rem;
             @media screen and (max-width: 325px) {
               font-size: 1rem;
+            }
+            @media screen and (min-width: 326px) {
+              font-size: 1rem;
+            }
+            @media screen and (min-width: 768px) {
+              font-size: 1.2rem;
             }
           }
           .menu-dish-titles-overflow {
@@ -319,6 +386,17 @@ body {
               white-space: initial;
               font-size: 0.8rem;
             }
+            @media screen and (min-width: 768px) {
+              text-overflow: clip;
+              overflow: visible;
+              white-space: initial;
+            }
+            @media screen and (min-width: 326px) {
+              font-size: 0.8rem;
+            }
+            @media screen and (min-width: 768px) {
+              font-size: 1rem;
+            }
           }
         }
         .dish-prices-container {
@@ -336,8 +414,19 @@ body {
             font-size: 1rem;
             font-weight: $fontWeightBold;
             color: black;
+            background: $backgroundColorGrey;
             @media screen and (max-width: 325px) {
-              right: 1rem;
+              right: 1.5rem;
+            }
+          }
+        }
+      }
+      .menu-dish-box-overflow {
+        @media screen and (max-width: 360px) {
+          height: 4rem;
+          &:hover {
+            .fa-circle-check {
+              top: 22px;
             }
           }
         }

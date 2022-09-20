@@ -7,8 +7,10 @@
     <meta charset="utf-8" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Shrikhand&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="css/menuPage.css" type="text/css" />
@@ -27,10 +29,10 @@
         <a class="back-arrow" href="index.html"
           ><i class="fa-solid fa-arrow-left"></i
         ></a>
-        <div class="menupage-logo">
+        <div class="logo">
           <a href="index.html">
             <img
-              class="menu-logo-img"
+              class="logo-img"
               style="vertical-align: middle"
               src="images/logo/ohmyfood.png"
               alt="ohmyfood Restaurant Service"
@@ -40,130 +42,171 @@
         </div>
         <div class="header-image">
           <img
-            class="background-image"
+            class="the-enchanted-plate-background-image"
             style="vertical-align: middle"
-            src="images/restaurant-card-images/the-enchanted-plate-2.jpg"
+            src="images/restaurant-card-images/the-enchanted-plate.jpg"
             alt="The Enchanted Plate Restaurant"
             title="The Enchanted Plate"
           />
         </div>
       </div>
     </header>
-    <main class="the-enchanted-plate-main">
-      <h1 id="menu-page-h1-the-enchanted-plate">
-        The Enchanted 
-        Plate<i class="fa fa-light fa-heart"></i
-        ><i class="fa fa-light fa-heart fa-heart-2"></i>
-      </h1>
-      <h2 class="menu-page-courses">Entrees</h2>
-      <div class="menu-dishes">
-        <div class="menu-dishes-content">
-          <p class="menu-dish-titles">Foie Gras Ravioli</p>
-          <div class="menu-dish-description">With truffle cream<p class="dish-prices">25€</p>
+    <main>
+      <h1>The Enchanted Plate<i class="fa-regular fa-heart"></i></h1>
+
+      <div class="menu-dishes-wrapper">
+        <div class="menu-dish-container">
+          <div class="entrees-container">
+            <h2 class="courses">Entrees</h2>
+            <div class="menu-dish-box">
+              <div class="dish-titles-and-description-container">
+                <p class="menu-dish-titles">Foie Gras Ravioli</p>
+                <div class="menu-dish-description">With truffle cream</div>
+              </div>
+              <div class="dish-prices-container">
+                <p class="dish-prices">25€</p>
+                <i class="fa-solid fa-circle-check"></i>
+              </div>
+            </div>
+            <div class="menu-dish-box">
+              <div class="dish-titles-and-description-container">
+                <p class="menu-dish-titles">Oscietra Caviar</p>
+                <div class="menu-dish-description">With buckwheat blinis</div>
+              </div>
+              <div class="dish-prices-container">
+                <p class="dish-prices">35€</p>
+                <i class="fa-solid fa-circle-check"></i>
+              </div>
+            </div>
+            <div class="menu-dish-box">
+              <div class="dish-titles-and-description-container">
+                <p class="menu-dish-titles">Lobster and Leek Foam</p>
+                <div class="menu-dish-description">
+                  Marinated with orange zest
+                </div>
+              </div>
+              <div class="dish-prices-container">
+                <p class="dish-prices">20€</p>
+                <i class="fa-solid fa-circle-check"></i>
+              </div>
+            </div>
+            <div class="menu-dish-box">
+              <div class="dish-titles-and-description-container">
+                <p class="menu-dish-titles">Duck Foei Gras</p>
+                <div class="menu-dish-description">
+                  With fig jam and grilled baguette
+                </div>
+              </div>
+              <div class="dish-prices-container">
+                <p class="dish-prices">35€</p>
+                <i class="fa-solid fa-circle-check"></i>
+              </div>
+            </div>
           </div>
-          <i class="fa-solid fa-circle-check"></i>
+          <div class="main-dish-container">
+            <h2 class="courses">Main Dish</h2>
+            <div class="menu-dish-box">
+              <div class="dish-titles-and-description-container">
+                <p class="menu-dish-titles">Fresh Buttered Scallops</p>
+                <div class="menu-dish-description">With white celery puree</div>
+              </div>
+              <div class="dish-prices-container">
+                <p class="dish-prices">40€</p>
+                <i class="fa-solid fa-circle-check"></i>
+              </div>
+            </div>
+            <div class="menu-dish-box">
+              <div class="dish-titles-and-description-container">
+                <p class="menu-dish-titles">Pan-Fried Lobster</p>
+                <div class="menu-dish-description">
+                  With mashed sweet potatoes
+                </div>
+              </div>
+              <div class="dish-prices-container">
+                <p class="dish-prices">35€</p>
+                <i class="fa-solid fa-circle-check"></i>
+              </div>
+            </div>
+            <div class="menu-dish-box">
+              <div class="dish-titles-and-description-container">
+                <p class="menu-dish-titles">Braised Ox Tail</p>
+                <div class="menu-dish-description">
+                  With wild rice and lemon zest
+                </div>
+              </div>
+              <div class="dish-prices-container">
+                <p class="dish-prices">44€</p>
+                <i class="fa-solid fa-circle-check"></i>
+              </div>
+            </div>
+          </div>
+          <div class="desserts-container">
+            <h2 class="courses">Desserts</h2>
+            <div class="menu-dish-box menu-dish-box-overflow">
+              <div class="dish-titles-and-description-container">
+                <p class="menu-dish-titles">Chocolate and Hazelnut Macaroon</p>
+                <div class="menu-dish-description">
+                  With caramel butter ice cream
+                </div>
+              </div>
+              <div class="dish-prices-container">
+                <p class="dish-prices">18€</p>
+                <i class="fa-solid fa-circle-check"></i>
+              </div>
+            </div>
+            <div class="menu-dish-box">
+              <div class="dish-titles-and-description-container">
+                <p class="menu-dish-titles">Baba au rhum</p>
+                <div class="menu-dish-description">With lemon drizzle</div>
+              </div>
+              <div class="dish-prices-container">
+                <p class="dish-prices">22€</p>
+                <i class="fa-solid fa-circle-check"></i>
+              </div>
+            </div>
+            <div class="menu-dish-box">
+              <div class="dish-titles-and-description-container">
+                <p class="menu-dish-titles">Lemon Meringue Pie</p>
+                <div class="menu-dish-description">Destructured</div>
+              </div>
+              <div class="dish-prices-container">
+                <p class="dish-prices">23€</p>
+                <i class="fa-solid fa-circle-check"></i>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-      <div class="menu-dishes">
-        <div class="menu-dishes-content">
-          <p class="menu-dish-titles">Oscietra Caviar</p>
-          <div class="menu-dish-description">With buckwheat binis<p class="dish-prices">35€</p>
-          </div>
-          <i class="fa-solid fa-circle-check"></i>
-        </div>
+      <div class="order-button-container">
+        <button class="order-button">
+          <a href="#" class="order-button-a">Order</a>
+        </button>
       </div>
-      <div class="menu-dishes">
-        <div class="menu-dishes-content">
-          <p class="menu-dish-titles">Lobster and Leek Foam</p>
-          <div class="menu-dish-description">Marinated with oramge zest<p class="dish-prices">20€</p>
-          </div>
-          <i class="fa-solid fa-circle-check"></i>
-        </div>
-      </div>
-      <div class="menu-dishes">
-        <div class="menu-dishes-content">
-          <p class="menu-dish-titles">Duck Foie Gras</p>
-          <div class="menu-dish-description">With fig jam and grilled baguette<p class="dish-prices">35€</p>
-          </div>
-          <i class="fa-solid fa-circle-check"></i>
-        </div>
-      </div>
-      <h3 class="menu-page-courses">Main Dish</h3>
-      <div class="menu-dishes">
-        <div class="menu-dishes-content">
-          <p class="menu-dish-titles">Fresh Buttered Scallops</p>
-          <div class="menu-dish-description">With white celery puree<p class="dish-prices">40€</p>
-          </div>
-          <i class="fa-solid fa-circle-check"></i>
-        </div>
-      </div>
-      <div class="menu-dishes">
-        <div class="menu-dishes-content">
-          <p class="menu-dish-titles">Pan-Fried Lobster</p>
-          <div class="menu-dish-description">With mashed sweet potatoes<p class="dish-prices">35€</p>
-          </div>
-          <i class="fa-solid fa-circle-check"></i>
-        </div>
-      </div>
-      <div class="menu-dishes">
-        <div class="menu-dishes-content">
-          <p class="menu-dish-titles">Braised Ox Tail</p>
-          <div class="menu-dish-description">With wild rice and lemon zest<p class="dish-prices">44€</p>
-          </div>
-          <i class="fa-solid fa-circle-check"></i>
-        </div>
-      </div>
-      <h4 class="menu-page-courses">Desserts</h4>
-      <div class="menu-dishes">
-        <div class="menu-dishes-content menu-dishes-content-overflow">
-          <p class="menu-dish-titles menu-dish-titles-overflow">Chocolate and Hazelnut 
-            Macroon</p></p>
-          <div class="menu-dish-description">With caramel butter ice cream<p class="dish-prices">18€</p>
-          </div>
-          <i class="fa-solid fa-circle-check"></i>
-        </div>
-      </div>
-      <div class="menu-dishes">
-        <div class="menu-dishes-content">
-          <p class="menu-dish-titles">Baba au rhum</p></p>
-          <div class="menu-dish-description">With lemon drizzle<p class="dish-prices">22€</p>
-          </div>
-          <i class="fa-solid fa-circle-check"></i>
-        </div>
-      </div>
-      <div class="menu-dishes">
-        <div class="menu-dishes-content">
-          <p class="menu-dish-titles">Lemon Meringue Pie</p></p>
-          <div class="menu-dish-description">Destructured<p class="dish-prices">23€</p>
-          </div>
-          <i class="fa-solid fa-circle-check"></i>
-        </div>
-      </div>
-      <button class="order-button order-button-the-enchanted-plate">
-        <a href="#" class="order-button-a">Order</a>
-      </button>
     </main>
-    <footer class="footer-the-enchanted-plate">
-      <div class="footer-logo">
-        <a href="index.html">
-          <img
-            class="footer-logo-img"
-            style="vertical-align: middle"
-            src="images/logo/ohmyfood.png"
-            alt="ohmyfood Restaurant Service"
-            title="ohmyfood"
-          />
-        </a>
-      </div>
-      <div class="support-a-restaurant">
-        <p class="footer-p support-a-restaurant-p">
-          <i class="fa-solid fa-utensils"></i>Support a restaurant
-        </p>
-        <p class="footer-p become-a-partner-p">
-          <i class="fa-solid fa-handshake-angle"></i>Become a partner
-        </p>
-        <p class="footer-p legal-p">Legal</p>
-        <p class="footer-p contact-p">Contact</p>
+
+    <footer>
+      <div class="footer-content-container">
+        <div class="footer-logo">
+          <a href="index.html">
+            <img
+              class="footer-logo-img"
+              style="vertical-align: middle"
+              src="images/logo/ohmyfood.png"
+              alt="ohmyfood Restaurant Service"
+              title="ohmyfood"
+            />
+          </a>
+        </div>
+        <div class="support-a-restaurant">
+          <p class="footer-p support-a-restaurant-p">
+            <i class="fa-solid fa-utensils"></i>Support a restaurant
+          </p>
+          <p class="footer-p become-a-partner-p">
+            <i class="fa-solid fa-handshake-angle"></i>Become a partner
+          </p>
+          <p class="footer-p legal-p">Legal</p>
+          <p class="footer-p contact-p">Contact</p>
+        </div>
       </div>
     </footer>
   </body>

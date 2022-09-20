@@ -4,7 +4,7 @@
 }
 
 body {
-  background: rgb(246, 246, 246);
+  background: #f6f6f6;
 }
 body header {
   margin-bottom: 1rem;
@@ -37,16 +37,112 @@ body header .header-container .logo a .logo-img {
   }
 }
 body header .header-container .header-image .background-image {
-  max-width: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+@media screen and (min-width: 280px) {
+  body header .header-container .header-image .background-image {
+    max-height: 5rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  body header .header-container .header-image .background-image {
+    max-height: 20rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  body header .header-container .header-image .background-image {
+    max-height: 20rem;
+    -o-object-position: center 50%;
+       object-position: center 50%;
+  }
 }
 @media screen and (min-width: 1024px) {
   body header .header-container .header-image .background-image {
     max-height: 30rem;
-    width: 100%;
-    -o-object-fit: cover;
-       object-fit: cover;
-    -o-object-position: center -10rem;
-       object-position: center -10rem;
+    -o-object-position: center 70%;
+       object-position: center 70%;
+  }
+}
+@media screen and (min-width: 2000px) {
+  body header .header-container .header-image .background-image {
+    max-height: 35rem;
+    -o-object-position: center 70%;
+       object-position: center 70%;
+  }
+}
+body header .header-container .header-image .the-enchanted-plate-background-image {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+@media screen and (min-width: 280px) {
+  body header .header-container .header-image .the-enchanted-plate-background-image {
+    max-height: 15rem;
+    -o-object-position: center 45%;
+       object-position: center 45%;
+  }
+}
+@media screen and (min-width: 400px) {
+  body header .header-container .header-image .the-enchanted-plate-background-image {
+    max-height: 20rem;
+  }
+}
+@media screen and (min-width: 550px) {
+  body header .header-container .header-image .the-enchanted-plate-background-image {
+    -o-object-position: center 65%;
+       object-position: center 65%;
+  }
+}
+@media screen and (min-width: 768px) {
+  body header .header-container .header-image .the-enchanted-plate-background-image {
+    max-height: 25rem;
+    -o-object-position: center 60%;
+       object-position: center 60%;
+  }
+}
+@media screen and (min-width: 1024px) {
+  body header .header-container .header-image .the-enchanted-plate-background-image {
+    max-height: 30rem;
+    -o-object-position: center 70%;
+       object-position: center 70%;
+  }
+}
+@media screen and (min-width: 1440px) {
+  body header .header-container .header-image .the-enchanted-plate-background-image {
+    -o-object-position: center 60%;
+       object-position: center 60%;
+  }
+}
+@media screen and (min-width: 1920px) {
+  body header .header-container .header-image .the-enchanted-plate-background-image {
+    max-height: 40rem;
+  }
+}
+@media screen and (min-width: 1750px) {
+  body header .header-container .header-image .bastille-background-image {
+    -o-object-position: center 75%;
+       object-position: center 75%;
+    max-height: 35rem;
+  }
+}
+@media screen and (min-width: 2000px) {
+  body header .header-container .header-image .bastille-background-image {
+    max-height: 45rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  body header .header-container .header-image .le-gourmand-background-image {
+    -o-object-position: center 90%;
+       object-position: center 90%;
+  }
+}
+@media screen and (min-width: 1440px) {
+  body header .header-container .header-image .le-gourmand-background-image {
+    max-height: 40rem;
+    -o-object-position: center 75%;
+       object-position: center 75%;
   }
 }
 body main {
@@ -54,7 +150,7 @@ body main {
   top: -4rem;
   width: 100%;
   overflow-y: hidden;
-  background: rgb(246, 246, 246);
+  background: #f6f6f6;
   border-top-left-radius: 2rem;
   border-top-right-radius: 2rem;
 }
@@ -68,6 +164,11 @@ body main h1 {
   margin: 2rem 0 0 1.5rem;
   font-size: 1.5rem;
   font-family: "Shrikhand", cursive;
+}
+@media screen and (max-width: 360px) {
+  body main h1 {
+    font-size: 1.4rem;
+  }
 }
 @media screen and (min-width: 1024px) {
   body main h1 {
@@ -83,9 +184,11 @@ body main h1 .fa-regular {
   right: 30px;
   bottom: 10px;
 }
-@media screen and (max-width: 360px) {
+@media screen and (max-width: 325px) {
   body main h1 .fa-regular {
     font-size: 20px;
+    right: 1rem;
+    bottom: -1rem;
   }
 }
 @media screen and (min-width: 1024px) {
@@ -101,8 +204,8 @@ body main h1 .fa-regular:hover {
   -webkit-background-clip: text;
           background-clip: text;
   -webkit-text-fill-color: transparent;
-  background-color: rgb(246, 246, 246);
-  background-image: rgb(246, 246, 246);
+  background-color: #f6f6f6;
+  background-image: #f6f6f6;
 }
 body main h1 .fa-regular:active {
   font-weight: 900;
@@ -110,8 +213,8 @@ body main h1 .fa-regular:active {
   -webkit-background-clip: text;
           background-clip: text;
   -webkit-text-fill-color: transparent;
-  background-color: rgb(246, 246, 246);
-  background-image: rgb(246, 246, 246);
+  background-color: #f6f6f6;
+  background-image: #f6f6f6;
 }
 body main .menu-dishes-wrapper {
   width: 100%;
@@ -155,6 +258,20 @@ body main .menu-dishes-wrapper .menu-dish-container {
     margin-top: 0.3rem;
   }
 }
+@media screen and (min-width: 768px) {
+  body main .menu-dishes-wrapper .menu-dish-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin: 1rem 5%;
+  }
+}
 @media screen and (min-width: 1024px) {
   body main .menu-dishes-wrapper .menu-dish-container {
     display: -webkit-box;
@@ -179,6 +296,12 @@ body main .menu-dishes-wrapper .entrees-container {
           flex-grow: 1;
   margin: 1rem 0;
 }
+@media screen and (min-width: 768px) {
+  body main .menu-dishes-wrapper .entrees-container {
+    min-width: 20rem;
+    max-width: 28rem;
+  }
+}
 @media screen and (min-width: 1024px) {
   body main .menu-dishes-wrapper .entrees-container {
     min-width: 23rem;
@@ -195,6 +318,12 @@ body main .menu-dishes-wrapper .main-dish-container {
           flex-grow: 1;
   margin: 1rem 0;
 }
+@media screen and (min-width: 768px) {
+  body main .menu-dishes-wrapper .main-dish-container {
+    min-width: 20rem;
+    max-width: 28rem;
+  }
+}
 @media screen and (min-width: 1024px) {
   body main .menu-dishes-wrapper .main-dish-container {
     min-width: 23rem;
@@ -210,6 +339,12 @@ body main .menu-dishes-wrapper .desserts-container {
       -ms-flex-positive: 1;
           flex-grow: 1;
   margin: 1rem 0;
+}
+@media screen and (min-width: 768px) {
+  body main .menu-dishes-wrapper .desserts-container {
+    min-width: 20rem;
+    max-width: 28rem;
+  }
 }
 @media screen and (min-width: 1024px) {
   body main .menu-dishes-wrapper .desserts-container {
@@ -229,7 +364,7 @@ body main .menu-dishes-wrapper .menu-dish-box {
           flex-direction: column;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  height: 4rem;
+  height: 3rem;
   margin: 1rem;
   -webkit-box-shadow: 0rem 0.3rem 0.5rem 0.1rem #cfcfcf;
           box-shadow: 0rem 0.3rem 0.5rem 0.1rem #cfcfcf;
@@ -242,75 +377,45 @@ body main .menu-dishes-wrapper .menu-dish-box {
     padding: 0 0 1rem 0;
   }
 }
-body main .menu-dishes-wrapper .menu-dish-box .menu-dish-box-overflow {
-  height: 5rem;
+@media screen and (min-width: 768px) {
+  body main .menu-dishes-wrapper .menu-dish-box {
+    height: 4.3rem;
+  }
+  body main .menu-dishes-wrapper .menu-dish-box:hover {
+    height: 6rem;
+  }
 }
 body main .menu-dishes-wrapper .menu-dish-box:hover {
   margin-left: 1rem;
 }
 body main .menu-dishes-wrapper .menu-dish-box:hover .dish-prices-container {
-  width: 40%;
+  width: 100px;
 }
 body main .menu-dishes-wrapper .menu-dish-box:hover .fa-circle-check {
+  top: 14px;
+  right: 14px;
+  font-size: 2rem;
+  cursor: pointer;
   -webkit-animation: spin 1s 1;
           animation: spin 1s 1;
-  right: 15%;
   -webkit-animation-delay: 0.3s;
           animation-delay: 0.3s;
-  visibility: visible;
 }
 @media screen and (max-width: 325px) {
   body main .menu-dishes-wrapper .menu-dish-box:hover .fa-circle-check {
-    right: 1.4rem;
-    top: 35%;
-  }
-}
-@media screen and (min-width: 500px) {
-  body main .menu-dishes-wrapper .menu-dish-box:hover .fa-circle-check {
-    right: 20%;
-    font-size: 2rem;
-    top: 25%;
-  }
-}
-@media screen and (min-width: 900px) {
-  body main .menu-dishes-wrapper .menu-dish-box:hover .fa-circle-check {
-    font-size: 2.2rem;
-  }
-}
-@media screen and (min-width: 1024px) {
-  body main .menu-dishes-wrapper .menu-dish-box:hover .fa-circle-check {
-    right: 10%;
+    right: 17px;
+    bottom: 40px;
+    font-size: 1.8rem;
   }
 }
 body main .menu-dishes-wrapper .menu-dish-box:hover .dish-prices {
   position: absolute;
-  margin-right: 4rem;
+  margin-right: 2.5rem;
   -webkit-transition: 0.3s;
   transition: 0.3s;
-  background: rgb(246, 246, 246);
-}
-@media screen and (max-width: 325px) {
-  body main .menu-dishes-wrapper .menu-dish-box:hover .dish-prices {
-    margin-right: 4rem;
-  }
-}
-@media screen and (min-width: 500px) {
-  body main .menu-dishes-wrapper .menu-dish-box:hover .dish-prices {
-    margin-right: 8rem;
-  }
-}
-@media screen and (min-width: 800px) {
-  body main .menu-dishes-wrapper .menu-dish-box:hover .dish-prices {
-    margin-right: 11rem;
-  }
-}
-@media screen and (min-width: 1024px) {
-  body main .menu-dishes-wrapper .menu-dish-box:hover .dish-prices {
-    margin-right: 3rem;
-  }
 }
 body main .menu-dishes-wrapper .menu-dish-box:hover .dish-titles-and-description-container {
-  width: 60%;
+  max-width: 260px;
   word-wrap: normal;
   overflow: hidden;
 }
@@ -321,6 +426,15 @@ body main .menu-dishes-wrapper .menu-dish-box:hover .dish-titles-and-description
     overflow: visible;
     white-space: initial;
     bottom: 0.7rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  body main .menu-dishes-wrapper .menu-dish-box:hover .dish-titles-and-description-container .menu-dish-description {
+    position: absolute;
+    text-overflow: initial;
+    overflow: visible;
+    white-space: initial;
+    bottom: 1rem;
   }
 }
 @media screen and (max-width: 325px) {
@@ -335,7 +449,7 @@ body main .menu-dishes-wrapper .menu-dish-box:hover::after {
 body main .menu-dishes-wrapper .menu-dish-box::after {
   content: " ";
   position: absolute;
-  width: 20%;
+  width: 60px;
   height: 100%;
   background: #99e2d0;
   right: 0;
@@ -353,24 +467,10 @@ body main .menu-dishes-wrapper .menu-dish-box::after {
   -webkit-transform-origin: right;
           transform-origin: right;
 }
-@media screen and (max-width: 325px) {
-  body main .menu-dishes-wrapper .menu-dish-box::after {
-    width: 25%;
-  }
-}
 body main .menu-dishes-wrapper .menu-dish-box .fa-circle-check {
   position: absolute;
-  bottom: 1.5rem;
-  color: rgb(246, 246, 246);
-  top: 1.2rem;
-  font-size: 1.5rem;
-  overflow: visible;
-  visibility: hidden;
-}
-@media screen and (max-width: 325px) {
-  body main .menu-dishes-wrapper .menu-dish-box .fa-circle-check {
-    font-size: 2rem;
-  }
+  font-size: 0;
+  color: #f6f6f6;
 }
 @-webkit-keyframes spin {
   100% {
@@ -400,6 +500,16 @@ body main .menu-dishes-wrapper .menu-dish-box .dish-titles-and-description-conta
     font-size: 1rem;
   }
 }
+@media screen and (min-width: 326px) {
+  body main .menu-dishes-wrapper .menu-dish-box .dish-titles-and-description-container .menu-dish-titles {
+    font-size: 1rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  body main .menu-dishes-wrapper .menu-dish-box .dish-titles-and-description-container .menu-dish-titles {
+    font-size: 1.2rem;
+  }
+}
 body main .menu-dishes-wrapper .menu-dish-box .dish-titles-and-description-container .menu-dish-titles-overflow {
   white-space: pre-line;
 }
@@ -421,6 +531,23 @@ body main .menu-dishes-wrapper .menu-dish-box .dish-titles-and-description-conta
     font-size: 0.8rem;
   }
 }
+@media screen and (min-width: 768px) {
+  body main .menu-dishes-wrapper .menu-dish-box .dish-titles-and-description-container .menu-dish-description {
+    text-overflow: clip;
+    overflow: visible;
+    white-space: initial;
+  }
+}
+@media screen and (min-width: 326px) {
+  body main .menu-dishes-wrapper .menu-dish-box .dish-titles-and-description-container .menu-dish-description {
+    font-size: 0.8rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  body main .menu-dishes-wrapper .menu-dish-box .dish-titles-and-description-container .menu-dish-description {
+    font-size: 1rem;
+  }
+}
 body main .menu-dishes-wrapper .menu-dish-box .dish-prices-container {
   position: absolute;
   height: 100%;
@@ -437,10 +564,19 @@ body main .menu-dishes-wrapper .menu-dish-box .dish-prices-container .dish-price
   font-size: 1rem;
   font-weight: 1000;
   color: black;
+  background: #f6f6f6;
 }
 @media screen and (max-width: 325px) {
   body main .menu-dishes-wrapper .menu-dish-box .dish-prices-container .dish-prices {
-    right: 1rem;
+    right: 1.5rem;
+  }
+}
+@media screen and (max-width: 360px) {
+  body main .menu-dishes-wrapper .menu-dish-box-overflow {
+    height: 4rem;
+  }
+  body main .menu-dishes-wrapper .menu-dish-box-overflow:hover .fa-circle-check {
+    top: 22px;
   }
 }
 body main .order-button-container {
