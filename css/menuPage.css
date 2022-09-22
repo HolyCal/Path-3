@@ -184,7 +184,7 @@ body main h1 .fa-regular {
   right: 30px;
   bottom: 10px;
 }
-@media screen and (max-width: 325px) {
+@media screen and (max-width: 319px) {
   body main h1 .fa-regular {
     font-size: 20px;
     right: 1rem;
@@ -253,7 +253,7 @@ body main .menu-dishes-wrapper .menu-dish-container {
           justify-content: space-evenly;
   margin: 1rem 0;
 }
-@media screen and (max-width: 325px) {
+@media screen and (max-width: 319px) {
   body main .menu-dishes-wrapper .menu-dish-container {
     margin-top: 0.3rem;
   }
@@ -372,7 +372,14 @@ body main .menu-dishes-wrapper .menu-dish-box {
   z-index: 1;
   padding: 0.3rem 0 0.5rem 0;
 }
-@media screen and (max-width: 325px) {
+@media screen and (max-width: 319px) {
+  body main .menu-dishes-wrapper .menu-dish-box {
+    min-height: -webkit-fit-content;
+    min-height: -moz-fit-content;
+    min-height: fit-content;
+  }
+}
+@media screen and (max-width: 319px) {
   body main .menu-dishes-wrapper .menu-dish-box {
     padding: 0 0 1rem 0;
   }
@@ -401,7 +408,7 @@ body main .menu-dishes-wrapper .menu-dish-box:hover .fa-circle-check {
   -webkit-animation-delay: 0.3s;
           animation-delay: 0.3s;
 }
-@media screen and (max-width: 325px) {
+@media screen and (max-width: 319px) {
   body main .menu-dishes-wrapper .menu-dish-box:hover .fa-circle-check {
     right: 17px;
     bottom: 40px;
@@ -419,13 +426,11 @@ body main .menu-dishes-wrapper .menu-dish-box:hover .dish-titles-and-description
   word-wrap: normal;
   overflow: hidden;
 }
-@media screen and (max-width: 325px) {
+@media screen and (max-width: 319px) {
   body main .menu-dishes-wrapper .menu-dish-box:hover .dish-titles-and-description-container .menu-dish-description {
     position: absolute;
     text-overflow: initial;
-    overflow: visible;
-    white-space: initial;
-    bottom: 0.7rem;
+    overflow: hidden;
   }
 }
 @media screen and (min-width: 768px) {
@@ -435,11 +440,6 @@ body main .menu-dishes-wrapper .menu-dish-box:hover .dish-titles-and-description
     overflow: visible;
     white-space: initial;
     bottom: 1rem;
-  }
-}
-@media screen and (max-width: 325px) {
-  body main .menu-dishes-wrapper .menu-dish-box:hover {
-    min-height: 6rem;
   }
 }
 body main .menu-dishes-wrapper .menu-dish-box:hover::after {
@@ -495,12 +495,12 @@ body main .menu-dishes-wrapper .menu-dish-box .dish-titles-and-description-conta
   font-weight: 600;
   margin: 0.5rem 0 0.2rem 0.5rem;
 }
-@media screen and (max-width: 325px) {
+@media screen and (max-width: 3px) {
   body main .menu-dishes-wrapper .menu-dish-box .dish-titles-and-description-container .menu-dish-titles {
     font-size: 1rem;
   }
 }
-@media screen and (min-width: 326px) {
+@media screen and (min-width: 319px) {
   body main .menu-dishes-wrapper .menu-dish-box .dish-titles-and-description-container .menu-dish-titles {
     font-size: 1rem;
   }
@@ -514,18 +514,18 @@ body main .menu-dishes-wrapper .menu-dish-box .dish-titles-and-description-conta
   white-space: pre-line;
 }
 body main .menu-dishes-wrapper .menu-dish-box .dish-titles-and-description-container .menu-dish-description {
+  margin-left: 0.5rem;
+  font-size: 1rem;
+  font-weight: 500;
+  font-family: "Roboto", sans-serif;
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
-  margin-left: 0.5rem;
-  font-family: "Roboto", sans-serif;
-  font-size: 1rem;
-  font-weight: 500;
   color: grey;
 }
-@media screen and (max-width: 325px) {
+@media screen and (max-width: 319px) {
   body main .menu-dishes-wrapper .menu-dish-box .dish-titles-and-description-container .menu-dish-description {
-    text-overflow: clip;
+    max-width: 150px;
     overflow: visible;
     white-space: initial;
     font-size: 0.8rem;
@@ -564,16 +564,20 @@ body main .menu-dishes-wrapper .menu-dish-box .dish-prices-container .dish-price
   font-size: 1rem;
   font-weight: 1000;
   color: black;
-  background: #f6f6f6;
 }
-@media screen and (max-width: 325px) {
+@media screen and (max-width: 319px) {
   body main .menu-dishes-wrapper .menu-dish-box .dish-prices-container .dish-prices {
+    bottom: 0.2rem;
     right: 1.5rem;
   }
 }
-@media screen and (max-width: 360px) {
+@media screen and (max-width: 319px) {
   body main .menu-dishes-wrapper .menu-dish-box-overflow {
     height: 4rem;
+    top: 0;
+  }
+  body main .menu-dishes-wrapper .menu-dish-box-overflow .menu-dish-titles {
+    max-width: 180px;
   }
   body main .menu-dishes-wrapper .menu-dish-box-overflow:hover .fa-circle-check {
     top: 22px;

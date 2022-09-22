@@ -142,7 +142,7 @@ body {
         color: black;
         right: 30px;
         bottom: 10px;
-        @media screen and (max-width: 325px) {
+        @media screen and (max-width: 319px) {
           font-size: 20px;
           right: 1rem;
           bottom: -1rem;
@@ -196,7 +196,7 @@ body {
         flex-wrap: wrap;
         justify-content: space-evenly;
         margin: 1rem 0;
-        @media screen and (max-width: 325px) {
+        @media screen and (max-width: 319px) {
           margin-top: 0.3rem;
         }
         @media screen and (min-width: 768px) {
@@ -263,7 +263,10 @@ body {
         border-radius: 1rem;
         z-index: 1;
         padding: 0.3rem 0 0.5rem 0;
-        @media screen and (max-width: 325px) {
+        @media screen and (max-width: 319px) {
+          min-height: fit-content;
+        }
+        @media screen and (max-width: 319px) {
           padding: 0 0 1rem 0;
         }
         @media screen and (min-width: 768px) {
@@ -273,10 +276,10 @@ body {
           }
         }
         &:hover {
+          margin-left: 1rem;
           .dish-prices-container {
             width: 100px;
           }
-          margin-left: 1rem;
           .fa-circle-check {
             top: 14px;
             right: 14px;
@@ -284,7 +287,7 @@ body {
             cursor: pointer;
             animation: spin 1s 1;
             animation-delay: 0.3s;
-            @media screen and (max-width: 325px) {
+            @media screen and (max-width: 319px) {
               right: 17px;
               bottom: 40px;
               font-size: 1.8rem;
@@ -300,12 +303,10 @@ body {
             word-wrap: normal;
             overflow: hidden;
             .menu-dish-description {
-              @media screen and (max-width: 325px) {
+              @media screen and (max-width: 319px) {
                 position: absolute;
                 text-overflow: initial;
-                overflow: visible;
-                white-space: initial;
-                bottom: 0.7rem;
+                overflow: hidden;
               }
               @media screen and (min-width: 768px) {
                 position: absolute;
@@ -315,9 +316,6 @@ body {
                 bottom: 1rem;
               }
             }
-          }
-          @media screen and (max-width: 325px) {
-            min-height: 6rem;
           }
         }
         &:hover::after {
@@ -358,10 +356,10 @@ body {
             font-size: 1.3rem;
             font-weight: 600;
             margin: 0.5rem 0 0.2rem 0.5rem;
-            @media screen and (max-width: 325px) {
+            @media screen and (max-width: 3px) {
               font-size: 1rem;
             }
-            @media screen and (min-width: 326px) {
+            @media screen and (min-width: 319px) {
               font-size: 1rem;
             }
             @media screen and (min-width: 768px) {
@@ -372,16 +370,16 @@ body {
             white-space: pre-line;
           }
           .menu-dish-description {
+            margin-left: 0.5rem;
+            font-size: 1rem;
+            font-weight: 500;
+            font-family: $fontRoboto;
             text-overflow: ellipsis;
             overflow: hidden;
             white-space: nowrap;
-            margin-left: 0.5rem;
-            font-family: $fontRoboto;
-            font-size: 1rem;
-            font-weight: 500;
             color: grey;
-            @media screen and (max-width: 325px) {
-              text-overflow: clip;
+            @media screen and (max-width: 319px) {
+              max-width: 150px;
               overflow: visible;
               white-space: initial;
               font-size: 0.8rem;
@@ -414,16 +412,20 @@ body {
             font-size: 1rem;
             font-weight: $fontWeightBold;
             color: black;
-            background: $backgroundColorGrey;
-            @media screen and (max-width: 325px) {
+            @media screen and (max-width: 319px) {
+              bottom: 0.2rem;
               right: 1.5rem;
             }
           }
         }
       }
       .menu-dish-box-overflow {
-        @media screen and (max-width: 360px) {
+        @media screen and (max-width: 319px) {
           height: 4rem;
+          top: 0;
+          .menu-dish-titles {
+            max-width: 180px;
+          }
           &:hover {
             .fa-circle-check {
               top: 22px;
