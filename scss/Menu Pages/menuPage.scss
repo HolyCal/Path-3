@@ -104,7 +104,7 @@ body {
             object-position: center 90%;
           }
           @media screen and (min-width: 1440px) {
-            max-height: 40rem;
+            max-height: 35rem;
             object-position: center 75%;
           }
         }
@@ -356,7 +356,7 @@ body {
             font-size: 1.3rem;
             font-weight: 600;
             margin: 0.5rem 0 0.2rem 0.5rem;
-            @media screen and (max-width: 3px) {
+            @media screen and (max-width: 319px) {
               font-size: 1rem;
             }
             @media screen and (min-width: 319px) {

@@ -140,7 +140,7 @@ body header .header-container .header-image .the-enchanted-plate-background-imag
 }
 @media screen and (min-width: 1440px) {
   body header .header-container .header-image .le-gourmand-background-image {
-    max-height: 40rem;
+    max-height: 35rem;
     -o-object-position: center 75%;
        object-position: center 75%;
   }
@@ -495,7 +495,7 @@ body main .menu-dishes-wrapper .menu-dish-box .dish-titles-and-description-conta
   font-weight: 600;
   margin: 0.5rem 0 0.2rem 0.5rem;
 }
-@media screen and (max-width: 3px) {
+@media screen and (max-width: 319px) {
   body main .menu-dishes-wrapper .menu-dish-box .dish-titles-and-description-container .menu-dish-titles {
     font-size: 1rem;
   }
